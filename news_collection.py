@@ -1,77 +1,101 @@
 import twitter
+import urllib2
+
+import random
+import time
+import re
+import gzip, StringIO
+
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
 from nytimesarticle import articleAPI
-
-def parse_articles(articles):
-    '''
-    This function takes in a response to the NYT api and parses
-    the articles into a list of dictionaries
-    '''
-    news = []
-    for i in articles['response']['docs']:
-        dic = {}
-        dic['id'] = i['_id']
-        if i['abstract'] is not None:
-            dic['abstract'] = i['abstract'].encode("utf8")
-        dic['headline'] = i['headline']['main'].encode("utf8")
-        dic['desk'] = i['news_desk']
-        dic['date'] = i['pub_date'][0:10] # cutting time of day.
-        dic['section'] = i['section_name']
-        if i['snippet'] is not None:
-            dic['snippet'] = i['snippet'].encode("utf8")
-        dic['source'] = i['source']
-        dic['type'] = i['type_of_material']
-        dic['url'] = i['web_url']
-        dic['word_count'] = i['word_count']
-        # locations
-        locations = []
-        for x in range(0,len(i['keywords'])):
-            if 'glocations' in i['keywords'][x]['name']:
-                locations.append(i['keywords'][x]['value'])
-        dic['locations'] = locations
-        # subject
-        subjects = []
-        for x in range(0,len(i['keywords'])):
-            if 'subject' in i['keywords'][x]['name']:
-                subjects.append(i['keywords'][x]['value'])
-        dic['subjects'] = subjects   
-        news.append(dic)
-    return(news) 
+from bs4 import BeautifulSoup
 
 
-def get_articles(date,query):
-    '''
-    This function accepts a year in string format (e.g.'1980')
-    and a query (e.g.'Amnesty International') and it will 
-    return a list of parsed articles (in dictionaries)
-    for that year.
-    '''
-    all_articles = []
-    for i in range(0,100): #NYT limits pager to first 100 pages. But rarely will you find over 100 pages of results anyway.
-        articles = api.search(q = query,
-               fq = {'source':['Reuters','AP', 'The New York Times']},
-               begin_date = date + '0101',
-               end_date = date + '1231',
-               sort='oldest',
-               page = str(i))
-        articles = parse_articles(articles)
-        all_articles = all_articles + articles
-    return(all_articles)
-
-# api = twitter.Api(consumer_key='rFgco6r9TslZXEc7tjqH8LuKG',
-#                   consumer_secret='1RCj8tDw9pnXo6foLk8HJWkm2xaFPGdyAznBobwtDfE94LHuwN',
-#                   access_token_key='861144046026108930-1MGtJ4pEXaLbw8s1QCHrgX7Ot2BPhF3',
-#                   access_token_secret='8k9SX1Ie5FwtvYWciglRt1JYmFdFi7ccxkuz2ZYi6eDGG')
-
-# print(api.VerifyCredentials())
+user_agents = list()
 
 
+def get_ariticle_urls_for_date(**params):
+    URL_template = "https://www.google.com/search?q={stock_symbol}+stock&tbs=cdr%3A1%2Ccd_min%3A{month}%2F{day}%2F{year}%2Ccd_max%3A{month}%2F{day}%2F{year}&as_mindate={month}%2F%{day}%2F{year}&as_maxdate={month}%2F{day}%2F{year}&tbm=nws"
+    URL = URL_template.format(**params)
+    driver = webdriver.Firefox()
+    driver.get(URL)
+    links = []
+    elems = driver.find_elements_by_class_name("_PMs")
+    for x in range(0,len(elems)):
+        links.append(elems[x].get_attribute("href"))
+    driver.close()
+    return links
 
-# articles = api.search( q = 'Apple', 
-#      fq = {'headline':'Apple', 'source':['Reuters','AP', 'The New York Times']}, 
-#      begin_date = 20111231, end_date = 20120205)
 
-# print(parse_articles(articles))
+def get_html_with_url(url):
+    retry = 3
+    html = ""
+    while(retry > 0):
+        try:
+            request = urllib2.Request(url)
+            length = len(user_agents)
+            index = random.randint(0, length-1)
+            user_agent = user_agents[index] 
+            request.add_header('User-agent', user_agent)
+            request.add_header('connection','keep-alive')
+            request.add_header('Accept-Encoding', 'gzip')
+            request.add_header('referer', "https://www.google.com/")
+            response = urllib2.urlopen(request)
+            html = response.read() 
+            if(response.headers.get('content-encoding', None) == 'gzip'):
+                html = gzip.GzipFile(fileobj=StringIO.StringIO(html)).read()
+            break;
+        except urllib2.URLError,e:
+            print 'url error:', e
+            random_sleep(5,10)
+            retry = retry - 1
+            continue
+        
+        except Exception, e:
+            print 'error:', e
+            retry = retry - 1
+            random_sleep(5,10)
+            continue
+    return html
 
 
-# get_articles('2010','APPL')
+def random_sleep(lower,upper):
+    sleeptime =  random.randint(lower, upper)
+    print("[INFO] Sleeping for {0} seconds...".format(sleeptime))
+    time.sleep(sleeptime)
 
+
+def load_user_agent():
+    fp = open('./user_agents', 'r')
+
+    line  = fp.readline().strip('\n')
+    while(line):
+        user_agents.append(line)
+        line = fp.readline().strip('\n')
+    fp.close()
+
+
+def visible(element):
+    if element.parent.name in ['style', 'script', '[document]', 'head', 'title']:
+        return False
+    elif re.match('<!--.*-->', str(element.encode('utf-8'))):
+        return False
+    return True
+
+
+def get_text_from_html(html):
+    soup = BeautifulSoup(html)
+    data = soup.findAll(text=True)
+    result = filter(visible, data)
+    # print(result)
+    # print list(result)
+
+
+def save_html_to_file(root_dir,stock_symbol,html,year,month,day,index):
+    with open("{0}/{1}_{2}-{3}-{4}_news{5}.html".format(root_dir,stock_symbol,year,month,day,index), "w") as text_file:
+        text_file.write(html)
+
+
+def init():
+    load_user_agent()
