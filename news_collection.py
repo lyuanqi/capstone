@@ -5,11 +5,14 @@ import random
 import time
 import re
 import gzip, StringIO
-
+import os.path
+from datetime import date, timedelta
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from nytimesarticle import articleAPI
 from bs4 import BeautifulSoup
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.feature_extraction.text import CountVectorizer
 
 
 user_agents = list()
@@ -85,11 +88,11 @@ def visible(element):
 
 
 def get_text_from_html(html):
-    soup = BeautifulSoup(html)
+    soup = BeautifulSoup(html, 'html.parser')
     data = soup.findAll(text=True)
     result = filter(visible, data)
-    # print(result)
-    # print list(result)
+    return result
+    # return soup.get_text()
 
 
 def save_html_to_file(root_dir,stock_symbol,html,year,month,day,index):
@@ -97,5 +100,47 @@ def save_html_to_file(root_dir,stock_symbol,html,year,month,day,index):
         text_file.write(html)
 
 
+def collect_news(root_dir,stock_symbol,start_date,end_date):
+    nc.init()
+
+    delta = end_date - start_date         # timedelta
+
+    for i in range(delta.days + 1):
+        current_date = start_date + timedelta(days=i)
+        print("[INFO] Now collecting news for {0} on: {1}-{2}-{3}".format(stock_symbol,current_date.year,current_date.month,current_date.day))
+        urls = nc.get_ariticle_urls_for_date(stock_symbol=stock_symbol,year=current_date.year,month=current_date.month,day=current_date.day)
+        for j in range(len(urls)):
+            print("------ Downloading html from urls[{0}]: {1}".format(j,urls[j]))
+            html = nc.get_html_with_url(urls[j])
+            if(html==""):
+                html = urls[j]
+                nc.save_html_to_file(root_dir,stock_symbol,html,current_date.year,current_date.month,current_date.day,"empty")
+            nc.save_html_to_file(root_dir,stock_symbol,html,current_date.year,current_date.month,current_date.day,j)
+        nc.random_sleep(30,120)
+
+
+def get_news_from_past_n_days(root_dir,stock_symbol,date,n):
+    news = []
+    current_date = date
+    for i in range(1,n+1):
+        past_date = current_date-timedelta(days=i)
+        print("now reading news for date: {0}-{1}-{2}".format(past_date.year,past_date.month,past_date.day))
+
+        prefix = "{0}/{1}_{2}-{3}-{4}_news".format(root_dir,stock_symbol,past_date.year,past_date.month,past_date.day)
+        for j in range(0,10):
+            news_html_file = "{0}{1}{2}".format(prefix,j,".html")
+            if(os.path.isfile(news_html_file)):
+                with open(news_html_file) as f:
+                    # print("{0}{1}".format("now reading from: ",news_html_file))
+                    text = get_text_from_html(f)
+                    text = ' '.join(text)
+                    news.append(text)
+    return news
+
+
 def init():
     load_user_agent()
+
+# root_dir = "/Users/liyuanqi/Google_Drive/UCLA_MSCS/Capstone/data"
+# stock_symbol = "tsla"
+# get_news_from_past_n_days(root_dir,stock_symbol,2016,7,1,1)
