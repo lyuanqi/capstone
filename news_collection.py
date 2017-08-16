@@ -101,30 +101,29 @@ def save_html_to_file(root_dir,stock_symbol,html,year,month,day,index):
 
 
 def collect_news(root_dir,stock_symbol,start_date,end_date):
-    nc.init()
-
     delta = end_date - start_date         # timedelta
 
     for i in range(delta.days + 1):
         current_date = start_date + timedelta(days=i)
         print("[INFO] Now collecting news for {0} on: {1}-{2}-{3}".format(stock_symbol,current_date.year,current_date.month,current_date.day))
-        urls = nc.get_ariticle_urls_for_date(stock_symbol=stock_symbol,year=current_date.year,month=current_date.month,day=current_date.day)
+        urls = get_ariticle_urls_for_date(stock_symbol=stock_symbol,year=current_date.year,month=current_date.month,day=current_date.day)
         for j in range(len(urls)):
             print("------ Downloading html from urls[{0}]: {1}".format(j,urls[j]))
-            html = nc.get_html_with_url(urls[j])
+            html = get_html_with_url(urls[j])
             if(html==""):
                 html = urls[j]
-                nc.save_html_to_file(root_dir,stock_symbol,html,current_date.year,current_date.month,current_date.day,"empty")
-            nc.save_html_to_file(root_dir,stock_symbol,html,current_date.year,current_date.month,current_date.day,j)
-        nc.random_sleep(30,120)
+                save_html_to_file(root_dir,stock_symbol,html,current_date.year,current_date.month,current_date.day,"empty")
+            save_html_to_file(root_dir,stock_symbol,html,current_date.year,current_date.month,current_date.day,j)
+        random_sleep(30,120)
 
 
 def get_news_from_past_n_days(root_dir,stock_symbol,date,n):
     news = []
     current_date = date
+    print("[data prep] now reading news for date: {0}-{1}-{2}...".format(current_date.year,current_date.month,current_date.day))
     for i in range(1,n+1):
         past_date = current_date-timedelta(days=i)
-        print("now reading news for date: {0}-{1}-{2}".format(past_date.year,past_date.month,past_date.day))
+        # print("now reading news for date: {0}-{1}-{2}".format(past_date.year,past_date.month,past_date.day))
 
         prefix = "{0}/{1}_{2}-{3}-{4}_news".format(root_dir,stock_symbol,past_date.year,past_date.month,past_date.day)
         for j in range(0,10):
