@@ -134,11 +134,22 @@ def train_with_params(start_date,end_date,cv,past_n_range,keyword_num_range,term
                 result['params'] = params
                 result['scores'] = scores
                 all_results.append(result)
+    print_and_write_to_file("-------------------------------------------------------------------------")
     for i in range(len(all_results)):
         result = all_results[i]
-        print(result['params'])
-        print(result['scores'])
+        print_and_write_to_file("** | past_n={0} | keyword_num={1} | term_offset={2} | AVG_SCORE = {3}"
+            .format(result['params']['past_n'],result['params']['keyword_num'],result['params']['term_offset'],np.mean(result['scores'])))
+        print_and_write_to_file("** scores: [{0}]".format(', '.join([str(x) for x in result['scores']])))
+        print_and_write_to_file("-------------------------------------------------------------------------")
+    
+    np.save('all_results',all_results)
 
+
+
+def print_and_write_to_file(string):
+    f = open("all_results.txt", "a")
+    f.write(string + "\n")
+    print(string)
 
 def collect_news():
     amzn_data_root_dir = "/Users/liyuanqi/Google_Drive/UCLA_MSCS/Capstone/data/amzn"
@@ -151,23 +162,34 @@ def collect_news():
 def init():
     nc.init()
     pc.init()
+    try:
+        os.remove('all_results.txt')
+    except OSError:
+        pass
 
 
 def main():
     init()
     cv = 2
+    test = True
+    # test_dates
     start_date = date(2016,7,1)
     end_date = date(2016,7,30)
     
     # test ranges
-    # past_n_range = np.arange(3,5,1)
-    # keyword_num_range = np.arange(10,20,5)
-    # term_offset_range = np.arange(1,3,1)
-
-    #real ranges
-    past_n_range = np.arange(1,61,1)
-    keyword_num_range = np.arange(10,150,10)
-    term_offset_range = np.arange(1,61,1)
+    past_n_range = np.arange(3,5,1)
+    keyword_num_range = np.arange(10,20,5)
+    term_offset_range = np.arange(1,3,1)
+    if(not test):
+        print("[main] using real ranges...")
+        cv = 5
+        # real dates
+        start_date = date(2016,8,1)
+        end_date = date(2017,4,1)
+        # real ranges
+        past_n_range = np.arange(1,61,2)
+        keyword_num_range = np.arange(10,150,10)
+        term_offset_range = np.arange(1,61,2)
 
     train_with_params(start_date,end_date,cv,past_n_range,keyword_num_range,term_offset_range)
     # classification(past_n,start_date,end_date,keyword_num,term_offset,cv)
