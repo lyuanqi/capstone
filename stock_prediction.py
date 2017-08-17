@@ -1,3 +1,4 @@
+import os.path
 import numpy as np
 import pandas as pd
 import price_collection as pc
@@ -12,8 +13,12 @@ from nltk.stem import LancasterStemmer
 from sklearn.decomposition import TruncatedSVD
 
 
-root_dir = "/Users/liyuanqi/Google_Drive/UCLA_MSCS/Capstone/data"
+data_root_dir = "/Users/liyuanqi/Google_Drive/UCLA_MSCS/Capstone/data"
 stock_symbol = "tsla"    
+
+
+def file_exists(file_path):
+    return os.path.isfile(file_path) 
 
 
 def get_date_duration_string(start_date,end_date):
@@ -58,9 +63,9 @@ def progression():
 
 def prepare_data(past_n,start_date,end_date,keyword_num,term_offset,cv):
     print("[data prep] preparing training data...")
-    trends_data_file_name = 'all_trends_{0}'.format(get_date_duration_string(start_date,end_date)) 
-    vectorized_data_file_name = "n{0}_vectorized_data_{1}".format(past_n,get_date_duration_string(start_date,end_date))
-    past_n_trends_matrix_file_name = "past_{0}_trends_matrix_{1}".format(past_n,get_date_duration_string(start_date,end_date))
+    trends_data_file_name = '{0}_all_trends_{1}'.format(data_root_dir + "/" + stock_symbol,get_date_duration_string(start_date,end_date)) 
+    vectorized_data_file_name = "{0}_n{1}_vectorized_data_{2}".format(data_root_dir + "/" + stock_symbol,past_n,get_date_duration_string(start_date,end_date))
+    past_n_trends_matrix_file_name = "{0}_past_{1}_trends_matrix_{2}".format(data_root_dir + "/" + stock_symbol,past_n,get_date_duration_string(start_date,end_date))
     all_news = []
     all_trends = []
     past_n_trends_matrix = []
@@ -68,7 +73,7 @@ def prepare_data(past_n,start_date,end_date,keyword_num,term_offset,cv):
     for i in range(delta.days + 1):
         current_date = start_date + timedelta(days=i)
         if(pc.has_date(current_date)):
-            news = nc.get_news_from_past_n_days(root_dir,stock_symbol,current_date,past_n)
+            news = nc.get_news_from_past_n_days(data_root_dir + "/" + stock_symbol,stock_symbol,current_date,past_n)
             news = " ".join(news)
             trend = pc.get_trend_by_date(current_date + timedelta(days=term_offset))
             all_news.append(news)
@@ -93,9 +98,14 @@ def prepare_data(past_n,start_date,end_date,keyword_num,term_offset,cv):
 
 def classification(past_n,start_date,end_date,keyword_num,term_offset,cv):
     print("[classification] loading training data from .npy files...")
-    vectorized_data_file_name = "n{0}_vectorized_data_{1}.npy".format(past_n,get_date_duration_string(start_date,end_date))
-    trends_data_file_name = 'all_trends_{0}.npy'.format(get_date_duration_string(start_date,end_date)) 
-    past_n_trends_matrix_file_name = "past_{0}_trends_matrix_{1}.npy".format(past_n,get_date_duration_string(start_date,end_date))
+    trends_data_file_name = '{0}_all_trends_{1}.npy'.format(data_root_dir + "/" + stock_symbol,get_date_duration_string(start_date,end_date)) 
+    vectorized_data_file_name = "{0}_n{1}_vectorized_data_{2}.npy".format(data_root_dir + "/" + stock_symbol,past_n,get_date_duration_string(start_date,end_date))
+    past_n_trends_matrix_file_name = "{0}_past_{1}_trends_matrix_{2}.npy".format(data_root_dir + "/" + stock_symbol,past_n,get_date_duration_string(start_date,end_date))
+    
+    all_data_files_exist = file_exists(trends_data_file_name) and file_exists(vectorized_data_file_name) and file_exists(past_n_trends_matrix_file_name)
+    if(not all_data_files_exist):
+        prepare_data(past_n,start_date,end_date,keyword_num,term_offset,cv)
+
     data_train_vectorized = np.load(vectorized_data_file_name)
     all_trends = np.load(trends_data_file_name)
     past_n_trends_matrix = np.load(past_n_trends_matrix_file_name)
@@ -105,17 +115,37 @@ def classification(past_n,start_date,end_date,keyword_num,term_offset,cv):
     data_train_matrix = lsi.fit_transform(data_train_vectorized)
     data_train_matrix_with_past_price = np.c_[data_train_matrix, past_n_trends_matrix]
     classifier = LogisticRegression()
-    print("[classification] training and predicting...")
+    print("[classification] training and predicting with past_n={0},keyword_num={1},term_offset={2}...".format(past_n,keyword_num,term_offset))
     scores = cross_val_score(classifier, data_train_matrix_with_past_price, all_trends, cv=cv,scoring='average_precision')
-    print(scores)
+    return scores
+
+
+def train_with_params(start_date,end_date,cv,past_n_range,keyword_num_range,term_offset_range):
+    all_results = []
+    for past_n in past_n_range:
+        for keyword_num in keyword_num_range:
+            for term_offset in term_offset_range:
+                params = {}
+                params['past_n'] = past_n
+                params['keyword_num'] = keyword_num
+                params['term_offset'] = term_offset
+                scores = classification(past_n,start_date,end_date,keyword_num,term_offset,cv)
+                result = {}
+                result['params'] = params
+                result['scores'] = scores
+                all_results.append(result)
+    for i in range(len(all_results)):
+        result = all_results[i]
+        print(result['params'])
+        print(result['scores'])
 
 
 def collect_news():
-    amzn_root_dir = "/Users/liyuanqi/Google_Drive/UCLA_MSCS/Capstone/data/amzn"
+    amzn_data_root_dir = "/Users/liyuanqi/Google_Drive/UCLA_MSCS/Capstone/data/amzn"
     stock_symbol = "amzn"
     d1 = date(2017, 6, 6)  # start date
     d2 = date(2017, 7, 1)  # end date
-    nc.collect_news(amzn_root_dir,stock_symbol,d1,d2)
+    nc.collect_news(amzn_data_root_dir,stock_symbol,d1,d2)
 
 
 def init():
@@ -126,13 +156,21 @@ def init():
 def main():
     init()
     cv = 2
-    past_n = 5
     start_date = date(2016,7,1)
     end_date = date(2016,7,30)
-    keyword_num = 10
-    term_offset = 10
-    prepare_data(past_n,start_date,end_date,keyword_num,term_offset,cv)
-    classification(past_n,start_date,end_date,keyword_num,term_offset,cv)
+    
+    # test ranges
+    # past_n_range = np.arange(3,5,1)
+    # keyword_num_range = np.arange(10,20,5)
+    # term_offset_range = np.arange(1,3,1)
+
+    #real ranges
+    past_n_range = np.arange(1,61,1)
+    keyword_num_range = np.arange(10,150,10)
+    term_offset_range = np.arange(1,61,1)
+
+    train_with_params(start_date,end_date,cv,past_n_range,keyword_num_range,term_offset_range)
+    # classification(past_n,start_date,end_date,keyword_num,term_offset,cv)
 
 
 init()
