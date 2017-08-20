@@ -130,7 +130,7 @@ def get_news_from_past_n_days(root_dir,stock_symbol,date,n):
             news_html_file = "{0}{1}{2}".format(prefix,j,".html")
             if(os.path.isfile(news_html_file)):
                 with open(news_html_file) as f:
-                    # print("{0}{1}".format("now reading from: ",news_html_file))
+                    # print("{0}{1}".format("[data prep] now reading from: ",news_html_file))
                     text = get_text_from_html(f)
                     text = ' '.join(text)
                     news.append(text)

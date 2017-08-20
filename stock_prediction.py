@@ -3,6 +3,7 @@ import numpy as np
 import pandas as pd
 import price_collection as pc
 import news_collection as nc
+import matplotlib.pyplot as plt
 from datetime import date, timedelta
 from sklearn.neural_network import MLPRegressor
 from sklearn.model_selection import cross_val_score
@@ -134,28 +135,45 @@ def train_with_params(start_date,end_date,cv,past_n_range,keyword_num_range,term
                 result['params'] = params
                 result['scores'] = scores
                 all_results.append(result)
-    print_and_write_to_file("-------------------------------------------------------------------------")
-    for i in range(len(all_results)):
-        result = all_results[i]
-        print_and_write_to_file("** | past_n={0} | keyword_num={1} | term_offset={2} | AVG_SCORE = {3}"
-            .format(result['params']['past_n'],result['params']['keyword_num'],result['params']['term_offset'],np.mean(result['scores'])))
-        print_and_write_to_file("** scores: [{0}]".format(', '.join([str(x) for x in result['scores']])))
-        print_and_write_to_file("-------------------------------------------------------------------------")
+                print_and_write_to_file("** | past_n={0} | keyword_num={1} | term_offset={2} | AVG_SCORE = {3}"
+                    .format(result['params']['past_n'],result['params']['keyword_num'],result['params']['term_offset'],np.mean(result['scores'])))
+                print_and_write_to_file("** scores: [{0}]".format(', '.join([str(x) for x in result['scores']])))
+                print_and_write_to_file("-------------------------------------------------------------------------")
+            
+    # print_and_write_to_file("-------------------------------------------------------------------------")
+    # for i in range(len(all_results)):
+    #     result = all_results[i]
+    #     print_and_write_to_file("** | past_n={0} | keyword_num={1} | term_offset={2} | AVG_SCORE = {3}"
+    #         .format(result['params']['past_n'],result['params']['keyword_num'],result['params']['term_offset'],np.mean(result['scores'])))
+    #     print_and_write_to_file("** scores: [{0}]".format(', '.join([str(x) for x in result['scores']])))
+    #     print_and_write_to_file("-------------------------------------------------------------------------")
     
     np.save('all_results',all_results)
 
+
+def plot_for_varying_x(x_name,x_range,y_range):
+    plt.figure()
+    axes = plt.gca()
+    plt.xlabel(x_name)
+    plt.ylabel("AVG Accuracy")
+    plt.title("My Title")
+    plt.plot(x_range, y_range, color = 'r', ls='-', marker='o')
+    plt.savefig(x_name + "_accuracy_plot")
+    plt.close()
 
 
 def print_and_write_to_file(string):
     f = open("all_results.txt", "a")
     f.write(string + "\n")
     print(string)
+    f.close()
+
 
 def collect_news():
-    amzn_data_root_dir = "/Users/liyuanqi/Google_Drive/UCLA_MSCS/Capstone/data/amzn"
-    stock_symbol = "amzn"
-    d1 = date(2017, 6, 6)  # start date
-    d2 = date(2017, 7, 1)  # end date
+    amzn_data_root_dir = "/Users/liyuanqi/Google_Drive/UCLA_MSCS/Capstone/data/tsla"
+    stock_symbol = "tsla"
+    d1 = date(2016, 1, 1)  # start date
+    d2 = date(2016, 4, 30)  # end date
     nc.collect_news(amzn_data_root_dir,stock_symbol,d1,d2)
 
 
@@ -171,28 +189,43 @@ def init():
 def main():
     init()
     cv = 2
-    test = True
+    test = False
     # test_dates
-    start_date = date(2016,7,1)
-    end_date = date(2016,7,30)
+    start_date = date(2016,8,1)
+    end_date = date(2017,4,1)
     
     # test ranges
-    past_n_range = np.arange(3,5,1)
-    keyword_num_range = np.arange(10,20,5)
-    term_offset_range = np.arange(1,3,1)
+    past_n_range = [5,11,15]
+    keyword_num_range = [50]
+    term_offset_range = [1,5,10]
     if(not test):
         print("[main] using real ranges...")
         cv = 5
         # real dates
-        start_date = date(2016,8,1)
+        start_date = date(2016,4,1)
         end_date = date(2017,4,1)
         # real ranges
-        past_n_range = np.arange(1,61,2)
-        keyword_num_range = np.arange(10,150,10)
-        term_offset_range = np.arange(1,61,2)
+        past_n_range = [5,10,15,20,25,30]
+        # keyword_num_range = np.arange(50,160,30)
+        # term_offset_range = [1,5,10,15,20,25,30]
+
+        keyword_num_range = [10]
+        term_offset_range = [1]
 
     train_with_params(start_date,end_date,cv,past_n_range,keyword_num_range,term_offset_range)
     # classification(past_n,start_date,end_date,keyword_num,term_offset,cv)
+    all_results = np.load("all_results.npy")
+    keyword_num = 50
+    term_offset = 10
+    x_range=[]
+    y_range=[]
+    for result in all_results:
+        params = result['params']
+        avg_score = np.mean(result['scores'])
+        if(params['keyword_num']==keyword_num and params['term_offset']==term_offset):
+            x_range.append(params['past_n'])
+            y_range.append(avg_score)
+    plot_for_varying_x("past_n",x_range,y_range)
 
 
 init()
