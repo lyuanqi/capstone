@@ -6,6 +6,8 @@ import time
 import re
 import gzip, StringIO
 import os.path
+import numpy as np
+
 from datetime import date, timedelta
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
@@ -13,9 +15,41 @@ from nytimesarticle import articleAPI
 from bs4 import BeautifulSoup
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.feature_extraction.text import CountVectorizer
+from boilerpipe.extract import Extractor
 
 
 user_agents = list()
+
+date_to_articles_map = {}
+
+
+def build_article_map(data_root_dir,stock_symbol,start_date,end_date):
+    news_dir = data_root_dir + "/" + stock_symbol
+    global date_to_articles_map
+    all_news_file = "{0}/{1}_all_news_{2}_{3}.npy".format(data_root_dir,stock_symbol,start_date.strftime('%Y-%m-%d'),end_date.strftime('%Y-%m-%d'))
+    if(not os.path.isfile(all_news_file)):
+        delta = end_date - start_date
+        for i in range(delta.days + 1):
+            news = []
+            current_date = start_date + timedelta(days=i)
+            prefix = "{0}/{1}_{2}-{3}-{4}_news".format(news_dir,stock_symbol,current_date.year,current_date.month,current_date.day)
+            for j in range(0,10):
+                news_html_file = "{0}{1}{2}".format(prefix,j,".html")
+                if(os.path.isfile(news_html_file)):
+                    try:
+                        with open(news_html_file) as f:
+                            # print("{0}{1}".format("[news collection] now reading from: ",news_html_file))
+                            extractor = Extractor(extractor='ArticleExtractor', html=f.read())
+                            extracted_text = extractor.getText()
+                            if("TSLA" in extracted_text or "Tesla" in extracted_text):
+                                news.append(extracted_text)
+                    except Exception,e:
+                        continue
+            print("[news collection] collected {0} news for {1} on date: {2}".format(len(news),stock_symbol,current_date.strftime('%Y-%m-%d')))
+            date_to_articles_map[current_date] = news
+        np.save(all_news_file,date_to_articles_map)
+    date_to_articles_map = np.load(all_news_file)
+    date_to_articles_map = date_to_articles_map[()]
 
 
 def get_ariticle_urls_for_date(**params):
@@ -87,6 +121,13 @@ def visible(element):
     return True
 
 
+def cleanhtml(raw_html):
+  cleanr = re.compile('<.*?>')
+  cleantext = re.sub(cleanr, '', raw_html)
+  return cleantext
+
+
+
 def get_text_from_html(html):
     soup = BeautifulSoup(html, 'html.parser')
     data = soup.findAll(text=True)
@@ -117,29 +158,36 @@ def collect_news(root_dir,stock_symbol,start_date,end_date):
         random_sleep(30,120)
 
 
-def get_news_from_past_n_days(root_dir,stock_symbol,date,n):
+def get_news_from_past_n_days(date,n):
     news = []
     current_date = date
-    print("[data prep] now reading news for date: {0}-{1}-{2}...".format(current_date.year,current_date.month,current_date.day))
+    # print("[data prep] now reading past {0} days of news for date: {1}...".format(n,current_date.strftime('%Y-%m-%d')))
+    
     for i in range(1,n+1):
         past_date = current_date-timedelta(days=i)
-        # print("now reading news for date: {0}-{1}-{2}".format(past_date.year,past_date.month,past_date.day))
-
-        prefix = "{0}/{1}_{2}-{3}-{4}_news".format(root_dir,stock_symbol,past_date.year,past_date.month,past_date.day)
-        for j in range(0,10):
-            news_html_file = "{0}{1}{2}".format(prefix,j,".html")
-            if(os.path.isfile(news_html_file)):
-                with open(news_html_file) as f:
-                    # print("{0}{1}".format("[data prep] now reading from: ",news_html_file))
-                    text = get_text_from_html(f)
-                    text = ' '.join(text)
-                    news.append(text)
+        news.append(date_to_articles_map[past_date])
     return news
 
 
-def init():
+def init(root_dir,stock_symbol):
     load_user_agent()
+    start_date = date(2016,1,1)
+    end_date = date(2017,7,22)
+    # end_date = date(2016,1,2)
 
-# root_dir = "/Users/liyuanqi/Google_Drive/UCLA_MSCS/Capstone/data"
+    build_article_map(root_dir,stock_symbol,start_date,end_date)
+
+
+
+# data_root_dir = "/Users/liyuanqi/Google_Drive/UCLA_MSCS/Capstone/data"
 # stock_symbol = "tsla"
-# get_news_from_past_n_days(root_dir,stock_symbol,2016,7,1,1)
+# # init(root_dir,stock_symbol)
+# current_date = date(2016,1,1)
+# news_dir = data_root_dir + "/" + stock_symbol
+
+# prefix = "{0}/{1}_{2}-{3}-{4}_news".format(news_dir,stock_symbol,current_date.year,current_date.month,current_date.day)
+# news_html_file = "{0}{1}{2}".format(prefix,3,".html")
+# with open(news_html_file) as f:
+#     extractor = Extractor(extractor='ArticleExtractor', html=f.read())
+#     extracted_text = extractor.getText()
+#     print(extracted_text)
