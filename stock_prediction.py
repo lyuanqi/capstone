@@ -15,6 +15,7 @@ from sklearn.decomposition import TruncatedSVD
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.neural_network import MLPClassifier
 from sklearn import metrics
+from sklearn.metrics import accuracy_score
 
 
 data_root_dir = "/Users/liyuanqi/Google_Drive/UCLA_MSCS/Capstone/data"
@@ -77,7 +78,7 @@ def prepare_data(past_n,start_date,end_date,keyword_num,term_offset):
 
 
 def prepare_data_for_prediction(vectorizer,past_n,start_date,end_date,keyword_num,term_offset):
-    print("[data prep] preparing training data...")
+    # print("[data prep] preparing training data...")
     trends_data_file_name = '{0}_all_trends_{1}_offset{2}.npy'.format(data_root_dir + "/" + stock_symbol,get_date_duration_string(start_date,end_date),term_offset) 
     vectorized_data_file_name = "{0}_n{1}_vectorized_data_{2}.npy".format(data_root_dir + "/" + stock_symbol,past_n,get_date_duration_string(start_date,end_date))
     past_n_trends_matrix_file_name = "{0}_past_{1}_trends_matrix_{2}.npy".format(data_root_dir + "/" + stock_symbol,past_n,get_date_duration_string(start_date,end_date))
@@ -98,7 +99,7 @@ def prepare_data_for_prediction(vectorizer,past_n,start_date,end_date,keyword_nu
             past_n_trends_matrix.append(trends)
 
     if(not file_exists(vectorized_data_file_name)):
-        print("[prediction data prep] Vectorizing data for past_n={0}...".format(past_n))
+        # print("[prediction data prep] Vectorizing data for past_n={0}...".format(past_n))
         data_train_vectorized = vectorizer.transform(all_news)
         data_train_vectorized = data_train_vectorized.toarray()
         np.save(vectorized_data_file_name,data_train_vectorized)
@@ -108,7 +109,7 @@ def prepare_data_for_prediction(vectorizer,past_n,start_date,end_date,keyword_nu
 
 
 def classification(classifier,past_n,start_date,end_date,keyword_num,term_offset,cv):
-    print("[classification] loading training data from .npy files...")
+    # print("[classification] loading training data from .npy files...")
     trends_data_file_name = '{0}_all_trends_{1}_offset{2}.npy'.format(data_root_dir + "/" + stock_symbol,get_date_duration_string(start_date,end_date),term_offset) 
     vectorized_data_file_name = "{0}_n{1}_vectorized_data_{2}.npy".format(data_root_dir + "/" + stock_symbol,past_n,get_date_duration_string(start_date,end_date))
     past_n_trends_matrix_file_name = "{0}_past_{1}_trends_matrix_{2}.npy".format(data_root_dir + "/" + stock_symbol,past_n,get_date_duration_string(start_date,end_date))
@@ -126,7 +127,7 @@ def classification(classifier,past_n,start_date,end_date,keyword_num,term_offset
     data_train_matrix = lsi.fit_transform(data_train_vectorized)
     data_train_matrix_with_past_price = np.c_[data_train_matrix, past_n_trends_matrix]
     # classifier = LogisticRegression()
-    print("[classification] training and predicting with past_n={0},keyword_num={1},term_offset={2}...".format(past_n,keyword_num,term_offset))
+    # print("[classification] training and predicting with past_n={0},keyword_num={1},term_offset={2}...".format(past_n,keyword_num,term_offset))
     scores = cross_val_score(classifier, data_train_matrix_with_past_price, all_trends, cv=cv,scoring='average_precision')
     return data_train_matrix_with_past_price, all_trends, scores
 
@@ -149,36 +150,25 @@ def get_vectorizer_and_lsi_for_period(start_date,end_date,past_n,keyword_num):
 
 
 def predict_with_classifier(classifier,past_n,start_date,end_date,keyword_num,term_offset):
-    print("[prediction] loading training data from .npy files...")
+    # print("[prediction] loading training data from .npy files...")
     trends_data_file_name = '{0}_all_trends_{1}_offset{2}.npy'.format(data_root_dir + "/" + stock_symbol,get_date_duration_string(start_date,end_date),term_offset) 
     vectorized_data_file_name = "{0}_n{1}_vectorized_data_{2}.npy".format(data_root_dir + "/" + stock_symbol,past_n,get_date_duration_string(start_date,end_date))
     past_n_trends_matrix_file_name = "{0}_past_{1}_trends_matrix_{2}.npy".format(data_root_dir + "/" + stock_symbol,past_n,get_date_duration_string(start_date,end_date))
-    lsi = None
-    all_data_files_exist = file_exists(trends_data_file_name) and file_exists(vectorized_data_file_name) and file_exists(past_n_trends_matrix_file_name)
-    if(not all_data_files_exist):
-        vectorizer,lsi = get_vectorizer_and_lsi_for_period(training_start_date,training_end_date,past_n,keyword_num)
-        prepare_data_for_prediction(vectorizer,past_n,start_date,end_date,keyword_num,term_offset)
+
+    vectorizer,lsi = get_vectorizer_and_lsi_for_period(training_start_date,training_end_date,past_n,keyword_num)
+    prepare_data_for_prediction(vectorizer,past_n,start_date,end_date,keyword_num,term_offset)
 
     data_train_vectorized = np.load(vectorized_data_file_name)
     all_trends = np.load(trends_data_file_name)
     past_n_trends_matrix = np.load(past_n_trends_matrix_file_name)
     data_train_matrix = lsi.transform(data_train_vectorized)
     data_train_matrix_with_past_price = np.c_[data_train_matrix, past_n_trends_matrix]
-    print(data_train_matrix_with_past_price.shape)
-    print("[prediction] predicting with past_n={0},keyword_num={1},term_offset={2}...".format(past_n,keyword_num,term_offset))
-    predicted_labels = classifier.predict(data_train_matrix_with_past_price)
-    print(metrics.classification_report(all_trends, predicted_labels))
+    # print("[prediction] predicting with past_n={0},keyword_num={1},term_offset={2}...".format(past_n,keyword_num,term_offset))
+    predicted_labels = classifier["classifier"].predict(data_train_matrix_with_past_price)
+    result = accuracy_score(all_trends, predicted_labels)
+    # print(result)
+    return result
 
-
-def get_cross_val_score(classifier,data_train,labels,cv):
-    try:
-        scores = cross_val_score(classifier, data_train, labels, cv=cv,scoring='average_precision')
-    except Exception:
-        param = {'silent':1, 'objective':'binary:logistic'}
-        num_round=1
-        res = classifier.cv(param, dtrain, num_round, nfold=5,
-               metrics={'error'}, seed = 0)
-        print(res)
 
 def train_with_params(classifier,start_date,end_date,cv,past_n_range,keyword_num_range,term_offset_range):
     all_results = []
@@ -189,26 +179,26 @@ def train_with_params(classifier,start_date,end_date,cv,past_n_range,keyword_num
                 params['past_n'] = past_n
                 params['keyword_num'] = keyword_num
                 params['term_offset'] = term_offset
-                training_data, training_labels, scores = classification(classifier,past_n,start_date,end_date,keyword_num,term_offset,cv)
-                classifier.fit(training_data,training_labels)
-
-                print(training_data.shape)
+                training_data, training_labels, scores = classification(classifier["classifier"],past_n,start_date,end_date,keyword_num,term_offset,cv)
 
                 prediction_start_date = date(2017,4,2)
-                prediction_end_date = date(2017,5,1)
-
-                predict_with_classifier(classifier,past_n,prediction_start_date,prediction_end_date,keyword_num,term_offset)
+                prediction_end_date = date(2017,6,2)
+                classifier["classifier"].fit(training_data,training_labels)
+                # predicted_metrics = predict_with_classifier(classifier,past_n,prediction_start_date,prediction_end_date,keyword_num,term_offset)
+                
                 result = {}
                 result['params'] = params
                 result['scores'] = scores
+                result['avg_score'] = np.mean(scores)
+                # result['predicted_metrics'] = predicted_metrics
                 all_results.append(result)
-                print_and_write_to_file("** | past_n={0} | keyword_num={1} | term_offset={2} | AVG_SCORE = {3}"
-                    .format(result['params']['past_n'],result['params']['keyword_num'],result['params']['term_offset'],np.mean(result['scores'])))
-                print_and_write_to_file("** scores: [{0}]".format(', '.join([str(x) for x in result['scores']])))
-                print_and_write_to_file("-------------------------------------------------------------------------")
+                # print_and_write_to_file("** | past_n={0} | keyword_num={1} | term_offset={2} | AVG_SCORE = {3}"
+                #     .format(result['params']['past_n'],result['params']['keyword_num'],result['params']['term_offset'],np.mean(result['scores'])))
+                # print_and_write_to_file("** scores: [{0}]".format(', '.join([str(x) for x in result['scores']])))
+                # print_and_write_to_file("-------------------------------------------------------------------------")
                 
-    np.save('all_results',all_results)
-
+    np.save('all_results{0}.npy'.format(classifier["name"].replace(" ", "_")),all_results)
+    return all_results
 
 def plot_for_varying_x(x_name,x_range,y_range):
     plt.figure()
@@ -219,6 +209,12 @@ def plot_for_varying_x(x_name,x_range,y_range):
     plt.plot(x_range, y_range, color = 'r', ls='-', marker='o')
     plt.savefig(x_name + "_accuracy_plot")
     plt.close()
+
+
+# def plot_for_classifier_results(classifier_results):
+#     default_n = 6
+#     results_map = np.load("results_map.npy")[()]
+#     print(results_map['Random Forest'])
 
 
 def print_and_write_to_file(string):
@@ -253,18 +249,41 @@ def main():
     start_date = training_start_date
     end_date = training_end_date
     # real ranges
-    # past_n_range = np.arange(1,41,1)
-    # keyword_num_range = np.arange(50,160,30)
-    # term_offset_range = [1,5,10,15,20,25,30]
-    past_n_range = [6]
-    keyword_num_range = [100]
-    term_offset_range = [10]
-    # classifier = RandomForestClassifier(random_state=1)
-    # classifier = XGBClassifier(seed=1)
-    classifier = MLPClassifier(solver='lbfgs',random_state=1)
-    train_with_params(classifier,start_date,end_date,cv,past_n_range,keyword_num_range,term_offset_range)
+    past_n_range = np.arange(1,41,1)
+    keyword_num_range = np.arange(10,160,10)
+    term_offset_range = np.arange(1,31,1)
+    # [1,5,10,15,20,25,30]
+    classifier1 = {}
+    classifier1["classifier"] = RandomForestClassifier(random_state=1)
+    classifier1["name"] = "Random Forest"
+    classifier2 = {}
+    classifier2["classifier"] = LogisticRegression()
+    classifier2["name"] = "Logistic Regression"
+    classifier3 = {}
+    classifier3["classifier"] = MLPClassifier(solver='lbfgs',random_state=1)
+    classifier3["name"] = "Multi-layer Perceptron"
     
+    classifiers = [classifier1,classifier2,classifier3]
 
+    classifier_to_all_results_map = {}
+    classifier_to_all_sorted_results_map = {}
+
+    for classifier in classifiers:
+        all_results = train_with_params(classifier,start_date,end_date,cv,past_n_range,keyword_num_range,term_offset_range)
+        classifier_to_all_results_map[classifier["name"]] = all_results
+        sorted_results = sorted(all_results, key=lambda k: k['avg_score'], reverse=True) 
+        classifier_to_all_sorted_results_map[classifier["name"]] = sorted_results
+        count = 0
+        for result in sorted_results:
+            if(count<5):
+                print("{0}#{1}:".format(classifier["name"],count))
+                print(result["params"])
+                print(result["avg_score"])
+                count = count + 1
+                print("------------------------")
+
+    np.save("results_map.npy",classifier_to_all_results_map)
+    np.save("sorted_results_map.npy",classifier_to_all_sorted_results_map)
     # all_results = np.load("all_results.npy")
     # keyword_num = 100
     # term_offset = 10
@@ -279,4 +298,50 @@ def main():
     # plot_for_varying_x("past_n",x_range,y_range)
 
 
-main()
+# main()
+# plot_for_classifier_results(None)
+def get_top_n_results(n):
+    init(data_root_dir,stock_symbol)
+    classifier1 = {}
+    classifier1["classifier"] = RandomForestClassifier(random_state=1)
+    classifier1["name"] = "Random Forest"
+    classifier2 = {}
+    classifier2["classifier"] = LogisticRegression()
+    classifier2["name"] = "Logistic Regression"
+    classifier3 = {}
+    classifier3["classifier"] = MLPClassifier(solver='lbfgs',random_state=1)
+    classifier3["name"] = "Multi-layer Perceptron"
+
+    classifiers = [classifier1,classifier2,classifier3]
+    classifier_to_all_sorted_results_map = np.load("sorted_results_map.npy")[()]
+
+    for classifier in classifiers:
+
+        result_array = classifier_to_all_sorted_results_map[classifier["name"]]
+        print(classifier["name"])
+        count =0 
+        for result in result_array:
+            if(count<n):
+                count = count +1
+                params = result["params"]
+                training_data, training_labels, scores = classification(classifier["classifier"],params["past_n"],training_start_date,training_end_date,params["keyword_num"],params["term_offset"],5)
+                prediction_start_date = date(2017,4,2)
+                prediction_end_date = date(2017,6,2)
+                classifier["classifier"].fit(training_data,training_labels)
+                prediction_score = predict_with_classifier(classifier,params["past_n"],date(2017,4,2),date(2017,6,2),params["keyword_num"],params["term_offset"])
+                print("{0},{1},{2},{3},{4}".format(params["past_n"],params["keyword_num"],params["term_offset"],result["avg_score"],prediction_score))
+
+
+get_top_n_results(10)
+
+
+
+
+
+
+
+
+
+
+
+
