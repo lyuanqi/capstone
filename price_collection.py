@@ -30,7 +30,8 @@ def build_date_to_price_map():
     dates_text = [x[0] for x in all_rows]
     dates = []
     for i in range(0,len(dates_text)):
-        dates.append(convert_string_to_date(dates_text[i]))
+        converted_date = convert_string_to_date(dates_text[i])
+        dates.append(converted_date)
     prices = [x[1] for x in all_rows]
     for i in range(0,len(dates)):
         date_to_price_map[dates[i]]=prices[i]
@@ -50,21 +51,17 @@ def get_date_string(year,month,day):
 
 def convert_string_to_date(string):
     m = re.match(r"(\d+)/(\d+)/(\d+)", string)
-    return date(int(m.groups()[0]),int(m.groups()[1]),int(m.groups()[2]))
+    return date(int(m.groups()[2])+2000,int(m.groups()[0]),int(m.groups()[1]))
 
 
 def get_nth_date(n):
     return sorted_dates[n]
 
 
-def get_trend_by_date(date):
-    while(date not in sorted_dates):
-        date = date - timedelta(days=1)
-    current_price = get_stock_price_by_date(date)
-    past_price = get_past_n_prices(date,1)[0]
-    if(multiclass):
-        return round((current_price-past_price)*100/past_price)
-    return current_price > past_price
+def get_trend_by_date(current_date, future_date):
+    current_price = get_past_n_prices(current_date,1)[0]
+    future_price = get_past_n_prices(future_date,1)[0]
+    return future_price > current_price
 
 
 def get_stock_price_by_date(date_string):
@@ -73,12 +70,13 @@ def get_stock_price_by_date(date_string):
 
 def get_past_n_prices(date,n):
     prices=[]
+
     while(date not in sorted_dates):
         date = date - timedelta(days=1)
     date_index = date_to_index_map[date]
     if date_index-n<0:
         raise ValueError('date cannot be the oldest n dates')
-    for i in range(date_index - n, date_index):
+    for i in range(date_index - n + 1, date_index + 1):
         prices.append(date_to_price_map[sorted_dates[i]])
     return prices
 
@@ -88,19 +86,13 @@ def get_past_n_trends(date,n):
     trends = []
     for i in range(len(prices)-1):
         trends.append(round((prices[i+1]-prices[i])*100.0/prices[i]))
+        # trends.append(prices[i+1]>prices[i])
     return trends
-
-
-
-# def get_past_n_prices(index, n):
-#     prices=[]
-#     date_index = index
-#     if date_index-n<0:
-#         raise ValueError('date cannot be the oldest n dates')
-#     for i in range(date_index - n, date_index):
-#         prices.append(date_to_price_map[sorted_dates[i]])
-#     return prices
 
 
 def has_date(date):
     return date in sorted_dates
+
+# init()
+# print(get_trend_by_date(date(2015,12,31),date(2016,4,29)))
+
