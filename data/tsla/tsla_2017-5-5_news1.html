@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8">
+<script data-cfasync='false' data-pagespeed-no-defer>var __ez=__ez||{};__ez.evt={};__ez.ck={};__ez.dot={};__ez.template={};__ez.template.isOrig=true;__ez.evt.add=function(el,evt,handler){if(el.addEventListener){el.addEventListener(evt,handler,false)}else if(el.attachEvent){el.attachEvent('on'+evt,handler)}else{el['on'+evt]=handler()}};__ez.ck.get=function(n,e){null!==e&&(n=n+"_"+e);for(var t=n+"=",r=decodeURIComponent(document.cookie),o=r.split(";"),i=0;i<o.length;i++){for(var u=o[i];" "===u.charAt(0);)u=u.substring(1);if(0===u.indexOf(t))return u.substring(t.length,u.length)}return""};__ez.queue=function(){function g(a,b,g,h,j,k,l,m){var n=new f.file(a,b,g,h,j,k,l);!0===m?d[a]=n:e[a]=n,c[a]=n,i(n)}function h(a,g,h,j,k,l,m,n,o){!0===l&&(a=a+"_"+b++);var p=new f.func(a,g,h,j,k,m,n);!0===o?d[a]=p:e[a]=p,c[a]=p,i(p)}function i(a){!0!==j(a)&&a.process()}function j(a){if(a.blockedBy instanceof Array)for(var b=0;b<a.blockedBy.length;b++){var d=a.blockedBy[b];if(!1===c.hasOwnProperty(d))return k(a.name+" blocked = "+d),!0;if(!0===a.proceedIfError&&!0===c[d].isError)return!1;if(!1===c[d].isComplete)return k(a.name+" blocked = "+d),!0}return!1}function k(a){var b=window.location.href,c=new RegExp("[?&]ezq=([^&#]*)","i"),d=c.exec(b);"1"===(d?d[1]:null)&&console.debug(a)}function l(){++a>20||(k("let's go"),m(d),m(e))}function m(a){for(var b in a)if(!1!==a.hasOwnProperty(b)){var c=a[b];!0===c.isComplete||j(c)||!0===c.isInitialized||!0===c.isError?!0===c.isError?k(c.name+": error"):!0===c.isComplete?k(c.name+": complete already"):!0===c.isInitialized&&k(c.name+": initialized already"):c.process()}}var a=0,b=0,c=[],d=[],e=[],f={func:function(a,b,d,e,f,g,h){var i=this;this.name=a,this.funcName=b,this.parameters=null===d?null:d instanceof Array?d:[d],this.isBlock=e,this.blockedBy=f,this.deleteWhenComplete=g,this.isError=!1,this.isComplete=!1,this.isInitialized=!1,this.proceedIfError=h,this.process=function(){k("... func = "+a),i.isInitialized=!0,i.isComplete=!0;var b=i.funcName.split(".");b.length>3||(3===b.length?window[b[0]][b[1]][b[2]].apply(null,this.parameters):2===b.length?window[b[0]][b[1]].apply(null,this.parameters):window[i.funcName].apply(null,this.parameters)),!0===i.deleteWhenComplete&&delete c[a],!0===i.isBlock&&(k("----- F'D: "+i.name),l())}},file:function(a,b,c,d,e,f,g){var h=this;this.name=a,this.path=b,this.async=e,this.defer=f,this.isBlock=c,this.blockedBy=d,this.isInitialized=!1,this.isError=!1,this.isComplete=!1,this.proceedIfError=g,this.process=function(){h.isInitialized=!0,k("... file = "+a);var c=document.createElement("script");c.src=b,!0===e?c.async=!0:!0===f&&(c.defer=!0),c.onerror=function(){k("----- ERR'D: "+h.name),h.isError=!0,!0===h.isBlock&&l()},c.onreadystatechange=c.onload=function(){var a=c.readyState;k("----- F'D: "+h.name),a&&!/loaded|complete/.test(a)||(h.isComplete=!0,!0===h.isBlock&&l())},document.getElementsByTagName("head")[0].appendChild(c)}}};return{addFile:g,addFunc:h,items:c}}();var __ezDotData=function(a,b){this.name=a,this.val=b};__ez.dot.b64={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",encode:function(a){var c,d,e,f,g,h,i,b="",j=0;for(a=Base64._utf8_encode(a);j<a.length;)c=a.charCodeAt(j++),d=a.charCodeAt(j++),e=a.charCodeAt(j++),f=c>>2,g=(3&c)<<4|d>>4,h=(15&d)<<2|e>>6,i=63&e,isNaN(d)?h=i=64:isNaN(e)&&(i=64),b=b+this._keyStr.charAt(f)+this._keyStr.charAt(g)+this._keyStr.charAt(h)+this._keyStr.charAt(i);return b},decode:function(a){var c,d,e,f,g,h,i,b="",j=0;for(a=a.replace(/[^A-Za-z0-9+\/=]/g,"");j<a.length;)f=this._keyStr.indexOf(a.charAt(j++)),g=this._keyStr.indexOf(a.charAt(j++)),h=this._keyStr.indexOf(a.charAt(j++)),i=this._keyStr.indexOf(a.charAt(j++)),c=f<<2|g>>4,d=(15&g)<<4|h>>2,e=(3&h)<<6|i,b+=String.fromCharCode(c),64!=h&&(b+=String.fromCharCode(d)),64!=i&&(b+=String.fromCharCode(e));return b=Base64._utf8_decode(b)},_utf8_encode:function(a){a=a.replace(/rn/g,"n");for(var b="",c=0;c<a.length;c++){var d=a.charCodeAt(c);d<128?b+=String.fromCharCode(d):d>127&&d<2048?(b+=String.fromCharCode(d>>6|192),b+=String.fromCharCode(63&d|128)):(b+=String.fromCharCode(d>>12|224),b+=String.fromCharCode(d>>6&63|128),b+=String.fromCharCode(63&d|128))}return b},_utf8_decode:function(a){for(var b="",c=0,d=c1=c2=0;c<a.length;)d=a.charCodeAt(c),d<128?(b+=String.fromCharCode(d),c++):d>191&&d<224?(c2=a.charCodeAt(c+1),b+=String.fromCharCode((31&d)<<6|63&c2),c+=2):(c2=a.charCodeAt(c+1),c3=a.charCodeAt(c+2),b+=String.fromCharCode((15&d)<<12|(63&c2)<<6|63&c3),c+=3);return b}},__ez.dot.dataToStr=function(a){if(void 0===a)return[];try{for(var b in a)a[b].val=a[b].val+""}catch(a){}return a},__ez.dot.getCC=function(){var a="XX";return"undefined"!=typeof _ezaq&&_ezaq.hasOwnProperty("country")&&(a=_ezaq.country),a},__ez.dot.getDID=function(){var a="0";return"undefined"!=typeof _ezaq&&_ezaq.hasOwnProperty("domain_id")&&(a=_ezaq.domain_id.toString()),a},__ez.dot.getEpoch=function(a){return"undefined"!=typeof _ezaq&&_ezaq.hasOwnProperty("t_epoch")&&(a=_ezaq.t_epoch),a},__ez.dot.getURL=function(a){return("undefined"!=typeof ezJsu&&1==ezJsu||"undefined"!=typeof _ez_sa&&1==_ez_sa||"undefined"!=typeof isAmp&&!0===isAmp)&&(a="//g.ezoic.net"+a),a},__ez.dot.isValid=function(a){for(var b=0;b<a.length;b++)if(a[b]instanceof __ezDotData==!1)return console.error("Invalid data. ",a[b]),!1;return!0},__ez.dot.isDefined=function(){for(var a=0;a<arguments.length;a++)if(void 0===arguments[a]||null===arguments[a])return console.error("Argument not defined. ",arguments),!1;return!0};__ez.bit=function(){function c(a,b){d(a,b),e()}function d(b,c){__ez.dot.isDefined(b)&&__ez.dot.isValid(c)&&a.push({type:"pageview",pageview_id:b,domain_id:__ez.dot.getDID(),t_epoch:__ez.dot.getEpoch(0),data:__ez.dot.dataToStr(c)})}function e(){void 0!==document.visibilityState&&"prerender"===document.visibilityState||(__ez.dot.isDefined(a)&&a.length>0&&((new Image).src=__ez.dot.getURL(b)+"?orig="+(!0===__ez.template.isOrig?1:0)+"&ds="+btoa(JSON.stringify(a))),a=[])}var a=[],b="/detroitchicago/greenoaks.gif";return{Add:d,AddAndFire:c,Fire:e}}();</script><script data-cfasync='false' data-pagespeed-no-defer>__ez.pel=function(){function c(a,b){d(a,b,0,0,0,0,0),f()}function d(b,c,d,e,f,h,i){if(__ez.dot.isDefined(b,b.getSlotElementId)){var j=parseInt(b.getTargeting("ap")[0]),k=b.getSizes()[0],l=k.l.toString()+"x"+k.j.toString(),m=g(b),n=b.getSlotElementId();__ez.dot.isDefined(m,n)&&__ez.dot.isValid(c)&&a.push({type:"impression",impression_id:m,domain_id:__ez.dot.getDID(),unit:n,t_epoch:__ez.dot.getEpoch(0),revenue:d,est_revenue:e,ad_position:j,ad_size:l,bid_floor_filled:f,bid_floor_prev:h,stat_source_id:i,country_code:__ez.dot.getCC(),data:__ez.dot.dataToStr(c)})}}function e(b,c){var d=b.split("/");if(__ez.dot.isDefined(b)&&3===d.length&&__ez.dot.isValid(c)){var e=d[0],f=d[2];a.push({type:"impression",impression_id:f,domain_id:__ez.dot.getDID(),unit:e,t_epoch:__ez.dot.getEpoch(0),data:__ez.dot.dataToStr(c)})}}function f(){void 0!==document.visibilityState&&"prerender"===document.visibilityState||(__ez.dot.isDefined(a)&&a.length>0&&((new Image).src=__ez.dot.getURL(b)+"?orig="+(!0===__ez.template.isOrig?1:0)+"&sts="+btoa(JSON.stringify(a))),a=[])}function g(a){var b=0;try{var c=a.getTargetingMap();if(-1===a.getSlotElementId().indexOf("div-gpt-ad"))return b;if(void 0!==c)for(var e in c)if(-1!==e.indexOf("iid")&&void 0!==c[e][0]){b=c[e][0];break}}catch(a){}return b}var a=[],b="/porpoiseant/army.gif";return{Add:d,AddAndFire:c,AddById:e,Fire:f}}();var EzoicPixel=function(){this.pixels=[],this.pixelUrl="/ezoic/e.gif",("undefined"!=typeof ezJsu&&ezJsu===!0||"undefined"!=typeof _ez_sa&&_ez_sa===!0||"undefined"!=typeof window.isAmp&&isAmp===!0)&&(this.pixelUrl="//g.ezoic.net"+this.pixelUrl),this.tEpoch=0,"undefined"!=typeof _ezaq&&_ezaq.hasOwnProperty("t_epoch")&&(this.tEpoch=_ezaq.t_epoch)},EzoicPixelData=function(a,b){this.name=a,this.val=b};EzoicPixel.prototype={constructor:EzoicPixel,AddAndFireImpPixel:function(a,b){this.AddImpPixel(a,b,0,0,0,0,0),this.FirePixels()},AddAndFirePVPixel:function(a,b){this.AddPVPixel(a,b),this.FirePixels()},AddImpPixel:function(a,b,c,d,e,f,g){if(this.isDefined(a,a.getSlotElementId)){var h=parseInt(a.getTargeting("ap")[0]),i=a.getSizes()[0],j=i.l.toString()+"x"+i.j.toString(),k="0",l="XX";"undefined"!=typeof _ezaq&&_ezaq.hasOwnProperty("domain_id")&&(k=_ezaq.domain_id.toString()),"undefined"!=typeof _ezaq&&_ezaq.hasOwnProperty("country")&&(l=_ezaq.country);var m=this.getSlotIID(a),n=a.getSlotElementId();this.isDefined(m,n)&&this.validateData(b)&&(b=this.convertDataToStr(b),this.pixels.push({type:"impression",impression_id:m,domain_id:k,unit:n,t_epoch:this.tEpoch,revenue:c,est_revenue:d,ad_position:h,ad_size:j,bid_floor_filled:e,bid_floor_prev:f,stat_source_id:g,country_code:l,data:b}))}},AddImpPixelById:function(a,b){var c="0";"undefined"!=typeof _ezaq&&_ezaq.hasOwnProperty("domain_id")&&(c=_ezaq.domain_id.toString());var d=a.split("/");if(this.isDefined(a)&&3===d.length&&this.validateData(b)){var e=d[0],f=d[2];b=this.convertDataToStr(b),this.pixels.push({type:"impression",impression_id:f,domain_id:c,unit:e,t_epoch:this.tEpoch,data:b})}},AddPVPixel:function(a,b){var c="0";"undefined"!=typeof _ezaq&&_ezaq.hasOwnProperty("domain_id")&&(c=_ezaq.domain_id.toString()),this.isDefined(a)&&this.validateData(b)&&(b=this.convertDataToStr(b),this.pixels.push({type:"pageview",pageview_id:a,domain_id:c,t_epoch:this.tEpoch,data:b}))},FirePixels:function(){"undefined"!=typeof document.visibilityState&&"prerender"===document.visibilityState||(this.isDefined(this.pixels)&&this.pixels.length>0&&((new Image).src=this.pixelUrl+"?orig="+(__ez.template.isOrig===!0?1:0)+"&pixels="+encodeURIComponent(JSON.stringify(this.pixels))),this.pixels=[])},NewData:function(a,b){return new EzoicPixelData(a,b)},convertDataToStr:function(a){if("undefined"==typeof a)return[];try{for(var b in a)a[b].val=a[b].val+""}catch(a){}return a},getSlotIID:function(a){var b=0;try{var c=a.getTargetingMap(),d=a.getSlotElementId();if(d.indexOf("div-gpt-ad")===-1)return b;if("undefined"!=typeof c)for(var e in c)if(e.indexOf("iid")!==-1&&"undefined"!=typeof c[e][0]){b=c[e][0];break}}catch(a){}return b},isDefined:function(){for(var a=0;a<arguments.length;a++)if("undefined"==typeof arguments[a]||null===arguments[a])return console.error("Argument not defined. ",arguments),!1;return!0},validateData:function(a){for(var b=0;b<a.length;b++)if(a[b]instanceof EzoicPixelData==!1)return console.error("Invalid pixelData. ",a[b]),!1;return!0}};</script>
+
+<title>
+Tesla Inc (TSLA), Twilio Inc (TWLO) And QUALCOMM, Inc. (QCOM) - Today's Technical Trading Ideas</title>
+<link rel="stylesheet" type="text/css" href="https://static.amigobulls.com/css/1499152099_amigo_template.min.css"><meta name='description' content="Take a look at today's technical trading ideas for- Tesla Inc (NASDAQ:TSLA) stock, Twilio Inc (NYSE:TWLO) stock and QUALCOMM, Inc. (NASDAQ: QCOM) stock." />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+<link rel="shortcut icon" href="https://static.amigobulls.com/v2images/favicon.ico" type="image/x-icon" >
+  <link rel='canonical' href='https://amigobulls.com/articles/2017-05-05-tesla-inc-tsla-twilio-inc-twlo-and-qualcomm-inc-qcom-todays-technical-trading-ideas' />
+<meta property="fb:pages" content="508744769149352" />
+	<link rel="amphtml" href='https://amigobulls.com/amphtml/articles/2017-05-05-tesla-inc-tsla-twilio-inc-twlo-and-qualcomm-inc-qcom-todays-technical-trading-ideas' />
+	<meta name='news_keywords' content=' Tesla Inc (NASDAQ:TSLA) stock, Tesla Inc (NASDAQ:TSLA) news, Stock Market News, Technical Analysis' />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Tesla Inc (TSLA), Twilio Inc (TWLO) And QUALCOMM, Inc. (QCOM) - Today's Technical Trading Ideas" />
+	<meta property="og:description" content="Take a look at today's technical trading ideas for- Tesla Inc (NASDAQ:TSLA) stock, Twilio Inc (NYSE:TWLO) stock and QUALCOMM, Inc. (NASDAQ: QCOM) stock." />
+	<meta property="og:url" content="https://amigobulls.com/articles/2017-05-05-tesla-inc-tsla-twilio-inc-twlo-and-qualcomm-inc-qcom-todays-technical-trading-ideas" />
+	<meta property="og:site_name" content="Amigobulls : Technology Stock Analysis" />
+	<meta property="article:publisher" content="https://www.facebook.com/amigobulls" />
+		<meta property="article:tag" content="Tesla Inc, Twilio, Qualcomm" />
+			<meta property="article:section" content="Stock Market News, Technical Analysis News" />
+		<meta property="article:published_time" content="2017-05-05 06:35:21" />
+		<meta property="fb:app_id" content="451038928314843" />
+		<meta property="og:image:type" content="image/png" />
+	<meta property="og:image" content="https://static.amigobulls.com/articles/wp-content/uploads/2017/05/Tesla-Inc-TSLA-Twilio-Inc-TWLO-And-QUALCOMM-Inc.-QCOM-Todays-Technical-Trading-Ideas.jpg" />
+		<meta name="twitter:card" content="summary"/>
+	<meta name="twitter:site" content="@amigobulls"/>
+	<meta name="twitter:domain" content="amigobulls.com"/>
+		<meta name="twitter:creator" content="@https://twitter.com/sreekanthOne1A" />
+			<meta name="twitter:image:src" content="https://static.amigobulls.com/articles/wp-content/uploads/2017/05/Tesla-Inc-TSLA-Twilio-Inc-TWLO-And-QUALCOMM-Inc.-QCOM-Todays-Technical-Trading-Ideas.jpg" />
+	<meta name="twitter:image" content="https://static.amigobulls.com/articles/wp-content/uploads/2017/05/Tesla-Inc-TSLA-Twilio-Inc-TWLO-And-QUALCOMM-Inc.-QCOM-Todays-Technical-Trading-Ideas.jpg" />
+		<meta name="twitter:description" content="Take a look at today's technical trading ideas for- Tesla Inc (NASDAQ:TSLA) stock, Twilio Inc (NYSE:TWLO) stock and QUALCOMM, Inc. (NASDAQ: QCOM) stock."/>
+	<meta name="twitter:title" content="Tesla Inc (TSLA), Twilio Inc (TWLO) And QUALCOMM, Inc. (QCOM) - Today's Technical Trading Ideas"/>
+	<meta name="twitter:url" content="https://amigobulls.com/articles/2017-05-05-tesla-inc-tsla-twilio-inc-twlo-and-qualcomm-inc-qcom-todays-technical-trading-ideas"/>
+
+  <script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script type="text/javascript">
+    function setCookie(name,userid,domain){
+        var exdate=new Date();
+        exdate.setDate(exdate.getDate() + 10000);
+        var c_value=userid + ("; expires="+exdate.toUTCString())+(";domain="+domain+"; path=/;");
+        document.cookie=name + "=" + c_value;
+    }
+    setCookie("userid",'59771f97b39fc','.amigobulls.com'); //set cookie for .amigobulls.com intailly
+  </script>
+<script type="text/javascript">
+    width=window.innerWidth;
+    if (width >= 1200) {
+        device_type = "desktop";
+        document.cookie = "device=desktop"+"; path=/";
+    }else if(width>=760){
+        device_type = "tablet";
+        document.cookie = "device=tablet"+"; path=/";
+    }else{
+        device_type = "mobile";
+        document.cookie = "device=mobile"+"; path=/";
+    } 
+</script>
+ 
+<script>
+var _prum = [['id', '557af72cabe53d446b5ce345'],
+             ['mark', 'firstbyte', (new Date()).getTime()]];
+(function() {
+    var s = document.getElementsByTagName('script')[0]
+      , p = document.createElement('script');
+    p.async = 'async';
+    p.src = '//rum-static.pingdom.net/prum.min.js';
+    s.parentNode.insertBefore(p, s);
+})();
+</script>
+
+<script data-cfasync="false" type="text/javascript">window.google_analytics_uacct = "UA-97831649-32";</script>
+<script data-cfasync="false" type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['e._setAccount', 'UA-97831649-32']);
+_gaq.push(['f._setAccount', 'UA-38339005-1']);
+_gaq.push(['e._setDomainName', 'amigobulls.com']);
+_gaq.push(['f._setDomainName', 'amigobulls.com']);
+_gaq.push(['e._setCustomVar',1,'template','old_site_gc',3]);
+_gaq.push(['e._setCustomVar',2,'t','126',3]);
+_gaq.push(['e._setCustomVar',3,'rid','0',2]);
+_gaq.push(['e._setCustomVar',4,'bra','mod4',3]);
+_gaq.push(['e._setAllowAnchor',true]);
+_gaq.push(['e._setSiteSpeedSampleRate', 10]);
+_gaq.push(['f._setCustomVar',1,'template','old_site_gc',3]);
+_gaq.push(['f._setCustomVar',2,'domain','amigobulls.com',3]);
+_gaq.push(['f._setSiteSpeedSampleRate', 20]);
+_gaq.push(['e._trackPageview']);
+_gaq.push(['f._trackPageview']);
+
+
+(function() {
+ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script type="text/javascript">var ezouid = "1398600005";</script><base href="https://amigobulls.com/articles/2017-05-05-tesla-inc-tsla-twilio-inc-twlo-and-qualcomm-inc-qcom-todays-technical-trading-ideas"><script type='text/javascript'>
+var ezoTemplate = 'old_site_gc';
+if(typeof ezouid == 'undefined')
+{
+    var ezouid = 'none';
+}
+var ezoFormfactor = '1';
+var ezo_elements_to_check = Array();
+</script><!-- START EZHEAD -->
+<script type='text/javascript'>
+var soc_app_id = '0';
+var did = 46056;
+var ezdomain = 'amigobulls.com';
+var ezoicSearchable = 1;
+</script>
+<!--{jquery}-->
+<!-- END EZHEAD -->
+<script type="text/javascript" data-cfasync="false">var _ezaq = {"ab_test_id":"mod4","ab_test_val":"","ad_cache_level":0,"adgroup_rank_id":-1,"browser":"Firefox","browser_version":0,"country":"US","device_height":528,"device_width":1280,"domain_id":46056,"engaged_time_visit":0,"ezcache_level":0,"forensiq_score":-1,"form_factor_id":1,"ip":"10.0.0.72","is_bot":0,"landing_page_url":"https://amigobulls.com/articles/2017-05-05-tesla-inc-tsla-twilio-inc-twlo-and-qualcomm-inc-qcom-todays-technical-trading-ideas","lt_cache_level":0,"os":"Windows","page_ad_positions":"","page_view_id":"ff00f2f2-64ec-4ce4-7906-4cff9e6740c3","pv_event_count":0,"referrer_id":0,"referring_domain":"google.com","region":"us-west-1","serverid":"54.183.163.219:16031","t_epoch":1500979095,"template_id":126,"time_on_site_visit":0,"url":"https://amigobulls.com/articles/2017-05-05-tesla-inc-tsla-twilio-inc-twlo-and-qualcomm-inc-qcom-todays-technical-trading-ideas","user_agent":"Mozilla/5.0 (Windows NT 6.2; WOW64; rv:1.8.0.7) Gecko/20110321 MultiZilla/4.33.2.6a SeaMonkey/8.6.55","user_id":1398600005,"visit_id":43523614};var _ezExtraQueries = "&ez_orig=1";</script><script data-cfasync='false' type="text/javascript" src="/detroitchicago/rochester.js?cb=169-0&v=7" async></script></head>
+<body>
+    <div id="main-content" class="clearfix">
+        <div id="header">
+            <header class="new_header home_hide positionRelative" id="header_cont">
+    <nav class="all_menus">
+        <div class="mobi-hideit fs75 toprow"><div class='all_stocks'><div class='newstocks_head  colr1 left'><a class='tickerblue' href='https://amigobulls.com/stocks/AAPL/analysis'  title="Apple stock analysis">AAPL</a>&nbsp;<span class= 'mobi-hideit'><span class='fa fa-arrow-up'></span>$152.09 (1.21%)</span></div><div class='newstocks_head  colr1 left'><a class='tickerblue' href='https://amigobulls.com/stocks/FB/analysis'  title="Facebook stock analysis">FB</a>&nbsp;<span class= 'mobi-hideit'><span class='fa fa-arrow-up'></span>$166 (0.95%)</span></div><div class='newstocks_head  colr1 left'><a class='tickerblue' href='https://amigobulls.com/stocks/AMZN/analysis'  title="Amazon stock analysis">AMZN</a>&nbsp;<span class= 'mobi-hideit'><span class='fa fa-arrow-up'></span>$1038.95 (1.29%)</span></div><div class='newstocks_head  colr1 left'><a class='tickerblue' href='https://amigobulls.com/stocks/GOOG/analysis'  title="Alphabet Inc-C stock analysis">GOOG</a>&nbsp;<span class= 'mobi-hideit'><span class='fa fa-arrow-up'></span>$980.34 (0.76%)</span></div></div></div> 
+        <div class="clear separater mobi-hideit home_tab_hide"></div>
+            <div class="overlay_mask mobi_tab_hide"></div>
+            <div class ="smallmenu mobi_tab_hide">
+                <div class="logindiv fs75 toprow">
+                    <span class="hoverorange enrich active_menu"><a href="https://enrichview.in/">AMIGOBULLS FOR BUSINESS</a></span>
+                     
+                        <span class="joinus signupfromjq hoverorange">SIGN UP</span>
+                        <span class="login hoverorange loginfromjq ">LOGIN</span>
+                        <!-- <span class="hoverblack mobi_tab_hide" id="signup" ><a href='' title="Become a contributor for amigobulls" id='contributer'>CONTRIBUTE</a></span> -->
+                                    </div> 
+                <div class="right mt3px search_box">
+                                </div>
+                <div  class="bottomrow menu fs80 ">
+                    <ul class="menudiv">       
+                        <li id="index"  class="hover_parent" data-nav="primary">
+                            <a href="https://amigobulls.com" title="amigobulls - homepage"><span class="desktop_hide line_text">HOME<span class="under_line"></span></span><span class="mobi_tab_hide fa fa-home fa-lg"></span></a>
+                        </li>
+                        <li id="fundamentalpicks" class=" alink_parent" data-nav="primary" >
+                            <div class="mobi_menulist">
+                                <span class=' mainlink alink_click hoverorange'>STOCK PICKS<span class="under_line"></span></span>
+                                <i class ="marrow fa fa-chevron-down"></i>
+                            </div>
+                            <ul id='picks_ul' class="sub-menu"  >
+                                <li ><a class='alink' href="https://amigobulls.com/stocks-to-buy/top-tech-stocks/" title="Technology Stock Picks">Technology Stock Picks</a></li>
+                                <li ><a href="https://amigobulls.com/stocks-to-buy/best-stocks-to-buy-today/" title="Stocks to buy Today">Daily Stock Picks</a></li>
+                                <li ><a href="https://amigobulls.com/stocks-to-buy/top-auto-stocks/" title="Top Auto Stocks">Top Auto Stocks</a></li>
+
+                                </ul>   
+                        </li>
+                        <li id="analysis"  class=" alink_parent" data-nav="primary">
+                            <div class="mobi_menulist">
+                                <span class=' mainlink alink_click hoverorange'>ARTICLES<span class="under_line"></span></span>
+                                <i class ="marrow fa fa-chevron-down"></i>
+                            </div>
+                            <ul id='analysis_ul' class="sub-menu"  >
+                                <li ><a class='alink' href="https://amigobulls.com/articles/" title="Latest">Latest</a></li> 
+                                <li ><a href="https://amigobulls.com/articles/category/earnings-analysis" title="Earnings Analysis">Earnings Analysis</a></li> 
+                                <li ><a href="https://amigobulls.com/articles/category/finance" >Finance</a></li> 
+                                <li ><a href="https://amigobulls.com/articles/category/stock-updates" >Stock Updates</a></li>
+                                <li ><a href="https://amigobulls.com/articles/category/investing" >Investing</a></li> 
+                                <li ><a href="https://amigobulls.com/articles/category/stock-market-news" >Stock Market News</a></li>
+                                <li ><a href="https://amigobulls.com/articles/category/stock-valuation" >Stock Valuation</a></li>
+                                <li ><a href="https://amigobulls.com/articles/category/ipo">IPO</a></li>
+                                <li ><a href="https://amigobulls.com/articles/category/technical-analysis">Technical Analysis</a></li>
+                            </ul>
+                        </li>        
+                        <li id="screener" class="hover_parent" data-nav="primary">
+                            <a href="https://amigobulls.com/sectors/computer-and-technology/internet-services" class="colorgreyNew  hoverorange" title="Technology and internet stocks"><span class="line_text">SCREENER<span class="under_line"></span></span></a>
+                        </li>
+                        <li  id="mystocks"   class="hover_parent" data-nav="primary" >
+                            <a class='colorgreyNew' href="https://amigobulls.com/watchlist" title="My Stocks"><span class="line_text  hoverorange">MY STOCKS<span class="under_line"></span></span> <span class ="left fa fa-heart mr5px mt3px mobi_tab_hide"></span></a>
+                        </li>                    
+                    </ul>
+                </div>            </div> 
+            <div class="top_layer ">
+                                           <a  href="https://amigobulls.com" title="amigobulls.com - internet stock analysis" >
+                          <span class="amigo_logo"></span>
+                        </a>
+                                </div> 
+            <div class="desktop_hide  small-menu-click fa fa-bars fa-lg colorgreyNew"></div>   
+            <div  class="bottom_layer searchdiv fs80 home_tab_hide">  
+                <input title="ticker or company or video" placeholder="Ticker or Company" type="text" id="edit-search-block-form--2" data-qs="ms" data-show_video_icon="true" data-context_search='false' data-page_redirect="true" name="search_block_form" size="15" maxlength="128" class=" footer_search_input form-text ui-autocomplete-processed ui-autocomplete-input nobold" aria-autocomplete="list" > 
+                <span class="fa fa-search fa-lg mobi-hideit" ></span>
+                 <div class="clear"></div>
+            </div>
+            <div id="mobi_search_icon_1"  class="desktop_tab_hide pointerCursor fa fa-search"><div class="cross-icon  mobi_tab_hide"> &#10005;</div></div> 
+        <div class="clear"></div>
+    </nav>
+</header>
+        </div>
+        <div id="primary" class="container  clearfix scroll_loop">
+        <div id="article_1">
+        		<ol class=' breadcrumbs fs62 mobi-hideit mtn10px' itemscope itemtype="https://schema.org/BreadcrumbList">
+		<li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem' class='displayInline'><a itemprop='item'   href='https://amigobulls.com/' title='amigobulls.com'><span itemprop='name'>Home</span></a><meta itemprop='position' content='1' /></li><li class='displayInline'> &gt; </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem' class='displayInline'><a itemprop='item'   href='https://amigobulls.com/articles/' title='stock market news and research'><span itemprop='name'>Stocks Market News - Articles & Analysis</span></a><meta itemprop='position' content='2' /></li><li class='displayInline'> &gt; </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem' class='displayInline'><a itemprop='item'   href='https://amigobulls.com/articles/category/stock-market-news' title='Stock Market News'><span itemprop='name'>Stock Market News</span></a><meta itemprop='position' content='3' /></li><li class='displayInline'> &gt; </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem' class='displayInline'><a itemprop='item'   href='https://amigobulls.com/articles/2017-05-05-tesla-inc-tsla-twilio-inc-twlo-and-qualcomm-inc-qcom-todays-technical-trading-ideas' title='Tesla Inc (TSLA), Twilio Inc (TWLO) And QUALCOMM, Inc. (QCOM) - Today&#039;s Technical Trading Ideas'><span itemprop='name'>Tesla Inc (TSLA), Twilio Inc (TWLO) And QUALCOMM, Inc. (QCOM) - Today&#039;s Technical Trading Ideas</span></a><meta itemprop='position' content='4' /></li>		</ol>
+
+		<article id="post-71951" class="post_content_maindiv">
+			<div itemscope itemtype="https://schema.org/NewsArticle">
+		<meta itemscope itemprop="mainEntityOfPage" itemType="https://schema.org/WebPage" itemid="https://amigobulls.com/articles/2017-05-05-tesla-inc-tsla-twilio-inc-twlo-and-qualcomm-inc-qcom-todays-technical-trading-ideas" content="https://amigobulls.com/articles/2017-05-05-tesla-inc-tsla-twilio-inc-twlo-and-qualcomm-inc-qcom-todays-technical-trading-ideas" />
+	<meta itemprop="inlanguage" content="en-US" />
+	<div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+        <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+              <meta itemprop="url" content="https://static.amigobulls.com/v2images/amigobulls_logo.png">
+              <meta itemprop="width" content="169">
+              <meta itemprop="height" content="39">
+        </div>
+        <meta itemprop="name" content="Amigobulls">
+    </div>
+		<header>
+		<h1 itemprop="headline" class='small borderNone'>
+		Tesla Inc (TSLA), Twilio Inc (TWLO) And QUALCOMM, Inc. (QCOM) - Today's Technical Trading Ideas		</h1>
+	<div class='borderBottomSolid mt10px mb5px'></div>
+		<div class="clear"></div>
+				<meta itemprop="description" content="Take a look at today's technical trading ideas for- Tesla Inc (NASDAQ:TSLA) stock, Twilio Inc (NYSE:TWLO) stock and QUALCOMM, Inc. (NASDAQ: QCOM) stock.">		<meta itemprop="audience" content='NASDAQ and NYSE stock investors'>
+		<meta itemprop="url discussionUrl" content='https://amigobulls.com/articles/2017-05-05-tesla-inc-tsla-twilio-inc-twlo-and-qualcomm-inc-qcom-todays-technical-trading-ideas'>
+		<meta itemprop="keywords" content='TSLA stock, TSLA news, Tesla Inc (NASDAQ:TSLA) Stock Market News, Technical Analysis'/>
+		<meta itemprop="datePublished" content="2017-05-05T10:35:21-04:00" />
+		<meta itemprop="dateModified" content="2017-05-05T11:05:25-04:00" />
+		<meta itemprop="articleSection" content='Stock Market News, Technical Analysis News' />						    <div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+				<meta itemprop="url" content="https://static.amigobulls.com/articles/wp-content/uploads/2017/05/Tesla-Inc-TSLA-Twilio-Inc-TWLO-And-QUALCOMM-Inc.-QCOM-Todays-Technical-Trading-Ideas.jpg">
+				<meta itemprop="width" content="696">
+				<meta itemprop="height" content="392">
+		    </div>
+				</header>
+		<div class="clear"></div>
+		<div class="amigo_right mt5px">
+						<div id='ezoic-pub-ad-placeholder-102'> 			<div id='dga_3' class="txtCen ic_div">
+			<script  type="text/javascript">
+				var responsive_type="";
+				var show_tab =0;
+				if(device_type=="desktop"|| (device_type == "tablet" && show_tab)){
+					var id='dga_3';
+				  	elem = document.createElement('ins');
+				   	elem.className += "adsbygoogle";
+				 	elem.setAttribute("style", 'display:inline-block;width:300px;height:1050px;');
+				 	elem.setAttribute("data-ad-client", "ca-pub-7431353201809691");
+					elem.setAttribute("data-ad-slot",'9207178568');
+					if(responsive_type!=""){
+						elem.setAttribute("data-ad-format",responsive_type);
+					}
+					document.getElementById(id).appendChild(elem);
+				}
+				if(device_type=="desktop"|| (device_type == "tablet" && show_tab)){(adsbygoogle = window.adsbygoogle || []).push({});
+				}
+			</script>
+			</div>
+					</div> 		</div>
+		<div id='single_left' class='amigo_left'>
+	<div class="post_date">
+		<div class="left">
+		<span class="fs75 ppauthor">Posted by </span><span itemprop="author" itemscope itemtype="https://schema.org/Person"><a itemprop="url" class="tickerorange" rel="author" href="https://twitter.com/sreekanthOne1A" title="Follow Sreekanth Anasa on twitter"><span itemprop="name">Sreekanth Anasa</span></a></span>
+	
+		<span class="fs75 ppauthor">on </span><a href="https://amigobulls.com/articles/2017/05/05" title="Read articles published on May 05, 2017" rel="bookmark"><span class="fs75 ppauthor">May 05, 2017, 06:35 AM EST</span></a>
+		</div>		
+			<span class='fs80 related-tags right'>Related Tickers: <a href='https://amigobulls.com/stocks/TSLA/analysis?ref=tp' class='tickerblue newsfont' title='Tesla Inc stock analysis video'>TSLA</a> , <a href='https://amigobulls.com/stocks/TWLO/analysis?ref=tp' class='tickerblue newsfont' title='Twilio stock analysis video'>TWLO</a> , <a href='https://amigobulls.com/stocks/QCOM/analysis?ref=tp' class='tickerblue newsfont' title='Qualcomm stock analysis video'>QCOM</a></span>		</div>
+		
+		<div class="clear"></div>
+		<div class="postbody">
+		<div class="article">			<div itemprop="articleBody">
+			<h3>Tesla Inc (NASDAQ:TSLA) stock closed below its crucial 20-day SMA support in yesterday's trade.</h3>
+<p>Palo Alto, Californa-based, electric automobile and renewable energy company, <strong><a class="tickerblue" title="Tesla Inc stock analysis" href="https://amigobulls.com/stocks/TSLA/analysis">Tesla Inc (NASDAQ:TSLA)</a></strong> recently reported its <a href="https://amigobulls.com/articles/2017-05-04-tesla-stock-earnings-a-huge-miss-but-dont-short-the-stock-yet-tesla-inc-nasdaq-tsla">Q1 earnings</a>. The company had a mixed quarter with a slender beat on the top line and a big miss on the bottom line. Shares of the Elon Musk-founded company lost 5% following its latest earnings results. Tesla stock had risen to <a href="https://amigobulls.com/articles/2017-05-01-tesla-inc-will-report-a-record-quarter-will-the-stock-follow-tesla-inc-nasdaq-tsla-earnings?ref=il">new all-time highs going into the earnings</a> and enjoyed a strong support at the $300 level. However, the massive spike in losses has disappointed investors. This has led to TSLA stock falling below its crucial 20-day Simple Moving Average (SMA) support line. It has also fallen below the $300 price level, which was a strong support going into the earnings. Tesla stock has enjoyed a strong support at the 20-day SMA in the recent past and had bounced back after closing below it. If shares of Tesla fail to bounce back above the 20-day SMA levels soon, then it has the next level of support at its 50-day SMA. The 50-day SMA presently stands at $279.71. To add to that, TSLA stock has not yet entered oversold territory based on both Bollinger Bands and Relative Strength Index (RSI) indicators.</p>			<div id='ezoic-pub-ad-placeholder-624'> 			</div> 			<div id='ezoic-pub-ad-placeholder-104'> 		<div id='mga_1' class="txtCen ic_div">
+		<script  type="text/javascript">
+			var responsive_type="rectangle";
+			if(device_type=="mobile"){
+				var id='mga_1';
+			  	elem = document.createElement('ins');
+			   	elem.className += "adsbygoogle";
+			 	elem.setAttribute("style", 'display:block');
+			 	elem.setAttribute("data-ad-client", "ca-pub-7431353201809691");
+				elem.setAttribute("data-ad-slot",'1679399760');
+				if(responsive_type!=""){
+					elem.setAttribute("data-ad-format",responsive_type);
+				}
+				document.getElementById(id).appendChild(elem);
+			}
+			if(device_type=="mobile"){(adsbygoogle = window.adsbygoogle || []).push({});
+			}
+		</script>
+		</div>
+		</div> 
+<p><a href="https://static.amigobulls.com/articles/wp-content/uploads/2017/05/Tesla-technical-chart.jpg"><img class="alignnone size-full wp-image-71963" src="https://static.amigobulls.com/articles/wp-content/uploads/2017/05/Tesla-technical-chart.jpg" alt="Tesla technical chart"   /></a></p>			<div id='ezoic-pub-ad-placeholder-100'> 			<div id='dga_1' class="txtCen ic_div">
+			<script  type="text/javascript">
+				var responsive_type="rectangle";
+				var show_tab =1;
+				if(device_type=="desktop"|| (device_type == "tablet" && show_tab)){
+					var id='dga_1';
+				  	elem = document.createElement('ins');
+				   	elem.className += "adsbygoogle";
+				 	elem.setAttribute("style", 'display:block');
+				 	elem.setAttribute("data-ad-client", "ca-pub-7431353201809691");
+					elem.setAttribute("data-ad-slot",'1789499762');
+					if(responsive_type!=""){
+						elem.setAttribute("data-ad-format",responsive_type);
+					}
+					document.getElementById(id).appendChild(elem);
+				}
+				if(device_type=="desktop"|| (device_type == "tablet" && show_tab)){(adsbygoogle = window.adsbygoogle || []).push({});
+				}
+			</script>
+			</div>
+					</div> 			<div id='ezoic-pub-ad-placeholder-624'> 	</div> 
+<h3>MACD makes a bearish crossover with the center line for Twilio Inc (NYSE:TWLO) stock.</h3>
+<p>Shares of San Francisco, California-based <strong><a class="tickerblue" title="Twilio stock analysis" href="https://amigobulls.com/stocks/TWLO/analysis">Twilio Inc (NYSE:TWLO)</a></strong> were hit by a massive post-earnings crash. The company's stock is down by more than 27% since its earnings announcement day. Investors dumped TWLO stock on account of weak management guidance for the current quarter and full year 2017. The in-app communication company's stock price is presently below its listing debut price. Twilio's stock price has gapped down below its crucial 20-day, 50-day and 100-day SMAs. With the absence of any near-term catalysts, these crucial SMA's will now act as resistance levels for the stock. After the earnings, the stock had found good support at $24 levels. However, in a bearish move, the Moving Average Convergence Divergence (MACD) indicator fell below the center line in the last trading session. This suggests further weakness in the stock. Investors need to be very cautious as the stock could be in for a very volatile phase going ahead. Further, only the Bollinger Bands indicator hints that the stock has entered oversold zone. The Relative Strength Index (RSI) measure of the stock is still above the oversold threshold of 30. So, <a href="https://amigobulls.com/articles/2017-05-04-what-next-for-twilio-stock-after-post-earnings-crash-twilio-inc-nyse-twlo">what next for TWLO stock</a>? If the <a rel="nofollow" target="_blank" href="http://investorplace.com/2017/05/twilio-inc-twlo-stock-ultimate-contrarian-play/2/" target="_blank">$24 level fails to act as a good support</a> then the stock could be in for a free fall.<a href="https://amigobulls.com/stocks/TWLO/technical-charts?tcq=MjAxNzA1MDVfVFdMT190ZWNobmljYWxfY2hhcnQmdHlwZT1zbWEmcGVyaW9kPTIwJnJhbmdlPTZN"><img src="https://amigobulls.com/static/charts/MjAxNzA1MDVfVFdMT190ZWNobmljYWxfY2hhcnQmdHlwZT1zbWEmcGVyaW9kPTIwJnJhbmdlPTZN.svg" alt="TWLO Technical chart" /></a></p>			<div id='ezoic-pub-ad-placeholder-662'> 			</div> 
+<h3>QUALCOMM, Inc. (NASDAQ: QCOM) stock enters overbought territory.</h3>
+<p>Shares of the world's largest smartphone chipmaker, <strong><a class="tickerblue" title="Qualcomm stock analysis" href="https://amigobulls.com/stocks/QCOM/analysis">Qualcomm Inc (NASDAQ:QCOM)</a> </strong>have slowly put the negative sentiment surrounding its <a href="https://amigobulls.com/articles/2017-04-24-is-qualcomm-inc-qcom-stock-a-very-risky-bet-even-after-q2-earnings-beat">Q2 earnings</a> behind, gaining nearly 5% in the last 5 trading days. The chipmaker's stock is on an upward trend after it recently broke above its critical 20-day SMA. The present momentum suggests it is on the verge of breaking above its 50-day SMA as well. Meanwhile, the company's legal battle with <strong><a class="tickerblue" title="Apple stock analysis" href="https://amigobulls.com/stocks/AAPL/analysis">Apple (NASDAQ:AAPL)</a></strong> got messier after a recent report came out stating that Qualcomm is now trying to seek a <a rel="nofollow" target="_blank" href="https://www.bloomberg.com/news/articles/2017-05-03/qualcomm-said-to-seek-u-s-import-ban-for-iphones" target="_blank">ban on import of iPhones in the USA</a>. The company's latest earnings beat has not quelled investor worries about its legal issues. This latest news has given a little impetus to the struggling QCOM stock. This fresh momentum has pushed the stock into overbought territory. The Relative Strength Index (RSI) measure of the stock has crossed above the overbought threshold of 70 after yesterday's close. The current RSI measure stands at 77.18. However, the good part is that the Bollinger Bands indicator still does not indicate that the stock is overbought. The combination of these two indicators is considered as a better signal. If you are looking for more technical trading ideas, do check out our <a href="https://amigobulls.com/stocks-to-buy/best-stocks-to-buy-today/">daily technical trading ideas</a> page.<br />
+<a href="https://amigobulls.com/stocks/QCOM/technical-charts?tcq=MjAxNzA1MDVfUUNPTV90ZWNobmljYWxfY2hhcnQmdHlwZT1zbWEmcGVyaW9kPTUwJnJhbmdlPTZN"><img src="https://amigobulls.com/static/charts/MjAxNzA1MDVfUUNPTV90ZWNobmljYWxfY2hhcnQmdHlwZT1zbWEmcGVyaW9kPTUwJnJhbmdlPTZN.svg" alt="QCOM Technical chart" /></a></p>			<div id='ezoic-pub-ad-placeholder-663'> 			</div> 			<div id='ezoic-pub-ad-placeholder-105'> 		<div id='mga_2' class="txtCen ic_div">
+		<script  type="text/javascript">
+			var responsive_type="rectangle";
+			if(device_type=="mobile"){
+				var id='mga_2';
+			  	elem = document.createElement('ins');
+			   	elem.className += "adsbygoogle";
+			 	elem.setAttribute("style", 'display:block');
+			 	elem.setAttribute("data-ad-client", "ca-pub-7431353201809691");
+				elem.setAttribute("data-ad-slot",'1539798960');
+				if(responsive_type!=""){
+					elem.setAttribute("data-ad-format",responsive_type);
+				}
+				document.getElementById(id).appendChild(elem);
+			}
+			if(device_type=="mobile"){(adsbygoogle = window.adsbygoogle || []).push({});
+			}
+		</script>
+		</div>
+		</div> 
+<p>Looking for great tech stocks to invest on basis of strong fundamentals? Then do check out Amigobulls' <a href="https://amigobulls.com/stocks-to-buy/top-tech-stocks/" target="_blank">top stock picks</a>, which have beaten the NASDAQ by over 130%. If you're looking for top picks from the auto sector, you should also check out our <a href="https://amigobulls.com/stocks-to-buy/top-auto-stocks/" target="_blank">top auto stock picks</a>, which have outperformed the S&amp;P 500 by over 168%.</p>			<div id='ezoic-pub-ad-placeholder-101'> 			<div id='dga_2' class="txtCen ic_div">
+			<script  type="text/javascript">
+				var responsive_type="rectangle";
+				var show_tab =1;
+				if(device_type=="desktop"|| (device_type == "tablet" && show_tab)){
+					var id='dga_2';
+				  	elem = document.createElement('ins');
+				   	elem.className += "adsbygoogle";
+				 	elem.setAttribute("style", 'display:block');
+				 	elem.setAttribute("data-ad-client", "ca-pub-7431353201809691");
+					elem.setAttribute("data-ad-slot",'3266232962');
+					if(responsive_type!=""){
+						elem.setAttribute("data-ad-format",responsive_type);
+					}
+					document.getElementById(id).appendChild(elem);
+				}
+				if(device_type=="desktop"|| (device_type == "tablet" && show_tab)){(adsbygoogle = window.adsbygoogle || []).push({});
+				}
+			</script>
+			</div>
+					</div> 			<div id='ezoic-pub-ad-placeholder-662'> 	</div> 
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="clear"></div>
+		<div class="mb10px">
+			<div class="right">
+		<span data-type=article 
+					data-type_id=71951  
+			data-vote=up class='voteup enabledvoteicon  icon_text' title ='voteup'>                   
+					<span  class=' pointerCursor fa fa-thumbs-up fs150 '></span> 
+					<span  class='votecount displayInlineBlock'>6</span> 
+		 	</span><span data-type=article 
+					data-type_id=71951  
+			data-vote=down class='votedown enabledvoteicon  icon_text' title ='votedown'>                   
+					<span  class=' pointerCursor fa fa-thumbs-down fs150 '></span> 
+					<span  class='votecount displayInlineBlock'>2</span> 
+		 	</span>		</div>
+		<div class="left">
+					<div id="ssba">
+	<ul>
+		<li class="mobi-hideit">
+			<a id="ssba_email_share" class="ssba_share_link" href="mailto:?Subject=Tesla Inc (TSLA), Twilio Inc (TWLO) And QUALCOMM, Inc. (QCOM) - Today's Technical Trading Ideas by Amigobulls&amp;Body=Hi%20Friend%2C%0AI%20thought%20you%20might%20find%20this%20article%20on%20Amigobulls%20interesting%3A%0A%09Take%20a%20look%20at%20today%27s%20technical%20trading%20ideas%20for%20-%20Tesla%20stock%2C%20Twilio%20stock%20and%20QUALCOMM%20stock.%0ATo%20continue%20reading%20please%20click%20on%20the%20link%20below%3A%0Ahttps%3A%2F%2Famigobulls.com%2Farticles%2F2017-05-05-tesla-inc-tsla-twilio-inc-twlo-and-qualcomm-inc-qcom-todays-technical-trading-ideas%3Fref%3Dma"> 
+			<span title="Email this article" class="fa fa-envelope fa-2x"></span>
+			<span class="displayNone"> Share this article via Email</span>
+			</a>
+		</li>
+		<li>
+			<a id="ssba_twitter_share" href="https://twitter.com/share?url=https://amigobulls.com/articles/2017-05-05-tesla-inc-tsla-twilio-inc-twlo-and-qualcomm-inc-qcom-todays-technical-trading-ideas?ref=tw&amp;text=Tesla+Inc+%28TSLA%29%2C+Twilio+Inc+%28TWLO%29+And+QUALCOMM%2C+Inc.+%28QCOM%29+-+Today%27s+Technical+Trading+Ideas" > 
+			<span title="" class="fa fa-twitter-square fa-2x"></span>
+			<span class="displayNone"> Share this article on Twitter</span>
+			</a>
+		</li>
+		<li>
+			<a id="ssba_facebook_share" href="https://www.facebook.com/sharer.php?u=https://amigobulls.com/articles/2017-05-05-tesla-inc-tsla-twilio-inc-twlo-and-qualcomm-inc-qcom-todays-technical-trading-ideas?ref=fb&amp;title=Tesla+Inc+%28TSLA%29%2C+Twilio+Inc+%28TWLO%29+And+QUALCOMM%2C+Inc.+%28QCOM%29+-+Today%27s+Technical+Trading+Ideas&amp;summary=Take+a+look+at+today%27s+technical+trading+ideas+for+-+Tesla+stock%2C+Twilio+stock+and+QUALCOMM+stock." > 
+			<span title="" class="fa fa-facebook-square fa-2x" ></span>
+			<span class="displayNone"> Share this article on Facebook</span>
+			</a>
+		</li>
+		<li>
+			<a id="ssba_linkedin_share" class="ssba_share_link" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://amigobulls.com/articles/2017-05-05-tesla-inc-tsla-twilio-inc-twlo-and-qualcomm-inc-qcom-todays-technical-trading-ideas?ref=ld&amp;title=Tesla+Inc+%28TSLA%29%2C+Twilio+Inc+%28TWLO%29+And+QUALCOMM%2C+Inc.+%28QCOM%29+-+Today%27s+Technical+Trading+Ideas&amp;summary=Take+a+look+at+today%27s+technical+trading+ideas+for+-+Tesla+stock%2C+Twilio+stock+and+QUALCOMM+stock." > 
+			<span title="" class="fa fa-linkedin-square fa-2x"></span>
+			<span class="displayNone"> Share this article on linkedin</span>
+			</a>
+		</li>
+		<li>
+			<a id="ssba_google_share" href="https://plus.google.com/share?url=https://amigobulls.com/articles/2017-05-05-tesla-inc-tsla-twilio-inc-twlo-and-qualcomm-inc-qcom-todays-technical-trading-ideas" > 
+			<span title="" class="fa fa-google-plus-square fa-2x"></span>
+			<span class="displayNone"> Share this article on GooglePlus</span>
+			</a>
+		</li>
+		<li>
+			<a id="ssba_whatsapp_share" class="ssba_share_link whatsapp-share-button desktop_tab_hide" data-count="true" href="whatsapp://send?text=Tesla+Inc+%28TSLA%29%2C+Twilio+Inc+%28TWLO%29+And+QUALCOMM%2C+Inc.+%28QCOM%29+-+Today%27s+Technical+Trading+Ideas https%3A%2F%2Famigobulls.com%2Farticles%2F2017-05-05-tesla-inc-tsla-twilio-inc-twlo-and-qualcomm-inc-qcom-todays-technical-trading-ideas%3Fref%3Dwp" > 
+				<span title="Share this post on WhatsApp" class="fa fa-whatsapp"></span>
+			</a>
+		</li>
+	</ul>
+</div>
+		</div>			
+			<div class="right mt5px">Is this article helpful ?&nbsp;&nbsp;&nbsp;&nbsp;</div>
+		 </div>
+         <div class='clear'></div>
+         <hr class="desktop_hide">
+        <div class="mt20px mb30px">
+					<div id='ezoic-pub-ad-placeholder-106'> 		<div id='mga_3' class="txtCen ic_div">
+		<script  type="text/javascript">
+			var responsive_type="rectangle";
+			if(device_type=="mobile"){
+				var id='mga_3';
+			  	elem = document.createElement('ins');
+			   	elem.className += "adsbygoogle";
+			 	elem.setAttribute("style", 'display:block');
+			 	elem.setAttribute("data-ad-client", "ca-pub-7431353201809691");
+				elem.setAttribute("data-ad-slot",'4182322567');
+				if(responsive_type!=""){
+					elem.setAttribute("data-ad-format",responsive_type);
+				}
+				document.getElementById(id).appendChild(elem);
+			}
+			if(device_type=="mobile"){(adsbygoogle = window.adsbygoogle || []).push({});
+			}
+		</script>
+		</div>
+		</div> 		</div> 
+
+		<!-- Display the related section for articles in aside tag -->
+		<aside>
+		<h2 class='small mt10px mobi-hideit'> More on Tesla Inc stock</h2><hr><div  class='articlesMainDiv displayBlock'>			<div id='ezoic-pub-ad-placeholder-103'> 			<div id='dga_matched' class="txtCen ic_div">
+			<script  type="text/javascript">
+				var responsive_type="autorelaxed";
+				var show_tab =1;
+				if(device_type=="desktop"|| (device_type == "tablet" && show_tab)){
+					var id='dga_matched';
+				  	elem = document.createElement('ins');
+				   	elem.className += "adsbygoogle";
+				 	elem.setAttribute("style", 'display:block');
+				 	elem.setAttribute("data-ad-client", "ca-pub-7431353201809691");
+					elem.setAttribute("data-ad-slot",'4418756163');
+					if(responsive_type!=""){
+						elem.setAttribute("data-ad-format",responsive_type);
+					}
+					document.getElementById(id).appendChild(elem);
+				}
+				if(device_type=="desktop"|| (device_type == "tablet" && show_tab)){(adsbygoogle = window.adsbygoogle || []).push({});
+				}
+			</script>
+			</div>
+					</div> </div>		</aside> <!-- entire related content should be inside the aside tag -->
+
+		<div class="mt10px mb10px left author_pic" >
+		<a href="https://amigobulls.com/articles/author/sreekanth-anasa?ref=tp"><img src="https://static.amigobulls.com/profile_images/20161102_DSC_6164-(187015).png" alt="Sreekanth Anasa" class="authorbox-photo author_img"></a>
+		<span class="fs100 left" ><a class="orange" href="https://amigobulls.com/articles/author/sreekanth-anasa?ref=tp" > Sreekanth Anasa</a> </span>	
+		<span class='left'>&nbsp; on Amigobulls : </span> <div class='follow_div  orange fs120 left'><div  class='pointerCursor author_follow' data-id='213' data-post_id='71951' data-follow='1' ><i class='fa fa-plus orange'> </i>Follow </div></div>		</div>
+			<footer>
+				<div class="disclaimer" >
+				<p>Neither Amigobulls, nor any members of its staff hold positions in any of the stocks discussed in this post. The author may not be a certified/registered investment advisor, and the opinions expressed should not be treated as investment advice.</p> <p>Buying and selling of securities carries the risk of monetary losses.Readers/Viewers are advised to carry out their own due diligence and consult their investment advisors before making any investment decisions.</p> <p> Neither Amigobulls, nor the author have any business relationship with any of the companies covered in this post.</p>				</div>
+				<div class="disclaimer_more cursorPointer tickerorange right fs14px ">show more</div>
+			</footer>
+		</div><!-- .entry-content -->
+		<div class='clear'></div>
+	<div id="comments" class="">
+		<h2 class="mtb20px small"> Comments on this article and TSLA stock </h2>
+		<div class="stockComments">
+	    <div class="commentlayout commentsleft">
+	        <div id='proscomments'>
+	                        <textarea placeholder="Share your opinion on Tesla Inc stock" onclick="showForm(this);" id='commentcontent_' class=' fs80 comment_box '></textarea>
+    <div class="clear"></div>
+    <div id='commentform_' class="commentform">
+        <div id="com_error_" class="comment_error">
+            <span id="com_alerticon_" class="comment_alerticon"></span>
+            <span id="com_alertmsg_"></span> 
+        </div>
+        <div class="right">
+                        <div class="comment_form">
+                <a href="javascript:;" onclick="commentPost('');"><span title='post new comment' class="fs62 post_anonymously post_anon_btn analysis_post post_button_"><span>post</span></span></a>
+                 <span class="ajaxloader_ displayNone left m10px"> <i class="fa fa-spin fa-spinner"></i></span>
+            </div>
+                    </div>
+                <div class="reply ">
+            <div class="right fs80 toggle_radio">
+                <input type="radio" value= "bullish"  class="bullish" name="toggle_option">
+                <input type="radio" value= "neutral" checked="checked" class="neutral" name="toggle_option">
+                <input type="radio" value= "bearish"  class="bearish" name="toggle_option">
+                <label class="bull">bullish</label>
+                <label class="neut neut_checked">neutral</label>
+                <label class="bear">bearish</label>
+                <div class="toggle_option_slider">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+	        </div>
+	        <div class='commentcontents'>
+	            	        </div>
+	    </div>                  
+	    <div class='clear'></div>
+	</div>
+	<div id="avathar_dialog" style="display:none;"></div>
+</div><!-- #comments -->
+</div><!-- #post-## -->
+</div>
+</article>
+<div class="sharePopup mobi-hideit" id="sharePopup" title="Enjoyed reading this article?" > Do share this awesome post <br/> <div class="sharebuttons"></div></div>
+<div  id= 'single_right' class='amigo_right'>
+	
+			<div class="article_rhs">
+		<div class='tab_lscape_rhs mb30px'><h2 class='small mb5px'>Tesla Inc Stock Articles</h2> 
+		<div class="titleContainer">
+		<a  href="https://amigobulls.com/articles/2017-07-18-tesla-stock-looks-set-for-a-bounce-higher-tesla-inc"><span class= 'recent_art'>Tesla Stock Looks Set For A Bounce Higher: Tesla Inc.</span></a>     			   
+		<div class='clear'></div><div class="hr_dotted"></div></div>    
+		<div class="titleContainer">
+		<a  href="https://amigobulls.com/articles/2017-07-10-tesla-inc-stock-why-53-growth-was-not-good-enough"><span class= 'recent_art'>Tesla Inc Stock: Why 53% Growth Was Not Good Enough</span></a>     			   
+		<div class='clear'></div><div class="hr_dotted"></div></div>    
+		<div class="titleContainer">
+		<a  href="https://amigobulls.com/articles/2017-07-07-shorting-tesla-stock-now-is-a-big-risk-tesla-inc"><span class= 'recent_art'>Shorting Tesla Stock Now Is A Big Risk: Tesla Inc.</span></a>     			   
+		<div class='clear'></div><div class="hr_dotted"></div></div>    
+		<div class="titleContainer">
+		<a  href="https://amigobulls.com/articles/2017-07-06-facebook-inc-stock-tesla-inc-and-amazon-com-inc-todays-technical-stock-trading-ideas"><span class= 'recent_art'>Facebook Inc Stock, Tesla Inc And Amazon.com Inc - Today&#039;s Technical Stock Trading Ideas</span></a>     			   
+		<div class='clear'></div><div class="hr_dotted"></div></div>    
+		<div class="titleContainer">
+		<a  href="https://amigobulls.com/articles/2017-07-03-tesla-inc-hits-another-milestone-should-you-buy-tesla-stock"><span class= 'recent_art'>Tesla Inc Hits Another Milestone. Should You Buy Tesla Stock?</span></a>     			   
+		<div class='clear'></div><div class="hr_dotted"></div></div>    
+		<div class="titleContainer">
+		<a  href="https://amigobulls.com/articles/2017-06-28-tesla-inc-nvidia-corporation-and-alphabet-inc-todays-technical-stock-trading-ideas"><span class= 'recent_art'>Tesla Inc, NVIDIA Corporation And Alphabet Inc - Today&#039;s Technical Stock Trading Ideas</span></a>     			   
+		<div class='clear'></div><div class="none"></div></div>    
+		<div class="titleContainer">
+		<a  href="https://amigobulls.com/articles/2017-07-24-is-ford-stock-a-buy-going-into-the-earnings"><span class= 'recent_art'>Is Ford Stock A Buy Going Into The Earnings?</span></a>     			   
+		<div class='clear'></div><div class="none"></div></div>   </div>			<div id='ezoic-pub-ad-placeholder-665'> 			</div> <div class='tab_lscape_rhs mb30px'><h2 class='small mb5px'>TSLA News</h2> 
+		<div class="titleContainer">
+		<a  href="https://amigobulls.com/news/lyft-plans-to-develop-its-own-self-driving-technology"><span class= 'recent_art'>Lyft Plans to Develop its Own Self-Driving Technology</span></a>     			   
+		<div class='clear'></div><div class="hr_dotted"></div></div>    
+		<div class="titleContainer">
+		<a  href="https://amigobulls.com/news/heres-why-tesla-tsla-stock-fell-today"><span class= 'recent_art'>Here&#039;s Why Tesla (TSLA) Stock Fell Today</span></a>     			   
+		<div class='clear'></div><div class="hr_dotted"></div></div>    
+		<div class="titleContainer">
+		<a  href="https://amigobulls.com/news/tesla-announces-date-for-second-quarter-2017-financial-results-and-webcast"><span class= 'recent_art'>Tesla Announces Date for Second Quarter 2017 Financial Results and Webcast</span></a>     			   
+		<div class='clear'></div><div class="hr_dotted"></div></div>    
+		<div class="titleContainer">
+		<a  href="https://amigobulls.com/news/3-inspirational-elon-musk-quotes-about-the-future"><span class= 'recent_art'>3 Inspirational Elon Musk Quotes About the Future</span></a>     			   
+		<div class='clear'></div><div class="hr_dotted"></div></div>    
+		<div class="titleContainer">
+		<a  href="https://amigobulls.com/news/tesla-tsla-secures-big-battery-contract-in-australia"><span class= 'recent_art'>Tesla (TSLA) Secures Big Battery Contract in Australia</span></a>     			   
+		<div class='clear'></div><div class="hr_dotted"></div></div>    
+		<div class="titleContainer">
+		<a  href="https://amigobulls.com/news/advanced-microgrid-solutions-raises-34-million-in-series-b-energy-leaders-see-der-optimization-as-major-growth-market"><span class= 'recent_art'>Advanced Microgrid Solutions Raises $34 Million in Series B, Energy Leaders See DER Optimization as Major Growth Market</span></a>     			   
+		<div class='clear'></div><div class="none"></div></div>   </div>	<div class="tab_lscape_rhs mb30px picks_box alink_parent">
+		<div class="txtCen alink_click  picks_theme">
+			<div class="mb10px fs150">One of our top stock picks has returned over 600% since 2011. See the entire list, it's free.
+			</div> 
+			<div class="mt10px">
+				<a class="alink" href="https://amigobulls.com/stocks-to-buy/top-tech-stocks/" >
+				</a>
+				<input type="button" class="mt10px" value='See our top picks'>
+			</div>
+		</div>
+	</div>
+	</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+var siteurl="https://amigobulls.com/";
+</script>
+    <script type="text/javascript">
+            var geturl="https://static.amigobulls.com/"+"1500954907_getAllStocks_gz.txt";
+          </script>
+
+	 <script type="text/javascript">
+        tickSymbol="TSLA";
+    	    		var visited_stock=5909;
+    	        companyName="Tesla Inc";
+        entityId="71951";
+        commentType=3;
+        stockPrice=0;
+    </script>
+<!-- #mainContent -->
+<script>var page_type=33;</script><div class="clear"></div>
+<!-- <div class='displayNone height'><span class='embed_popup tickergreen bold left heightauto' id='mail-verification' title='Email Verification'></span></div>        -->
+<div class="clear"></div>
+<div class="footer_ad mt10px txtCen"> 
+</div>
+<div id="overlay" class="mobi-hideit"><div id="overlaydiv"></div></div>
+    <footer class="footer_fixed mt10px">
+        <div class="back_color">
+        <div id="footerbg">
+             <div class="top_sec">
+                <h3 class="footertitle">Top Sections</h3>     
+                <ul>
+                    <li><a href="https://amigobulls.com" title="amigobulls - home page"> Home</a>  </li> 
+                    <li><a href="https://amigobulls.com/stocks-to-buy/top-tech-stocks/" title="internet stock picks">Stock Picks</a> </li>
+                    <li><a href="https://amigobulls.com/articles/" title="Stock Market Analysis">Articles</a> </li>
+                    <li><a href="https://amigobulls.com/news/" title="Stock Market News">News From Partners</a> </li>
+                    <li class="mobi-footermenuhide"><a href="https://amigobulls.com/sectors/computer-and-technology/internet-services" title="Technology and internet stocks">Screen Stocks</a>  </li>
+                    <li><a href="https://amigobulls.com/watchlist" title="Stock Market Watchlist">Watchlist</a> </li>
+                </ul>
+            </div>
+            <div  class="company_sec">
+                <h3 class="footertitle">Company Info</h3>
+                <ul>
+                    <li><a href="https://amigobulls.com/about"   title="About Amigobulls">About</a></li>
+                    <li><a href="https://amigobulls.com/jobs"  title="Existing careers at Amigobulls">Jobs</a></li>
+                    <li><a href="https://amigobulls.com/contact" title="Contact us  Amigobulls" >Contact</a></li>
+                    <li><a href="https://amigobulls.com/articles/author/" title="Amigobulls Authors" >Our Authors</a></li>
+                    <li><a href="https://amigobulls.com/terms"   title="Terms of use">Terms of Use</a></li>
+                    <li><a href="https://amigobulls.com/privacy" title="Privacy Policy">Privacy</a></li>
+                    <li><a href="#" title="Feedback" class="feedbackpopup" >Feedback</a></li>
+                </ul>
+            </div>
+            <div  class="widgets_sec mobi-hideit">
+                <h3 class="footertitle">Widgets &amp; Others </h3>
+                <ul>
+                    <li><a href="https://amigobulls.com/widgets/"   title="">Stock Chart Widget</a></li>
+                    <li><a href="https://amigobulls.com/articles/feed" title="RSS Feeds">RSS Feeds</a></li>
+                    <li><a href="https://amigobulls.com/glossary/" title="glossary">Glossary</a></li>
+                     <li><a href="https://amigobulls.com/companies/" title="Stocks Listing">Stocks Listing</a></li>
+                    <li><a href="https://amigobulls.com/links" title="blogroll">Blogroll</a></li>
+                </ul>
+            </div>
+         <!--    <div class="stocks_sec mobi-hideit">
+                <h3 class="footertitle ml5px">Top Stocks We Track</h3>
+                    <ul>
+                                                                        </ul>
+            </div> -->
+			<div class = "left socialdiv">
+        <div class="promo_div"><a href = "https://enrichview.in">
+          <div class="promo_text_content left">
+            <div class="promo_heading">AMIGOBULLS FOR BUSINESS</div>
+            <div class="promo_text fs80 mobi-hideit">Engage your wealth management clients with video statements.</div>
+          </div>
+          <div class="promo_img right">
+            <i class="fa fa-video-camera"></i>
+          </div>
+        </a>
+        </div>
+				<div class="socialicon">
+						<h3 class="footertitle">Join Us On</h3>                   
+							<a  target="_blank" class = "mleft" title="Follow amigobulls.com on Facebook" href="https://www.facebook.com/amigobulls">
+									<i class="fa fa-facebook-square fa-2x"></i>
+								<span class="displayNone">Follow amigobulls.com on Facebook</span>
+							</a>
+							<a  target="_blank" title="Follow amigobulls.com on Twitter" href="https://twitter.com/amigobulls">
+									<i class="fa fa-twitter-square fa-2x" ></i>
+								<span class="displayNone">Follow amigobulls.com on Twitter</span>
+							</a>
+							<a target="_blank" title="Follow amigobulls.com on LinkedIn" href="https://www.linkedin.com/company/amigobulls">
+									<i class="fa fa-linkedin-square fa-2x" ></i>
+								<span class="displayNone">Follow amigobulls.com on LinkedIn</span>
+							</a>
+							<a  target="_blank" title="Follow amigobulls.com on Google+" rel="publisher" href="https://plus.google.com/+amigobulls">
+									<i class="fa fa-google-plus-square fa-2x"></i>
+								<span class="displayNone">Follow amigobulls.com on Google+</span>
+							</a>
+              <a class="" target="_blank" title="Follow amigobulls.com on stocktwits" href="https://stocktwits.com/amigobulls">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAAAAAA6fptVAAAACklEQVR4nGP6DwABBQECz6AuzQAAAABJRU5ErkJggg==" data-src="https://static.amigobulls.com/v2images/StockTwits.svg" class="stocktwits_share lazy" alt="stocktwits"/>
+              </a>								
+				</div>
+                			</div>						
+            <div class="clear"></div>
+            <span class="fs62 footerst">Copyright<i class="fa fa-copyright"></i>2014 amigobulls.com </span>
+        </div></div>
+        <div class="fs75 footer_txt">
+            Historical, current end-of-day data, and company fundamental data provided by <a rel="nofollow" href="http://www.zacksdata.com/" class="linkblue" target="post">Zacks</a>.<br />
+        	All information provided "as is" for informational purposes only, not intended for trading purposes or advice. 
+        	Neither Amigobulls nor any of the data providers is liable for any informational errors, incompleteness, or delays, or for any actions taken in reliance on information contained herein. By accessing the amigobulls.com, you agree not to redistribute the information found therein.
+        	Please read our <a class="linkblue" href="https://amigobulls.com/terms">terms of use</a> and <a class="linkblue" href="https://amigobulls.com/privacy">privacy policy</a>.
+        </div>
+    </footer>
+    <div class="clear"></div>
+</div>
+<script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        //for main server
+                    ga('create', 'UA-39375880-1', 'auto');
+                ga('send', 'pageview');
+        if (window.ga) {
+          //send event timeonpage if a user has stayed for more than 15 seconds
+          var myintervalid = setInterval(function() {ga('send', 'event', 'timeonpage', 'timeonpage', window.location.pathname,15);},15000);
+          // clear the event after 15 mins
+          setTimeout(function(){clearInterval(myintervalid);},900000);
+        }
+</script>
+
+<div id='feedbackdivs'></div><script type="text/javascript">
+    var siteurl="https://amigobulls.com/";
+    var siteimageurl="https://static.amigobulls.com/";
+    var cssurl="https://static.amigobulls.com/css/";
+    var jsurl="https://static.amigobulls.com/js/";
+    var server_type="1";
+    var unique_id='59771f97b39fc';
+	var loggedin=false;
+	var user_email='';
+	var user_name='';
+	var user_id='';
+
+	    var limit_exceeded = '' ? 1 : 0;
+  		var visitedurl='/articles/2017-05-05-tesla-inc-tsla-twilio-inc-twlo-and-qualcomm-inc-qcom-todays-technical-trading-ideas';
+	var referrer='/https://www.google.com/';
+	var urlquery="u=2017-05-05-tesla-inc-tsla-twilio-inc-twlo-and-qualcomm-inc-qcom-todays-technical-trading-ideas";
+    if (typeof limit_exceeded !== 'undefined' && limit_exceeded) {
+        urlquery += '&forced=1';
+    }
+	var request_url='/articles/2017-05-05-tesla-inc-tsla-twilio-inc-twlo-and-qualcomm-inc-qcom-todays-technical-trading-ideas';
+	var siteurl='https://amigobulls.com/';
+	var node_type='articles';
+    var trade_it_enabled = 0;
+  if (trade_it_enabled) {
+    var publisher_name ='';
+    var tradit_js = '';
+  }
+</script>
+
+<script type="text/javascript">
+  			var isArticle="";
+                   isArticle=true;
+        </script>
+<script>
+  var session_open_popup= false;
+  var session_download_limit_exceeded=false;
+</script>
+<div class="displayNone " id="footer-login">
+<div id='forcedialog' class="txtCen" title="Login with amigobulls.com">
+<div class="pad10px">
+    <div id="title"></div>
+    <div class="pad10px displayInline"><input type='submit'  class="submit_button loginfromjq"  tabindex="4" value="Login"></div>
+    <div class="pad10px displayInline"><input type='submit'  class="submit_button signupfromjq" tabindex="4" value="Sign Up"></div>
+</div>   
+</div>
+</div><div class="blackout"></div>
+      <script>
+  local_storage_access = true;
+
+  try{
+    localStorage.setItem("access","true");
+    test = localStorage.getItem("access");
+    localStorage.removeItem("access");
+  }
+  catch(err){
+    local_storage_access=false;
+  }
+  function async(u, c) {
+  var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+  o.src = u;
+  if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+  s.parentNode.insertBefore(o, s);
+}
+var jquery_lib="https://static.amigobulls.com/js/jquery_1.9.1.min.js";
+async( jquery_lib, function() {
+               common_js = document.createElement("script");
+            common_js.src = "https://static.amigobulls.com/js/combined/1500546975_jquer_amigo.min.js";
+            document.body.appendChild(common_js);
+  });   
+</script>
+<script type="text/javascript">
+/*query string to attach when show full article is clicked */
+	full_article_qs="?p=n";
+	is_single ="1";
+</script>
+<!--Begin comScore Tag--><script>var _comscore=_comscore||[];_comscore.push({c1:"2",c2:"20015427"});(function(){var s=document.createElement("script"),el=document.getElementsByTagName("script")[0];s.async=true;s.src=(document.location.protocol=="https:"?"https://sb":"http://b")+".scorecardresearch.com/beacon.js";el.parentNode.insertBefore(s,el)})();</script><noscript><img src="http://b.scorecardresearch.com/p?c1=2&c2=20015427&cv=2.0&cj=1"/></noscript><!--End comScore Tag-->
+<!--Quantcast Tag--><script type="text/javascript">var _qevents=_qevents||[];(function(){var elem=document.createElement('script');elem.src=(document.location.protocol=="https:"?"https://secure":"http://edge")+".quantserve.com/quant.js";elem.async=true;elem.type="text/javascript";var scpt=document.getElementsByTagName('script')[0];scpt.parentNode.insertBefore(elem,scpt)})();_qevents.push({qacct:"p-31iz6hfFutd16",labels:"Domain.amigobulls_com,DomainId.46056"});</script><noscript><div style="display:none;"><img src="//pixel.quantserve.com/pixel/p-31iz6hfFutd16.gif?labels=Domain.amigobulls_com,DomainId.46056"border="0"height="1"width="1"alt="Quantcast"/></div></noscript><!--End Quantcast tag-->
+<script type='text/javascript' style='display:none;' async>
+__ez.queue.addFile('edmonton.php', '//amigobulls.com/detroitchicago/edmonton.webp?a=a&cb=0&shcb=23', true, [], true, false, false, false);
+__ez.queue.addFile('jellyfish.php', '//amigobulls.com/porpoiseant/jellyfish.webp?a=a&cb=0&shcb=23', false, [], true, false, false, false);
+</script>
+</body>
+</html>

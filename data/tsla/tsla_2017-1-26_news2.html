@@ -1,0 +1,971 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<script data-cfasync='false' data-pagespeed-no-defer>var __ez=__ez||{};__ez.evt={};__ez.ck={};__ez.dot={};__ez.template={};__ez.template.isOrig=false;__ez.evt.add=function(el,evt,handler){if(el.addEventListener){el.addEventListener(evt,handler,false)}else if(el.attachEvent){el.attachEvent('on'+evt,handler)}else{el['on'+evt]=handler()}};__ez.ck.get=function(n,e){null!==e&&(n=n+"_"+e);for(var t=n+"=",r=decodeURIComponent(document.cookie),o=r.split(";"),i=0;i<o.length;i++){for(var u=o[i];" "===u.charAt(0);)u=u.substring(1);if(0===u.indexOf(t))return u.substring(t.length,u.length)}return""};__ez.queue=function(){function g(a,b,g,h,j,k,l,m){var n=new f.file(a,b,g,h,j,k,l);!0===m?d[a]=n:e[a]=n,c[a]=n,i(n)}function h(a,g,h,j,k,l,m,n,o){!0===l&&(a=a+"_"+b++);var p=new f.func(a,g,h,j,k,m,n);!0===o?d[a]=p:e[a]=p,c[a]=p,i(p)}function i(a){!0!==j(a)&&a.process()}function j(a){if(a.blockedBy instanceof Array)for(var b=0;b<a.blockedBy.length;b++){var d=a.blockedBy[b];if(!1===c.hasOwnProperty(d))return k(a.name+" blocked = "+d),!0;if(!0===a.proceedIfError&&!0===c[d].isError)return!1;if(!1===c[d].isComplete)return k(a.name+" blocked = "+d),!0}return!1}function k(a){var b=window.location.href,c=new RegExp("[?&]ezq=([^&#]*)","i"),d=c.exec(b);"1"===(d?d[1]:null)&&console.debug(a)}function l(){++a>20||(k("let's go"),m(d),m(e))}function m(a){for(var b in a)if(!1!==a.hasOwnProperty(b)){var c=a[b];!0===c.isComplete||j(c)||!0===c.isInitialized||!0===c.isError?!0===c.isError?k(c.name+": error"):!0===c.isComplete?k(c.name+": complete already"):!0===c.isInitialized&&k(c.name+": initialized already"):c.process()}}var a=0,b=0,c=[],d=[],e=[],f={func:function(a,b,d,e,f,g,h){var i=this;this.name=a,this.funcName=b,this.parameters=null===d?null:d instanceof Array?d:[d],this.isBlock=e,this.blockedBy=f,this.deleteWhenComplete=g,this.isError=!1,this.isComplete=!1,this.isInitialized=!1,this.proceedIfError=h,this.process=function(){k("... func = "+a),i.isInitialized=!0,i.isComplete=!0;var b=i.funcName.split(".");b.length>3||(3===b.length?window[b[0]][b[1]][b[2]].apply(null,this.parameters):2===b.length?window[b[0]][b[1]].apply(null,this.parameters):window[i.funcName].apply(null,this.parameters)),!0===i.deleteWhenComplete&&delete c[a],!0===i.isBlock&&(k("----- F'D: "+i.name),l())}},file:function(a,b,c,d,e,f,g){var h=this;this.name=a,this.path=b,this.async=e,this.defer=f,this.isBlock=c,this.blockedBy=d,this.isInitialized=!1,this.isError=!1,this.isComplete=!1,this.proceedIfError=g,this.process=function(){h.isInitialized=!0,k("... file = "+a);var c=document.createElement("script");c.src=b,!0===e?c.async=!0:!0===f&&(c.defer=!0),c.onerror=function(){k("----- ERR'D: "+h.name),h.isError=!0,!0===h.isBlock&&l()},c.onreadystatechange=c.onload=function(){var a=c.readyState;k("----- F'D: "+h.name),a&&!/loaded|complete/.test(a)||(h.isComplete=!0,!0===h.isBlock&&l())},document.getElementsByTagName("head")[0].appendChild(c)}}};return{addFile:g,addFunc:h,items:c}}();var __ezDotData=function(a,b){this.name=a,this.val=b};__ez.dot.b64={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",encode:function(a){var c,d,e,f,g,h,i,b="",j=0;for(a=Base64._utf8_encode(a);j<a.length;)c=a.charCodeAt(j++),d=a.charCodeAt(j++),e=a.charCodeAt(j++),f=c>>2,g=(3&c)<<4|d>>4,h=(15&d)<<2|e>>6,i=63&e,isNaN(d)?h=i=64:isNaN(e)&&(i=64),b=b+this._keyStr.charAt(f)+this._keyStr.charAt(g)+this._keyStr.charAt(h)+this._keyStr.charAt(i);return b},decode:function(a){var c,d,e,f,g,h,i,b="",j=0;for(a=a.replace(/[^A-Za-z0-9+\/=]/g,"");j<a.length;)f=this._keyStr.indexOf(a.charAt(j++)),g=this._keyStr.indexOf(a.charAt(j++)),h=this._keyStr.indexOf(a.charAt(j++)),i=this._keyStr.indexOf(a.charAt(j++)),c=f<<2|g>>4,d=(15&g)<<4|h>>2,e=(3&h)<<6|i,b+=String.fromCharCode(c),64!=h&&(b+=String.fromCharCode(d)),64!=i&&(b+=String.fromCharCode(e));return b=Base64._utf8_decode(b)},_utf8_encode:function(a){a=a.replace(/rn/g,"n");for(var b="",c=0;c<a.length;c++){var d=a.charCodeAt(c);d<128?b+=String.fromCharCode(d):d>127&&d<2048?(b+=String.fromCharCode(d>>6|192),b+=String.fromCharCode(63&d|128)):(b+=String.fromCharCode(d>>12|224),b+=String.fromCharCode(d>>6&63|128),b+=String.fromCharCode(63&d|128))}return b},_utf8_decode:function(a){for(var b="",c=0,d=c1=c2=0;c<a.length;)d=a.charCodeAt(c),d<128?(b+=String.fromCharCode(d),c++):d>191&&d<224?(c2=a.charCodeAt(c+1),b+=String.fromCharCode((31&d)<<6|63&c2),c+=2):(c2=a.charCodeAt(c+1),c3=a.charCodeAt(c+2),b+=String.fromCharCode((15&d)<<12|(63&c2)<<6|63&c3),c+=3);return b}},__ez.dot.dataToStr=function(a){if(void 0===a)return[];try{for(var b in a)a[b].val=a[b].val+""}catch(a){}return a},__ez.dot.getCC=function(){var a="XX";return"undefined"!=typeof _ezaq&&_ezaq.hasOwnProperty("country")&&(a=_ezaq.country),a},__ez.dot.getDID=function(){var a="0";return"undefined"!=typeof _ezaq&&_ezaq.hasOwnProperty("domain_id")&&(a=_ezaq.domain_id.toString()),a},__ez.dot.getEpoch=function(a){return"undefined"!=typeof _ezaq&&_ezaq.hasOwnProperty("t_epoch")&&(a=_ezaq.t_epoch),a},__ez.dot.getURL=function(a){return("undefined"!=typeof ezJsu&&1==ezJsu||"undefined"!=typeof _ez_sa&&1==_ez_sa||"undefined"!=typeof isAmp&&!0===isAmp)&&(a="//g.ezoic.net"+a),a},__ez.dot.isValid=function(a){for(var b=0;b<a.length;b++)if(a[b]instanceof __ezDotData==!1)return console.error("Invalid data. ",a[b]),!1;return!0},__ez.dot.isDefined=function(){for(var a=0;a<arguments.length;a++)if(void 0===arguments[a]||null===arguments[a])return console.error("Argument not defined. ",arguments),!1;return!0};__ez.bit=function(){function c(a,b){d(a,b),e()}function d(b,c){__ez.dot.isDefined(b)&&__ez.dot.isValid(c)&&a.push({type:"pageview",pageview_id:b,domain_id:__ez.dot.getDID(),t_epoch:__ez.dot.getEpoch(0),data:__ez.dot.dataToStr(c)})}function e(){void 0!==document.visibilityState&&"prerender"===document.visibilityState||(__ez.dot.isDefined(a)&&a.length>0&&((new Image).src=__ez.dot.getURL(b)+"?orig="+(!0===__ez.template.isOrig?1:0)+"&ds="+btoa(JSON.stringify(a))),a=[])}var a=[],b="/detroitchicago/greenoaks.gif";return{Add:d,AddAndFire:c,Fire:e}}();</script><script data-cfasync='false' data-pagespeed-no-defer>__ez.pel=function(){function c(a,b){d(a,b,0,0,0,0,0),f()}function d(b,c,d,e,f,h,i){if(__ez.dot.isDefined(b,b.getSlotElementId)){var j=parseInt(b.getTargeting("ap")[0]),k=b.getSizes()[0],l=k.l.toString()+"x"+k.j.toString(),m=g(b),n=b.getSlotElementId();__ez.dot.isDefined(m,n)&&__ez.dot.isValid(c)&&a.push({type:"impression",impression_id:m,domain_id:__ez.dot.getDID(),unit:n,t_epoch:__ez.dot.getEpoch(0),revenue:d,est_revenue:e,ad_position:j,ad_size:l,bid_floor_filled:f,bid_floor_prev:h,stat_source_id:i,country_code:__ez.dot.getCC(),data:__ez.dot.dataToStr(c)})}}function e(b,c){var d=b.split("/");if(__ez.dot.isDefined(b)&&3===d.length&&__ez.dot.isValid(c)){var e=d[0],f=d[2];a.push({type:"impression",impression_id:f,domain_id:__ez.dot.getDID(),unit:e,t_epoch:__ez.dot.getEpoch(0),data:__ez.dot.dataToStr(c)})}}function f(){void 0!==document.visibilityState&&"prerender"===document.visibilityState||(__ez.dot.isDefined(a)&&a.length>0&&((new Image).src=__ez.dot.getURL(b)+"?orig="+(!0===__ez.template.isOrig?1:0)+"&sts="+btoa(JSON.stringify(a))),a=[])}function g(a){var b=0;try{var c=a.getTargetingMap();if(-1===a.getSlotElementId().indexOf("div-gpt-ad"))return b;if(void 0!==c)for(var e in c)if(-1!==e.indexOf("iid")&&void 0!==c[e][0]){b=c[e][0];break}}catch(a){}return b}var a=[],b="/porpoiseant/army.gif";return{Add:d,AddAndFire:c,AddById:e,Fire:f}}();var EzoicPixel=function(){this.pixels=[],this.pixelUrl="/ezoic/e.gif",("undefined"!=typeof ezJsu&&ezJsu===!0||"undefined"!=typeof _ez_sa&&_ez_sa===!0||"undefined"!=typeof window.isAmp&&isAmp===!0)&&(this.pixelUrl="//g.ezoic.net"+this.pixelUrl),this.tEpoch=0,"undefined"!=typeof _ezaq&&_ezaq.hasOwnProperty("t_epoch")&&(this.tEpoch=_ezaq.t_epoch)},EzoicPixelData=function(a,b){this.name=a,this.val=b};EzoicPixel.prototype={constructor:EzoicPixel,AddAndFireImpPixel:function(a,b){this.AddImpPixel(a,b,0,0,0,0,0),this.FirePixels()},AddAndFirePVPixel:function(a,b){this.AddPVPixel(a,b),this.FirePixels()},AddImpPixel:function(a,b,c,d,e,f,g){if(this.isDefined(a,a.getSlotElementId)){var h=parseInt(a.getTargeting("ap")[0]),i=a.getSizes()[0],j=i.l.toString()+"x"+i.j.toString(),k="0",l="XX";"undefined"!=typeof _ezaq&&_ezaq.hasOwnProperty("domain_id")&&(k=_ezaq.domain_id.toString()),"undefined"!=typeof _ezaq&&_ezaq.hasOwnProperty("country")&&(l=_ezaq.country);var m=this.getSlotIID(a),n=a.getSlotElementId();this.isDefined(m,n)&&this.validateData(b)&&(b=this.convertDataToStr(b),this.pixels.push({type:"impression",impression_id:m,domain_id:k,unit:n,t_epoch:this.tEpoch,revenue:c,est_revenue:d,ad_position:h,ad_size:j,bid_floor_filled:e,bid_floor_prev:f,stat_source_id:g,country_code:l,data:b}))}},AddImpPixelById:function(a,b){var c="0";"undefined"!=typeof _ezaq&&_ezaq.hasOwnProperty("domain_id")&&(c=_ezaq.domain_id.toString());var d=a.split("/");if(this.isDefined(a)&&3===d.length&&this.validateData(b)){var e=d[0],f=d[2];b=this.convertDataToStr(b),this.pixels.push({type:"impression",impression_id:f,domain_id:c,unit:e,t_epoch:this.tEpoch,data:b})}},AddPVPixel:function(a,b){var c="0";"undefined"!=typeof _ezaq&&_ezaq.hasOwnProperty("domain_id")&&(c=_ezaq.domain_id.toString()),this.isDefined(a)&&this.validateData(b)&&(b=this.convertDataToStr(b),this.pixels.push({type:"pageview",pageview_id:a,domain_id:c,t_epoch:this.tEpoch,data:b}))},FirePixels:function(){"undefined"!=typeof document.visibilityState&&"prerender"===document.visibilityState||(this.isDefined(this.pixels)&&this.pixels.length>0&&((new Image).src=this.pixelUrl+"?orig="+(__ez.template.isOrig===!0?1:0)+"&pixels="+encodeURIComponent(JSON.stringify(this.pixels))),this.pixels=[])},NewData:function(a,b){return new EzoicPixelData(a,b)},convertDataToStr:function(a){if("undefined"==typeof a)return[];try{for(var b in a)a[b].val=a[b].val+""}catch(a){}return a},getSlotIID:function(a){var b=0;try{var c=a.getTargetingMap(),d=a.getSlotElementId();if(d.indexOf("div-gpt-ad")===-1)return b;if("undefined"!=typeof c)for(var e in c)if(e.indexOf("iid")!==-1&&"undefined"!=typeof c[e][0]){b=c[e][0];break}}catch(a){}return b},isDefined:function(){for(var a=0;a<arguments.length;a++)if("undefined"==typeof arguments[a]||null===arguments[a])return console.error("Argument not defined. ",arguments),!1;return!0},validateData:function(a){for(var b=0;b<a.length;b++)if(a[b]instanceof EzoicPixelData==!1)return console.error("Invalid pixelData. ",a[b]),!1;return!0}};</script>
+<script type="text/javascript">
+	var __banger_pmp_deals=[{"SlotName":"/1254144/amigobulls_com-banner-2","Deals":[]},{"SlotName":"/1254144/amigobulls_com-large-billboard-2","Deals":[{"DealId":18,"Floor":25}]},{"SlotName":"/1254144/amigobulls_com-large-leaderboard-2","Deals":[{"DealId":17,"Floor":160},{"DealId":18,"Floor":25},{"DealId":19,"Floor":100},{"DealId":7,"Floor":150},{"DealId":8,"Floor":200}]},{"SlotName":"/1254144/amigobulls_com-medrectangle-3","Deals":[{"DealId":18,"Floor":25}]},{"SlotName":"/1254144/amigobulls_com-leader-1","Deals":[{"DealId":18,"Floor":25},{"DealId":19,"Floor":100}]},{"SlotName":"/1254144/amigobulls_com-medrectangle-4","Deals":[{"DealId":17,"Floor":160},{"DealId":18,"Floor":25},{"DealId":19,"Floor":100},{"DealId":7,"Floor":150}]},{"SlotName":"/1254144/amigobulls_com-banner-1","Deals":[{"DealId":18,"Floor":25}]},{"SlotName":"/1254144/amigobulls_com-box-4","Deals":[{"DealId":17,"Floor":160},{"DealId":18,"Floor":25},{"DealId":19,"Floor":100},{"DealId":7,"Floor":150}]},{"SlotName":"/1254144/amigobulls_com-medrectangle-1","Deals":[{"DealId":18,"Floor":25},{"DealId":19,"Floor":100}]}];
+</script>
+<script data-cfasync="false" data-pagespeed-no-defer type='text/javascript'>
+function ez_isclean( data ) {
+    if (typeof data === 'undefined') { data = document.URL; }
+    var re = /(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))(@|%2540|%40)((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))/;
+    var isClean = !re.test(data);
+    return isClean;
+}
+
+var ez_queue = new Array();
+function sort_queue(a, b)
+{
+  if( a.priority < b.priority ) return -1;
+  else if( a.priority == b.priority ) return 0;
+  else return 1;
+}
+function execute_ez_queue()
+{
+  ez_queue.sort( sort_queue );
+
+  for( var i in ez_queue )
+  {
+        if(typeof ez_queue[i].method != "undefined")
+        {
+            try{
+                ez_queue[i].method.call( null );
+            }
+            catch (err) {
+
+            }
+        }
+  }
+}
+
+window.ez_ad_units = new Array();
+window.ezslots = new Array();
+function ez_write_tag(d) {
+    if(ez_isclean() && d instanceof Array) {
+
+		ez_ad_units[ez_ad_units.length] = d;
+        var ezcmd = "googletag.cmd.push(function() {var divid = 'div-gpt-ad-"+d[1]+"-0';if(typeof ezlrarn == 'function'){ezlrarn(divid);}googletag.display(divid);var to = 0;if("+d[2]+".getTargeting('ga')[0] == '0'){to = 500;console.log('"+d[2]+" - no google');}if(window.ezDisableInitialLoad==true){setTimeout(function(){googletag.pubads().refresh(["+d[2]+"])},to);}});";
+		return ezcmd;
+    }
+    else {
+        return "1+1";
+    }
+}
+function in_array(needle, haystack) {
+    var length = haystack.length;
+    for(var i = 0; i < length; i++) {
+        if(haystack[i] == needle) return true;
+    }
+    return false;
+}
+</script><script data-cfasync="false" data-pagespeed-no-defer type='text/javascript'>var ezrpos = new Array();var ez_current_interval;var ez_current_load = 0;</script>
+<script data-cfasync="false" type="text/javascript" data-pagespeed-no-defer src="//go.ezoic.net/porpoiseant/dall.js" async></script>
+<script data-cfasync="false" type="text/javascript" data-pagespeed-no-defer>
+function epbjsRefreshSlot(e){epbjs.que.push(function(){epbjs.requestBids({adUnitCodes:[e.getSlotElementId()],bidsBackHandler:function(){epbjs.setTargetingForGPTAsync([e.getSlotElementId()])}})})}var epbjs=epbjs||{};epbjs.bidderTimeout=2000,epbjs.useAdj=true,epbjs.que=epbjs.que||[],epbjs.ezdss=epbjs.ezdss||[],epbjs.ezobid=epbjs.ezobid||[],epbjs.que.push(function(){var e=[{code: 'div-gpt-ad-amigobulls_com-banner-2-0', sizes: [[160,600]], bids: [{bidder: 'districtm', params: { placementId: '11586111' }},{bidder: 'pulsepoint', params: { cf: '160X600', cp: 560269, ct: 472595 }},{bidder: 'sonobi', params: { placement_id: '507eb80cf92592557f50' }},{bidder: 'criteo', params: { zoneId: '739916' }}] },{code: 'div-gpt-ad-amigobulls_com-large-billboard-2-0', sizes: [[336,280],[300,250]], bids: [{bidder: 'districtm', params: { placementId: '11586111' }},{bidder: 'pulsepoint', params: { cf: '300X250', cp: 560269, ct: 472597 }},{bidder: 'sonobi', params: { placement_id: '507eb80cf92592557f50' }},{bidder: 'criteo', params: { zoneId: '739917' }}] },{code: 'div-gpt-ad-amigobulls_com-large-leaderboard-2-0', sizes: [[336,280],[300,250]], bids: [{bidder: 'districtm', params: { placementId: '11586111' }},{bidder: 'pulsepoint', params: { cf: '300X250', cp: 560269, ct: 472597 }},{bidder: 'sonobi', params: { placement_id: '507eb80cf92592557f50' }},{bidder: 'criteo', params: { zoneId: '739917' }}] ,sizeMapping: [
+			{
+				minWidth: 336,
+				sizes: [[336,280]]
+			}]},{code: 'div-gpt-ad-amigobulls_com-medrectangle-3-0', sizes: [[300,250]], bids: [{bidder: 'districtm', params: { placementId: '11586111' }},{bidder: 'pulsepoint', params: { cf: '300X250', cp: 560269, ct: 472597 }},{bidder: 'sonobi', params: { placement_id: '507eb80cf92592557f50' }},{bidder: 'criteo', params: { zoneId: '739917' }}] },{code: 'div-gpt-ad-amigobulls_com-leader-1-0', sizes: [[468,60]], bids: [{bidder: 'sonobi', params: { placement_id: '507eb80cf92592557f50' }},{bidder: 'criteo', params: { zoneId: '739923' }}] },{code: 'div-gpt-ad-amigobulls_com-medrectangle-4-0', sizes: [[580,400],[336,280],[300,250]], bids: [{bidder: 'districtm', params: { placementId: '11586111' }},{bidder: 'pulsepoint', params: { cf: '300X250', cp: 560269, ct: 472597 }},{bidder: 'sonobi', params: { placement_id: '507eb80cf92592557f50' }},{bidder: 'criteo', params: { zoneId: '739917' }}] },{code: 'div-gpt-ad-amigobulls_com-banner-1-0', sizes: [[580,400],[336,280],[300,250]], bids: [{bidder: 'districtm', params: { placementId: '11586111' }},{bidder: 'pulsepoint', params: { cf: '300X250', cp: 560269, ct: 472597 }},{bidder: 'sonobi', params: { placement_id: '507eb80cf92592557f50' }},{bidder: 'criteo', params: { zoneId: '739917' }}] },{code: 'div-gpt-ad-amigobulls_com-box-4-0', sizes: [[300,250]], bids: [{bidder: 'districtm', params: { placementId: '11586111' }},{bidder: 'pulsepoint', params: { cf: '300X250', cp: 560269, ct: 472597 }},{bidder: 'sonobi', params: { placement_id: '507eb80cf92592557f50' }},{bidder: 'criteo', params: { zoneId: '739917' }}] },{code: 'div-gpt-ad-amigobulls_com-medrectangle-1-0', sizes: [[336,280],[300,250]], bids: [{bidder: 'districtm', params: { placementId: '11586111' }},{bidder: 'pulsepoint', params: { cf: '300X250', cp: 560269, ct: 472597 }},{bidder: 'sonobi', params: { placement_id: '507eb80cf92592557f50' }},{bidder: 'criteo', params: { zoneId: '739917' }}] ,sizeMapping: [
+			{
+				minWidth: 336,
+				sizes: [[336,280]]
+			}]}];epbjs.addAdUnits(e);epbjs.aliasBidder('appnexus', 'districtm');epbjs.SS={"criteo":10050,"districtm":10035,"pulsepoint":10019,"sonobi":10048},epbjs.bidderSettings={districtm: { bidCpmAdjustment: function(bidCpm) { var adj1 = bidCpm * 0.850000; var adj2 = adj1 * 1.200000; return adj2; }},pulsepoint: { bidCpmAdjustment: function(bidCpm) { var adj1 = bidCpm * 0.750000; var adj2 = adj1 * 1.200000; return adj2; }},sonobi: { bidCpmAdjustment: function(bidCpm) { var adj1 = bidCpm * 0.700000; var adj2 = adj1 * 1.200000; return adj2; }},criteo: { bidCpmAdjustment: function(bidCpm) { var adj1 = bidCpm * 0.720000; var adj2 = adj1 * 1.200000; return adj2; }},standard:{adserverTargeting:[{key:"hb_bidder",val:function(e){return e.bidderCode}},{key:"hb_adid",val:function(e){return e.adId}},{key:"hb_pb",val:function(e){var s=e.cpm;return 5>s?(Math.floor(100*s)/100).toFixed(2):(Math.floor(10*s)/10).toFixed(2)}},{key:"hb_ssid",val:function(e){return"ehb"==e.bidder?0:"undefined"!=typeof epbjs.SS[e.bidder]?epbjs.SS[e.bidder]:(console.error("epbjs: NO MATCH"),0)}}]}},epbjs.onEvent("bidWon",function(e){"ehb"==e.bidder?epbjs.ezdss[e.adUnitCode]=e.ss:"undefined"!=typeof epbjs.SS[e.bidder]?(epbjs.ezdss[e.adUnitCode]=epbjs.SS[e.bidder],1==epbjs.useAdj&&["sovrn","openx","pulsepoint","defymedia","aol","conversant","districtm","admedia","brealtime","sonobi","criteo"].indexOf(e.bidder)>-1&&(epbjs.ezobid[e.adUnitCode]=e.cpm/1.200000)):console.error("epbjs: NO MATCH")}),epbjs.requestBids({bidsBackHandler:function(e){epbjs.setTargetingForGPTAsync()}})});
+</script><script data-cfasync="false" data-pagespeed-no-defer type='text/javascript'>window.isEZABL=false;window.ezmadspc=300;</script><script data-cfasync="false" data-pagespeed-no-defer type='text/javascript'>window.ezDisableInitialLoad=false;</script><script data-cfasync="false" data-pagespeed-no-defer type='text/javascript'>
+window.googletag = window.googletag || {};
+googletag.cmd = googletag.cmd || [];
+(function() {
+var gads = document.createElement('script');
+gads.async = true;
+gads.type = 'text/javascript';
+var useSSL = 'https:' == document.location.protocol;
+gads.src = (useSSL ? 'https:' : 'http:') +
+'//www.googletagservices.com/tag/js/gpt.js';
+var node = document.getElementsByTagName('script')[0];
+node.parentNode.insertBefore(gads, node);
+})();
+
+
+
+</script>
+<script data-cfasync="false" data-pagespeed-no-defer type='text/javascript'>
+googletag.cmd.push(function() {if(typeof window.isEZABL == 'undefined' || window.isEZABL != true) {ezslot_0 = googletag.defineSlot('/1254144/amigobulls_com-banner-2',[160,600],'div-gpt-ad-amigobulls_com-banner-2-0').addService(googletag.pubads()).setTargeting('iid5','498866').setTargeting('t','134').setTargeting('d','46056').setTargeting('t1','134').setTargeting('pvc','0').setTargeting('ap','1102').setTargeting('sap','1102').setTargeting('a','|3|').setTargeting('as','revenue').setTargeting('plat','1').setTargeting('bra','mod6').setTargeting('ic','1').setTargeting('at','mbf').setTargeting('adr','399').setTargeting('reft','tf').setTargeting('refs','30').setTargeting('ga','2497208').setTargeting('rid','99998').setTargeting('pt','18').setTargeting('al','1031').setTargeting('compid','0').setTargeting('tap','amigobulls_com-banner-2-498866').setTargeting('bv','17').setCollapseEmptyDiv(false).setTargeting('br1','0').setTargeting('br2','0').setTargeting('ezoic','1').setTargeting('deal1',[17,18,19,20,21,22,23,24,25,26,7,8,9,10,11,12,13,14,15,16]);ezslot_0.set('adsense_ad_types','text_image').set('adsense_background_color','FFFFFF').set('adsense_border_color','FFFFFF').set('adsense_channel_ids','1702401361').set('adsense_link_color','0000FF').set('adsense_text_color','000000').set('adsense_url_color','828282');ezrpos[0]="0";ezslot_1 = googletag.defineSlot('/1254144/amigobulls_com-large-billboard-2',[336,280],'div-gpt-ad-amigobulls_com-large-billboard-2-0').addService(googletag.pubads()).setTargeting('iid5','440517').setTargeting('t','134').setTargeting('d','46056').setTargeting('t1','134').setTargeting('pvc','0').setTargeting('ap','1665').setTargeting('sap','1665').setTargeting('a','|3|').setTargeting('as','revenue').setTargeting('plat','1').setTargeting('bra','mod6').setTargeting('ic','1').setTargeting('at','mbf').setTargeting('adr','399').setTargeting('reft','tf').setTargeting('refs','120').setTargeting('ga','2497208').setTargeting('rid','99998').setTargeting('pt','0').setTargeting('al','1034').setTargeting('compid','0').setTargeting('tap','amigobulls_com-large-billboard-2-440517').setTargeting('bv','3').setCollapseEmptyDiv(false).setTargeting('br1','70').setTargeting('br2','40').setTargeting('ezoic','1').setTargeting('deal1',[17,19,20,21,22,23,24,25,26,7,8,9,10,11,12,13,14,15,16]);ezslot_1.set('adsense_ad_types','text_image').set('adsense_background_color','FFFFFF').set('adsense_border_color','FFFFFF').set('adsense_channel_ids','1702401361').set('adsense_link_color','0000FF').set('adsense_text_color','000000').set('adsense_url_color','828282');ezrpos[1]="1";ezslot_2 = googletag.defineSlot('/1254144/amigobulls_com-large-leaderboard-2',[336,280],'div-gpt-ad-amigobulls_com-large-leaderboard-2-0').addService(googletag.pubads()).setTargeting('iid5','496316').setTargeting('t','134').setTargeting('d','46056').setTargeting('t1','134').setTargeting('pvc','0').setTargeting('ap','1101').setTargeting('sap','1101').setTargeting('a','|3|').setTargeting('as','revenue').setTargeting('plat','1').setTargeting('bra','mod6').setTargeting('ic','1').setTargeting('at','mbf').setTargeting('adr','399').setTargeting('reft','n').setTargeting('refs','120').setTargeting('ga','2497208').setTargeting('rid','99998').setTargeting('pt','0').setTargeting('al','1036').setTargeting('compid','0').setTargeting('tap','amigobulls_com-large-leaderboard-2-496316').setTargeting('bv','19').setCollapseEmptyDiv(false).setTargeting('br1','260').setTargeting('br2','140').setTargeting('ezoic','1').setTargeting('deal1',[20,21,22,23,24,25,26,9,10,11,12,13,14,15,16]).defineSizeMapping(googletag.sizeMapping().addSize([336,0], [336,280]).addSize([0,0], []).build());ezslot_2.set('adsense_ad_types','text_image').set('adsense_background_color','FFFFFF').set('adsense_border_color','FFFFFF').set('adsense_channel_ids','1702401361').set('adsense_link_color','0000FF').set('adsense_text_color','000000').set('adsense_url_color','828282');ezrpos[2]="2";ezslot_3 = googletag.defineSlot('/1254144/amigobulls_com-medrectangle-3',[300,250],'div-gpt-ad-amigobulls_com-medrectangle-3-0').addService(googletag.pubads()).setTargeting('iid5','496917').setTargeting('t','134').setTargeting('d','46056').setTargeting('t1','134').setTargeting('pvc','0').setTargeting('ap','1624').setTargeting('sap','1624').setTargeting('a','|3|').setTargeting('as','revenue').setTargeting('plat','1').setTargeting('bra','mod6').setTargeting('ic','1').setTargeting('at','mbf').setTargeting('adr','399').setTargeting('reft','tf').setTargeting('refs','30').setTargeting('ga','2497208').setTargeting('rid','99998').setTargeting('pt','8').setTargeting('al','1021').setTargeting('compid','0').setTargeting('tap','amigobulls_com-medrectangle-3-496917').setTargeting('bv','17').setCollapseEmptyDiv(false).setTargeting('br1','90').setTargeting('br2','40').setTargeting('ezoic','1').setTargeting('deal1',[17,19,20,21,22,23,24,25,26,7,8,9,10,11,12,13,14,15,16]);ezslot_3.set('adsense_ad_types','text_image').set('adsense_background_color','FFFFFF').set('adsense_border_color','FFFFFF').set('adsense_channel_ids','1702401361').set('adsense_link_color','0000FF').set('adsense_text_color','000000').set('adsense_url_color','828282');ezrpos[3]="3";ezslot_4 = googletag.defineSlot('/1254144/amigobulls_com-leader-1',[468,60],'div-gpt-ad-amigobulls_com-leader-1-0').addService(googletag.pubads()).setTargeting('iid5','481467').setTargeting('t','134').setTargeting('d','46056').setTargeting('t1','134').setTargeting('pvc','0').setTargeting('ap','1664').setTargeting('sap','1664').setTargeting('a','|3|').setTargeting('as','revenue').setTargeting('plat','1').setTargeting('bra','mod6').setTargeting('ic','1').setTargeting('at','mbf').setTargeting('adr','399').setTargeting('reft','n').setTargeting('refs','30').setTargeting('ga','2497208').setTargeting('rid','99998').setTargeting('pt','0').setTargeting('al','1037').setTargeting('compid','0').setTargeting('tap','amigobulls_com-leader-1-481467').setTargeting('bv','16').setCollapseEmptyDiv(false).setTargeting('br1','140').setTargeting('br2','70').setTargeting('ezoic','1').setTargeting('deal1',[17,20,21,22,23,24,25,26,7,8,9,10,11,12,13,14,15,16]);ezslot_4.set('adsense_ad_types','text_image').set('adsense_background_color','FFFFFF').set('adsense_border_color','FFFFFF').set('adsense_channel_ids','1702401361').set('adsense_link_color','0000FF').set('adsense_text_color','000000').set('adsense_url_color','828282');ezrpos[4]="4";ezslot_5 = googletag.defineSlot('/1254144/amigobulls_com-medrectangle-4',[580,400],'div-gpt-ad-amigobulls_com-medrectangle-4-0').addService(googletag.pubads()).setTargeting('iid5','434966').setTargeting('t','134').setTargeting('d','46056').setTargeting('t1','134').setTargeting('pvc','0').setTargeting('ap','1100').setTargeting('sap','1100').setTargeting('a','|3|').setTargeting('as','revenue').setTargeting('plat','1').setTargeting('bra','mod6').setTargeting('ic','1').setTargeting('at','mbf').setTargeting('adr','399').setTargeting('reft','n').setTargeting('refs','120').setTargeting('ga','2497208').setTargeting('rid','99998').setTargeting('pt','9').setTargeting('al','1022').setTargeting('compid','2').setTargeting('tap','amigobulls_com-medrectangle-4-434966').setTargeting('bv','14').setCollapseEmptyDiv(false).setTargeting('br1','160').setTargeting('br2','80').setTargeting('ezoic','1').setTargeting('deal1',[20,21,22,23,24,25,26,8,9,10,11,12,13,14,15,16]);ezslot_5.set('adsense_ad_types','text_image').set('adsense_background_color','FFFFFF').set('adsense_border_color','FFFFFF').set('adsense_channel_ids','1702401361').set('adsense_link_color','0000FF').set('adsense_text_color','000000').set('adsense_url_color','828282');ezrpos[5]="5";ezslot_6 = googletag.defineSlot('/1254144/amigobulls_com-banner-1',[580,400],'div-gpt-ad-amigobulls_com-banner-1-0').addService(googletag.pubads()).setTargeting('iid5','440667').setTargeting('t','134').setTargeting('d','46056').setTargeting('t1','134').setTargeting('pvc','0').setTargeting('ap','1663').setTargeting('sap','1663').setTargeting('a','|3|').setTargeting('as','revenue').setTargeting('plat','1').setTargeting('bra','mod6').setTargeting('ic','1').setTargeting('at','mbf').setTargeting('adr','399').setTargeting('reft','tf').setTargeting('refs','30').setTargeting('ga','2497208').setTargeting('rid','99998').setTargeting('pt','5').setTargeting('al','1030').setTargeting('compid','0').setTargeting('tap','amigobulls_com-banner-1-440667').setTargeting('bv','20').setCollapseEmptyDiv(false).setTargeting('br1','40').setTargeting('br2','20').setTargeting('ezoic','1').setTargeting('deal1',[17,19,20,21,22,23,24,25,26,7,8,9,10,11,12,13,14,15,16]);ezslot_6.set('adsense_ad_types','text_image').set('adsense_background_color','FFFFFF').set('adsense_border_color','FFFFFF').set('adsense_channel_ids','1702401361').set('adsense_link_color','0000FF').set('adsense_text_color','000000').set('adsense_url_color','828282');ezrpos[6]="6";ezslot_7 = googletag.defineSlot('/1254144/amigobulls_com-box-4',[300,250],'div-gpt-ad-amigobulls_com-box-4-0').addService(googletag.pubads()).setTargeting('iid5','448168').setTargeting('t','134').setTargeting('d','46056').setTargeting('t1','134').setTargeting('pvc','0').setTargeting('ap','1662').setTargeting('sap','1662').setTargeting('a','|3|').setTargeting('as','revenue').setTargeting('plat','1').setTargeting('bra','mod6').setTargeting('ic','1').setTargeting('at','mbf').setTargeting('adr','399').setTargeting('reft','tf').setTargeting('refs','120').setTargeting('ga','2497208').setTargeting('rid','99998').setTargeting('pt','6').setTargeting('al','1003').setTargeting('compid','0').setTargeting('tap','amigobulls_com-box-4-448168').setTargeting('bv','12').setCollapseEmptyDiv(false).setTargeting('br1','160').setTargeting('br2','80').setTargeting('ezoic','1').setTargeting('deal1',[20,21,22,23,24,25,26,8,9,10,11,12,13,14,15,16]);ezslot_7.set('adsense_ad_types','text_image').set('adsense_background_color','FFFFFF').set('adsense_border_color','FFFFFF').set('adsense_channel_ids','1702401361').set('adsense_link_color','0000FF').set('adsense_text_color','000000').set('adsense_url_color','828282');ezrpos[7]="7";ezslot_8 = googletag.defineSlot('/1254144/amigobulls_com-medrectangle-1',[336,280],'div-gpt-ad-amigobulls_com-medrectangle-1-0').addService(googletag.pubads()).setTargeting('iid5','463469').setTargeting('t','134').setTargeting('d','46056').setTargeting('t1','134').setTargeting('pvc','0').setTargeting('ap','1683').setTargeting('sap','1683').setTargeting('a','|3|').setTargeting('as','revenue').setTargeting('plat','1').setTargeting('bra','mod6').setTargeting('ic','1').setTargeting('at','mbf').setTargeting('adr','399').setTargeting('reft','n').setTargeting('refs','30').setTargeting('ga','2497208').setTargeting('rid','99998').setTargeting('pt','4').setTargeting('al','1004').setTargeting('compid','0').setTargeting('tap','amigobulls_com-medrectangle-1-463469').setTargeting('bv','11').setTargeting('acptad','1').setCollapseEmptyDiv(false).setTargeting('br1','100').setTargeting('br2','50').setTargeting('ezoic','1').setTargeting('deal1',[17,20,21,22,23,24,25,26,7,8,9,10,11,12,13,14,15,16]).defineSizeMapping(googletag.sizeMapping().addSize([336,0], [336,280]).addSize([0,0], []).build());ezslot_8.set('adsense_ad_types','text_image').set('adsense_background_color','FFFFFF').set('adsense_border_color','FFFFFF').set('adsense_channel_ids','1702401361').set('adsense_link_color','0000FF').set('adsense_text_color','000000').set('adsense_url_color','828282');ezrpos[8]="8";}else{window.ezHideLocations=[];window.ezHideLocations.push('div-gpt-ad-amigobulls_com-banner-2-0');window.ezHideLocations.push('div-gpt-ad-amigobulls_com-large-billboard-2-0');window.ezHideLocations.push('div-gpt-ad-amigobulls_com-large-leaderboard-2-0');window.ezHideLocations.push('div-gpt-ad-amigobulls_com-medrectangle-3-0');window.ezHideLocations.push('div-gpt-ad-amigobulls_com-leader-1-0');window.ezHideLocations.push('div-gpt-ad-amigobulls_com-medrectangle-4-0');window.ezHideLocations.push('div-gpt-ad-amigobulls_com-banner-1-0');window.ezHideLocations.push('div-gpt-ad-amigobulls_com-box-4-0');ezslot_8 = googletag.defineSlot('/1254144/amigobulls_com-medrectangle-1',[336,280],'div-gpt-ad-amigobulls_com-medrectangle-1-0').addService(googletag.pubads()).setTargeting('iid5','463469').setTargeting('t','134').setTargeting('d','46056').setTargeting('t1','134').setTargeting('pvc','0').setTargeting('ap','1683').setTargeting('sap','1683').setTargeting('a','|3|').setTargeting('as','revenue').setTargeting('plat','1').setTargeting('bra','mod6').setTargeting('ic','1').setTargeting('at','mbf').setTargeting('adr','399').setTargeting('reft','n').setTargeting('refs','30').setTargeting('ga','2497208').setTargeting('rid','99998').setTargeting('pt','4').setTargeting('al','1004').setTargeting('compid','0').setTargeting('tap','amigobulls_com-medrectangle-1-463469').setTargeting('bv','11').setTargeting('acptad','1').setCollapseEmptyDiv(false).setTargeting('br1','100').setTargeting('br2','50').setTargeting('ezoic','1').setTargeting('deal1',[17,20,21,22,23,24,25,26,7,8,9,10,11,12,13,14,15,16]).defineSizeMapping(googletag.sizeMapping().addSize([336,0], [336,280]).addSize([0,0], []).build());ezslot_8.set('adsense_ad_types','text_image').set('adsense_background_color','FFFFFF').set('adsense_border_color','FFFFFF').set('adsense_channel_ids','1702401361').set('adsense_link_color','0000FF').set('adsense_text_color','000000').set('adsense_url_color','828282');ezrpos[8]="8";}googletag.pubads().addEventListener('slotRenderEnded', function(event) { __ez.queue.addFunc("ezbanger", "ezbanger", event, false, ['banger.js'], true, true, false, true); });googletag.pubads().addEventListener('impressionViewable', function(event) { __ez.queue.addFunc("ezvb", "ezvb", event, false, ['banger.js'], true, true, false, true); });googletag.pubads().addEventListener('slotVisibilityChanged', function(event) { __ez.queue.addFunc("ezvbc", "ezvbc", event, false, ['banger.js'], true, true, false, true); });googletag.enableServices();});if(typeof window.isEZABL == 'undefined' || window.isEZABL != true) {ezslots.push("ezslot_0");ezslots.push("ezslot_1");ezslots.push("ezslot_2");ezslots.push("ezslot_3");ezslots.push("ezslot_4");ezslots.push("ezslot_5");ezslots.push("ezslot_6");ezslots.push("ezslot_7");ezslots.push("ezslot_8");}else{ezslots.push("ezslot_8");}</script>
+<script>(function(){function a(g,h,i){var j=new Date;j.setTime(j.getTime()+1e3*(60*(60*(24*i))));var k="expires="+j.toUTCString(),l=g+"="+h+";"+k+";path=/;";"undefined"!=typeof ezdomain&&(l+="domain="+ezdomain),document.cookie=l}var b=window.addEventListener?"addEventListener":"attachEvent",c=window[b],f="attachEvent"==b?"onmessage":"message";c(f,function(g){"undefined"!=typeof g.data.ezstatus&&(__ez.bit.AddAndFire(_ezaq.page_view_id,[new __ezDotData("dg",g.data.ezstatus)]),a("ezdg",g.data.ezstatus,730))})})();</script>
+<script type="text/javascript" data-cfasync="false">var _ezaq = {"ad_cache_level":1,"ad_location_ids":"31,34,36,21,37,22,30,3,4,95","adx_ad_count":8,"bidder_version":3,"city":"","country":"US","days_since_last_visit":-1,"display_ad_count":9,"domain_id":46056,"ds_adsize_opt_id":-1,"engaged_time_visit":0,"ezcache_level":0,"forensiq_score":-1,"form_factor_id":1,"has_bad_words":0,"iab_category":"","is_bot":0,"is_return_visitor":false,"last_page_load":"","last_pageview_id":"","lt_cache_level":0,"max_ads":10,"metro_code":0,"page_ad_positions":"1100,1101,1102,1103,1624,1662,1663,1664,1665,1683","page_view_count":0,"page_view_id":"75c6f189-828f-4735-69af-2edb4a19e7ed","pv_event_count":0,"response_time_orig":362,"serverid":"13.56.138.29:12739","sub_page_ad_positions":"1100,1101,1102,1103,1624,1662,1663,1664,1665,1683","t_epoch":1500892136,"template_id":134,"time_on_site_visit":0,"url":"https://amigobulls.com/articles/tsla-stock-does-tesla-motors-inc-have-a-future-in-solar-energy-space","user_id":921062654,"weather_precipitation":0,"weather_summary":"","weather_temperature":0,"word_count":2499};var _ezim_d = {"amigobulls_com-banner-1":{"adx_ad_count":8,"full_id":"amigobulls_com-banner-1/2017-07-24/440667","height":"400","position_id":1663,"sub_position_id":1663,"width":"580"},"amigobulls_com-banner-2":{"adx_ad_count":8,"full_id":"amigobulls_com-banner-2/2017-07-24/498866","height":"600","position_id":1102,"sub_position_id":1102,"width":"160"},"amigobulls_com-box-4":{"adx_ad_count":8,"full_id":"amigobulls_com-box-4/2017-07-24/448168","height":"250","position_id":1662,"sub_position_id":1662,"width":"300"},"amigobulls_com-large-billboard-2":{"adx_ad_count":8,"full_id":"amigobulls_com-large-billboard-2/2017-07-24/440517","height":"280","position_id":1665,"sub_position_id":1665,"width":"336"},"amigobulls_com-large-leaderboard-2":{"adx_ad_count":8,"full_id":"amigobulls_com-large-leaderboard-2/2017-07-24/496316","height":"280","position_id":1101,"sub_position_id":1101,"width":"336"},"amigobulls_com-leader-1":{"adx_ad_count":8,"full_id":"amigobulls_com-leader-1/2017-07-24/481467","height":"60","position_id":1664,"sub_position_id":1664,"width":"468"},"amigobulls_com-medrectangle-1":{"adx_ad_count":8,"full_id":"amigobulls_com-medrectangle-1/2017-07-24/463469","height":"280","position_id":1683,"sub_position_id":1683,"width":"336"},"amigobulls_com-medrectangle-3":{"adx_ad_count":8,"full_id":"amigobulls_com-medrectangle-3/2017-07-24/496917","height":"250","position_id":1624,"sub_position_id":1624,"width":"300"},"amigobulls_com-medrectangle-4":{"adx_ad_count":8,"full_id":"amigobulls_com-medrectangle-4/2017-07-24/434966","height":"400","position_id":1100,"sub_position_id":1100,"width":"580"},"amigobulls_com-nativedouble-1":{"adx_ad_count":8,"full_id":"amigobulls_com-nativedouble-1/2017-07-24/452216","height":"480","position_id":1103,"sub_position_id":1103,"width":"100"}};var _ezat = {"domain_id":46056,"form_factor_id":1,"pageview_date":"2017-07-24","pageview_id":"75c6f189-828f-4735-69af-2edb4a19e7ed","template_id":134,"url":"https://amigobulls.com/articles/tsla-stock-does-tesla-motors-inc-have-a-future-in-solar-energy-space","visit_uuid":"99bc1fcb-ec6f-4527-5aec-3fb9556a0e78"};</script><script data-cfasync='false' type="text/javascript" src="/detroitchicago/rochester.js?cb=169-0&v=7" async></script><script data-pagespeed-no-defer data-cfasync='false' type="text/javascript">__ez.queue.addFile('banger.js', '/porpoiseant/banger.js?cb=169-0&bv=2&v=15&PageSpeed=off', true, [], true, false, false, true);</script><script data-pagespeed-no-defer data-cfasync='false'>
+function create_ezolpl() {
+    var d = new Date();
+    d.setTime(d.getTime() + (365*24*60*60*1000));
+    var expires = "expires="+d.toUTCString();
+    document.cookie = "ezux_lpl_46056=" + new Date().getTime() + "|75c6f189-828f-4735-69af-2edb4a19e7ed; " + expires;
+}
+function attach_ezolpl() {
+    if(window.attachEvent) {
+        window.attachEvent('onload', create_ezolpl);
+    } else {
+        if(window.onload) {
+            var curronload = window.onload;
+            var newonload = function(evt) {
+                curronload(evt);
+                create_ezolpl();
+            };
+            window.onload = newonload;
+        } else {
+            window.onload = create_ezolpl;
+        }
+    }
+}
+attach_ezolpl();
+</script>
+
+<title>
+TSLA stock: Does Tesla Motors Inc Have A Future In Solar Energy Space?</title>
+<link rel="stylesheet" type="text/css" href="https://static.amigobulls.com/css/1499152099_amigo_template.min.css"><meta name="description" content="Tesla Motors Inc has too much on its plate and should avoid the cutthroat solar industry.">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+<link rel="shortcut icon" href="https://static.amigobulls.com/v2images/favicon.ico" type="image/x-icon">
+  <link rel="canonical" href="https://amigobulls.com/articles/tsla-stock-does-tesla-motors-inc-have-a-future-in-solar-energy-space">
+<meta property="fb:pages" content="508744769149352">
+	<link rel="amphtml" href="https://amigobulls.com/amphtml/articles/tsla-stock-does-tesla-motors-inc-have-a-future-in-solar-energy-space">
+	<meta name="news_keywords" content=" Tesla Inc (NASDAQ:TSLA) stock, Tesla Inc (NASDAQ:TSLA) news, Stock Market News">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="TSLA stock: Does Tesla Motors Inc Have A Future In Solar Energy Space?">
+	<meta property="og:description" content="Tesla Motors Inc has too much on its plate and should avoid the cutthroat solar industry.">
+	<meta property="og:url" content="https://amigobulls.com/articles/tsla-stock-does-tesla-motors-inc-have-a-future-in-solar-energy-space">
+	<meta property="og:site_name" content="Amigobulls : Technology Stock Analysis">
+	<meta property="article:publisher" content="https://www.facebook.com/amigobulls">
+		<meta property="article:tag" content="Tesla Inc">
+			<meta property="article:section" content="Stock Market News">
+		<meta property="article:published_time" content="2017-01-26 03:09:46">
+		<meta property="fb:app_id" content="451038928314843">
+		<meta property="og:image:type" content="image/png">
+	<meta property="og:image" content="https://static.amigobulls.com/articles/wp-content/uploads/2017/01/TSLA-stock-Does-Tesla-Motors-Inc-Have-A-Future-In-Solar-Energy-Space.jpg">
+		<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="@amigobulls">
+	<meta name="twitter:domain" content="amigobulls.com">
+		<meta name="twitter:creator" content="@https://twitter.com/AGreenInvestor">
+			<meta name="twitter:image:src" content="https://static.amigobulls.com/articles/wp-content/uploads/2017/01/TSLA-stock-Does-Tesla-Motors-Inc-Have-A-Future-In-Solar-Energy-Space.jpg">
+	<meta name="twitter:image" content="https://static.amigobulls.com/articles/wp-content/uploads/2017/01/TSLA-stock-Does-Tesla-Motors-Inc-Have-A-Future-In-Solar-Energy-Space.jpg">
+		<meta name="twitter:description" content="Tesla Motors Inc has too much on its plate and should avoid the cutthroat solar industry.">
+	<meta name="twitter:title" content="TSLA stock: Does Tesla Motors Inc Have A Future In Solar Energy Space?">
+	<meta name="twitter:url" content="https://amigobulls.com/articles/tsla-stock-does-tesla-motors-inc-have-a-future-in-solar-energy-space">
+
+  <script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script type="text/javascript">
+    function setCookie(name,userid,domain){
+        var exdate=new Date();
+        exdate.setDate(exdate.getDate() + 10000);
+        var c_value=userid + ("; expires="+exdate.toUTCString())+(";domain="+domain+"; path=/;");
+        document.cookie=name + "=" + c_value;
+    }
+    setCookie("userid",'5975cbe8a55fa','.amigobulls.com'); //set cookie for .amigobulls.com intailly
+  </script>
+<script type="text/javascript">
+    width=window.innerWidth;
+    if (width >= 1200) {
+        device_type = "desktop";
+        document.cookie = "device=desktop"+"; path=/";
+    }else if(width>=760){
+        device_type = "tablet";
+        document.cookie = "device=tablet"+"; path=/";
+    }else{
+        device_type = "mobile";
+        document.cookie = "device=mobile"+"; path=/";
+    } 
+</script>
+ 
+<script>
+var _prum = [['id', '557af72cabe53d446b5ce345'],
+             ['mark', 'firstbyte', (new Date()).getTime()]];
+(function() {
+    var s = document.getElementsByTagName('script')[0]
+      , p = document.createElement('script');
+    p.async = 'async';
+    p.src = '//rum-static.pingdom.net/prum.min.js';
+    s.parentNode.insertBefore(p, s);
+})();
+</script>
+
+<style>
+	.ezmob-footer {
+	    position: fixed; left: 0px; bottom: 0px; height: 50px; width: 100%; background: white; z-index: 1000;
+	}
+    body {
+        padding-bottom: 50px;
+    }
+</style>
+<style>.ezoic-ad.banner-2 { display:block !important;float:none !important;margin-bottom:2px !important;margin-left:0px !important;margin-right:0px !important;margin-top:2px !important;min-height:620px;min-width:160px;text-align:center !important; }
+.ezoic-ad.large-billboard-2 { display:block !important;float:none !important;margin-bottom:2px !important;margin-left:0px !important;margin-right:0px !important;margin-top:2px !important;min-height:300px;min-width:336px;text-align:center !important; }
+.ezoic-ad.large-leaderboard-2 { display:block !important;float:none;margin-bottom:2px !important;margin-left:0px !important;margin-right:0px !important;margin-top:2px !important;min-height:300px;min-width:336px;text-align:center !important; }
+.ezoic-ad.medrectangle-3 { display:block !important;float:none;margin-bottom:2px !important;margin-left:0px !important;margin-right:0px !important;margin-top:2px !important;min-height:270px;min-width:300px;text-align:center !important; }
+.ezoic-ad.leader-1 { display:block !important;float:none !important;margin-bottom:2px !important;margin-left:0px !important;margin-right:0px !important;margin-top:2px !important;min-height:80px;min-width:468px; }
+.ezoic-ad.banner-1 { display:block !important;float:none !important;margin-bottom:2px !important;margin-left:0px !important;margin-right:0px !important;margin-top:2px !important;min-height:420px;min-width:580px;text-align:center !important; }
+.ezoic-ad.box-4 { display:block !important;float:none !important;margin-bottom:2px !important;margin-left:0px !important;margin-right:0px !important;margin-top:2px !important;min-height:270px;min-width:300px;text-align:center !important; }
+.ezoic-ad.medrectangle-1 { display:block !important;float:none;margin-bottom:2px !important;margin-left:0px !important;margin-right:0px !important;margin-top:2px !important;min-height:300px;min-width:336px;text-align:center !important; }
+.ezoic-ad.medrectangle-4 { display:block !important;float:none;margin-bottom:2px !important;margin-left:0px !important;margin-right:0px !important;margin-top:2px !important;min-height:420px;min-width:580px;text-align:center !important; }
+.ezoic-ad.nativedouble-1 { display:block !important;float:none !important;margin-bottom:2px !important;margin-left:0px !important;margin-right:0px !important;margin-top:2px !important;min-height:480px;min-width:100%;text-align:center !important; }
+.ezoic-ad{display:inline-block;}
+.ezoic-floating-bottom { display: none!important; }</style>
+<script data-cfasync="false" type="text/javascript">window.google_analytics_uacct = "UA-97831649-32";</script>
+<script data-cfasync="false" type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['e._setAccount', 'UA-97831649-32']);
+_gaq.push(['f._setAccount', 'UA-38339005-1']);
+_gaq.push(['e._setDomainName', 'amigobulls.com']);
+_gaq.push(['f._setDomainName', 'amigobulls.com']);
+_gaq.push(['e._setCustomVar',1,'template','pub_site',3]);
+_gaq.push(['e._setCustomVar',2,'t','134',3]);
+_gaq.push(['e._setCustomVar',3,'rid','0',2]);
+_gaq.push(['e._setCustomVar',4,'bra','mod6',3]);
+_gaq.push(['e._setAllowAnchor',true]);
+_gaq.push(['e._setSiteSpeedSampleRate', 10]);
+_gaq.push(['f._setCustomVar',1,'template','pub_site',3]);
+_gaq.push(['f._setCustomVar',2,'domain','amigobulls.com',3]);
+_gaq.push(['f._setSiteSpeedSampleRate', 20]);
+_gaq.push(['e._trackPageview']);
+_gaq.push(['f._trackPageview']);
+
+
+(function() {
+ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script type="text/javascript">var ezouid = "921062654";</script><base href="https://amigobulls.com/articles/tsla-stock-does-tesla-motors-inc-have-a-future-in-solar-energy-space"><script type='text/javascript'>
+var ezoTemplate = 'pub_site';
+if(typeof ezouid == 'undefined')
+{
+    var ezouid = 'none';
+}
+var ezoFormfactor = '1';
+var ezo_elements_to_check = Array();
+</script><!-- START EZHEAD -->
+<script type='text/javascript'>
+var soc_app_id = '0';
+var did = 46056;
+var ezdomain = 'amigobulls.com';
+var ezoicSearchable = 1;
+</script>
+<!--{jquery}-->
+<!-- END EZHEAD -->
+<script data-pagespeed-no-defer data-cfasync='false' type='text/javascript' style='display:none'>
+__ez.queue.addFile('__ezf_ezosuigeneris', '//g.ezoic.net/ezosuigeneris.js', true, [], true, false, false, false);
+var __ez_ezosuigenerisEvt = function() { __ez.bit.AddAndFire(_ezaq['page_view_id'], [(new __ezDotData('universal_user_id', ezosuigeneris))]); };
+__ez.queue.addFunc('__ez_ezosuigenerisEvt', '__ez_ezosuigenerisEvt', null, false, ['__ezf_ezosuigeneris'], false, false, false, false);</script><script data-pagespeed-no-defer data-cfasync='false' type='text/javascript' style='display:none'>__ez.queue.addFile('__ezf_ezosuigenerisc', '//g.ezoic.net/ezosuigenerisc.js?nogen=1', true, [], true, false, false, false);</script></head>
+<body>
+    <div id="main-content" class="clearfix">
+        <div id="header">
+            <header class="new_header home_hide positionRelative" id="header_cont">
+    <nav class="all_menus">
+        <div class="mobi-hideit fs75 toprow"><div class="all_stocks"><div class="newstocks_head  colr2 left"><a class="tickerblue" href="https://amigobulls.com/stocks/AAPL/analysis" title="Apple stock analysis">AAPL</a>&nbsp;<span class="mobi-hideit"><span class="fa fa-arrow-down"></span>$150.27 (0.05%)</span></div><div class="newstocks_head  colr2 left"><a class="tickerblue" href="https://amigobulls.com/stocks/FB/analysis" title="Facebook stock analysis">FB</a>&nbsp;<span class="mobi-hideit"><span class="fa fa-arrow-down"></span>$164.43 (0.06%)</span></div><div class="newstocks_head  colr2 left"><a class="tickerblue" href="https://amigobulls.com/stocks/AMZN/analysis" title="Amazon stock analysis">AMZN</a>&nbsp;<span class="mobi-hideit"><span class="fa fa-arrow-down"></span>$1025.67 (0.29%)</span></div><div class="newstocks_head  colr1 left"><a class="tickerblue" href="https://amigobulls.com/stocks/GOOG/analysis" title="Alphabet Inc-C stock analysis">GOOG</a>&nbsp;<span class="mobi-hideit"><span class="fa fa-arrow-up"></span>$972.92 (0.49%)</span></div></div></div> 
+        <div class="clear separater mobi-hideit home_tab_hide"></div>
+            <div class="overlay_mask mobi_tab_hide"></div>
+            <div class="smallmenu mobi_tab_hide">
+                <div class="logindiv fs75 toprow">
+                    <span class="hoverorange enrich active_menu"><a href="https://enrichview.in/">AMIGOBULLS FOR BUSINESS</a></span>
+                     
+                        <span class="joinus signupfromjq hoverorange">SIGN UP</span>
+                        <span class="login hoverorange loginfromjq ">LOGIN</span>
+                        <!-- <span class="hoverblack mobi_tab_hide" id="signup" ><a href='' title="Become a contributor for amigobulls" id='contributer'>CONTRIBUTE</a></span> -->
+                                    </div> 
+                <div class="right mt3px search_box">
+                                </div>
+                <div class="bottomrow menu fs80 ">
+                    <ul class="menudiv">       
+                        <li id="index" class="hover_parent" data-nav="primary">
+                            <a href="https://amigobulls.com" title="amigobulls - homepage"><span class="desktop_hide line_text">HOME<span class="under_line"></span></span><span class="mobi_tab_hide fa fa-home fa-lg"></span></a>
+                        </li>
+                        <li id="fundamentalpicks" class=" alink_parent" data-nav="primary">
+                            <div class="mobi_menulist">
+                                <span class=" mainlink alink_click hoverorange">STOCK PICKS<span class="under_line"></span></span>
+                                <i class="marrow fa fa-chevron-down"></i>
+                            </div>
+                            <ul id="picks_ul" class="sub-menu">
+                                <li><a class="alink" href="https://amigobulls.com/stocks-to-buy/top-tech-stocks/" title="Technology Stock Picks">Technology Stock Picks</a></li>
+                                <li><a href="https://amigobulls.com/stocks-to-buy/best-stocks-to-buy-today/" title="Stocks to buy Today">Daily Stock Picks</a></li>
+                                <li><a href="https://amigobulls.com/stocks-to-buy/top-auto-stocks/" title="Top Auto Stocks">Top Auto Stocks</a></li>
+
+                                </ul>   
+                        </li>
+                        <li id="analysis" class=" alink_parent" data-nav="primary">
+                            <div class="mobi_menulist">
+                                <span class=" mainlink alink_click hoverorange">ARTICLES<span class="under_line"></span></span>
+                                <i class="marrow fa fa-chevron-down"></i>
+                            </div>
+                            <ul id="analysis_ul" class="sub-menu">
+                                <li><a class="alink" href="https://amigobulls.com/articles/" title="Latest">Latest</a></li> 
+                                <li><a href="https://amigobulls.com/articles/category/earnings-analysis" title="Earnings Analysis">Earnings Analysis</a></li> 
+                                <li><a href="https://amigobulls.com/articles/category/finance">Finance</a></li> 
+                                <li><a href="https://amigobulls.com/articles/category/stock-updates">Stock Updates</a></li>
+                                <li><a href="https://amigobulls.com/articles/category/investing">Investing</a></li> 
+                                <li><a href="https://amigobulls.com/articles/category/stock-market-news">Stock Market News</a></li>
+                                <li><a href="https://amigobulls.com/articles/category/stock-valuation">Stock Valuation</a></li>
+                                <li><a href="https://amigobulls.com/articles/category/ipo">IPO</a></li>
+                                <li><a href="https://amigobulls.com/articles/category/technical-analysis">Technical Analysis</a></li>
+                            </ul>
+                        </li>        
+                        <li id="screener" class="hover_parent" data-nav="primary">
+                            <a href="https://amigobulls.com/sectors/computer-and-technology/internet-services" class="colorgreyNew  hoverorange" title="Technology and internet stocks"><span class="line_text">SCREENER<span class="under_line"></span></span></a>
+                        </li>
+                        <li id="mystocks" class="hover_parent" data-nav="primary">
+                            <a class="colorgreyNew" href="https://amigobulls.com/watchlist" title="My Stocks"><span class="line_text  hoverorange">MY STOCKS<span class="under_line"></span></span> <span class="left fa fa-heart mr5px mt3px mobi_tab_hide"></span></a>
+                        </li>                    
+                    </ul>
+                </div>            </div> 
+            <div class="top_layer ">
+                                           <a href="https://amigobulls.com" title="amigobulls.com - internet stock analysis">
+                          <span class="amigo_logo"></span>
+                        </a>
+                                </div> 
+            <div class="desktop_hide  small-menu-click fa fa-bars fa-lg colorgreyNew"></div>   
+            <div class="bottom_layer searchdiv fs80 home_tab_hide">  
+                <input title="ticker or company or video" placeholder="Ticker or Company" type="text" id="edit-search-block-form--2" data-qs="ms" data-show_video_icon="true" data-context_search="false" data-page_redirect="true" name="search_block_form" size="15" maxlength="128" class=" footer_search_input form-text ui-autocomplete-processed ui-autocomplete-input nobold" aria-autocomplete="list"> 
+                <span class="fa fa-search fa-lg mobi-hideit"></span>
+                 <div class="clear"></div>
+            </div>
+            <div id="mobi_search_icon_1" class="desktop_tab_hide pointerCursor fa fa-search"><div class="cross-icon  mobi_tab_hide"> ✕</div></div> 
+        <div class="clear"></div>
+    </nav>
+</header>
+        </div>
+        <div id="primary" class="container  clearfix scroll_loop">
+        <div id="article_1">
+        		<ol class=" breadcrumbs fs62 mobi-hideit mtn10px" itemscope="" itemtype="https://schema.org/BreadcrumbList">
+		<li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem" class="displayInline"><a itemprop="item" href="https://amigobulls.com/" title="amigobulls.com"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li><li class="displayInline"> &gt; </li><li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem" class="displayInline"><a itemprop="item" href="https://amigobulls.com/articles/" title="stock market news and research"><span itemprop="name">Stocks Market News - Articles &amp; Analysis</span></a><meta itemprop="position" content="2"></li><li class="displayInline"> &gt; </li><li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem" class="displayInline"><a itemprop="item" href="https://amigobulls.com/articles/category/stock-market-news" title="Stock Market News"><span itemprop="name">Stock Market News</span></a><meta itemprop="position" content="3"></li><li class="displayInline"> &gt; </li><li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem" class="displayInline"><a itemprop="item" href="https://amigobulls.com/articles/tsla-stock-does-tesla-motors-inc-have-a-future-in-solar-energy-space" title="TSLA stock: Does Tesla Motors Inc Have A Future In Solar Energy Space?"><span itemprop="name">TSLA stock: Does Tesla Motors Inc Have A Future In Solar Energy Space?</span></a><meta itemprop="position" content="4"></li>		</ol>
+
+		<article id="post-67812" class="post_content_maindiv">
+			<div itemscope="" itemtype="https://schema.org/NewsArticle">
+		<meta itemscope="" itemprop="mainEntityOfPage" itemtype="https://schema.org/WebPage" itemid="https://amigobulls.com/articles/tsla-stock-does-tesla-motors-inc-have-a-future-in-solar-energy-space" content="https://amigobulls.com/articles/tsla-stock-does-tesla-motors-inc-have-a-future-in-solar-energy-space">
+	<meta itemprop="inlanguage" content="en-US">
+	<div itemprop="publisher" itemscope="" itemtype="https://schema.org/Organization">
+        <div itemprop="logo" itemscope="" itemtype="https://schema.org/ImageObject">
+              <meta itemprop="url" content="https://static.amigobulls.com/v2images/amigobulls_logo.png">
+              <meta itemprop="width" content="169">
+              <meta itemprop="height" content="39">
+        </div>
+        <meta itemprop="name" content="Amigobulls">
+    </div>
+		<header>
+		<h1 itemprop="headline" class="small borderNone">
+		TSLA Stock: Does Tesla Motors Inc Have A Future In Solar Energy Space?		</h1>
+	<div class="borderBottomSolid mt10px mb5px"></div>
+		<div class="clear"></div>
+				<meta itemprop="description" content="Tesla Motors Inc has too much on its plate and should avoid the cutthroat solar industry.">		<meta itemprop="audience" content="NASDAQ and NYSE stock investors">
+		<meta itemprop="url discussionUrl" content="https://amigobulls.com/articles/tsla-stock-does-tesla-motors-inc-have-a-future-in-solar-energy-space">
+		<meta itemprop="keywords" content="TSLA stock, TSLA news, Tesla Inc (NASDAQ:TSLA) Stock Market News">
+		<meta itemprop="datePublished" content="2017-01-26T08:09:46-05:00">
+		<meta itemprop="dateModified" content="2017-01-26T08:13:30-05:00">
+		<meta itemprop="articleSection" content="Stock Market News">						    <div itemprop="image" itemscope="" itemtype="https://schema.org/ImageObject">
+				<meta itemprop="url" content="https://static.amigobulls.com/articles/wp-content/uploads/2017/01/TSLA-stock-Does-Tesla-Motors-Inc-Have-A-Future-In-Solar-Energy-Space.jpg">
+				<meta itemprop="width" content="696">
+				<meta itemprop="height" content="392">
+		    </div><span id='ezoic-pub-ad-placeholder-685' class="ezoic-adpicker-ad"></span>
+				</header>
+		<div class="clear"></div>
+		<div class="amigo_right mt5px">
+						<span id='ezoic-pub-ad-placeholder-102'></span><span style='display:block !important;float:none !important;margin-bottom:2px !important;margin-left:0px !important;margin-right:0px !important;margin-top:2px !important;min-height:620px;min-width:160px;text-align:center !important;' class='ezoic-ad banner-2 adtester-container adtester-container-102' data-ez-name='amigobulls_com-banner-2'><span id='div-gpt-ad-amigobulls_com-banner-2-0' ezaw='160' ezah='600' style='position:relative;z-index:0;display:inline-block;' class='ezoic-ad'><script data-cfasync='false' type='text/javascript' style='display:none;'>eval(ez_write_tag([[160,600],'amigobulls_com-banner-2','ezslot_0']));</script></span></span> 		</div>
+		<div id="single_left" class="amigo_left">
+	<div class="post_date">
+		<div class="left">
+		<span class="fs75 ppauthor">Posted by </span><span itemprop="author" itemscope="" itemtype="https://schema.org/Person"><a itemprop="url" class="tickerorange" rel="author" href="https://twitter.com/AGreenInvestor" title="Follow Sneha Shah on twitter"><span itemprop="name">Sneha Shah</span></a></span>
+	
+		<span class="fs75 ppauthor">on </span><a href="https://amigobulls.com/articles/2017/01/26" title="Read articles published on Jan 26, 2017" rel="bookmark"><span class="fs75 ppauthor">January 26, 2017, 03:09 AM EST</span></a>
+		</div>		
+			<span class="fs80 related-tags right">Related Ticker: <a href="https://amigobulls.com/stocks/TSLA/analysis?ref=tp" class="tickerblue newsfont" title="Tesla Inc stock analysis video">TSLA</a></span>		</div>
+		
+		<div class="clear"></div>
+		<div class="postbody">
+		<div class="article">			<div itemprop="articleBody">
+			<div class="coverImage"><a href="https://static.amigobulls.com/articles/wp-content/uploads/2017/01/small_width400_TSLA-stock-Does-Tesla-Motors-Inc-Have-A-Future-In-Solar-Energy-Space.jpg"><img class="alignnone size-full wp-image-68236" src="https://static.amigobulls.com/articles/wp-content/uploads/2017/01/small_width400_TSLA-stock-Does-Tesla-Motors-Inc-Have-A-Future-In-Solar-Energy-Space.jpg" alt="TSLA stock Does Tesla Motors Inc Have A Future In Solar Energy Space"></a><br>
+<span class="imageCopyright">Flickr</span></div>
+<p><span id='ezoic-pub-ad-placeholder-696' class="ezoic-adpicker-ad"></span>Do you know what industrial and technological giants such as <a class="tickerblue" title="Intel stock analysis" href="https://amigobulls.com/stocks/INTC/analysis">Intel Corporation (NASDAQ:INTC)</a>,&nbsp;<a class="tickerblue" title="General Electric stock analysis" href="https://amigobulls.com/stocks/GE/analysis?ref=il">General Electric (NYSE:GE)</a>, TSMC, <a rel="nofollow" target="_blank" href="http://www.pv-tech.org/news/bosch_shuts_down_solar_division_total_loss_amounts_to_2.4_billion">Bosch</a>, and <a rel="nofollow" target="_blank" href="https://www.bloomberg.com/news/articles/2013-06-17/siemens-will-shut-solar-unit-as-it-loses-1-billion-in-two-years">Siemens</a>&nbsp;have in common? They have all invested in the solar energy industry and failed after sinking millions if not billions of dollars each. Solar panel manufacturing has seen such a steep and precipitous fall in costs and prices over the last 5 years that <a rel="nofollow" target="_blank" href="http://www.ibtimes.com/electricity-through-solar-power-now-cheaper-fossil-fuels-wef-says-new-report-2465707">solar energy has now become cheaper</a> than coal in 30 countries. Though it has been great for consumers and the growth of the overall industry, the manufacturers have suffered from low margins and losses. The history of the solar industry is littered with <a rel="nofollow" target="_blank" href="http://www.greenworldinvestor.com/2011/07/01/second-wave-of-solar-thin-film-bankruptcies-starts-suntech-ends-csg-solar-funding/">hundreds of bankruptcies</a> and billions in losses. Even long standing <a rel="nofollow" target="_blank" href="http://fortune.com/2016/12/07/sunpower-corporation-lay-offs/">industry stalwarts such</a> as SunPower (NASDAQ:SPWR) and First Solar (NASDAQ:FSLR) are finding the going difficult. Recently another strong panel player, AUO, gave up its solar energy endeavor unable to compete with the low cost Chinese companies.</p>			<span id='ezoic-pub-ad-placeholder-624'></span><span style='display:none !important;float:none;margin-bottom:2px !important;margin-left:0px !important;margin-right:0px !important;margin-top:2px !important;min-height:270px;min-width:300px;text-align:center !important;' class='ezoic-ad medrectangle-3 adtester-container adtester-container-624' data-ez-name='amigobulls_com-medrectangle-3'><span id='div-gpt-ad-amigobulls_com-medrectangle-3-0' ezaw='300' ezah='250' style='position:relative;z-index:0;display:none;' class='ezoic-ad'><!--script-placeholder--></span></span><script>var ezzns21 = {0.90:504560,1.60:504653,2.40:504659,0.05:504099,0.35:504552,0.50:504556,1.10:504648,1.20:504649,1.90:504656,3.00:504664,3.50:504665,0.30:504551,0.40:504554,0.80:504559,2.00:504657,4.00:504666,5.00:504669,0.10:504141,0.15:504144,0.20:504145,1.30:504650,1.70:504654,0.45:504555,1.40:504651,1.00:504647,2.20:504658,2.80:504661,0.25:504548,1.50:504652,1.80:504655,2.60:504660,4.50:504667,0.60:504557,0.70:504558,};</script><script type="text/javascript" src="//static.criteo.net/js/ld/publishertag.js" ></script>
+<div class="ezflad-47" style="display:inline-block" adunitname="amigobulls_com-medrectangle-3" id="crt-21">
+<script type="text/javascript">
+var ezoflbf_2_21 = function() { __ez.queue.addFunc('ReloadFromP_1624', 'IL11ILILIIlLLLILILLLLIILLLIIL11111LLILiiLIliLlILlLiiLLIiILL.ReloadFromP', 1624, false, ['banger.js'], false, false, false, true); };
+var ezoflbf_21 = function() { eval(ez_write_tag([[300,250],'amigobulls_com-medrectangle-3','ezslot_3']));
+		};</script><script type="text/javascript">Criteo.DisplayAd({
+    zoneid: 504559, containerid: 'crt-21', passbackcode: ezoflbf_21
+});
+</script></div>
+<script type='text/javascript'>
+	var __ezfl_sss_1624 = function() {
+		setTimeout(function(){
+			var ezflaun = IL11ILILIIlLLLILILLLLIILLLIIL11111LLILiiLIliLlILlLiiLLIiILL.GetNameFromPositionId(1624);
+			if (typeof ezflaun != 'undefined' && ezflaun.length > 0) {
+				if (typeof ez_ad_units != undefined) {
+					for (i = 0; i < ez_ad_units.length; i++) {
+						if (ezflaun.indexOf(ez_ad_units[i][1]) >= 0) {
+							return false;
+						}
+					}
+				}
+				IL11ILILIIlLLLILILLLLIILLLIIL11111LLILiiLIliLlILlLiiLLIiILL.StoreStatSource(ezflaun, 47, 0.80);
+				IL11ILILIIlLLLILILLLLIILLLIIL11111LLILiiLIliLlILlLiiLLIiILL.RemoveSlotById(ezflaun);
+			}
+		}, 4000);
+	};
+	__ez.queue.addFunc('__ezfl_sss_1624', '__ezfl_sss_1624', null, false, ['banger.js'], false, false, false, true);
+</script><!--ezoicfl--> 			<span id='ezoic-pub-ad-placeholder-104'></span><!-- placeholder 104 blocked.  Reason : no sizes --> 
+<p style="text-align: justify;">Given this history, it was very strange for <strong><a class="tickerblue" title="Tesla stock analysis" href="https://amigobulls.com/stocks/TSLA/analysis">Tesla (NASDAQ:TSLA)</a></strong> (its subsidiary <a class="tickerblue" title="SolarCity stock quotes" href="https://amigobulls.com/stocks/SCTY">SolarCity (NASDAQ:SCTY)</a>) to enter the solar panel manufacturing industry by announcing a 1 GW plant in New York. It wanted to vertically integrate despite knowing the pitfalls.</p>			<span id='ezoic-pub-ad-placeholder-100'></span><span style='display:block !important;float:none;margin-bottom:2px !important;margin-left:0px !important;margin-right:0px !important;margin-top:2px !important;min-height:420px;min-width:580px;text-align:center !important;' class='ezoic-ad medrectangle-4 adtester-container adtester-container-100' data-ez-name='amigobulls_com-medrectangle-4'><span id='div-gpt-ad-amigobulls_com-medrectangle-4-0' ezaw='580' ezah='400' style='position:relative;z-index:0;display:inline-block;' class='ezoic-ad'><script data-cfasync='false' type='text/javascript' style='display:none;'>eval(ez_write_tag([[580,400],'amigobulls_com-medrectangle-4','ezslot_5']));</script></span></span> 			 
+<h3 style="text-align: justify;">Even Before Launch, Tesla Has Failed In The Solar Panel Business<span id='ezoic-pub-ad-placeholder-602' class="ezoic-adpicker-ad"></span></h3>
+<p style="text-align: justify;"><span id='ezoic-pub-ad-placeholder-698' class="ezoic-adpicker-ad"></span>In 2014, when Tesla announced a gigawatt scale solar panel factory, the <a rel="nofollow" target="_blank" href="http://blog.solarcity.com/solar-at-scale/">reasoning given by Elon Musk</a> was to create economies of scale in solar panels something similar to what he was doing with lithium batteries.<span id='ezoic-pub-ad-placeholder-699' class="ezoic-adpicker-ad"></span></p>			<span id='ezoic-pub-ad-placeholder-662'></span><span style='display:none !important;float:none !important;margin-bottom:2px !important;margin-left:0px !important;margin-right:0px !important;margin-top:2px !important;min-height:270px;min-width:300px;text-align:center !important;' class='ezoic-ad box-4 adtester-container adtester-container-662' data-ez-name='amigobulls_com-box-4'><span id='div-gpt-ad-amigobulls_com-box-4-0' ezaw='300' ezah='250' style='position:relative;z-index:0;display:none;' class='ezoic-ad'><!--script-placeholder--></span></span><script>var ezzns3 = {0.20:504145,1.30:504650,1.90:504656,4.50:504667,2.60:504660,5.00:504669,0.05:504099,0.25:504548,0.60:504557,0.70:504558,1.60:504653,2.40:504659,3.00:504664,0.10:504141,0.35:504552,1.70:504654,2.80:504661,3.50:504665,0.50:504556,0.80:504559,1.00:504647,1.10:504648,1.40:504651,1.80:504655,0.30:504551,4.00:504666,1.50:504652,2.20:504658,0.15:504144,0.40:504554,0.45:504555,0.90:504560,1.20:504649,2.00:504657,};</script><script type="text/javascript" src="//static.criteo.net/js/ld/publishertag.js" ></script>
+<div class="ezflad-47" style="display:inline-block" adunitname="amigobulls_com-box-4" id="crt-3">
+<script type="text/javascript">
+var ezoflbf_2_3 = function() { __ez.queue.addFunc('ReloadFromP_1662', 'IL11ILILIIlLLLILILLLLIILLLIIL11111LLILiiLIliLlILlLiiLLIiILL.ReloadFromP', 1662, false, ['banger.js'], false, false, false, true); };
+var ezoflbf_3 = function() { eval(ez_write_tag([[300,250],'amigobulls_com-box-4','ezslot_7']));
+		};</script><script type="text/javascript">Criteo.DisplayAd({
+    zoneid: 504651, containerid: 'crt-3', passbackcode: ezoflbf_3
+});
+</script></div>
+<script type='text/javascript'>
+	var __ezfl_sss_1662 = function() {
+		setTimeout(function(){
+			var ezflaun = IL11ILILIIlLLLILILLLLIILLLIIL11111LLILiiLIliLlILlLiiLLIiILL.GetNameFromPositionId(1662);
+			if (typeof ezflaun != 'undefined' && ezflaun.length > 0) {
+				if (typeof ez_ad_units != undefined) {
+					for (i = 0; i < ez_ad_units.length; i++) {
+						if (ezflaun.indexOf(ez_ad_units[i][1]) >= 0) {
+							return false;
+						}
+					}
+				}
+				IL11ILILIIlLLLILILLLLIILLLIIL11111LLILiiLIliLlILlLiiLLIiILL.StoreStatSource(ezflaun, 47, 1.40);
+				IL11ILILIIlLLLILILLLLIILLLIIL11111LLILiiLIliLlILlLiiLLIiILL.RemoveSlotById(ezflaun);
+			}
+		}, 4000);
+	};
+	__ez.queue.addFunc('__ezfl_sss_1662', '__ezfl_sss_1662', null, false, ['banger.js'], false, false, false, true);
+</script><!--ezoicfl--> 
+<blockquote><p><em>“Our intent is to combine what we believe is fundamentally the best photovoltaic technology with massive economies of scale to achieve a breakthrough in the cost of solar power…</em><em> At a targeted capacity greater than 1 GW within the next two years, it will be one of the single largest solar panel production plants in the world.&nbsp;”</em></p>			<span id='ezoic-pub-ad-placeholder-663'></span><span style='display:block !important;float:none !important;margin-bottom:2px !important;margin-left:0px !important;margin-right:0px !important;margin-top:2px !important;min-height:420px;min-width:580px;text-align:center !important;' class='ezoic-ad banner-1 adtester-container adtester-container-663' data-ez-name='amigobulls_com-banner-1'><span id='div-gpt-ad-amigobulls_com-banner-1-0' ezaw='580' ezah='400' style='position:relative;z-index:0;display:inline-block;' class='ezoic-ad'><script data-cfasync='false' type='text/javascript' style='display:none;'>eval(ez_write_tag([[580,400],'amigobulls_com-banner-1','ezslot_6']));</script></span></span> 			<span id='ezoic-pub-ad-placeholder-105'></span><!-- placeholder 105 blocked.  Reason : no sizes --> </blockquote>
+<p style="text-align: justify;">But 1-gigawatt plant in 2016 is really not big given that top tier Chinese companies will be <a rel="nofollow" target="_blank" href="http://www.pv-tech.org/editors-blog/top-5-solar-module-manufacturers-in-2016">shipping around 5-6 GW</a> of solar panels this year. Economies of scale and low costs<b>&nbsp;</b>seems difficult to achieve&nbsp;given that SolarCity's target <a rel="nofollow" target="_blank" href="https://www.greentechmedia.com/articles/read/Is-SolarCitys-New-PV-Module-the-Worlds-Most-Efficient-Rooftop-Solar-Pane">cost of producing solar panels</a> at 55 cents/watt seems ludicrously expensive, considering the current international price of 36 cents/watt. Tesla is now trying to save face <a rel="nofollow" target="_blank" href="https://www.greentechmedia.com/articles/read/Panasonic-to-Invest-256-Million-in-Teslas-Solar-Cell-Factory-in-NY">by signing an MOU</a> with its battery partner Panasonic to invest in its solar factory. But Panasonic is itself a marginal player in the solar panel production industry now and recently closed its Japanese plant because of high costs. <a rel="nofollow" target="_blank" href="http://www.pv-tech.org/editors-blog/tesla-solarcity-silveo-panasonic-1gw-buffalo-fabs-known-unknowns">Industry experts have also questioned</a> the compatibility of Silveo’s and Panasonic’s technology and the huge delays in the completion of the Buffalo factory.</p>			<span id='ezoic-pub-ad-placeholder-101'></span><span style='display:block !important;float:none;margin-bottom:2px !important;margin-left:0px !important;margin-right:0px !important;margin-top:2px !important;min-height:300px;min-width:336px;text-align:center !important;' class='ezoic-ad large-leaderboard-2 adtester-container adtester-container-101' data-ez-name='amigobulls_com-large-leaderboard-2'><span id='div-gpt-ad-amigobulls_com-large-leaderboard-2-0' ezaw='336' ezah='280' style='position:relative;z-index:0;display:inline-block;' class='ezoic-ad'><script data-cfasync='false' type='text/javascript' style='display:none;'>eval(ez_write_tag([[336,280],'amigobulls_com-large-leaderboard-2','ezslot_2']));</script></span></span> 			 
+<p style="text-align: justify;">It seems extremely difficult for either Panasonic or Silveo to become competitive with the top tier Chinese companies in my view. They will remain niche producers at best. But what is the logic of<strong>&nbsp;</strong>Tesla&nbsp;being a niche panel producer? They are much better off using their capital and management bandwidth elsewhere and buying the solar panels from the Asian manufacturers as they currently do. The lithium battery business is a new area in which the Panasonic and Tesla combination can create new benchmarks in costs but the solar panels race has already been lost. The faster the Tesla management realizes it the better.</p>			<span id='ezoic-pub-ad-placeholder-664'></span><span style='display:block !important;float:none !important;margin-bottom:2px !important;margin-left:0px !important;margin-right:0px !important;margin-top:2px !important;min-height:80px;min-width:468px;' class='ezoic-ad leader-1 adtester-container adtester-container-664' data-ez-name='amigobulls_com-leader-1'><span id='div-gpt-ad-amigobulls_com-leader-1-0' ezaw='468' ezah='60' style='position:relative;z-index:0;display:inline-block;' class='ezoic-ad'><script data-cfasync='false' type='text/javascript' style='display:none;'>eval(ez_write_tag([[468,60],'amigobulls_com-leader-1','ezslot_4']));</script></span></span> 			 
+<h3 style="text-align: justify;"><span id='ezoic-pub-ad-placeholder-159' class="ezoic-adpicker-ad"></span>Does Tesla Really Need To Be In The Solar Roofing Space And Can It Succeed?</h3>
+<p style="text-align: justify;">Elon Musk&nbsp;<a title="TSLA Stock: Solar Roof Over-hyped, Tesla Motors Inc Needs Volume" href="https://amigobulls.com/articles/tsla-stock-is-tesla-motors-inc-running-on-musk-hyped-claims" target="_blank">recently announced plans</a> of making a revolutionary “solar roof” that would integrate solar panels with battery power packs.</p>
+<blockquote><p><em>“Create a smoothly integrated and beautiful solar-roof-with-battery product that just works, empowering the individual as their own utility, and then scale that throughout the world. One ordering experience, one installation, one service contact, one phone app.”</em></p></blockquote>
+<p style="text-align: justify;"><span id='ezoic-pub-ad-placeholder-603' class="ezoic-adpicker-ad"></span>The company wants to replace 5 million housing roofs with its new solar product. However, Tesla has failed to give any pricing or cost data for this “solar roof” and how it would compare to a traditional roof with solar panels. This product does not look like a slam dunk idea, given that others much more experienced in the material industry such as <a class="tickerblue" title="Dow Chemical stock analysis" href="https://amigobulls.com/stocks/DOW/analysis">Dow Chemical (NYSE:DOW)</a> have<a rel="nofollow" target="_blank" href="https://www.greentechmedia.com/articles/read/dow-chemical-sheds-solar-shingle-business"> tried and failed</a>. It is simply much cheaper and easier to install normal solar panels on mounting structures rather than integrating solar cells into the roof tiles.<span id='ezoic-pub-ad-placeholder-604' class="ezoic-adpicker-ad"></span><span id='ezoic-pub-ad-placeholder-605' class="ezoic-adpicker-ad"></span></p>
+<p style="text-align: justify;">The rooftop solar business model is facing pressure as USA customers move more towards the <a rel="nofollow" target="_blank" href="http://www.utilitydive.com/news/why-solar-financing-is-moving-from-leases-to-loans/403678/">self-financing route</a>, rather than the third-party financing model which SolarCity champions. The rooftop solar industry is not an easy one to crack and in my opinion, it seems difficult for Tesla to make this solar roof product into a major revenue stream. While Elon Musk might cite the synergy between solar energy and energy storage for entering this segment, it looks a bit far-fetched to me. Should Tesla start manufacturing steel just because it uses it a lot in electric vehicles?</p>
+<h3 style="text-align: justify;">Conclusion</h3>
+<p style="text-align: justify;">Tesla has never been a cheap stock and is currently priced to perfection with a P/B of 15.3x and a P/S of 5.9x. The stock has jumped up by almost 25% in the last 3 months and is trading near its 52 week high. News of faster than expected <a title="Tesla Motors Inc (TSLA) Hits Rare Home Run After Activating The Gigafactory" href="https://amigobulls.com/articles/tesla-motors-inc-tsla-hits-rare-home-run-after-activating-the-gigafactory" target="_blank">production at its “Gigafactory”</a> and Elon Musk’s proximity to Donald Trump have been the key triggers for the stock. However, the company has a lot on its plate as it fights other technological and auto majors in the rapidly changing transportation industry, which is on the cusp of a major paradigm change with autonomous technology.</p>
+<p style="text-align: justify;">It will take a huge effort and all the resources that Tesla can muster to keep ahead in this rapidly evolving industry. Its vision to expand into trucking and buses makes sense keeping in mind the synergy with its electric cars. However, I am not convinced that Tesla has much of a future in the cutthroat solar energy (or solar roofing) industry. It is a distraction that Elon Musk could do without and Tesla investors would sleep better at night if the company torpedoed its solar plans and focused fully on getting its energy storage and electric vehicle plays right.</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="clear"></div>
+		<div class="mb10px">
+			<div class="right">
+		<span data-type="article" data-type_id="67812" data-vote="up" class="voteup enabledvoteicon  icon_text" title="voteup">                   
+					<span class=" pointerCursor fa fa-thumbs-up fs150 "></span> 
+					<span class="votecount displayInlineBlock">9</span> 
+		 	</span><span data-type="article" data-type_id="67812" data-vote="down" class="votedown enabledvoteicon  icon_text" title="votedown">                   
+					<span class=" pointerCursor fa fa-thumbs-down fs150 "></span> 
+					<span class="votecount displayInlineBlock">10</span> 
+		 	</span>		</div>
+		<div class="left">
+					<div id="ssba">
+	<ul>
+		<li class="mobi-hideit">
+			<a id="ssba_email_share" class="ssba_share_link" href="mailto:?Subject=TSLA stock: Does Tesla Motors Inc Have A Future In Solar Energy Space? by Amigobulls&amp;Body=Hi%20Friend%2C%0AI%20thought%20you%20might%20find%20this%20article%20on%20Amigobulls%20interesting%3A%0A%09Tesla%20making%20an%20entry%20into%C2%A0solar%20panel%20manufacturing%20even%20as%20the%20existing%20players%20are%20finding%20it%20difficult%20to%20survive.%20Leading%20companies%20in%20the%20past%20have%20failed%20to%20sell%20solar%20roofing%20products.%20Tesla%20has%20too%20much%20on%20its%20plate%20and%20should%20avoid%20the%20cutthroat%20solar%20industry%0ATo%20continue%20reading%20please%20click%20on%20the%20link%20below%3A%0Ahttps%3A%2F%2Famigobulls.com%2Farticles%2Ftsla-stock-does-tesla-motors-inc-have-a-future-in-solar-energy-space%3Fref%3Dma"> 
+			<span title="Email this article" class="fa fa-envelope fa-2x"></span>
+			<span class="displayNone"> Share this article via Email</span>
+			</a>
+		</li>
+		<li>
+			<a id="ssba_twitter_share" href="https://twitter.com/share?url=https://amigobulls.com/articles/tsla-stock-does-tesla-motors-inc-have-a-future-in-solar-energy-space?ref=tw&amp;text=TSLA+stock%3A+Does+Tesla+Motors+Inc+Have+A+Future+In+Solar+Energy+Space%3F"> 
+			<span title="" class="fa fa-twitter-square fa-2x"></span>
+			<span class="displayNone"> Share this article on Twitter</span>
+			</a>
+		</li>
+		<li>
+			<a id="ssba_facebook_share" href="https://www.facebook.com/sharer.php?u=https://amigobulls.com/articles/tsla-stock-does-tesla-motors-inc-have-a-future-in-solar-energy-space?ref=fb&amp;title=TSLA+stock%3A+Does+Tesla+Motors+Inc+Have+A+Future+In+Solar+Energy+Space%3F&amp;summary=Tesla+making+an+entry+into%C2%A0solar+panel+manufacturing+even+as+the+existing+players+are+finding+it+difficult+to+survive.+Leading+companies+in+the+past+have+failed+to+sell+solar+roofing+products.+Tesla+has+too+much+on+its+plate+and+should+avoid+the+cutthroat+solar+industry"> 
+			<span title="" class="fa fa-facebook-square fa-2x"></span>
+			<span class="displayNone"> Share this article on Facebook</span>
+			</a>
+		</li>
+		<li>
+			<a id="ssba_linkedin_share" class="ssba_share_link" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://amigobulls.com/articles/tsla-stock-does-tesla-motors-inc-have-a-future-in-solar-energy-space?ref=ld&amp;title=TSLA+stock%3A+Does+Tesla+Motors+Inc+Have+A+Future+In+Solar+Energy+Space%3F&amp;summary=Tesla+making+an+entry+into%C2%A0solar+panel+manufacturing+even+as+the+existing+players+are+finding+it+difficult+to+survive.+Leading+companies+in+the+past+have+failed+to+sell+solar+roofing+products.+Tesla+has+too+much+on+its+plate+and+should+avoid+the+cutthroat+solar+industry"> 
+			<span title="" class="fa fa-linkedin-square fa-2x"></span>
+			<span class="displayNone"> Share this article on linkedin</span>
+			</a>
+		</li>
+		<li>
+			<a id="ssba_google_share" href="https://plus.google.com/share?url=https://amigobulls.com/articles/tsla-stock-does-tesla-motors-inc-have-a-future-in-solar-energy-space"> 
+			<span title="" class="fa fa-google-plus-square fa-2x"></span>
+			<span class="displayNone"> Share this article on GooglePlus</span>
+			</a>
+		</li>
+		<li>
+			<a id="ssba_whatsapp_share" class="ssba_share_link whatsapp-share-button desktop_tab_hide" data-count="true" href="whatsapp://send?text=TSLA+stock%3A+Does+Tesla+Motors+Inc+Have+A+Future+In+Solar+Energy+Space%3F https%3A%2F%2Famigobulls.com%2Farticles%2Ftsla-stock-does-tesla-motors-inc-have-a-future-in-solar-energy-space%3Fref%3Dwp"> 
+				<span title="Share this post on WhatsApp" class="fa fa-whatsapp"></span>
+			</a>
+		</li>
+	</ul>
+</div>
+		</div>			
+			<div class="right mt5px">Is this article helpful ?&nbsp;&nbsp;&nbsp;&nbsp;</div>
+		 </div>
+         <div class="clear"></div>
+         <hr class="desktop_hide">
+        <div class="mt20px mb30px">
+					<span id='ezoic-pub-ad-placeholder-106'></span><!-- placeholder 106 blocked.  Reason : no sizes --> 		</div> 
+
+		<!-- Display the related section for articles in aside tag -->
+		<aside>
+		<h2 class="small mt10px mobi-hideit"> More on Tesla Inc stock</h2><hr><div class="articlesMainDiv displayBlock">			<span id='ezoic-pub-ad-placeholder-103'></span><span style='display:block !important;float:none !important;margin-bottom:2px !important;margin-left:0px !important;margin-right:0px !important;margin-top:2px !important;min-height:480px;min-width:100%;text-align:center !important;' class='ezoic-ad nativedouble-1 adtester-container adtester-container-103' data-ez-name='amigobulls_com-nativedouble-1'><div class="OUTBRAIN" data-src="http://outbrain.ezoic.net/?variant=46056_1_103_100x480" data-widget-id="AR_1" data-ob-template="ezoic"></div>
+<script type="text/javascript" async="async" src="//widgets.outbrain.com/outbrain.js"></script></span> </div>		</aside> <!-- entire related content should be inside the aside tag -->
+
+		<div class="mt10px mb10px left author_pic">
+		<a href="https://amigobulls.com/articles/author/s-shah?ref=tp"><img src="https://static.amigobulls.com/profile_images/20170111_IMG-20170104-WA0022.png" alt="Sneha Shah" class="authorbox-photo author_img"></a>
+		<span class="fs100 left"><a class="orange" href="https://amigobulls.com/articles/author/s-shah?ref=tp"> Sneha Shah</a> </span>	
+		<span class="left">&nbsp; on Amigobulls : </span> <div class="follow_div  orange fs120 left"><div class="pointerCursor author_follow" data-id="235" data-post_id="67812" data-follow="1"><i class="fa fa-plus orange"> </i>Follow </div></div>		</div>
+			<footer>
+				<div class="disclaimer">
+				<div class="dis_tit">Author's Disclosures &amp; Disclaimers:</div><ul><li>I do not hold any positions in the stocks mentioned in this post and don't intend to initiate a position in the next 72 hours</li><li>I am not an investment advisor, and my opinion should not be treated as investment advice.</li><li>I am not being compensated for this post (except possibly by Amigobulls).</li><li>I do not have any business relationship with the companies mentioned in this post.</li></ul><div class="dis_tit">Amigobulls Disclosures &amp; Disclaimers:</div><p>This post has been submitted by an independent external contributor. This author may or may not hold any positions in the stocks discussed. Neither Amigobulls, nor any members of its staff hold positions in any of the stocks discussed in this post. Amigobulls has not verified the author’s positions in the stocks discussed, and does not provide any guarantees in this regard. The author may be paid by Amigobulls for this contribution, under the paid contributors program. However, Amigobulls does not guarantee the authenticity or accuracy of the information provided by the author in this post.</p><p>The author may not be a qualified investment advisor. The opinions stated in the post should not be treated as investment advice. Buying and selling of securities carries the risk of monetary losses. Readers/Viewers are advised to carry out their own due diligence and consult their investment advisors before making any investment decisions.</p><p>Amigobulls does not have any business relationship with any of the companies covered in this post. This post represents the views of the author/contributor and may not reflect the views of Amigobulls.</p>				</div>
+				<div class="disclaimer_more cursorPointer tickerorange right fs14px ">show more</div>
+			</footer>
+		</div><!-- .entry-content -->
+		<div class="clear"></div>
+	<div id="comments" class="">
+		<h2 class="mtb20px small"> Comments on this article and TSLA stock </h2>
+		<div class="stockComments">
+	    <div class="commentlayout commentsleft">
+	        <div id="proscomments">
+	                        <textarea placeholder="Share your opinion on Tesla Inc stock" onclick="showForm(this);" id="commentcontent_" class=" fs80 comment_box "></textarea>
+    <div class="clear"></div>
+    <div id="commentform_" class="commentform">
+        <div id="com_error_" class="comment_error">
+            <span id="com_alerticon_" class="comment_alerticon"></span>
+            <span id="com_alertmsg_"></span> 
+        </div>
+        <div class="right">
+                        <div class="comment_form">
+                <a href="javascript:;" onclick="commentPost('');"><span title="post new comment" class="fs62 post_anonymously post_anon_btn analysis_post post_button_"><span>post</span></span></a>
+                 <span class="ajaxloader_ displayNone left m10px"> <i class="fa fa-spin fa-spinner"></i></span>
+            </div>
+                    </div>
+                <div class="reply ">
+            <div class="right fs80 toggle_radio">
+                <input type="radio" value="bullish" class="bullish" name="toggle_option">
+                <input type="radio" value="neutral" checked="checked" class="neutral" name="toggle_option">
+                <input type="radio" value="bearish" class="bearish" name="toggle_option">
+                <label class="bull">bullish</label>
+                <label class="neut neut_checked">neutral</label>
+                <label class="bear">bearish</label>
+                <div class="toggle_option_slider">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+	        </div>
+	        <div class="commentcontents">
+	                <div class="prosconscommentdiv" itemscope="" itemtype="https://schema.org/Comment" id="comment_2053" data-id="2053">
+        <meta itemprop="about" content="TSLA stock: Does Tesla Motors Inc Have A Future In Solar Energy Space?">        <div class="left displayInline">
+             <img width="50" height="50" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAAAAAA6fptVAAAACklEQVR4nGP6DwABBQECz6AuzQAAAABJRU5ErkJggg==" class="lazy" data-src="https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/photo.jpg?sz=50" alt="user profile picture">        </div>
+        <div class="left fs80 commRightcont">
+             <div class="left displayInlineBlock  w85p">
+                <span class="left fs16px mobi_authorName"><span itemprop="creator" itemscope="" itemtype="https://schema.org/Person"><span itemprop="name">charlie gilreath</span></span></span>
+                                <span class="left mobi_authorDiv fs80 authorDiv displayInlineBlock">
+                                         <span class="fs75 authorDate mobi_authorDate" itemprop="datePublished" content="2017-01-26T20:26Z">  - Jan 26, 2017 at 03:26 PM</span>
+                </span>
+            </div>
+           <div class="right w15p">
+                 <div class=" neutral_tag tags" data-id="2053">neutral</div>            </div>
+            <div class="clear"></div>
+            <div class="comment_text fs14px w90p" itemprop="text">
+                I know the TSLA investors on this page well enough that they will spend their telling you what they think you do not know and how Musk will get it done. But you are right. We fund solar all day every day. As part of an energy services plan you can sell it. As part of a pace program it sells because the consumer thinks they will not see the cost  - but really this is a business in a race to the bottom. As storage is - if you look at Morgan Stanley battery analyst recent report. So why is Musk allowing himself to be distracted by two commodity business that will be a margin squeeze - because Musk tells stories and sells blue skys and todays green investors don't care about profits they think they are coming in the future. Tesla will need to be bailed out. The stock will crash - not because the car is not fantastic and I will even say Musk is a visionary - but he is about to run into the well funded competition from leading global brands like Porsche, Audi, BMW, - GM and they are cashed up and alredy have the global infrastructure he needs to build. In short. It wont crumble until the people start to watch batteries push to lower prices, China will lead this down with Korea and others in tow. Until the facts are separated from fiction re solar residential roof top ( the worst business in the world)are realized by these buy side analyst at a time they can no longer dispute the facts with more "vision" from Musk and the story based longs say - Oh crap.              </div>
+            <div class="mt10px">
+                <span data-type="comment" data-type_id="2053" data-vote="up" class="voteup enabledvoteicon  icon_text" title="voteup">                   
+					<span class=" pointerCursor fa fa-thumbs-up  "></span> 
+					<span class="votecount displayInlineBlock"></span> 
+		 	</span><span data-type="comment" data-type_id="2053" data-vote="down" class="votedown enabledvoteicon  icon_text" title="votedown">                   
+					<span class=" pointerCursor fa fa-thumbs-down  "></span> 
+					<span class="votecount displayInlineBlock"></span> 
+		 	</span>                                    <span class="dotSeperator mlr4px"> • </span><span class="commentreply paddingLT5px pointerCursor linkblue underline" data-replyid="2053" title="write a reply">reply</span>
+                                </div>
+        </div>
+    </div>
+            <div id="reply_2053" class="comment_reply" data-replyid="2053">
+            <div id="cmt_rply_txt_2053"></div>            <div class="commentreplycontents" id="replycontent_2053">
+                    <div class="prosconscommentdiv" itemscope="" itemtype="https://schema.org/Comment" id="comment_2054" data-id="2054">
+        <meta itemprop="about" content="TSLA stock: Does Tesla Motors Inc Have A Future In Solar Energy Space?">        <div class="left displayInline">
+             <i class="fa fa-3x fa-user"></i>        </div>
+        <div class="left fs80 commRightcont">
+             <div class="left displayInlineBlock  w85p">
+                <span class="left fs16px mobi_authorName"><span itemprop="creator" itemscope="" itemtype="https://schema.org/Person"><span itemprop="name">joeinslw</span></span></span>
+                                <span class="left mobi_authorDiv fs80 authorDiv displayInlineBlock">
+                                         <span class="fs75 authorDate mobi_authorDate" itemprop="datePublished" content="2017-01-27T00:38Z">  - Jan 26, 2017 at 07:38 PM</span>
+                </span>
+            </div>
+           <div class="right w15p">
+                 <div class=" neutral_tag tags" data-id="2054">neutral</div>            </div>
+            <div class="clear"></div>
+            <div class="comment_text fs14px w90p" itemprop="text">
+                All of this sounds like wishful thinking to me, a man who is short selling tsla and wants the stock to fall or fail for his own personal gain.  <br>
+However he fails to understand that Elon is there not just to make the company successful, but has backed it up with his own cash like he did once before when the company was almost bankrupt and really was in trouble.<br>
+<br>
+Elon said: “About four months ago, I ran out of cash,” he wrote in a court filing dated Feb. 23, reviewed by VentureBeat. That’s a problem not just for him but for Tesla, where he is the lead investor and chief product architect, as well as CEO. Musk’s willingness to funnel his own cash into Tesla has for years sustained the faith of fellow investors and reassured would-be car buyers in 2008 when the company’s finances were in perilous shape.<br>
+<br>
+According to the filing — part of his pending divorce case from sci-fi novelist Justine Musk — Elon Musk has been living off personal loans from friends since October 2009 and spending $200,000 a month while making far less. Musk confirmed this in an interview with VentureBeat.<br>
+<br>
+Tesla, likewise, is dealing with its cash flow problems by borrowing money from a friendly source — the United States government, which has eagerly backed cleantech startups through a Department of Energy loan program. Tesla burned through $37 million in cash in the last three months of 2009, according to amended S-1 documents, filed with the Securities &amp; Exchange Commission in preparation for its IPO. Tesla slowed this burn rate in the first quarter of 2010 to $8.4 million, but only by drawing down part of a $465 million loan from the DOE, while reporting a net loss of $29.5 million. Tesla’s sales were flat year-over-year in the first quarter, but declined precipitously in the U.S., according to a former Tesla executive".<br>
+<br>
+I know that some of you who look down at Tesla for taking Government help saying he couldn't have done it without their help, that would also be true for GM, Ford, and Chrysler, and you would not believe that they have not paid those loans back yet.<br>
+On the other hand Tesla has paid every penny of that 465 million dollar loan back WITH INTEREST, not one of the companies I just mentioned can boast that point.<br>
+When I read a post like the one above, to me it's all sour grapes, and from a man who MISSED to move up in tsla stock, in March of 2012.<br>
+If you doubt or say this is untrue, don't complain, just look it up for yourself !<br>
+<br>
+            </div>
+            <div class="mt10px">
+                <span data-type="comment" data-type_id="2054" data-vote="up" class="voteup enabledvoteicon  icon_text" title="voteup">                   
+					<span class=" pointerCursor fa fa-thumbs-up  "></span> 
+					<span class="votecount displayInlineBlock"></span> 
+		 	</span><span data-type="comment" data-type_id="2054" data-vote="down" class="votedown enabledvoteicon  icon_text" title="votedown">                   
+					<span class=" pointerCursor fa fa-thumbs-down  "></span> 
+					<span class="votecount displayInlineBlock"></span> 
+		 	</span>                            </div>
+        </div>
+    </div>
+     <div class="clear comments_line"></div>
+            </div>
+        </div>
+     <div class="clear comments_line"></div>
+	        </div>
+	    </div>                  
+	    <div class="clear"></div>
+	</div>
+	<div id="avathar_dialog" style="display:none;"></div>
+</div><!-- #comments -->
+</div><!-- #post-## -->
+</div>
+</article>
+<div class="sharePopup mobi-hideit" id="sharePopup" title="Enjoyed reading this article?"> Do share this awesome post <br> <div class="sharebuttons"></div></div>
+<div id="single_right" class="amigo_right">
+	
+			<div class="article_rhs">
+		<div class="tab_lscape_rhs mb30px"><h2 class="small mb5px">Tesla Inc Stock Articles</h2> 
+		<div class="titleContainer">
+		<a href="https://amigobulls.com/articles/2017-07-18-tesla-stock-looks-set-for-a-bounce-higher-tesla-inc"><span class="recent_art">Tesla Stock Looks Set For A Bounce Higher: Tesla Inc.</span></a>     			   
+		<div class="clear"></div><div class="hr_dotted"></div></div>    
+		<div class="titleContainer">
+		<a href="https://amigobulls.com/articles/2017-07-10-tesla-inc-stock-why-53-growth-was-not-good-enough"><span class="recent_art">Tesla Inc Stock: Why 53% Growth Was Not Good Enough</span></a>     			   
+		<div class="clear"></div><div class="hr_dotted"></div></div>    
+		<div class="titleContainer">
+		<a href="https://amigobulls.com/articles/2017-07-07-shorting-tesla-stock-now-is-a-big-risk-tesla-inc"><span class="recent_art">Shorting Tesla Stock Now Is A Big Risk: Tesla Inc.</span></a>     			   
+		<div class="clear"></div><div class="hr_dotted"></div></div>    
+		<div class="titleContainer">
+		<a href="https://amigobulls.com/articles/2017-07-06-facebook-inc-stock-tesla-inc-and-amazon-com-inc-todays-technical-stock-trading-ideas"><span class="recent_art">Facebook Inc Stock, Tesla Inc And Amazon.com Inc - Today's Technical Stock Trading Ideas</span></a>     			   
+		<div class="clear"></div><div class="hr_dotted"></div></div>    
+		<div class="titleContainer">
+		<a href="https://amigobulls.com/articles/2017-07-03-tesla-inc-hits-another-milestone-should-you-buy-tesla-stock"><span class="recent_art">Tesla Inc Hits Another Milestone. Should You Buy Tesla Stock?</span></a>     			   
+		<div class="clear"></div><div class="hr_dotted"></div></div>    
+		<div class="titleContainer">
+		<a href="https://amigobulls.com/articles/2017-06-28-tesla-inc-nvidia-corporation-and-alphabet-inc-todays-technical-stock-trading-ideas"><span class="recent_art">Tesla Inc, NVIDIA Corporation And Alphabet Inc - Today's Technical Stock Trading Ideas</span></a>     			   
+		<div class="clear"></div><div class="none"></div></div>    
+		<div class="titleContainer">
+		<a href="https://amigobulls.com/articles/2017-07-21-amazon-strikes-again-rival-stocks-tumble"><span class="recent_art">Amazon Strikes Again, Rival Stocks Tumble</span></a>     			   
+		<div class="clear"></div><div class="none"></div></div>   </div>			<span id='ezoic-pub-ad-placeholder-665'></span><span style='display:block !important;float:none !important;margin-bottom:2px !important;margin-left:0px !important;margin-right:0px !important;margin-top:2px !important;min-height:300px;min-width:336px;text-align:center !important;' class='ezoic-ad large-billboard-2 adtester-container adtester-container-665' data-ez-name='amigobulls_com-large-billboard-2'><span id='div-gpt-ad-amigobulls_com-large-billboard-2-0' ezaw='336' ezah='280' style='position:relative;z-index:0;display:inline-block;' class='ezoic-ad'><script data-cfasync='false' type='text/javascript' style='display:none;'>eval(ez_write_tag([[336,280],'amigobulls_com-large-billboard-2','ezslot_1']));</script></span></span> <div class="tab_lscape_rhs mb30px"><h2 class="small mb5px">TSLA News</h2> 
+		<div class="titleContainer">
+		<a href="https://amigobulls.com/news/heres-why-tesla-tsla-stock-fell-today"><span class="recent_art">Here's Why Tesla (TSLA) Stock Fell Today</span></a>     			   
+		<div class="clear"></div><div class="hr_dotted"></div></div>    
+		<div class="titleContainer">
+		<a href="https://amigobulls.com/news/tesla-announces-date-for-second-quarter-2017-financial-results-and-webcast"><span class="recent_art">Tesla Announces Date for Second Quarter 2017 Financial Results and Webcast</span></a>     			   
+		<div class="clear"></div><div class="hr_dotted"></div></div>    
+		<div class="titleContainer">
+		<a href="https://amigobulls.com/news/3-inspirational-elon-musk-quotes-about-the-future"><span class="recent_art">3 Inspirational Elon Musk Quotes About the Future</span></a>     			   
+		<div class="clear"></div><div class="hr_dotted"></div></div>    
+		<div class="titleContainer">
+		<a href="https://amigobulls.com/news/tesla-tsla-secures-big-battery-contract-in-australia"><span class="recent_art">Tesla (TSLA) Secures Big Battery Contract in Australia</span></a>     			   
+		<div class="clear"></div><div class="hr_dotted"></div></div>    
+		<div class="titleContainer">
+		<a href="https://amigobulls.com/news/advanced-microgrid-solutions-raises-34-million-in-series-b-energy-leaders-see-der-optimization-as-major-growth-market"><span class="recent_art">Advanced Microgrid Solutions Raises $34 Million in Series B, Energy Leaders See DER Optimization as Major Growth Market</span></a>     			   
+		<div class="clear"></div><div class="hr_dotted"></div></div>    
+		<div class="titleContainer">
+		<a href="https://amigobulls.com/news/qvc-hsn-merger-nvidia-ai-deal-blue-apron-ipo-and-teslas-rough-week"><span class="recent_art">QVC-HSN Merger, Nvidia AI Deal, Blue Apron IPO, and Tesla's Rough Week</span></a>     			   
+		<div class="clear"></div><div class="none"></div></div>   </div>	<div class="tab_lscape_rhs mb30px picks_box alink_parent">
+		<div class="txtCen alink_click  picks_theme">
+			<div class="mb10px fs150">One of our top stock picks has returned over 600% since 2011. See the entire list, it's free.
+			</div> 
+			<div class="mt10px">
+				<a class="alink" href="https://amigobulls.com/stocks-to-buy/top-tech-stocks/">
+				</a>
+				<input type="button" class="mt10px" value="See our top picks">
+			</div>
+		</div>
+	</div>
+	</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+var siteurl="https://amigobulls.com/";
+</script>
+    <script type="text/javascript">
+            var geturl="https://static.amigobulls.com/"+"1500868507_getAllStocks_gz.txt";
+          </script>
+
+	 <script type="text/javascript">
+        tickSymbol="TSLA";
+    	    		var visited_stock=5909;
+    	        companyName="Tesla Inc";
+        entityId="67812";
+        commentType=3;
+        stockPrice=0;
+    </script>
+<!-- #mainContent -->
+<script>var page_type=33;</script><div class="clear"></div>
+<!-- <div class='displayNone height'><span class='embed_popup tickergreen bold left heightauto' id='mail-verification' title='Email Verification'></span></div>        -->
+<div class="clear"></div>
+<div class="footer_ad mt10px txtCen"> 
+</div>
+<div id="overlay" class="mobi-hideit"><div id="overlaydiv"></div></div>
+    <footer class="footer_fixed mt10px">
+        <div class="back_color">
+        <div id="footerbg">
+             <div class="top_sec">
+                <h3 class="footertitle">Top Sections</h3>     
+                <ul>
+                    <li><a href="https://amigobulls.com" title="amigobulls - home page"> Home</a>  </li> 
+                    <li><a href="https://amigobulls.com/stocks-to-buy/top-tech-stocks/" title="internet stock picks">Stock Picks</a> </li>
+                    <li><a href="https://amigobulls.com/articles/" title="Stock Market Analysis">Articles</a> </li>
+                    <li><a href="https://amigobulls.com/news/" title="Stock Market News">News From Partners</a> </li>
+                    <li class="mobi-footermenuhide"><a href="https://amigobulls.com/sectors/computer-and-technology/internet-services" title="Technology and internet stocks">Screen Stocks</a>  </li>
+                    <li><a href="https://amigobulls.com/watchlist" title="Stock Market Watchlist">Watchlist</a> </li>
+                </ul>
+            </div>
+            <div class="company_sec">
+                <h3 class="footertitle">Company Info</h3>
+                <ul>
+                    <li><a href="https://amigobulls.com/about" title="About Amigobulls">About</a></li>
+                    <li><a href="https://amigobulls.com/jobs" title="Existing careers at Amigobulls">Jobs</a></li>
+                    <li><a href="https://amigobulls.com/contact" title="Contact us  Amigobulls">Contact</a></li>
+                    <li><a href="https://amigobulls.com/articles/author/" title="Amigobulls Authors">Our Authors</a></li>
+                    <li><a href="https://amigobulls.com/terms" title="Terms of use">Terms of Use</a></li>
+                    <li><a href="https://amigobulls.com/privacy" title="Privacy Policy">Privacy</a></li>
+                    <li><a href="#" title="Feedback" class="feedbackpopup">Feedback</a></li>
+                </ul>
+            </div>
+            <div class="widgets_sec mobi-hideit">
+                <h3 class="footertitle">Widgets &amp; Others </h3>
+                <ul>
+                    <li><a href="https://amigobulls.com/widgets/" title="">Stock Chart Widget</a></li>
+                    <li><a href="https://amigobulls.com/articles/feed" title="RSS Feeds">RSS Feeds</a></li>
+                    <li><a href="https://amigobulls.com/glossary/" title="glossary">Glossary</a></li>
+                     <li><a href="https://amigobulls.com/companies/" title="Stocks Listing">Stocks Listing</a></li>
+                    <li><a href="https://amigobulls.com/links" title="blogroll">Blogroll</a></li>
+                </ul>
+            </div>
+         <!--    <div class="stocks_sec mobi-hideit">
+                <h3 class="footertitle ml5px">Top Stocks We Track</h3>
+                    <ul>
+                                                                        </ul>
+            </div> -->
+			<div class="left socialdiv">
+        <div class="promo_div"><a href="https://enrichview.in">
+          <div class="promo_text_content left">
+            <div class="promo_heading">AMIGOBULLS FOR BUSINESS</div>
+            <div class="promo_text fs80 mobi-hideit">Engage your wealth management clients with video statements.</div>
+          </div>
+          <div class="promo_img right">
+            <i class="fa fa-video-camera"></i>
+          </div>
+        </a>
+        </div>
+				<div class="socialicon">
+						<h3 class="footertitle">Join Us On</h3>                   
+							<a target="_blank" class="mleft" title="Follow amigobulls.com on Facebook" href="https://www.facebook.com/amigobulls">
+									<i class="fa fa-facebook-square fa-2x"></i>
+								<span class="displayNone">Follow amigobulls.com on Facebook</span>
+							</a>
+							<a target="_blank" title="Follow amigobulls.com on Twitter" href="https://twitter.com/amigobulls">
+									<i class="fa fa-twitter-square fa-2x"></i>
+								<span class="displayNone">Follow amigobulls.com on Twitter</span>
+							</a>
+							<a target="_blank" title="Follow amigobulls.com on LinkedIn" href="https://www.linkedin.com/company/amigobulls">
+									<i class="fa fa-linkedin-square fa-2x"></i>
+								<span class="displayNone">Follow amigobulls.com on LinkedIn</span>
+							</a>
+							<a target="_blank" title="Follow amigobulls.com on Google+" rel="publisher" href="https://plus.google.com/+amigobulls">
+									<i class="fa fa-google-plus-square fa-2x"></i>
+								<span class="displayNone">Follow amigobulls.com on Google+</span>
+							</a>
+              <a class="" target="_blank" title="Follow amigobulls.com on stocktwits" href="https://stocktwits.com/amigobulls">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAAAAAA6fptVAAAACklEQVR4nGP6DwABBQECz6AuzQAAAABJRU5ErkJggg==" data-src="https://static.amigobulls.com/v2images/StockTwits.svg" class="stocktwits_share lazy" alt="stocktwits">
+              </a>								
+				</div>
+                			</div>						
+            <div class="clear"></div>
+            <span class="fs62 footerst">Copyright<i class="fa fa-copyright"></i>2014 amigobulls.com </span>
+        </div><span id='ezoic-pub-ad-placeholder-'null" class="ezoic-adpicker-ad"></span><!-- placeholder  blocked.  Reason : inactive --></div>
+        <div class="fs75 footer_txt"><span id='ezoic-pub-ad-placeholder-683' class="ezoic-adpicker-ad"></span><span style='display:none !important;float:none;margin-bottom:2px !important;margin-left:0px !important;margin-right:0px !important;margin-top:2px !important;min-height:300px;min-width:336px;text-align:center !important;' class='ezoic-ad medrectangle-1 adtester-container adtester-container-683' data-ez-name='amigobulls_com-medrectangle-1'><span id='div-gpt-ad-amigobulls_com-medrectangle-1-0' ezaw='336' ezah='280' style='position:relative;z-index:0;display:none;' class='ezoic-ad'><!--script-placeholder--></span></span><script>var ezzns4 = {0.60:504827,1.00:504831,1.40:504838,2.60:504853,5.00:504865,0.20:504815,0.30:504819,1.20:504835,0.80:504829,1.10:504833,0.15:504814,3.00:504857,2.40:504851,4.50:504863,0.50:504826,0.90:504830,0.70:504828,2.00:504848,4.00:504861,0.05:504809,0.40:504823,1.70:504842,1.80:504844,0.25:504817,1.30:504836,0.45:504824,1.60:504841,2.20:504850,2.80:504855,3.50:504859,0.10:504811,0.35:504821,1.50:504840,1.90:504846,};</script><script type="text/javascript" src="//static.criteo.net/js/ld/publishertag.js" ></script>
+<div class="ezflad-47" style="display:inline-block" adunitname="amigobulls_com-medrectangle-1" id="crt-4">
+<script type="text/javascript">
+var ezoflbf_2_4 = function() { __ez.queue.addFunc('ReloadFromP_1683', 'IL11ILILIIlLLLILILLLLIILLLIIL11111LLILiiLIliLlILlLiiLLIiILL.ReloadFromP', 1683, false, ['banger.js'], false, false, false, true); };
+var ezoflbf_4 = function() { eval(ez_write_tag([[336,280],'amigobulls_com-medrectangle-1','ezslot_8']));
+		};</script><script type="text/javascript">Criteo.DisplayAd({
+    zoneid: 504829, containerid: 'crt-4', passbackcode: ezoflbf_4
+});
+</script></div>
+<script type='text/javascript'>
+	var __ezfl_sss_1683 = function() {
+		setTimeout(function(){
+			var ezflaun = IL11ILILIIlLLLILILLLLIILLLIIL11111LLILiiLIliLlILlLiiLLIiILL.GetNameFromPositionId(1683);
+			if (typeof ezflaun != 'undefined' && ezflaun.length > 0) {
+				if (typeof ez_ad_units != undefined) {
+					for (i = 0; i < ez_ad_units.length; i++) {
+						if (ezflaun.indexOf(ez_ad_units[i][1]) >= 0) {
+							return false;
+						}
+					}
+				}
+				IL11ILILIIlLLLILILLLLIILLLIIL11111LLILiiLIliLlILlLiiLLIiILL.StoreStatSource(ezflaun, 47, 0.80);
+				IL11ILILIIlLLLILILLLLIILLLIIL11111LLILiiLIliLlILlLiiLLIiILL.RemoveSlotById(ezflaun);
+			}
+		}, 4000);
+	};
+	__ez.queue.addFunc('__ezfl_sss_1683', '__ezfl_sss_1683', null, false, ['banger.js'], false, false, false, true);
+</script><!--ezoicfl-->
+            Historical, current end-of-day data, and company fundamental data provided by <a rel="nofollow" href="http://www.zacksdata.com/" class="linkblue" target="post">Zacks</a>.<br>
+        	All information provided "as is" for informational purposes only, not intended for trading purposes or advice. 
+        	Neither Amigobulls nor any of the data providers is liable for any informational errors, incompleteness, or delays, or for any actions taken in reliance on information contained herein. By accessing the amigobulls.com, you agree not to redistribute the information found therein.
+        	Please read our <a class="linkblue" href="https://amigobulls.com/terms">terms of use</a> and <a class="linkblue" href="https://amigobulls.com/privacy">privacy policy</a>.
+        </div>
+    </footer>
+    <div class="clear"></div>
+</div>
+<script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        //for main server
+                    ga('create', 'UA-39375880-1', 'auto');
+                ga('send', 'pageview');
+        if (window.ga) {
+          //send event timeonpage if a user has stayed for more than 15 seconds
+          var myintervalid = setInterval(function() {ga('send', 'event', 'timeonpage', 'timeonpage', window.location.pathname,15);},15000);
+          // clear the event after 15 mins
+          setTimeout(function(){clearInterval(myintervalid);},900000);
+        }
+</script>
+
+<div id="feedbackdivs"></div><script type="text/javascript">
+    var siteurl="https://amigobulls.com/";
+    var siteimageurl="https://static.amigobulls.com/";
+    var cssurl="https://static.amigobulls.com/css/";
+    var jsurl="https://static.amigobulls.com/js/";
+    var server_type="1";
+    var unique_id='5975cbe8a55fa';
+	var loggedin=false;
+	var user_email='';
+	var user_name='';
+	var user_id='';
+
+	    var limit_exceeded = '' ? 1 : 0;
+  		var visitedurl='/articles/tsla-stock-does-tesla-motors-inc-have-a-future-in-solar-energy-space';
+	var referrer='/https://www.google.com/';
+	var urlquery="u=tsla-stock-does-tesla-motors-inc-have-a-future-in-solar-energy-space";
+    if (typeof limit_exceeded !== 'undefined' && limit_exceeded) {
+        urlquery += '&forced=1';
+    }
+	var request_url='/articles/tsla-stock-does-tesla-motors-inc-have-a-future-in-solar-energy-space';
+	var siteurl='https://amigobulls.com/';
+	var node_type='articles';
+    var trade_it_enabled = 0;
+  if (trade_it_enabled) {
+    var publisher_name ='';
+    var tradit_js = '';
+  }
+</script>
+
+<script type="text/javascript">
+  			var isArticle="";
+                   isArticle=true;
+        </script>
+<script>
+  var session_open_popup= false;
+  var session_download_limit_exceeded=false;
+</script>
+<div class="displayNone " id="footer-login">
+<div id="forcedialog" class="txtCen" title="Login with amigobulls.com">
+<div class="pad10px">
+    <div id="title"></div>
+    <div class="pad10px displayInline"><input type="submit" class="submit_button loginfromjq" tabindex="4" value="Login"></div>
+    <div class="pad10px displayInline"><input type="submit" class="submit_button signupfromjq" tabindex="4" value="Sign Up"></div>
+</div>   
+</div>
+</div><div class="blackout"></div>
+      <script>
+  local_storage_access = true;
+
+  try{
+    localStorage.setItem("access","true");
+    test = localStorage.getItem("access");
+    localStorage.removeItem("access");
+  }
+  catch(err){
+    local_storage_access=false;
+  }
+  function async(u, c) {
+  var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+  o.src = u;
+  if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+  s.parentNode.insertBefore(o, s);
+}
+var jquery_lib="https://static.amigobulls.com/js/jquery_1.9.1.min.js";
+async( jquery_lib, function() {
+               common_js = document.createElement("script");
+            common_js.src = "https://static.amigobulls.com/js/combined/1500546975_jquer_amigo.min.js";
+            document.body.appendChild(common_js);
+  });   
+</script>
+<script type="text/javascript">
+/*query string to attach when show full article is clicked */
+	full_article_qs="?p=n";
+	is_single ="1";
+</script>
+
+
+
+<!-- Ezoic - Anchor Ad - bottom_floating -->
+<div class="ezmob-footer ezoic-floating-bottom ezo_ad"><center><span id='ezoic-pub-ad-placeholder-600'></span><!-- placeholder 600 blocked.  Reason : no sizes --></center></div>
+<!-- End Ezoic - Anchor Ad - bottom_floating -->
+
+
+<!-- Ezoic - Inline Ad - inline -->
+<!--  -->
+<!-- End Ezoic - Inline Ad - inline -->
+
+<script type="text/javascript" style='display:none;'>
+var __ez_dims = (function() {
+	var setCookie = function( name, content, expiry ) {
+		return document.cookie = name+'='+content+((expiry)?';expires='+(new Date(Math.floor(new Date().getTime()+expiry*1000)).toUTCString()):'');
+	};
+	var ffid = 1;
+	var oh = window.screen.height;
+	var ow = window.screen.width;
+	var h = ffid === 1 ? oh : (oh > ow) ? oh : ow;
+	var w = ffid === 1 ? ow : (oh > ow) ? ow : oh;
+	var uh = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight;
+	var uw = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth;
+	setCookie('ezds', encodeURIComponent('ffid='+ffid+',w='+w+',h='+h), (31536e3*7));
+	setCookie('ezohw', encodeURIComponent('w='+uw+',h='+uh), (31536e3*7));
+})();
+</script><script type='text/javascript' style='display:none;' async>
+__ez.queue.addFile('edmonton.php', '//amigobulls.com/detroitchicago/edmonton.webp?a=a&cb=169-0&shcb=23', true, [], true, false, false, false);
+__ez.queue.addFile('jellyfish.php', '//amigobulls.com/porpoiseant/jellyfish.webp?a=a&cb=169-0&shcb=23', false, [], true, false, false, false);
+</script>
+
+
+<div id='dmo1' style='display:none'>
+	<script type="text/javascript"><!--
+		google_ad_client = "ca-pub-6396844742497208";
+		/* dmo */
+		google_ad_slot = "dmo";
+		google_ad_width = 88;
+		google_ad_height = 31;
+		//-->
+	</script>
+	<script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+</div>
+
+<!--Begin comScore Tag--><script>var _comscore=_comscore||[];_comscore.push({c1:"2",c2:"20015427"});(function(){var s=document.createElement("script"),el=document.getElementsByTagName("script")[0];s.async=true;s.src=(document.location.protocol=="https:"?"https://sb":"http://b")+".scorecardresearch.com/beacon.js";el.parentNode.insertBefore(s,el)})();</script><noscript><img src="http://b.scorecardresearch.com/p?c1=2&c2=20015427&cv=2.0&cj=1"/></noscript><!--End comScore Tag-->
+<!--Quantcast Tag--><script type="text/javascript">var _qevents=_qevents||[];(function(){var elem=document.createElement('script');elem.src=(document.location.protocol=="https:"?"https://secure":"http://edge")+".quantserve.com/quant.js";elem.async=true;elem.type="text/javascript";var scpt=document.getElementsByTagName('script')[0];scpt.parentNode.insertBefore(elem,scpt)})();_qevents.push({qacct:"p-31iz6hfFutd16",labels:"Domain.amigobulls_com,DomainId.46056"});</script><noscript><div style="display:none;"><img src="//pixel.quantserve.com/pixel/p-31iz6hfFutd16.gif?labels=Domain.amigobulls_com,DomainId.46056"border="0"height="1"width="1"alt="Quantcast"/></div></noscript><!--End Quantcast tag--></body></html><!--[selectron:done]-->

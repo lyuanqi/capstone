@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+
+ <html xmlns="http://www.w3.org/1999/xhtml"
+    xml:lang="en" lang="en">
+    <head>
+      <script type="text/javascript">
+function addLink(){var a=document.getElementsByTagName("body")[0];var b;b=window.getSelection();var c=' Newburgh Gazette http://newburghgazette.com/2017/07/22/hersha-hospitality-trust-ht-analysts-see-0-79-eps/';var e=b+c;var d=document.createElement("div");d.style.position="absolute";d.style.left="-99999px";a.appendChild(d);d.innerHTML=e;b.selectAllChildren(d);window.setTimeout(function(){a.removeChild(d)},0)}document.oncopy=addLink;
+</script>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <link type="image/x-icon" href="/favicon.ico" rel="shortcut icon">
+		<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UAcHUF9ACQcHVVRV"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),f=c.length,u=i(a,o,r),d=0;f>d;d++)c[d].apply(u,n);return u}function a(t,e){f[t]=s(t).concat(e)}function s(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:s,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(f){try{r("ierr",[f,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(5),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,window.onerror=e,NREUM.noticeError=n;try{throw new Error}catch(f){"stack"in f&&(t(1),t(4),"addEventListener"in window&&t(2),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&t(3),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:8,2:5,3:9,4:7,5:20,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],4:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(2);t("loader").features.stn=!0,t(1),n.on("fn-start",function(t){var e=t[0];e instanceof Event&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof Event&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1),window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:6,2:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=(t(1),t("ee").create()),i=t(2)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:20,2:21,ee:"QJf3ax",gos:"7eSDFh"}],6:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState"],"-")},{1:21,2:20,ee:"QJf3ax"}],7:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:21,2:20,ee:"QJf3ax"}],8:[function(t,e){function n(t,e,n){var r=t[0];"string"==typeof r&&(r=new Function(r)),t[0]=o(r,"fn-",null,n)}var r=(t(2),t("ee").create()),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:21,2:20,ee:"QJf3ax"}],9:[function(t,e){function n(){c.inPlace(this,d,"fn-")}function r(t,e){c.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}var i=t("ee").create(),a=t(1),s=t(2),c=s(i),f=s(a),u=window.XMLHttpRequest,d=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=i,window.XMLHttpRequest=function(t){var e=new u(t);try{i.emit("new-xhr",[],e),f.inPlace(e,["addEventListener","removeEventListener"],"-",function(t,e){return e}),e.addEventListener("readystatechange",n,!1)}catch(r){try{i.emit("internal-error",[r])}catch(o){}}return e},window.XMLHttpRequest.prototype=u.prototype,c.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),i.on("send-xhr-start",r),i.on("open-xhr-start",r)},{1:5,2:21,ee:"QJf3ax"}],10:[function(t){function e(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function n(t){var n=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!n.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){n.status=t.status;var a=t.responseType,f="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,u=e(f);if(u&&(r.rxSize=u),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(n.cat=d.split(", ").pop())}}else n.status=0;r.cbTime=this.cbTime,o("xhr",[n,r,this.startTime])}}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,f=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=n,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,n){var r=this.metrics,o=t[0],i=this;if(r&&o){var f=e(o);f&&(r.txSize=f)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof n.onload))&&i.end(n)}catch(e){try{a.emit("internal-error",[e])}catch(r){}}};for(var u=0;c>u;u++)n.addEventListener(s[u],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:11,3:9,4:5,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],11:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info;if(t&&t.agent&&t.licenseKey&&t.applicationID&&c&&c.body){p.proto="https"===d.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=c.createElement("script");e.src=p.proto+t.agent,c.body.appendChild(e)}}function r(){"complete"===c.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=window,c=s.document,f="addEventListener",u="attachEvent",d=(""+location).split("?")[0],p=e.exports={offset:i(),origin:d,features:{}};c[f]?(c[f]("DOMContentLoaded",o,!1),s[f]("load",n,!1)):(c[u]("onreadystatechange",r),s[u]("onload",n)),a("mark",["firstbyte",i()])},{handle:"D5DuLP"}],20:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],21:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,f;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){u([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return f=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,f],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,f(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s,t))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){u([o,e,n,r])}}function f(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){u([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function u(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:20,ee:"QJf3ax"}]},{},["G9z0Bl",3,10,4]);</script>
+<script>var HDN = HDN || {}; HDN.t_firstbyte = Number(new Date());</script>
+         
+        <meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0, width = device-width">
+
+        <link rel="stylesheet" type="text/css" href="/external/css/global.sharedmain.r6.2.1.0.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="/external/css/global.sharedmodules.r6.2.1.0.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="/external/css/global.sharedpages.r6.2.1.0.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="/external/css/global.sitemain.r6.2.1.0.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="/external/css/global.sitemodules.r6.2.1.0.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="/external/css/global.sitepages.r6.2.1.0.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="/external/css/global.section.r6.2.1.0.css" media="all" />
+		<link rel="stylesheet" type="text/css" href="/external/css/global.sharedmain.r6.3.0.12.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="/external/css/global.sharedmodules.r6.3.0.12.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="/external/css/global.sharedpages.r6.3.0.12.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="/external/css/global.sitemain.r6.3.0.12.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="/external/css/global.sitemodules.r6.3.0.12.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="/external/css/global.sitepages.r6.3.0.12.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="/external/css/global.section.r6.3.0.12.css" media="all" />
+		<link rel="stylesheet" type="text/css" href="/external/css/global.article_global.r6.3.0.12.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="/external/css/global.article_local.r6.3.0.12.css" media="all" />
+
+        <link rel="stylesheet" type="text/css" href="/external/css/global.article_print.r6.3.0.12.css" media="all" />
+
+        <script type="text/javascript" src="/js/jquery-1.8.1.min.js"></script>
+        <script type="text/javascript" src="/external/js/global.header.r6.2.1.0.js"></script>
+		<script type="text/javascript" src="/external/js/global.header.r6.3.0.12.js"></script>
+		
+
+        
+<script type="text/javascript">
+	// <![CDATA[
+	
+	var requestTime = new Date(1418742126 * 1000);
+
+										
+					
+		
+		// bizobject variables
+		var omni_channelPath = "Home";
+				var omni_title = "Home";
+				var omni_bizObjectId = "8498";
+		var omni_className = "channel";
+		var omni_publicationDate = "2013-01-24 21:30:00";
+		var omni_sourceSite="premiumsfgate";
+
+        	        
+        var omni_paywallSite = "1";
+
+    	// ]]>
+</script>
+
+
+
+        <TITLE>Hersha Hospitality Trust (HT) Analysts See $0.79 EPS</TITLE>
+
+
+<meta name="description" content="">
+<meta name="keywords" content="">
+
+    
+<link href='http://fonts.googleapis.com/css?family=Ledger&subset=latin,cyrillic' rel='stylesheet' type='text/css'/>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:600&subset=cyrillic-ext,latin,cyrillic' rel='stylesheet' type='text/css'/>  
+
+
+
+    
+                    <meta http-equiv="refresh" content="1800" />
+    
+    
+    
+    
+    <meta property="og:title" content="Home" />
+            <meta property="og:description" content="" />
+                        <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:site_name" content="" />
+        <!-- Twitter card metadata  -->
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="" />
+    
+       
+
+
+                <meta property="fb:app_id" content="537896802938133"/>
+    
+
+        
+        <script type="text/javascript" id="adPositionManagerScriptTag" src="/external/js/loadAds.js"></script>
+
+                            
+            
+            
+        <script type="text/javascript" async src="/external/js/embed.js" id="_nw2e-js"></script>
+        <!-- CSS/JS Hotfix freeform -->
+        
+       
+
+<script type="text/javascript">
+    // turn off/on media and freeform objects from gallery [CPREM-1953]
+    HDN.skipGalleryMediaObjects = true;
+    HDN.skipGalleryFreeformObjects = true;
+</script>
+
+<style>
+/* CPREM-1909 */
+.digital_pass_promo a {font-size: 16px;}
+
+.hc_sitefooter .hcsf_links .li-link:before {
+    background-size:48px 544px;
+}
+/*CPREM-2096*/
+.prem-exclusive .content h4.kicker,
+.prem-exclusive .content h4.kicker .byline {
+	color: #aaa;
+	font-size: 10px;
+	line-height:1em;
+	font-family:"PopularMedium", serif;
+	margin-bottom:8px;
+}
+
+/*CPREM-2192 */
+@media screen and (min-width: 1280px){
+.prem_homepage_2 .digital_pass_promo {
+margin: -24px 0 20px 0;
+}
+}
+.hc_sub_topstories .byline, .hc-home-lead .hl-item-1 h2.headline, h2.headline, h3.headline, h3.section-name,.article-body h2.headline, continues, continues-in, a.continues{
+font-family: 'Ledger', serif ;
+font-weight:bold;}
+.kicker, .breaking, .kicker.highlight, .header-branding h1.section-title, .hc-ft-columnists .ftc-item-head .ftc-name, .hc-ft-columnists .ftc-item-head .ftc-name a{
+font-family: 'Ledger', serif ;
+font-size: 15px;
+font-weight:bold;}
+.ht-link-item2{padding-left: 0px!important; border-left-width: 0px!important;}
+.ht-link-item2 a{color:white!important;}
+.ht-link-item2 a:hover{color:#C12020!important;}
+.ht-ed a{color:white!important;}
+.ht-ed a:hover{color:#C12020!important;}
+.ht-saved a{color:white!important;}
+.ht-saved a:hover{color:#C12020!important;}
+.hc-totn-bod{font-size:13px;}
+.hc-totn-bod2{font-size:14px!important;}
+.hc-totn-bod2 *{font-size:14px!important;}
+.hc-totn-bod *{font-size:14px!important;}
+</style>
+<script>
+	$(window).load(function() {
+		var author = $('.auth_header h2.auth_name').text();
+		var authorFirst = author.charAt(0);
+		var authorLast = author.substr(author.indexOf(" ") + 1);
+		var mailto = 'mailto:'+authorFirst+authorLast+'@';
+		$('.auth_sidebar .social-links ul li.email a').attr({'href': mailto, 'onclick':'#'});
+	});
+</script>
+
+
+<!-- Bing Webmaster Tools verification -->
+<meta name="msvalidate.01" content="9451CA04ABC9D1D5C6419C73B4C4F7B7" />
+<meta property="fb:admins" content="100006394927810"/>
+    </head>
+    <body id="home" class="home ">
+    <!-- ux/chron/tmpl/channel_omniture.php -->
+<script type="text/javascript" src="/js/omniture/atm.js"></script>
+<!-- e ux/chron/tmpl/channel_omniture.php -->
+            <div id="container" class="prem_homepage_2">
+                <div id="header">                
+<div class="header-top">
+  <div class="lock1200">
+    <ul class="ht-links" > 
+				<li class="ht-link-item first ht-link-item2"><a  href="/contacts.html" title="">Contacts</a></li>
+			      
+	
+    </ul>
+
+    
+
+
+
+
+<script>
+    $('.email-aw').watermark('Email Address');
+    $('.password-aw').watermark('Password');
+
+    $.ajax({
+        url: "validateEdb/channel-8498/index.php",
+        async: false
+    }).done(function(premiumAllowed) {
+        premiumAllowed = +premiumAllowed;
+        if (edbTokens.productToken == null || !premiumAllowed) {
+            $('ul.signed-in').remove();
+            $('ul.signed-out').show();
+            if ( edbTokens.errorMessage && edbTokens.signInError=='header' ){
+                $('#signIn').prepend('<div class="error-wrap error-back-light" style="display: block; "><span class="error-text error-text-light">'+
+                edbTokens.errorMessage+
+                '</span><img src="img/utils/error_dark.png"/></div>');
+                if(edbTokens.emailForPrompt){
+                    $("input.useremail").val(edbTokens.emailForPrompt);
+                }
+            }
+        } else {
+            $('ul.signed-out').remove();
+            $('ul.signed-in').show();
+        }
+    });
+</script>
+
+
+
+
+
+
+  </div>
+</div>
+
+     <div class="lock1200">                     
+					<div class="header-branding">
+                        <a href="/"> <img src="/logo.png" alt="Newburgh Gazette"></a>
+						
+                            <div class="head-date">
+							<span class="wide-only"></span><span class="date">July 25, 2017 
+							</span></div>
+        								<div class="header-share">
+									<!-- AddToAny BEGIN -->
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style"> 
+<a class="a2a_button_facebook"></a>
+<a class="a2a_button_twitter"></a>
+<a class="a2a_button_google_plus"></a>
+<a class="a2a_button_email"></a>
+<a class="a2a_button_app_net"></a>
+</div>
+<script type="text/javascript">
+var a2a_config = a2a_config || {};
+a2a_config.num_services = 8;
+</script>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END -->
+										</div>
+    									
+                    </div>
+
+ 
+    
+  
+
+
+
+<div class="header-nav">
+  <div class="wide-sections horizontal-menu">
+    <ul id="wide-nav" class="sections-list">
+	                  
+                                                      
+                      <li id="Ho-link" class="nav-item" >
+					  <a href="/economy/" >Economy</a>		  
+					  
+					  </li> 
+                      
+                                                      
+                      <li id="Ho-link" class="nav-item" >
+					  <a href="/culture/" >Culture</a>		  
+					  
+					  </li> 
+                      
+                                                      
+                      <li id="Ho-link" class="nav-item" >
+					  <a href="/sci-tech/" >Sci-tech</a>		  
+					  
+					  </li> 
+                      
+                                                      
+                      <li id="Ho-link" class="nav-item" >
+					  <a href="/science/" >Science</a>		  
+					  
+					  </li> 
+                      
+                                                      
+                      <li id="Ho-link" class="nav-item" >
+					  <a href="/sport/" >Sport</a>		  
+					  
+					  </li> 
+                      
+                                                      
+                      <li id="Ho-link" class="nav-item" style="background-color: grey;">
+					  <a href="/worldwide/" style="color: white;background:#2B2D30">Worldwide</a>		  
+					  
+					  </li> 
+                      
+                                                      
+                      <li id="Ho-link" class="nav-item" >
+					  <a href="/health-care/" >Health Care</a>		  
+					  
+					  </li> 
+                      
+                                                      
+                      <li id="Ho-link" class="nav-item" >
+					  <a href="/local/" >Local</a>		  
+					  
+					  </li> 
+         
+                        <!--  <li class="search"><a href="javascript:void(0);"><div class="search-open"></div></a>
+						
+						</li>  -->                     
+
+    </ul>
+	
+    
+  </div>
+  
+	
+
+
+  <!-- triple rule -->
+  <div class="solo_triple"></div>
+</div>
+
+</div> 
+</div> 
+
+
+</html>
+
+    <div id="container" class="article_page">
+    <div id="content">
+<style>
+.article-body p {
+	width:auto;
+}
+.article-text{
+	width:98%;
+}
+.asset_photo, .asset_media {
+	width:98%;
+}
+</style>
+    <div class="article-wrap" style="background:none;">
+        
+        <div class="zone zone-1">
+            <div class="article-body" >
+       
+<div class="article-head">
+
+    <h3 class="section-name">Worldwide</h3>
+    <h2 class="headline">Hersha Hospitality Trust (HT) Analysts See $0.79 EPS</h2>
+       
+<p class="byline"> <a href="/2017/07/22/hersha-hospitality-trust-ht-analysts-see-0-79-eps/">Dwayne Harmon</a></p>
+
+   <p class="byline">
+    <span class="datestamp">
+        <span class="published">22 July 2017, 03:37 </span>
+            
+        </span></p>
+</div> <!-- /article-head -->
+	
+<!-- AddToAny BEGIN -->
+<div class="a2a_kit a2a_default_style">  
+<a class="a2a_button_facebook"></a>
+<a class="a2a_button_twitter"></a>
+<a class="a2a_button_google_plus"></a>
+<a class="a2a_button_email"></a>
+<a class="a2a_button_app_net"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END -->
+
+<div class="article-text">
+
+
+
+<a name="asset-photo-7283017"></a><div class="asset_photo asset-photo " data-config-asset-position="6"><!-- photo float -->
+<div class="asset_info_container asset-info-container">
+					<span class="credit">
+											
+									</span>
+			
+<div class="share-toggle"><span class="icon"></span></div>
+</div>
+
+		<div class="caption-truncated" style="display:none;">July 22, 2017</div>
+	
+</div><body space="preserve" class="element" displayname="body" name="body">
+                
+				
+				<div >
+<div style="overflow:hidden"><div style="text-align: center; float:left; margin: 0px 5px 0px 0px;"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><!-- newburghgazette.com 336x280 --><script type="text/javascript">
+		var data = "601844414136";
+		document.write('<ins class="adsbygoogle" style="background-color:transparent; display:inline-block;width:336px;height:280px;" data-ad-client="ca-pub-10'+data+'40" ></ins>')
+	</script>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div><p>Ashford Hospitality Trust has a one year low of $5.35 and a one year high of $8.23. The company's 50-day moving average price is $18.85 and its 200 day moving average price is $19.33. Tesla Motors Inc had 71 analyst reports since July 21, 2015 according to SRatingsIntel. Four research analysts have rated the stock with a hold rating and four have issued a buy rating to the stock. It has outperformed by 11.12% the S&P500.The move comes after 8 months negative chart setup for the $589.18 million company. (NYSE:<a href="http://www.marketbeat.com/stocks/NYSE/AHT/" target="_blank">AHT</a>) has "Sell" rating given on Tuesday, October 27 by UBS. As per Sunday, August 9, the company rating was maintained by Cantor Fitzgerald. The firm has "Outperform" rating by Credit Suisse given on Tuesday, April 5.</p><p>News stories <strong>about Ashford Hospitality Trust</strong> (NYSE:AHT) have been trending somewhat positive on Friday, Accern Sentiment reports. Conversely, if the RSI is traveling down and it is between 60 and 20, it is probably an indication of a downtrend. Its down 7.33% from 3.82 million shares previously. The stock of Hersha Hospitality Trust (NYSE:HT) has "Hold" rating given on Thursday, December 17 by Stifel Nicolaus.</p><p>Shares of Ashford Hospitality Trust Inc (AHT) opened at 6.35 on Friday. It has underperformed by 19.00% the S&P500. Prudential Financial Inc. now owns 605,716 shares of the real estate investment trust's stock worth $6,426,000 after buying an additional 408,940 shares in the last quarter. The firm has a market cap of $300.48 million, a price-to-earnings ratio of 20.87 and a beta of 1.16. The Company invests primarily in institutional grade hotels in urban gateway markets, including New York, Washington, District of Columbia, Boston, Philadelphia, South Florida and select markets on the West Coast. On average, equities research analysts expect that Hersha Hospitality Trust will post $1.98 EPS for the current year. Therefore 17% are positive.</p><p>Hersha Hospitality Trust was downgraded to " by analysts at JMP Securities. Jefferies maintained Ingredion Inc (NYSE:INGR) on Wednesday, June 14 with "Buy" rating. Hersha Hospitality Trust has a consensus rating of "Hold" and a consensus target price of $20.11. BMO Capital Markets maintained Ingredion Inc (NYSE:INGR) on Monday, June 26 with "Hold" rating. BMO Capital Markets upgraded Endeavour Silver Corp (NYSE:EXK) on Tuesday, April 4 to "Market Perform" rating.</p><p>5/1/2017-Brean Capital Reiterated Rating of Buy. The company was downgraded on Wednesday, August 12 by Bank of America. <a href="http://www.americanconsumernews.net/scripts/click.aspx?ValuEngine=1&Symbol=AINC">ValuEngine</a> lowered Ashford Hospitality Prime from a "strong-buy" rating to a "buy" rating in a research report on Friday, June 2nd. The firm earned "Sector Perform" rating on Monday, January 4 by RBC Capital Markets.</p><p>Analysts await Ashford Hospitality Trust, Inc. The expected HT's profit could reach $32.84M giving the stock 5.98 P/E in the case that $0.79 earnings per share is reported. The real estate investment trust reported $0.30 EPS for the quarter, beating the Zacks' consensus estimate of $0.23 by $0.07.</p><p>Since March 14, 2017, it had 2 insider buys, and 0 sales for $160,044 activity. $789,182 worth of Tesla Inc (NASDAQ:TSLA) was sold by <a href="https://www.sec.gov/Archives/edgar/data/1318605/000149473117000006/0001494731-17-000006.txt">Musk Kimbal</a>. Ltd. boosted its stake in shares of Ashford Hospitality Prime, Inc. Zakrowski Donald A sold $155,040 worth of stock or 2,000 shares.</p><p>Investors sentiment decreased to 1.09 in 2016 Q4. Its up 0.83, from 0.85 in 2016Q3.</p><p>A number of other hedge funds have also recently made changes to their positions in the stock.</p><p>Nuveen Municipal Value Fund, Inc.is a diversified closed-end management investment company. Clearbridge Lc reported 290 shares stake. James Investment Research holds 0.04% or 220,600 shares. 112,500 are owned by Ontario Teachers Pension Plan Board. Hbk Invs Limited Partnership holds 161,335 shares. First Manhattan Communication has invested 0.34% in Ingredion Inc (NYSE:INGR). Maryland Cap Mgmt stated it has 35,440 shares or 0.4% of all its holdings. Stockholders of record on Friday, June 30th were paid a $0.16 dividend. The Alabama-based Weiss Multi has invested 0.78% in the stock. 176 are owned by Winfield Assocs Incorporated. Jacobs Levy Equity Inc holds 51,910 shares or 0.01% of its portfolio. Sessa Im L P accumulated 2.21 million shares. Shares saw a steep increase in trading volume of 104.72% over the normal average daily volume. The Switzerland-based Swiss Retail Bank has invested 0.04% in Ingredion Inc (NYSE:INGR).</p><p>Receive Hersha Hospitality Trust News & Ratings Via Email - Enter your email address below to receive a concise daily summary of the latest news and analysts' ratings for Hersha Hospitality Trust with <a href="http://www.marketbeat.com/daily-email-updates-basic/?RegistrationCode=MBAP-Footer-desotoedge" target="_blank">MarketBeat.com's FREE daily email newsletter</a>.</p><div style="clear:both; text-align: center;"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><!-- newburghgazette.com 580x400 --><script type="text/javascript">
+		var data = "601844414136";
+		document.write('<ins class="adsbygoogle" style="background-color:transparent; display:inline-block;width:580px;height:400px;" data-ad-client="ca-pub-10'+data+'40" ></ins>')
+	</script>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div><p style="margin:0;clear:both;"></p><div style="clear:both;"></div></div><div style="float:none;">
+<div id="contentad377795"></div>
+<script type="text/javascript">
+    (function(d) {
+        var params =
+        {
+            id: "5dea5c28-2576-42a2-b86e-1e533781f5f8",
+            d:  "bmV3YnVyZ2hnYXpldHRlLmNvbQ==",
+            wid: "377795",
+			
+            cb: (new Date()).getTime()
+        };
+        var qs=[];
+        for(var key in params) qs.push(key+'='+encodeURIComponent(params[key]));
+        var s = d.createElement('script');s.type='text/javascript';s.async=true;
+        var p = 'https:' == document.location.protocol ? 'https' : 'http';
+        s.src = p + "://api.content-ad.net/Scripts/widget2.aspx?" + qs.join('&');
+        d.getElementById("contentad377795").appendChild(s);
+    })(document);
+</script></div>
+<br><br>
+		<h3>Like this</h3>
+
+<ul>
+ <li style="padding: 5px"><a href="/2017/07/22/analysts-see-0-05-eps-for-safe-bulkers-inc-sb/">Analysts See $-0.05 EPS for Safe Bulkers, Inc. (SB)</a>
+</li>
+</li>
+<li style="padding: 5px"><a href="/2017/07/22/analysts-expect-archer-daniels-midland-company-nyse-adm-to/">Analysts Expect Archer-Daniels-Midland Company (NYSE:ADM) to Announce $0.54 EPS</a>
+</li>
+</li>
+<li style="padding: 5px"><a href="/2017/07/22/the-qorvo-inc-qrvo-vp-sells-401640-00-in-stock/">The Qorvo, Inc. (QRVO) VP Sells $401640.00 in Stock</a>
+</li>
+</li>
+<li style="padding: 5px"><a href="/2017/07/22/rexford-industrial-realty-inc-nyse-rexr-stock-institutional/">Rexford Industrial Realty Inc (NYSE:REXR): Stock Institutional Investors Are Bullish About</a>
+</li>
+</li>
+<li style="padding: 5px"><a href="/2017/07/22/ed-sheeran-tour-promoter-threatened-with-arrest-at/">Ed Sheeran tour promoter threatened with arrest at ticketing protest</a>
+</li>
+</li>
+<li style="padding: 5px"><a href="/2017/07/22/du-releases-6th-cut-off-list-admissions-begin/">DU Releases 6th Cut-Off List, Admissions Begin</a>
+</li>
+</li>
+<li style="padding: 5px"><a href="/2017/07/22/diversified-trust-co-raises-position-in-vodafone-group-plc/">Diversified Trust Co Raises Position in Vodafone Group PLC (NASDAQ:VOD)</a>
+</li>
+</li>
+<li style="padding: 5px"><a href="/2017/07/22/foreign-ministry-spokesperson-gopal-baglay-appointed-joint/">Foreign ministry spokesperson Gopal Baglay appointed joint secretary in PMO</a>
+</li>
+</li>
+<li style="padding: 5px"><a href="/2017/07/22/trump-administration-stalled-or-stopped-hundreds-of-federal/">Trump Administration Stalled Or Stopped Hundreds Of Federal Regulations</a>
+</li>
+</li>
+<li style="padding: 5px"><a href="/2017/07/22/q4-2017-eps-estimates-for-gray-television-inc-raised-by/">Q4 2017 EPS Estimates for Gray Television, Inc. Raised by Analyst (GTN)</a>
+</li>
+</li>
+</ul>
+</div>
+
+
+
+</div>
+ 	
+	
+	
+  
+     
+                
+            </div> 
+<div class="article-body" >
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><!-- newburghgazette.com 300x600 --><script type="text/javascript">
+		var data = "601844414136";
+		document.write('<ins class="adsbygoogle" style="background-color:transparent; display:inline-block;width:300px;height:600px;" data-ad-client="ca-pub-10'+data+'40" ></ins>')
+	</script>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>			
+			 <h3>Latest</h3><br>
+<style>
+.blocknews p{width:100%;}
+.blocknews p:last-child{max-height:200px;overflow:hidden;}
+</style>
+        <div style="height:650px; overflow-y:auto;overflow-x:hidden;" class="blocknews" >
+
+			<p>
+<span style="font-weight:bold;color:#c12020;font-size:12px;">22 July 2017</span>
+<br />
+
+				<a style="font-weight: bold;" href="/2017/07/22/nrp-is-down-at-27-65-natural-resource-partners-lp-schedules/" title="(NRP) is down at $27.65 Natural Resource Partners LP Schedules…">(NRP) is down at $27.65 Natural Resource Partners LP Schedules…</a>
+								
+<br />
+Intrust Bank NA purchased a new position in Alliance Resource Partners, L.P. during the first quarter valued at about $221,000. Steinberg Global Asset Management boosted its stake in Alliance Resource Partners, L.P.by 13.7% in the first quarter.
+</p>
+<p>
+<span style="font-weight:bold;color:#c12020;font-size:12px;">22 July 2017</span>
+<br />
+
+				<a style="font-weight: bold;" href="/2017/07/22/akshay-kumar-featured-toilet/" title="Akshay Kumar featured "Toilet"">Akshay Kumar featured "Toilet"</a>
+								
+<br />
+The movie, directed by Shree Narayan Singh, is based on a love story against the backdrop of the Swachh Bharat Abhiyan. Thank you all for your support". "I then called up Prerna Arora ( Toilet: Ek Prem Katha's producer) and informed her".
+</p>
+<p>
+<span style="font-weight:bold;color:#c12020;font-size:12px;">22 July 2017</span>
+<br />
+
+				<a style="font-weight: bold;" href="/2017/07/22/interpol-shares-list-of-173-potential-islamist-attackers/" title="Interpol Shares List of 173 Potential Islamist Attackers With EU Agencies">Interpol Shares List of 173 Potential Islamist Attackers With EU Agencies</a>
+								
+<br />
+This information was captured during the assault on Isis territories in Syria and Iraq. While it is estimated that around 70,000 ISIS fighters are already dead, Gen.
+</p>
+<p>
+<span style="font-weight:bold;color:#c12020;font-size:12px;">22 July 2017</span>
+<br />
+
+				<a style="font-weight: bold;" href="/2017/07/22/imran-khan-admits-to-having-incomplete-money-trail-of/" title="Imran Khan admits to having incomplete money trail of London flat">Imran Khan admits to having incomplete money trail of London flat</a>
+								
+<br />
+It has also been told that the amount of 61 thousand pounds was given initially, and the total sum of one hundred and 17 thousand pounds was paid in 1989.
+</p>
+<p>
+<span style="font-weight:bold;color:#c12020;font-size:12px;">22 July 2017</span>
+<br />
+
+				<a style="font-weight: bold;" href="/2017/07/22/nsw-liberals-to-debate-rules-on-the-floor-in-sydney/" title="NSW Liberals To Debate Rules 'On The Floor' In Sydney">NSW Liberals To Debate Rules 'On The Floor' In Sydney</a>
+								
+<br />
+Malcolm Turnbull says it's essential for the future of the Liberal Party that more power is given to grassroots members. Voting is now restricted to branch representatives and some party officials.
+</p>
+<p>
+<span style="font-weight:bold;color:#c12020;font-size:12px;">22 July 2017</span>
+<br />
+
+				<a style="font-weight: bold;" href="/2017/07/22/pepsico-inc-pep-rating-reiterated-by-royal-bank-of-canada/" title="Pepsico, Inc. (PEP) Rating Reiterated by Royal Bank Of Canada">Pepsico, Inc. (PEP) Rating Reiterated by Royal Bank Of Canada</a>
+								
+<br />
+For PEP, the company now has $10.28 Billion of cash on the books, which is offset by $8.28 Billion current liabilities. The stock of Goodyear Tire & Rubber Co (NASDAQ:GT) earned "Hold" rating by Standpoint Research on Wednesday, March 1.
+</p>
+<p>
+<span style="font-weight:bold;color:#c12020;font-size:12px;">22 July 2017</span>
+<br />
+
+				<a style="font-weight: bold;" href="/2017/07/22/lasalle-hotel-properties-nyse-lho-pt-set-at-35-00-by/" title="LaSalle Hotel Properties (NYSE:LHO) PT Set at $35.00 by Boenning Scattergood">LaSalle Hotel Properties (NYSE:LHO) PT Set at $35.00 by Boenning Scattergood</a>
+								
+<br />
+Therefore 15% are positive. (The) assumed coverage on shares of LaSalle Hotel Properties in a research note on Monday, April 10th. In an analyst note revealed to clients and investors on Friday morning, Deutsche Bank kept their Hold rating on shares of LHO.
+</p>
+<p>
+<span style="font-weight:bold;color:#c12020;font-size:12px;">22 July 2017</span>
+<br />
+
+				<a style="font-weight: bold;" href="/2017/07/22/oppenheimerfunds-inc-buys-3942-shares-of-summit-hotel/" title="OppenheimerFunds Inc. Buys 3942 Shares of Summit Hotel Properties, Inc. (NYSE:INN)">OppenheimerFunds Inc. Buys 3942 Shares of Summit Hotel Properties, Inc. (NYSE:INN)</a>
+								
+<br />
+The stock witnessed -5.45% declines, 7.26% gains and 13.96% gains for the 1-month, 3-month and 6-month period, respectively. Wellington Mngmt Grp Incorporated Ltd Liability Partnership, a Massachusetts-based fund reported 4.08 million shares.
+</p>
+<p>
+<span style="font-weight:bold;color:#c12020;font-size:12px;">22 July 2017</span>
+<br />
+
+				<a style="font-weight: bold;" href="/2017/07/22/robert-bodor-sells-3259-shares-of-proto-labs-inc-nyse-prlb/" title="Robert Bodor Sells 3259 Shares of Proto Labs, Inc. (NYSE:PRLB) Stock">Robert Bodor Sells 3259 Shares of Proto Labs, Inc. (NYSE:PRLB) Stock</a>
+								
+<br />
+Finally, Dougherty & Co upgraded Proto Labs from a "sell" rating to a "neutral" rating in a research report on Tuesday, June 27th. Lazard Asset Management LLC acquired a new stake in shares of Proto Labs during the first quarter valued at $8,416,000.
+</p>
+<p>
+<span style="font-weight:bold;color:#c12020;font-size:12px;">23 June 2017</span>
+<br />
+
+				<a style="font-weight: bold;" href="/2017/06/23/marvel-looks-to-shake-its-poor-gaming-reputation/" title="Marvel Looks To Shake Its Poor Gaming Reputation">Marvel Looks To Shake Its Poor Gaming Reputation</a>
+								
+<br />
+The games are well designed with attractive graphics and extensive content, but neither is viewed as a flawless experience. These games tend to be actually well done for what they are, and in a way they&rsquo;ve been the pride of Marvel gaming.
+</p>
+
+      </div><br>
+	  <div id="contentad377796"></div>
+<script type="text/javascript">
+    (function(d) {
+        var params =
+        {
+            id: "ede54628-c93b-4160-a57e-49313e83ea59",
+            d:  "bmV3YnVyZ2hnYXpldHRlLmNvbQ==",
+            wid: "377796",
+			
+            cb: (new Date()).getTime()
+        };
+        var qs=[];
+        for(var key in params) qs.push(key+'='+encodeURIComponent(params[key]));
+        var s = d.createElement('script');s.type='text/javascript';s.async=true;
+        var p = 'https:' == document.location.protocol ? 'https' : 'http';
+        s.src = p + "://api.content-ad.net/Scripts/widget2.aspx?" + qs.join('&');
+        d.getElementById("contentad377796").appendChild(s);
+    })(document);
+</script><br>
+			 <h3>Recommended</h3><br>
+        <ul >
+			<li class="hc-totn-item " style="margin-bottom: 10px"><div class="wide-only"><p class="timestamp">July 22, 2017  </p></div><a style="font-weight: normal;" href="/2017/07/22/outlander-at-comic-con-fans-surprised-with-season-3/" title="'Outlander' at Comic-Con: Fans Surprised With Season 3 Premiere Screening">'Outlander' at Comic-Con: Fans Surprised With Season 3 Premiere Screening</a></li>
+<li class="hc-totn-item " style="margin-bottom: 10px"><div class="wide-only"><p class="timestamp">July 22, 2017  </p></div><a style="font-weight: normal;" href="/2017/07/22/danaher-corporation-dhr-upgraded-by-bidaskclub-to-hold/" title="Danaher Corporation (DHR) Upgraded by BidaskClub to "Hold"">Danaher Corporation (DHR) Upgraded by BidaskClub to "Hold"</a></li>
+<li class="hc-totn-item " style="margin-bottom: 10px"><div class="wide-only"><p class="timestamp">July 22, 2017  </p></div><a style="font-weight: normal;" href="/2017/07/22/maxim-group-cuts-rating-on-potbelly-corporation-pbpb-to-hold/" title="Maxim Group Cuts Rating On Potbelly Corporation (PBPB) To "Hold"">Maxim Group Cuts Rating On Potbelly Corporation (PBPB) To "Hold"</a></li>
+<li class="hc-totn-item " style="margin-bottom: 10px"><div class="wide-only"><p class="timestamp">July 22, 2017  </p></div><a style="font-weight: normal;" href="/2017/07/22/the-commercial-metals-company-sees-unusually-large-options/" title="The Commercial Metals Company Sees Unusually Large Options Volume (CMC)">The Commercial Metals Company Sees Unusually Large Options Volume (CMC)</a></li>
+<li class="hc-totn-item " style="margin-bottom: 10px"><div class="wide-only"><p class="timestamp">July 22, 2017  </p></div><a style="font-weight: normal;" href="/2017/07/22/media-reports-of-chaudhry-nisars-resignation-baseless/" title="Media reports of Chaudhry Nisar's resignation baseless: interior ministry">Media reports of Chaudhry Nisar's resignation baseless: interior ministry</a></li>
+<li class="hc-totn-item " style="margin-bottom: 10px"><div class="wide-only"><p class="timestamp">July 22, 2017  </p></div><a style="font-weight: normal;" href="/2017/07/22/chinese-ship-in-vicinity-of-war-games/" title="Chinese ship in 'vicinity' of war games">Chinese ship in 'vicinity' of war games</a></li>
+<li class="hc-totn-item " style="margin-bottom: 10px"><div class="wide-only"><p class="timestamp">July 22, 2017  </p></div><a style="font-weight: normal;" href="/2017/07/22/aegean-marine-petroleum-network-inc-nyse-anw-reviewed-by/" title="Aegean Marine Petroleum Network Inc. (NYSE:ANW) Reviewed By Analysts">Aegean Marine Petroleum Network Inc. (NYSE:ANW) Reviewed By Analysts</a></li>
+<li class="hc-totn-item " style="margin-bottom: 10px"><div class="wide-only"><p class="timestamp">July 22, 2017  </p></div><a style="font-weight: normal;" href="/2017/07/22/palestinian-president-suspends-official-contact-with-israel/" title="Palestinian President suspends official contact with Israel over holy site">Palestinian President suspends official contact with Israel over holy site</a></li>
+<li class="hc-totn-item " style="margin-bottom: 10px"><div class="wide-only"><p class="timestamp">July 22, 2017  </p></div><a style="font-weight: normal;" href="/2017/07/22/pdl-biopharma-inc-nasdaq-pdli-sees-unusual-trading-volume/" title="PDL BioPharma, Inc. (NASDAQ:PDLI) Sees Unusual Trading Volume in Its Shares">PDL BioPharma, Inc. (NASDAQ:PDLI) Sees Unusual Trading Volume in Its Shares</a></li>
+<li class="hc-totn-item " style="margin-bottom: 10px"><div class="wide-only"><p class="timestamp">July 22, 2017  </p></div><a style="font-weight: normal;" href="/2017/07/22/synchrony-financial-nasdaq-syf-to-release-earnings/" title="Synchrony Financial (NASDAQ:SYF) To Release Earnings">Synchrony Financial (NASDAQ:SYF) To Release Earnings</a></li>
+<li class="hc-totn-item " style="margin-bottom: 10px"><div class="wide-only"><p class="timestamp">July 22, 2017  </p></div><a style="font-weight: normal;" href="/2017/07/22/eps-for-transcanada-corporation-usa-trp-expected-at-0-51/" title="EPS for TransCanada Corporation (USA) (TRP) Expected At $0.51">EPS for TransCanada Corporation (USA) (TRP) Expected At $0.51</a></li>
+<li class="hc-totn-item " style="margin-bottom: 10px"><div class="wide-only"><p class="timestamp">July 22, 2017  </p></div><a style="font-weight: normal;" href="/2017/07/22/nuvasive-inc-nuva-shares-sold-by-nuveen-asset-management-llc/" title="NuVasive, Inc. (NUVA) Shares Sold by Nuveen Asset Management LLC">NuVasive, Inc. (NUVA) Shares Sold by Nuveen Asset Management LLC</a></li>
+<li class="hc-totn-item " style="margin-bottom: 10px"><div class="wide-only"><p class="timestamp">July 22, 2017  </p></div><a style="font-weight: normal;" href="/2017/07/22/martincova-stuns-garcia-for-career-best-win/" title="Martincova stuns Garcia for career-best win">Martincova stuns Garcia for career-best win</a></li>
+<li class="hc-totn-item " style="margin-bottom: 10px"><div class="wide-only"><p class="timestamp">July 22, 2017  </p></div><a style="font-weight: normal;" href="/2017/07/22/iran-inaugurates-new-production-line-for-air-defense/" title="Iran Inaugurates New Production Line for Air Defense Missile, State TV Reports">Iran Inaugurates New Production Line for Air Defense Missile, State TV Reports</a></li>
+<li class="hc-totn-item " style="margin-bottom: 10px"><div class="wide-only"><p class="timestamp">July 22, 2017  </p></div><a style="font-weight: normal;" href="/2017/07/22/the-recent-analysts-ratings-updates-for-seagate-technology/" title="The Recent Analysts' Ratings Updates for Seagate Technology PLC (STX)">The Recent Analysts' Ratings Updates for Seagate Technology PLC (STX)</a></li>
+
+      </ul>
+        </div></div>  
+    </div>
+
+    <div class="zone zone-5">
+        
+                         <div class="hide-rss-link hdnce-e hdnce-collection-20952-premium_article_featured_articles">
+<div class="collection article-sections">
+
+	<div class="column-outer-wrap">
+        <div class="column-wrap ">
+			<div class="column odd firstcolumn">
+			
+			
+				
+				<div class="header">
+                <h4 class="kicker-link"><a href=""></a></h4>
+                </div>
+                                                                                
+					<a class="without_u " href="/2017/07/11/djokovic-would-be-happier-dating-deepika-padukone-says-ex/">
+										<img src="http://resize.indiatvnews.com/en/centered/newbucket/750_533/2017/07/deepika-padukone-images-1499740936.jpg" alt="Djokovic would be happier dating Deepika Padukone, says ex-girlfriend" border="0"/>
+										</a>
+  
+                     <h2 class="headline"><a  style="display:block;height:72px;overflow:hidden;" href="/2017/07/11/djokovic-would-be-happier-dating-deepika-padukone-says-ex/">Djokovic would be happier dating Deepika Padukone, says ex-girlfriend</a></h2>
+            </div>
+			
+			
+            <div class="column even ">
+                 	
+				<div class="header">
+                <h4 class="kicker-link"><a href=""></a></h4>
+                </div>
+                                                                                
+					<a class="without_u " href="/2017/07/10/regions-financial-corp-nyse-rf-dextera-surgical-inc-nasdaq/">
+										</a>
+  
+                     <h2 class="headline"><a  style="display:block;height:72px;overflow:hidden;" href="/2017/07/10/regions-financial-corp-nyse-rf-dextera-surgical-inc-nasdaq/">Regions Financial Corp (NYSE: RF), Dextera Surgical Inc (NASDAQ: DXTR)</a></h2>
+            </div>
+         </div>
+		 
+          <div class="column-wrap column-wrap-last">
+                <div class="column odd ">
+                      	
+				<div class="header">
+                <h4 class="kicker-link"><a href=""></a></h4>
+                </div>                                                      
+					<a class="without_u " href="/2017/06/30/most-think-trump-is-abusing-his-powers/">
+										<img src="http://media.graytvinc.com/images/810*454/trump+0627.jpg" alt="Most think Trump is abusing his powers" border="0" />
+										</a>
+  
+                     <h2 class="headline"><a  style="display:block;height:72px;overflow:hidden;" href="/2017/06/30/most-think-trump-is-abusing-his-powers/">Most think Trump is abusing his powers</a></h2>
+             </div>
+			 
+			 
+                 <div class="column even lastcolumn">
+                    	
+				<div class="header">
+                <h4 class="kicker-link"><a href=""></a></h4>
+                </div>
+                                                                                
+					<a class="without_u " href="/2017/06/26/dc-and-maryland-ags-sue-trump-for-constitutional-violations/">
+										<img src="https://www.commondreams.org/sites/default/files/styles/cd_large/public/views-article/trump_china_0.jpg" alt="DC and Maryland AGs sue Trump for constitutional violations" border="0"/>
+										</a>
+  
+                     <h2 class="headline"><a  style="display:block;height:72px;overflow:hidden;" href="/2017/06/26/dc-and-maryland-ags-sue-trump-for-constitutional-violations/">DC and Maryland AGs sue Trump for constitutional violations</a></h2>
+            </div>
+         </div>
+     </div>
+</div>
+
+</div>    
+
+
+</div><!-- /zone-5 -->
+    <!-- END Section Highlights Collection -->
+</div>
+</div><!-- /container -->   <style>.directadvert-block>div{margin:auto;}</style><div id="contentad377797"></div>
+<script type="text/javascript">
+    (function(d) {
+        var params =
+        {
+            id: "74eaef94-1070-4f6c-ab28-cfa9a6992311",
+            d:  "bmV3YnVyZ2hnYXpldHRlLmNvbQ==",
+            wid: "377797",
+			exitPopMobile: true,
+            cb: (new Date()).getTime()
+        };
+        var qs=[];
+        for(var key in params) qs.push(key+'='+encodeURIComponent(params[key]));
+        var s = d.createElement('script');s.type='text/javascript';s.async=true;
+        var p = 'https:' == document.location.protocol ? 'https' : 'http';
+        s.src = p + "://api.content-ad.net/Scripts/widget2.aspx?" + qs.join('&');
+        d.getElementById("contentad377797").appendChild(s);
+    })(document);
+</script> 
+
+
+<div class="hc_sitefooter">
+
+<div class="lock1200">
+
+   <div class="hcsf_header">
+    <a href="/"><img style="width:250px;" src="/logo.png " alt="Newburgh Gazette" /></a>
+    <div class="toplink"><a href="#container"><span class="topLinkText">TOP</span></a></div>
+   </div>
+ 
+     
+    <ul class="hcsf_links">
+    <li class="hcsf_about"> 
+     
+
+     <ul class="hcsf_linklist">
+	                  
+                                                      
+                      <li class="ht-link-item first">
+					  <a  href="/economy/ "  title="Economy">
+					  Economy					  </a>
+					  </li> 
+                      
+                                                      
+                      <li class="ht-link-item first">
+					  <a  href="/culture/ "  title="Culture">
+					  Culture					  </a>
+					  </li> 
+                      
+                                                      
+                      <li class="ht-link-item first">
+					  <a  href="/sci-tech/ "  title="Sci-tech">
+					  Sci-tech					  </a>
+					  </li> 
+                      
+                                                      
+                      <li class="ht-link-item first">
+					  <a  href="/science/ "  title="Science">
+					  Science					  </a>
+					  </li> 
+                      
+                                                      
+                      <li class="ht-link-item first">
+					  <a  href="/sport/ "  title="Sport">
+					  Sport					  </a>
+					  </li> 
+                      
+                                                      
+                      <li class="ht-link-item first">
+					  <a style="color:white;;background-color: grey;" href="/worldwide/ "  title="Worldwide">
+					  Worldwide					  </a>
+					  </li> 
+                      
+                                                      
+                      <li class="ht-link-item first">
+					  <a  href="/health-care/ "  title="Health Care">
+					  Health Care					  </a>
+					  </li> 
+                      
+                                                      
+                      <li class="ht-link-item first">
+					  <a  href="/local/ "  title="Local">
+					  Local					  </a>
+					  </li> 
+         
+                                          
+
+     </ul>
+	 </li>
+   </ul>
+   
+   
+   <ul class="hcsf_links">
+    <li class="hcsf_about"> 
+     <h3>Information</h3>
+
+     <ul class="hcsf_linklist">
+	 			<li class="ht-link-item first"><a  href="/contacts.html" title="">Contacts</a></li>
+						
+		 
+	
+     </ul>
+	 </li>
+   </ul>
+
+   <div class="copyright-wrap">
+    
+<p class="copyright">&copy; <script>document.write(new Date().getFullYear());</script> Newburgh Gazette</p>
+   </div>
+</div>
+  </div>
+
+ 
+
+<script>
+var data = '0786902';
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-9' + data + '-30', 'auto');
+  ga('send', 'pageview');
+</script>
+
+</body>
+</html>

@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8">
+<script data-cfasync='false' data-pagespeed-no-defer>var __ez=__ez||{};__ez.evt={};__ez.ck={};__ez.dot={};__ez.template={};__ez.template.isOrig=true;__ez.evt.add=function(el,evt,handler){if(el.addEventListener){el.addEventListener(evt,handler,false)}else if(el.attachEvent){el.attachEvent('on'+evt,handler)}else{el['on'+evt]=handler()}};__ez.ck.get=function(n,e){null!==e&&(n=n+"_"+e);for(var t=n+"=",r=decodeURIComponent(document.cookie),o=r.split(";"),i=0;i<o.length;i++){for(var u=o[i];" "===u.charAt(0);)u=u.substring(1);if(0===u.indexOf(t))return u.substring(t.length,u.length)}return""};__ez.queue=function(){function g(a,b,g,h,j,k,l,m){var n=new f.file(a,b,g,h,j,k,l);!0===m?d[a]=n:e[a]=n,c[a]=n,i(n)}function h(a,g,h,j,k,l,m,n,o){!0===l&&(a=a+"_"+b++);var p=new f.func(a,g,h,j,k,m,n);!0===o?d[a]=p:e[a]=p,c[a]=p,i(p)}function i(a){!0!==j(a)&&a.process()}function j(a){if(a.blockedBy instanceof Array)for(var b=0;b<a.blockedBy.length;b++){var d=a.blockedBy[b];if(!1===c.hasOwnProperty(d))return k(a.name+" blocked = "+d),!0;if(!0===a.proceedIfError&&!0===c[d].isError)return!1;if(!1===c[d].isComplete)return k(a.name+" blocked = "+d),!0}return!1}function k(a){var b=window.location.href,c=new RegExp("[?&]ezq=([^&#]*)","i"),d=c.exec(b);"1"===(d?d[1]:null)&&console.debug(a)}function l(){++a>20||(k("let's go"),m(d),m(e))}function m(a){for(var b in a)if(!1!==a.hasOwnProperty(b)){var c=a[b];!0===c.isComplete||j(c)||!0===c.isInitialized||!0===c.isError?!0===c.isError?k(c.name+": error"):!0===c.isComplete?k(c.name+": complete already"):!0===c.isInitialized&&k(c.name+": initialized already"):c.process()}}var a=0,b=0,c=[],d=[],e=[],f={func:function(a,b,d,e,f,g,h){var i=this;this.name=a,this.funcName=b,this.parameters=null===d?null:d instanceof Array?d:[d],this.isBlock=e,this.blockedBy=f,this.deleteWhenComplete=g,this.isError=!1,this.isComplete=!1,this.isInitialized=!1,this.proceedIfError=h,this.process=function(){k("... func = "+a),i.isInitialized=!0,i.isComplete=!0;var b=i.funcName.split(".");b.length>3||(3===b.length?window[b[0]][b[1]][b[2]].apply(null,this.parameters):2===b.length?window[b[0]][b[1]].apply(null,this.parameters):window[i.funcName].apply(null,this.parameters)),!0===i.deleteWhenComplete&&delete c[a],!0===i.isBlock&&(k("----- F'D: "+i.name),l())}},file:function(a,b,c,d,e,f,g){var h=this;this.name=a,this.path=b,this.async=e,this.defer=f,this.isBlock=c,this.blockedBy=d,this.isInitialized=!1,this.isError=!1,this.isComplete=!1,this.proceedIfError=g,this.process=function(){h.isInitialized=!0,k("... file = "+a);var c=document.createElement("script");c.src=b,!0===e?c.async=!0:!0===f&&(c.defer=!0),c.onerror=function(){k("----- ERR'D: "+h.name),h.isError=!0,!0===h.isBlock&&l()},c.onreadystatechange=c.onload=function(){var a=c.readyState;k("----- F'D: "+h.name),a&&!/loaded|complete/.test(a)||(h.isComplete=!0,!0===h.isBlock&&l())},document.getElementsByTagName("head")[0].appendChild(c)}}};return{addFile:g,addFunc:h,items:c}}();var __ezDotData=function(a,b){this.name=a,this.val=b};__ez.dot.b64={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",encode:function(a){var c,d,e,f,g,h,i,b="",j=0;for(a=Base64._utf8_encode(a);j<a.length;)c=a.charCodeAt(j++),d=a.charCodeAt(j++),e=a.charCodeAt(j++),f=c>>2,g=(3&c)<<4|d>>4,h=(15&d)<<2|e>>6,i=63&e,isNaN(d)?h=i=64:isNaN(e)&&(i=64),b=b+this._keyStr.charAt(f)+this._keyStr.charAt(g)+this._keyStr.charAt(h)+this._keyStr.charAt(i);return b},decode:function(a){var c,d,e,f,g,h,i,b="",j=0;for(a=a.replace(/[^A-Za-z0-9+\/=]/g,"");j<a.length;)f=this._keyStr.indexOf(a.charAt(j++)),g=this._keyStr.indexOf(a.charAt(j++)),h=this._keyStr.indexOf(a.charAt(j++)),i=this._keyStr.indexOf(a.charAt(j++)),c=f<<2|g>>4,d=(15&g)<<4|h>>2,e=(3&h)<<6|i,b+=String.fromCharCode(c),64!=h&&(b+=String.fromCharCode(d)),64!=i&&(b+=String.fromCharCode(e));return b=Base64._utf8_decode(b)},_utf8_encode:function(a){a=a.replace(/rn/g,"n");for(var b="",c=0;c<a.length;c++){var d=a.charCodeAt(c);d<128?b+=String.fromCharCode(d):d>127&&d<2048?(b+=String.fromCharCode(d>>6|192),b+=String.fromCharCode(63&d|128)):(b+=String.fromCharCode(d>>12|224),b+=String.fromCharCode(d>>6&63|128),b+=String.fromCharCode(63&d|128))}return b},_utf8_decode:function(a){for(var b="",c=0,d=c1=c2=0;c<a.length;)d=a.charCodeAt(c),d<128?(b+=String.fromCharCode(d),c++):d>191&&d<224?(c2=a.charCodeAt(c+1),b+=String.fromCharCode((31&d)<<6|63&c2),c+=2):(c2=a.charCodeAt(c+1),c3=a.charCodeAt(c+2),b+=String.fromCharCode((15&d)<<12|(63&c2)<<6|63&c3),c+=3);return b}},__ez.dot.dataToStr=function(a){if(void 0===a)return[];try{for(var b in a)a[b].val=a[b].val+""}catch(a){}return a},__ez.dot.getCC=function(){var a="XX";return"undefined"!=typeof _ezaq&&_ezaq.hasOwnProperty("country")&&(a=_ezaq.country),a},__ez.dot.getDID=function(){var a="0";return"undefined"!=typeof _ezaq&&_ezaq.hasOwnProperty("domain_id")&&(a=_ezaq.domain_id.toString()),a},__ez.dot.getEpoch=function(a){return"undefined"!=typeof _ezaq&&_ezaq.hasOwnProperty("t_epoch")&&(a=_ezaq.t_epoch),a},__ez.dot.getURL=function(a){return("undefined"!=typeof ezJsu&&1==ezJsu||"undefined"!=typeof _ez_sa&&1==_ez_sa||"undefined"!=typeof isAmp&&!0===isAmp)&&(a="//g.ezoic.net"+a),a},__ez.dot.isValid=function(a){for(var b=0;b<a.length;b++)if(a[b]instanceof __ezDotData==!1)return console.error("Invalid data. ",a[b]),!1;return!0},__ez.dot.isDefined=function(){for(var a=0;a<arguments.length;a++)if(void 0===arguments[a]||null===arguments[a])return console.error("Argument not defined. ",arguments),!1;return!0};__ez.bit=function(){function c(a,b){d(a,b),e()}function d(b,c){__ez.dot.isDefined(b)&&__ez.dot.isValid(c)&&a.push({type:"pageview",pageview_id:b,domain_id:__ez.dot.getDID(),t_epoch:__ez.dot.getEpoch(0),data:__ez.dot.dataToStr(c)})}function e(){void 0!==document.visibilityState&&"prerender"===document.visibilityState||(__ez.dot.isDefined(a)&&a.length>0&&((new Image).src=__ez.dot.getURL(b)+"?orig="+(!0===__ez.template.isOrig?1:0)+"&ds="+btoa(JSON.stringify(a))),a=[])}var a=[],b="/detroitchicago/greenoaks.gif";return{Add:d,AddAndFire:c,Fire:e}}();</script><script data-cfasync='false' data-pagespeed-no-defer>__ez.pel=function(){function c(a,b){d(a,b,0,0,0,0,0),f()}function d(b,c,d,e,f,h,i){if(__ez.dot.isDefined(b,b.getSlotElementId)){var j=parseInt(b.getTargeting("ap")[0]),k=b.getSizes()[0],l=k.l.toString()+"x"+k.j.toString(),m=g(b),n=b.getSlotElementId();__ez.dot.isDefined(m,n)&&__ez.dot.isValid(c)&&a.push({type:"impression",impression_id:m,domain_id:__ez.dot.getDID(),unit:n,t_epoch:__ez.dot.getEpoch(0),revenue:d,est_revenue:e,ad_position:j,ad_size:l,bid_floor_filled:f,bid_floor_prev:h,stat_source_id:i,country_code:__ez.dot.getCC(),data:__ez.dot.dataToStr(c)})}}function e(b,c){var d=b.split("/");if(__ez.dot.isDefined(b)&&3===d.length&&__ez.dot.isValid(c)){var e=d[0],f=d[2];a.push({type:"impression",impression_id:f,domain_id:__ez.dot.getDID(),unit:e,t_epoch:__ez.dot.getEpoch(0),data:__ez.dot.dataToStr(c)})}}function f(){void 0!==document.visibilityState&&"prerender"===document.visibilityState||(__ez.dot.isDefined(a)&&a.length>0&&((new Image).src=__ez.dot.getURL(b)+"?orig="+(!0===__ez.template.isOrig?1:0)+"&sts="+btoa(JSON.stringify(a))),a=[])}function g(a){var b=0;try{var c=a.getTargetingMap();if(-1===a.getSlotElementId().indexOf("div-gpt-ad"))return b;if(void 0!==c)for(var e in c)if(-1!==e.indexOf("iid")&&void 0!==c[e][0]){b=c[e][0];break}}catch(a){}return b}var a=[],b="/porpoiseant/army.gif";return{Add:d,AddAndFire:c,AddById:e,Fire:f}}();var EzoicPixel=function(){this.pixels=[],this.pixelUrl="/ezoic/e.gif",("undefined"!=typeof ezJsu&&ezJsu===!0||"undefined"!=typeof _ez_sa&&_ez_sa===!0||"undefined"!=typeof window.isAmp&&isAmp===!0)&&(this.pixelUrl="//g.ezoic.net"+this.pixelUrl),this.tEpoch=0,"undefined"!=typeof _ezaq&&_ezaq.hasOwnProperty("t_epoch")&&(this.tEpoch=_ezaq.t_epoch)},EzoicPixelData=function(a,b){this.name=a,this.val=b};EzoicPixel.prototype={constructor:EzoicPixel,AddAndFireImpPixel:function(a,b){this.AddImpPixel(a,b,0,0,0,0,0),this.FirePixels()},AddAndFirePVPixel:function(a,b){this.AddPVPixel(a,b),this.FirePixels()},AddImpPixel:function(a,b,c,d,e,f,g){if(this.isDefined(a,a.getSlotElementId)){var h=parseInt(a.getTargeting("ap")[0]),i=a.getSizes()[0],j=i.l.toString()+"x"+i.j.toString(),k="0",l="XX";"undefined"!=typeof _ezaq&&_ezaq.hasOwnProperty("domain_id")&&(k=_ezaq.domain_id.toString()),"undefined"!=typeof _ezaq&&_ezaq.hasOwnProperty("country")&&(l=_ezaq.country);var m=this.getSlotIID(a),n=a.getSlotElementId();this.isDefined(m,n)&&this.validateData(b)&&(b=this.convertDataToStr(b),this.pixels.push({type:"impression",impression_id:m,domain_id:k,unit:n,t_epoch:this.tEpoch,revenue:c,est_revenue:d,ad_position:h,ad_size:j,bid_floor_filled:e,bid_floor_prev:f,stat_source_id:g,country_code:l,data:b}))}},AddImpPixelById:function(a,b){var c="0";"undefined"!=typeof _ezaq&&_ezaq.hasOwnProperty("domain_id")&&(c=_ezaq.domain_id.toString());var d=a.split("/");if(this.isDefined(a)&&3===d.length&&this.validateData(b)){var e=d[0],f=d[2];b=this.convertDataToStr(b),this.pixels.push({type:"impression",impression_id:f,domain_id:c,unit:e,t_epoch:this.tEpoch,data:b})}},AddPVPixel:function(a,b){var c="0";"undefined"!=typeof _ezaq&&_ezaq.hasOwnProperty("domain_id")&&(c=_ezaq.domain_id.toString()),this.isDefined(a)&&this.validateData(b)&&(b=this.convertDataToStr(b),this.pixels.push({type:"pageview",pageview_id:a,domain_id:c,t_epoch:this.tEpoch,data:b}))},FirePixels:function(){"undefined"!=typeof document.visibilityState&&"prerender"===document.visibilityState||(this.isDefined(this.pixels)&&this.pixels.length>0&&((new Image).src=this.pixelUrl+"?orig="+(__ez.template.isOrig===!0?1:0)+"&pixels="+encodeURIComponent(JSON.stringify(this.pixels))),this.pixels=[])},NewData:function(a,b){return new EzoicPixelData(a,b)},convertDataToStr:function(a){if("undefined"==typeof a)return[];try{for(var b in a)a[b].val=a[b].val+""}catch(a){}return a},getSlotIID:function(a){var b=0;try{var c=a.getTargetingMap(),d=a.getSlotElementId();if(d.indexOf("div-gpt-ad")===-1)return b;if("undefined"!=typeof c)for(var e in c)if(e.indexOf("iid")!==-1&&"undefined"!=typeof c[e][0]){b=c[e][0];break}}catch(a){}return b},isDefined:function(){for(var a=0;a<arguments.length;a++)if("undefined"==typeof arguments[a]||null===arguments[a])return console.error("Argument not defined. ",arguments),!1;return!0},validateData:function(a){for(var b=0;b<a.length;b++)if(a[b]instanceof EzoicPixelData==!1)return console.error("Invalid pixelData. ",a[b]),!1;return!0}};</script>
+
+<title>
+BlackBerry Stock: BlackBerry Ltd (BBRY) Might Gain From The Tesla Motors Inc Hack</title>
+<link rel="stylesheet" type="text/css" href="https://static.amigobulls.com/css/1499152099_amigo_template.min.css"><meta name='description' content="BlackBerry Ltd(NASDAQ:BBRY) recently signed a deal with Ford for expanded use of its QNX and security software.Recent Tesla car hack news is good for BBRY stock." />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+<link rel="shortcut icon" href="https://static.amigobulls.com/v2images/favicon.ico" type="image/x-icon" >
+  <link rel='canonical' href='https://amigobulls.com/articles/blackberry-stock-why-the-tesla-motors-inc-hack-is-great-news-for-blackberry-ltd-bbry' />
+<meta property="fb:pages" content="508744769149352" />
+	<link rel="amphtml" href='https://amigobulls.com/amphtml/articles/blackberry-stock-why-the-tesla-motors-inc-hack-is-great-news-for-blackberry-ltd-bbry' />
+	<meta name='news_keywords' content=' BlackBerry (NASDAQ:BBRY) stock, BlackBerry (NASDAQ:BBRY) news, Stock Market News' />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="BlackBerry Stock: BlackBerry Ltd (BBRY) Might Gain From The Tesla Motors Inc Hack" />
+	<meta property="og:description" content="BlackBerry Ltd(NASDAQ:BBRY) recently signed a deal with Ford for expanded use of its QNX and security software.Recent Tesla car hack news is good for BBRY stock." />
+	<meta property="og:url" content="https://amigobulls.com/articles/blackberry-stock-why-the-tesla-motors-inc-hack-is-great-news-for-blackberry-ltd-bbry" />
+	<meta property="og:site_name" content="Amigobulls : Technology Stock Analysis" />
+	<meta property="article:publisher" content="https://www.facebook.com/amigobulls" />
+		<meta property="article:tag" content="BlackBerry, Tesla Inc, Ford" />
+			<meta property="article:section" content="Stock Market News" />
+		<meta property="article:published_time" content="2016-11-30 04:14:13" />
+			<meta property="article:modified_time" content="2016-12-02" />
+		<meta property="og:updated_time" content="2016-12-02" />
+		<meta property="fb:app_id" content="451038928314843" />
+		<meta property="og:image:type" content="image/png" />
+	<meta property="og:image" content="https://static.amigobulls.com/articles/wp-content/uploads/2016/11/BlackBerry-Stock-Why-The-Tesla-Motors-Inc-Hack-Is-Great-News-For-BlackBerry-Ltd-BBRY.jpg" />
+		<meta name="twitter:card" content="summary"/>
+	<meta name="twitter:site" content="@amigobulls"/>
+	<meta name="twitter:domain" content="amigobulls.com"/>
+		<meta name="twitter:creator" content="@https://twitter.com/sreekanthOne1A" />
+			<meta name="twitter:image:src" content="https://static.amigobulls.com/articles/wp-content/uploads/2016/11/BlackBerry-Stock-Why-The-Tesla-Motors-Inc-Hack-Is-Great-News-For-BlackBerry-Ltd-BBRY.jpg" />
+	<meta name="twitter:image" content="https://static.amigobulls.com/articles/wp-content/uploads/2016/11/BlackBerry-Stock-Why-The-Tesla-Motors-Inc-Hack-Is-Great-News-For-BlackBerry-Ltd-BBRY.jpg" />
+		<meta name="twitter:description" content="BlackBerry Ltd(NASDAQ:BBRY) recently signed a deal with Ford for expanded use of its QNX and security software.Recent Tesla car hack news is good for BBRY stock."/>
+	<meta name="twitter:title" content="BlackBerry Stock: BlackBerry Ltd (BBRY) Might Gain From The Tesla Motors Inc Hack"/>
+	<meta name="twitter:url" content="https://amigobulls.com/articles/blackberry-stock-why-the-tesla-motors-inc-hack-is-great-news-for-blackberry-ltd-bbry"/>
+
+  <script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script type="text/javascript">
+    function setCookie(name,userid,domain){
+        var exdate=new Date();
+        exdate.setDate(exdate.getDate() + 10000);
+        var c_value=userid + ("; expires="+exdate.toUTCString())+(";domain="+domain+"; path=/;");
+        document.cookie=name + "=" + c_value;
+    }
+    setCookie("userid",'5975b70fc384b','.amigobulls.com'); //set cookie for .amigobulls.com intailly
+  </script>
+<script type="text/javascript">
+    width=window.innerWidth;
+    if (width >= 1200) {
+        device_type = "desktop";
+        document.cookie = "device=desktop"+"; path=/";
+    }else if(width>=760){
+        device_type = "tablet";
+        document.cookie = "device=tablet"+"; path=/";
+    }else{
+        device_type = "mobile";
+        document.cookie = "device=mobile"+"; path=/";
+    } 
+</script>
+ 
+<script>
+var _prum = [['id', '557af72cabe53d446b5ce345'],
+             ['mark', 'firstbyte', (new Date()).getTime()]];
+(function() {
+    var s = document.getElementsByTagName('script')[0]
+      , p = document.createElement('script');
+    p.async = 'async';
+    p.src = '//rum-static.pingdom.net/prum.min.js';
+    s.parentNode.insertBefore(p, s);
+})();
+</script>
+
+<script data-cfasync="false" type="text/javascript">window.google_analytics_uacct = "UA-97831649-32";</script>
+<script data-cfasync="false" type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['e._setAccount', 'UA-97831649-32']);
+_gaq.push(['f._setAccount', 'UA-38339005-1']);
+_gaq.push(['e._setDomainName', 'amigobulls.com']);
+_gaq.push(['f._setDomainName', 'amigobulls.com']);
+_gaq.push(['e._setCustomVar',1,'template','old_site_gc',3]);
+_gaq.push(['e._setCustomVar',2,'t','126',3]);
+_gaq.push(['e._setCustomVar',3,'rid','0',2]);
+_gaq.push(['e._setCustomVar',4,'bra','mod6',3]);
+_gaq.push(['e._setAllowAnchor',true]);
+_gaq.push(['e._setSiteSpeedSampleRate', 10]);
+_gaq.push(['f._setCustomVar',1,'template','old_site_gc',3]);
+_gaq.push(['f._setCustomVar',2,'domain','amigobulls.com',3]);
+_gaq.push(['f._setSiteSpeedSampleRate', 20]);
+_gaq.push(['e._trackPageview']);
+_gaq.push(['f._trackPageview']);
+
+
+(function() {
+ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script type="text/javascript">var ezouid = "2008627322";</script><base href="https://amigobulls.com/articles/blackberry-stock-why-the-tesla-motors-inc-hack-is-great-news-for-blackberry-ltd-bbry"><script type='text/javascript'>
+var ezoTemplate = 'old_site_gc';
+if(typeof ezouid == 'undefined')
+{
+    var ezouid = 'none';
+}
+var ezoFormfactor = '1';
+var ezo_elements_to_check = Array();
+</script><!-- START EZHEAD -->
+<script type='text/javascript'>
+var soc_app_id = '0';
+var did = 46056;
+var ezdomain = 'amigobulls.com';
+var ezoicSearchable = 1;
+</script>
+<!--{jquery}-->
+<!-- END EZHEAD -->
+<script type="text/javascript" data-cfasync="false">var _ezaq = {"ab_test_id":"mod6","ab_test_val":"","ad_cache_level":0,"adgroup_rank_id":-1,"browser":"Firefox","browser_version":1,"country":"US","device_height":528,"device_width":1280,"domain_id":46056,"engaged_time_visit":0,"ezcache_level":0,"forensiq_score":-1,"form_factor_id":1,"ip":"10.0.2.167","is_bot":0,"landing_page_url":"https://amigobulls.com/articles/blackberry-stock-why-the-tesla-motors-inc-hack-is-great-news-for-blackberry-ltd-bbry","lt_cache_level":0,"os":"Linux","page_ad_positions":"","page_view_id":"82a10d75-67b9-4467-41cd-c1c857bcb80d","pv_event_count":0,"referrer_id":0,"referring_domain":"google.com","region":"us-west-1","serverid":"54.153.30.188:10416","t_epoch":1500886799,"template_id":126,"time_on_site_visit":0,"url":"https://amigobulls.com/articles/blackberry-stock-why-the-tesla-motors-inc-hack-is-great-news-for-blackberry-ltd-bbry","user_agent":"Mozilla/5.0 (X11; U; Linux i686; hu-HU; rv:1.7.12) Gecko/20051010 Firefox/1.0.7 (Ubuntu package 1.0.7)","user_id":2008627322,"visit_id":271647362};var _ezExtraQueries = "&ez_orig=1";</script><script data-cfasync='false' type="text/javascript" src="/detroitchicago/rochester.js?cb=169-0&v=7" async></script></head>
+<body>
+    <div id="main-content" class="clearfix">
+        <div id="header">
+            <header class="new_header home_hide positionRelative" id="header_cont">
+    <nav class="all_menus">
+        <div class="mobi-hideit fs75 toprow"><div class='all_stocks'><div class='newstocks_head  colr2 left'><a class='tickerblue' href='https://amigobulls.com/stocks/AAPL/analysis'  title="Apple stock analysis">AAPL</a>&nbsp;<span class= 'mobi-hideit'><span class='fa fa-arrow-down'></span>$150.27 (0.05%)</span></div><div class='newstocks_head  colr2 left'><a class='tickerblue' href='https://amigobulls.com/stocks/FB/analysis'  title="Facebook stock analysis">FB</a>&nbsp;<span class= 'mobi-hideit'><span class='fa fa-arrow-down'></span>$164.43 (0.06%)</span></div><div class='newstocks_head  colr2 left'><a class='tickerblue' href='https://amigobulls.com/stocks/AMZN/analysis'  title="Amazon stock analysis">AMZN</a>&nbsp;<span class= 'mobi-hideit'><span class='fa fa-arrow-down'></span>$1025.67 (0.29%)</span></div><div class='newstocks_head  colr1 left'><a class='tickerblue' href='https://amigobulls.com/stocks/GOOG/analysis'  title="Alphabet Inc-C stock analysis">GOOG</a>&nbsp;<span class= 'mobi-hideit'><span class='fa fa-arrow-up'></span>$972.92 (0.49%)</span></div></div></div> 
+        <div class="clear separater mobi-hideit home_tab_hide"></div>
+            <div class="overlay_mask mobi_tab_hide"></div>
+            <div class ="smallmenu mobi_tab_hide">
+                <div class="logindiv fs75 toprow">
+                    <span class="hoverorange enrich active_menu"><a href="https://enrichview.in/">AMIGOBULLS FOR BUSINESS</a></span>
+                     
+                        <span class="joinus signupfromjq hoverorange">SIGN UP</span>
+                        <span class="login hoverorange loginfromjq ">LOGIN</span>
+                        <!-- <span class="hoverblack mobi_tab_hide" id="signup" ><a href='' title="Become a contributor for amigobulls" id='contributer'>CONTRIBUTE</a></span> -->
+                                    </div> 
+                <div class="right mt3px search_box">
+                                </div>
+                <div  class="bottomrow menu fs80 ">
+                    <ul class="menudiv">       
+                        <li id="index"  class="hover_parent" data-nav="primary">
+                            <a href="https://amigobulls.com" title="amigobulls - homepage"><span class="desktop_hide line_text">HOME<span class="under_line"></span></span><span class="mobi_tab_hide fa fa-home fa-lg"></span></a>
+                        </li>
+                        <li id="fundamentalpicks" class=" alink_parent" data-nav="primary" >
+                            <div class="mobi_menulist">
+                                <span class=' mainlink alink_click hoverorange'>STOCK PICKS<span class="under_line"></span></span>
+                                <i class ="marrow fa fa-chevron-down"></i>
+                            </div>
+                            <ul id='picks_ul' class="sub-menu"  >
+                                <li ><a class='alink' href="https://amigobulls.com/stocks-to-buy/top-tech-stocks/" title="Technology Stock Picks">Technology Stock Picks</a></li>
+                                <li ><a href="https://amigobulls.com/stocks-to-buy/best-stocks-to-buy-today/" title="Stocks to buy Today">Daily Stock Picks</a></li>
+                                <li ><a href="https://amigobulls.com/stocks-to-buy/top-auto-stocks/" title="Top Auto Stocks">Top Auto Stocks</a></li>
+
+                                </ul>   
+                        </li>
+                        <li id="analysis"  class=" alink_parent" data-nav="primary">
+                            <div class="mobi_menulist">
+                                <span class=' mainlink alink_click hoverorange'>ARTICLES<span class="under_line"></span></span>
+                                <i class ="marrow fa fa-chevron-down"></i>
+                            </div>
+                            <ul id='analysis_ul' class="sub-menu"  >
+                                <li ><a class='alink' href="https://amigobulls.com/articles/" title="Latest">Latest</a></li> 
+                                <li ><a href="https://amigobulls.com/articles/category/earnings-analysis" title="Earnings Analysis">Earnings Analysis</a></li> 
+                                <li ><a href="https://amigobulls.com/articles/category/finance" >Finance</a></li> 
+                                <li ><a href="https://amigobulls.com/articles/category/stock-updates" >Stock Updates</a></li>
+                                <li ><a href="https://amigobulls.com/articles/category/investing" >Investing</a></li> 
+                                <li ><a href="https://amigobulls.com/articles/category/stock-market-news" >Stock Market News</a></li>
+                                <li ><a href="https://amigobulls.com/articles/category/stock-valuation" >Stock Valuation</a></li>
+                                <li ><a href="https://amigobulls.com/articles/category/ipo">IPO</a></li>
+                                <li ><a href="https://amigobulls.com/articles/category/technical-analysis">Technical Analysis</a></li>
+                            </ul>
+                        </li>        
+                        <li id="screener" class="hover_parent" data-nav="primary">
+                            <a href="https://amigobulls.com/sectors/computer-and-technology/internet-services" class="colorgreyNew  hoverorange" title="Technology and internet stocks"><span class="line_text">SCREENER<span class="under_line"></span></span></a>
+                        </li>
+                        <li  id="mystocks"   class="hover_parent" data-nav="primary" >
+                            <a class='colorgreyNew' href="https://amigobulls.com/watchlist" title="My Stocks"><span class="line_text  hoverorange">MY STOCKS<span class="under_line"></span></span> <span class ="left fa fa-heart mr5px mt3px mobi_tab_hide"></span></a>
+                        </li>                    
+                    </ul>
+                </div>            </div> 
+            <div class="top_layer ">
+                                           <a  href="https://amigobulls.com" title="amigobulls.com - internet stock analysis" >
+                          <span class="amigo_logo"></span>
+                        </a>
+                                </div> 
+            <div class="desktop_hide  small-menu-click fa fa-bars fa-lg colorgreyNew"></div>   
+            <div  class="bottom_layer searchdiv fs80 home_tab_hide">  
+                <input title="ticker or company or video" placeholder="Ticker or Company" type="text" id="edit-search-block-form--2" data-qs="ms" data-show_video_icon="true" data-context_search='false' data-page_redirect="true" name="search_block_form" size="15" maxlength="128" class=" footer_search_input form-text ui-autocomplete-processed ui-autocomplete-input nobold" aria-autocomplete="list" > 
+                <span class="fa fa-search fa-lg mobi-hideit" ></span>
+                 <div class="clear"></div>
+            </div>
+            <div id="mobi_search_icon_1"  class="desktop_tab_hide pointerCursor fa fa-search"><div class="cross-icon  mobi_tab_hide"> &#10005;</div></div> 
+        <div class="clear"></div>
+    </nav>
+</header>
+        </div>
+        <div id="primary" class="container  clearfix scroll_loop">
+        <div id="article_1">
+        		<ol class=' breadcrumbs fs62 mobi-hideit mtn10px' itemscope itemtype="https://schema.org/BreadcrumbList">
+		<li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem' class='displayInline'><a itemprop='item'   href='https://amigobulls.com/' title='amigobulls.com'><span itemprop='name'>Home</span></a><meta itemprop='position' content='1' /></li><li class='displayInline'> &gt; </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem' class='displayInline'><a itemprop='item'   href='https://amigobulls.com/articles/' title='stock market news and research'><span itemprop='name'>Stocks Market News - Articles & Analysis</span></a><meta itemprop='position' content='2' /></li><li class='displayInline'> &gt; </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem' class='displayInline'><a itemprop='item'   href='https://amigobulls.com/articles/category/stock-market-news' title='Stock Market News'><span itemprop='name'>Stock Market News</span></a><meta itemprop='position' content='3' /></li><li class='displayInline'> &gt; </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem' class='displayInline'><a itemprop='item'   href='https://amigobulls.com/articles/blackberry-stock-why-the-tesla-motors-inc-hack-is-great-news-for-blackberry-ltd-bbry' title='BlackBerry Stock: BlackBerry Ltd (BBRY) Might Gain From The Tesla Motors Inc Hack'><span itemprop='name'>BlackBerry Stock: BlackBerry Ltd (BBRY) Might Gain From The Tesla Motors Inc Hack</span></a><meta itemprop='position' content='4' /></li>		</ol>
+
+		<article id="post-64729" class="post_content_maindiv">
+			<div itemscope itemtype="https://schema.org/NewsArticle">
+		<meta itemscope itemprop="mainEntityOfPage" itemType="https://schema.org/WebPage" itemid="https://amigobulls.com/articles/blackberry-stock-why-the-tesla-motors-inc-hack-is-great-news-for-blackberry-ltd-bbry" content="https://amigobulls.com/articles/blackberry-stock-why-the-tesla-motors-inc-hack-is-great-news-for-blackberry-ltd-bbry" />
+	<meta itemprop="inlanguage" content="en-US" />
+	<div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+        <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+              <meta itemprop="url" content="https://static.amigobulls.com/v2images/amigobulls_logo.png">
+              <meta itemprop="width" content="169">
+              <meta itemprop="height" content="39">
+        </div>
+        <meta itemprop="name" content="Amigobulls">
+    </div>
+		<header>
+		<h1 itemprop="headline" class='small borderNone'>
+		BlackBerry Stock: BlackBerry Ltd (BBRY) Might Gain From The Tesla Motors Inc Hack		</h1>
+	<div class='borderBottomSolid mt10px mb5px'></div>
+		<div class="clear"></div>
+				<meta itemprop="description" content="BlackBerry Ltd(NASDAQ:BBRY) recently signed a deal with Ford for expanded use of its QNX and security software.Recent Tesla car hack news is good for BBRY stock.">		<meta itemprop="audience" content='NASDAQ and NYSE stock investors'>
+		<meta itemprop="url discussionUrl" content='https://amigobulls.com/articles/blackberry-stock-why-the-tesla-motors-inc-hack-is-great-news-for-blackberry-ltd-bbry'>
+		<meta itemprop="keywords" content='BBRY stock, BBRY news, BlackBerry (NASDAQ:BBRY) Stock Market News'/>
+		<meta itemprop="datePublished" content="2016-11-30T09:14:13-05:00" />
+		<meta itemprop="dateModified" content="2016-12-02T18:13:23-05:00" />
+		<meta itemprop="articleSection" content='Stock Market News' />						    <div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+				<meta itemprop="url" content="https://static.amigobulls.com/articles/wp-content/uploads/2016/11/BlackBerry-Stock-Why-The-Tesla-Motors-Inc-Hack-Is-Great-News-For-BlackBerry-Ltd-BBRY.jpg">
+				<meta itemprop="width" content="696">
+				<meta itemprop="height" content="392">
+		    </div>
+				</header>
+		<div class="clear"></div>
+		<div class="amigo_right mt5px">
+						<div id='ezoic-pub-ad-placeholder-102'> 			<div id='dga_3' class="txtCen ic_div">
+			<script  type="text/javascript">
+				var responsive_type="";
+				var show_tab =0;
+				if(device_type=="desktop"|| (device_type == "tablet" && show_tab)){
+					var id='dga_3';
+				  	elem = document.createElement('ins');
+				   	elem.className += "adsbygoogle";
+				 	elem.setAttribute("style", 'display:inline-block;width:300px;height:1050px;');
+				 	elem.setAttribute("data-ad-client", "ca-pub-7431353201809691");
+					elem.setAttribute("data-ad-slot",'9207178568');
+					if(responsive_type!=""){
+						elem.setAttribute("data-ad-format",responsive_type);
+					}
+					document.getElementById(id).appendChild(elem);
+				}
+				if(device_type=="desktop"|| (device_type == "tablet" && show_tab)){(adsbygoogle = window.adsbygoogle || []).push({});
+				}
+			</script>
+			</div>
+					</div> 		</div>
+		<div id='single_left' class='amigo_left'>
+	<div class="post_date">
+		<div class="left">
+		<span class="fs75 ppauthor">Posted by </span><span itemprop="author" itemscope itemtype="https://schema.org/Person"><a itemprop="url" class="tickerorange" rel="author" href="https://twitter.com/sreekanthOne1A" title="Follow Sreekanth Anasa on twitter"><span itemprop="name">Sreekanth Anasa</span></a></span>
+	
+		<span class="fs75 ppauthor">on </span><a href="https://amigobulls.com/articles/2016/11/30" title="Read articles published on Nov 30, 2016" rel="bookmark"><span class="fs75 ppauthor">November 30, 2016, 04:14 AM EST</span></a>
+		</div>		
+			<span class='fs80 related-tags right'>Related Tickers: <a href='https://amigobulls.com/stocks/BBRY/analysis?ref=tp' class='tickerblue newsfont' title='BlackBerry stock analysis video'>BBRY</a> , <a href='https://amigobulls.com/stocks/TSLA/analysis?ref=tp' class='tickerblue newsfont' title='Tesla Inc stock analysis video'>TSLA</a> , <a href='https://amigobulls.com/stocks/F/analysis?ref=tp' class='tickerblue newsfont' title='Ford stock analysis video'>F</a></span>		</div>
+		
+		<div class="clear"></div>
+		<div class="postbody">
+		<div class="article">			<div itemprop="articleBody">
+			<ul>
+<li>A Norwegian security firm recently demonstrated how easy it is for hackers to steal Tesla cars.</li>
+<li>Last month, BlackBerry Ltd. signed a deal with Ford for expanded use of its QNX and security software.</li>
+<li>Can cars become Blackberry's next 'mobile device'?</li>
+</ul>
+<div class="coverImage"><a href="https://static.amigobulls.com/articles/wp-content/uploads/2016/11/small_width400_BlackBerry-Stock-Why-The-Tesla-Motors-Inc-Hack-Is-Great-News-For-BlackBerry-Ltd-BBRY.jpg"><img class="alignnone size-full wp-image-64806" src="https://static.amigobulls.com/articles/wp-content/uploads/2016/11/small_width400_BlackBerry-Stock-Why-The-Tesla-Motors-Inc-Hack-Is-Great-News-For-BlackBerry-Ltd-BBRY.jpg" alt="BlackBerry Stock Why The Tesla Motors Inc Hack Is Great News For BlackBerry Ltd (BBRY)"   /></a><br />
+<span class="imageCopyright"><a rel="nofollow" target="_blank" href="https://www.flickr.com/photos/benstassen/3023046280/" target="_blank">Flickr</a></span></div>
+<p><a class="tickerblue" title="BlackBerry stock analysis" href="https://amigobulls.com/stocks/BBRY/analysis?ref=il" target="_blank">BlackBerry's (NASDAQ:BBRY)</a> turnaround has been moving at snail's pace. In that context, BlackBerry's deal  with <a class="tickerblue" title="Ford stock analysis" href="https://amigobulls.com/stocks/F/analysis">Ford (NYSE:F)</a> to expand usage of its QNX software in the latter's line of connected cars was welcome news. Many see BBRY's focus on automotive technology as a potential profit center. Norwegian security firm, Promon, recently gave a demonstration of how <a class="tickerblue" title="Tesla stock analysis" href="https://amigobulls.com/stocks/TSLA/analysis?ref=il" target="_blank">Tesla (NASDAQ:TSLA)</a> cars can <a rel="nofollow" target="_blank" href="http://thehackernews.com/2016/11/hacking-tesla-car.html" target="_blank">be stolen by hackers</a> through the company's official android application, which many car owners use to interact with their vehicles. This was one of the latest unflattering events to take place for Tesla. But this very news can be good for Blackberry. Here's why.</p>			<div id='ezoic-pub-ad-placeholder-624'> 			</div> 			<div id='ezoic-pub-ad-placeholder-104'> 		<div id='mga_1' class="txtCen ic_div">
+		<script  type="text/javascript">
+			var responsive_type="rectangle";
+			if(device_type=="mobile"){
+				var id='mga_1';
+			  	elem = document.createElement('ins');
+			   	elem.className += "adsbygoogle";
+			 	elem.setAttribute("style", 'display:block');
+			 	elem.setAttribute("data-ad-client", "ca-pub-7431353201809691");
+				elem.setAttribute("data-ad-slot",'1679399760');
+				if(responsive_type!=""){
+					elem.setAttribute("data-ad-format",responsive_type);
+				}
+				document.getElementById(id).appendChild(elem);
+			}
+			if(device_type=="mobile"){(adsbygoogle = window.adsbygoogle || []).push({});
+			}
+		</script>
+		</div>
+		</div> 
+<h2>Connected Cars A Fast Growing Market</h2>
+<p>According to <a rel="nofollow" target="_blank" href="https://techcrunch.com/2016/11/01/blackberry-teaming-up-with-ford-for-broader-use-of-qnx-in-connected-cars/" target="_blank">TechCrunch</a>, BlackBerry's QNX division is one of the Canadian company's rare bright spots. The software maker's operating system is a key ingredient in the infotainment offerings of a large number of automakers (BlackBerry says it's currently running in over 60 million vehicles). A Wells Fargo analyst projects that QNX will generate $110 million in sales in fiscal year 2017 and hit $138 million the following fiscal year. These numbers don't seem to be big, but in the field of networked devices, the world's 1.1 billion or so cars are second only to the mobile phones. 'Connected ' cars are the next big thing after smartphones, so there is immense potential here.</p>			<div id='ezoic-pub-ad-placeholder-100'> 			<div id='dga_1' class="txtCen ic_div">
+			<script  type="text/javascript">
+				var responsive_type="rectangle";
+				var show_tab =1;
+				if(device_type=="desktop"|| (device_type == "tablet" && show_tab)){
+					var id='dga_1';
+				  	elem = document.createElement('ins');
+				   	elem.className += "adsbygoogle";
+				 	elem.setAttribute("style", 'display:block');
+				 	elem.setAttribute("data-ad-client", "ca-pub-7431353201809691");
+					elem.setAttribute("data-ad-slot",'1789499762');
+					if(responsive_type!=""){
+						elem.setAttribute("data-ad-format",responsive_type);
+					}
+					document.getElementById(id).appendChild(elem);
+				}
+				if(device_type=="desktop"|| (device_type == "tablet" && show_tab)){(adsbygoogle = window.adsbygoogle || []).push({});
+				}
+			</script>
+			</div>
+					</div> 			<div id='ezoic-pub-ad-placeholder-624'> 	</div> 
+<h2>What QNX Offers</h2>
+<p>The latest product line of QNX includes :</p>			<div id='ezoic-pub-ad-placeholder-662'> 			</div> 
+<ul>
+<li class="p p1">QNX PLATFORM FOR ADAS (advanced driver assistance systems): for auto safety, vehicle-to-vehicle communication, and a multi camera vision system.</li>
+<li class="p p1">QNX Acoustics management platform<strong>:</strong> a software solution for management of audio signal processing in cars.</li>
+<li class="p p1">QNX OS for safety: an operating system with an applied cryptography and a key management solution, which also includes end-to-end security.</li>
+</ul>
+<p>This covers most of the software features on Tesla and other high end cars. Most customers probably already use QNX technology without knowing that they do. Like Ford, many car makers have infotainment systems which run on QNX. QNX has become very popular in the automotive industry.</p>			<div id='ezoic-pub-ad-placeholder-663'> 			</div> 			<div id='ezoic-pub-ad-placeholder-105'> 		<div id='mga_2' class="txtCen ic_div">
+		<script  type="text/javascript">
+			var responsive_type="rectangle";
+			if(device_type=="mobile"){
+				var id='mga_2';
+			  	elem = document.createElement('ins');
+			   	elem.className += "adsbygoogle";
+			 	elem.setAttribute("style", 'display:block');
+			 	elem.setAttribute("data-ad-client", "ca-pub-7431353201809691");
+				elem.setAttribute("data-ad-slot",'1539798960');
+				if(responsive_type!=""){
+					elem.setAttribute("data-ad-format",responsive_type);
+				}
+				document.getElementById(id).appendChild(elem);
+			}
+			if(device_type=="mobile"){(adsbygoogle = window.adsbygoogle || []).push({});
+			}
+		</script>
+		</div>
+		</div> 
+<p>Also Read: <a href="https://amigobulls.com/articles/blackberry-stock-blackberry-ltd-bbry-might-have-found-its-next-growth-driver" target="_blank">BlackBerry Stock: BlackBerry Ltd (BBRY) Might Have Found Its Next Growth Driver</a></p>			<div id='ezoic-pub-ad-placeholder-101'> 			<div id='dga_2' class="txtCen ic_div">
+			<script  type="text/javascript">
+				var responsive_type="rectangle";
+				var show_tab =1;
+				if(device_type=="desktop"|| (device_type == "tablet" && show_tab)){
+					var id='dga_2';
+				  	elem = document.createElement('ins');
+				   	elem.className += "adsbygoogle";
+				 	elem.setAttribute("style", 'display:block');
+				 	elem.setAttribute("data-ad-client", "ca-pub-7431353201809691");
+					elem.setAttribute("data-ad-slot",'3266232962');
+					if(responsive_type!=""){
+						elem.setAttribute("data-ad-format",responsive_type);
+					}
+					document.getElementById(id).appendChild(elem);
+				}
+				if(device_type=="desktop"|| (device_type == "tablet" && show_tab)){(adsbygoogle = window.adsbygoogle || []).push({});
+				}
+			</script>
+			</div>
+					</div> 			<div id='ezoic-pub-ad-placeholder-662'> 	</div> 
+<h2>Looking Beyond The Ford Deal</h2>
+<p>The details of the BlackBerry's Ford deal are not known. However, this is the first direct deal with an automaker, which makes BlackBerry a Tier 1 supplier, whereas most of QNX's business with automakers previously has been through another links in the supply chain. On Ford cars, QNX replaced Microsoft's OS, which was prone to crashes. The new Ford deal will directly increase the volume of QNX based cars, adding more credibility to QNX. Consequently, this could be first of many such deals for BlackBerry.</p>			<div id='ezoic-pub-ad-placeholder-664'> 			</div> 			<div id='ezoic-pub-ad-placeholder-663'> 	</div> 
+<p>There's no mention of automated driving in the Ford deal. However, QNX’s ADAS is participating in the <a rel="nofollow" target="_blank" href="https://news.ontario.ca/mto/en/2016/11/automated-vehicles-coming-to-ontario-roads.html" target="_blank">first automated vehicle (AV) pilot program in Canada</a>. BlackBerry's software may eventually feature in Ford's autonomous driving plans.</p>
+<p>Also Read: <a href="https://amigobulls.com/articles/tsla-stock-nvidia-powered-computer-vision-system-will-drive-tesla-motors-inc" target="_blank">TSLA Stock: NVIDIA Powered Computer Vision System Will Drive Tesla Motors Inc</a></p>
+<p>Linux OS, which is open source, is the closest competitor to QNX. QNX and Linux OS are projected to be market leaders in infotainment OS' in the future. The Linux OS has the advantage of being open source while QNX is a proprietary software. Tesla cars run on the Linux based OS. And though the recent Tesla car hack was not due OS vulnerabilities, an earlier hack reported was due to issues related to its web browser, for which <a rel="nofollow" target="_blank" href="http://fortune.com/2016/09/20/tesla-security-bug-hack/?iid=rightrail-more" target="_blank">Tesla also released an update over the air</a>.</p>
+<p>BlackBerry claims to offer the most secure, trusted and reliable platform that can power every aspect of connected cars. This makes a strong case for QNX to be considered by other automakers. With software becoming increasingly important to car manufacturers, the possibility of BlackBerry signing similar agreements with other car makers is very real.</p>
+<h2>Tesla's Bad News Can Be Good News for BlackBerry</h2>
+<p>Now coming to the main point, earlier this year, there was news about researchers hacking Tesla cars twice. An unimpressive review of the Model X <a rel="nofollow" target="_blank" href="http://www.consumerreports.org/suvs/2016-tesla-model-x-review/" target="_blank">recently posted by Consumer Reports</a> was another blow to Tesla, as it is a company which flourishes on its brand image and cult status. Apart from finding many faults in Tesla's Model X, Consumer Reports was critical about the Tesla's semi-autonomous driving package available on the Model X. It believes that stronger steps should be taken to ensure that these systems are safe.</p>
+<p>All these events bode well for BlackBerry, as the latter is pitching its QNX OS as secure and reliable platform for 'connected' cars. With its own software for self-driving systems cleared, it makes a strong alternative for future autonomous vehicles. Whether it can take the fight to likes of <a class="tickerblue" title="Alphabet Inc stock analysis" href="https://amigobulls.com/stocks/GOOGL/analysis?ref=il">Alphabet Inc (NASDAQ:GOOGL)</a>, <a class="tickerblue" title="Apple stock analysis" href="https://amigobulls.com/stocks/AAPL/analysis?ref=il" target="_blank">Apple Inc. (NASDAQ:AAPL)</a> and Tesla in autonomous vehicles software needs to be seen, but it does appear ready to give these tech giants a run for their money.</p>
+<p>There were also reports of QNX powered vehicles being hacked in the past, but <a rel="nofollow" target="_blank" href="http://crackberry.com/qnx-neutrino-os-far-hack" target="_blank">BlackBerry has come clean</a> on it, as it was due to other components of the infotainment system. It is impossible to say that any car is hack proof, but BlackBerry, with security as its core competence would give more confidence to automakers as well as customers.</p>
+<p>Moreover, the global <a rel="nofollow" target="_blank" href="http://www.gsma.com/connectedliving/wp-content/uploads/2013/06/cl_ma_forecast_06_13.pdf" target="_blank">connected car segment</a> will be worth 39 billion euros by 2018. With the growing demand for software in the car industry, companies like BlackBerry can become acquisition targets for auto companies. The final part is pure speculation on our part. Tesla acquiring BlackBerry seems to be farfetched given its recent merger with SolarCity and its weak financial state. But a Tesla car with BlackBerry software could be a dream car for many customers.</p>
+<p>Customers are also very much concerned about what software goes into their high end cars. In a <a rel="nofollow" target="_blank" href="https://twitter.com/elonmusk/status/802708695830306816" target="_blank">recent tweet</a>, a Tesla customer was disappointed on not receiving the latest software on his brand new Tesla, which incited a response from Elon Musk, stating that it will get rolled out incrementally. For the years 2016, 2017, and 2018 Tesla has missed sell side model targets. With its software updates also getting delayed recently,a BlackBerry Tesla deal would be great news for customers.</p>
+<p>With BlackBerry's core competence in security and autonomous vehicle software, a greater synergy can be expected, given Tesla's hands-on autonomous driving software experience. This would also help Tesla sort out some of its software driven production issues, with BlackBerry concentrating on software. QNX claims to be platform independent. However, we don't really know how it will work with Tesla's present software, which is built on Linux OS.</p>
+<p>A deal with Tesla, or an acquisition by any automaker for that matter would turn the fate of the BBRY stock investors. Also BBRY stock reacted well to Ford deal, at first. A Tesla BlackBerry deal may also be a good narrative for TSLA stock.</p>
+<p>With 'connected' cars being touted as the next big thing after smartphones, automotive software could become the next 'mobile device' for BlackBerry, if it can demonstrate strong monetization capabilities for QNX.Looking for tech stocks? Check out Amigobulls' <a href="https://amigobulls.com/stocks-to-buy/top-tech-stocks/?ref=il">top tech stock picks</a>, which have beaten the NASDAQ by over 111%.</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="clear"></div>
+		<div class="mb10px">
+			<div class="right">
+		<span data-type=article 
+					data-type_id=64729  
+			data-vote=up class='voteup enabledvoteicon  icon_text' title ='voteup'>                   
+					<span  class=' pointerCursor fa fa-thumbs-up fs150 '></span> 
+					<span  class='votecount displayInlineBlock'>35</span> 
+		 	</span><span data-type=article 
+					data-type_id=64729  
+			data-vote=down class='votedown enabledvoteicon  icon_text' title ='votedown'>                   
+					<span  class=' pointerCursor fa fa-thumbs-down fs150 '></span> 
+					<span  class='votecount displayInlineBlock'>5</span> 
+		 	</span>		</div>
+		<div class="left">
+					<div id="ssba">
+	<ul>
+		<li class="mobi-hideit">
+			<a id="ssba_email_share" class="ssba_share_link" href="mailto:?Subject=BlackBerry Stock: BlackBerry Ltd (BBRY) Might Gain From The Tesla Motors Inc Hack by Amigobulls&amp;Body=Hi%20Friend%2C%0AI%20thought%20you%20might%20find%20this%20article%20on%20Amigobulls%20interesting%3A%0A%09A%20Norwegian%20security%20firm%20recently%20demonstrated%20how%20easy%20it%20is%20for%20hackers%20to%20steal%20Tesla%20cars.%20Last%20month%2C%20BlackBerry%20Ltd.%20%20signed%20a%20deal%20with%20Ford%20for%20expanded%20use%20of%20its%20QNX%20and%20security%20software.%20Can%20cars%20become%20Blackberry%27s%20next%20%27mobile%20device%27%3F%0ATo%20continue%20reading%20please%20click%20on%20the%20link%20below%3A%0Ahttps%3A%2F%2Famigobulls.com%2Farticles%2Fblackberry-stock-why-the-tesla-motors-inc-hack-is-great-news-for-blackberry-ltd-bbry%3Fref%3Dma"> 
+			<span title="Email this article" class="fa fa-envelope fa-2x"></span>
+			<span class="displayNone"> Share this article via Email</span>
+			</a>
+		</li>
+		<li>
+			<a id="ssba_twitter_share" href="https://twitter.com/share?url=https://amigobulls.com/articles/blackberry-stock-why-the-tesla-motors-inc-hack-is-great-news-for-blackberry-ltd-bbry?ref=tw&amp;text=BlackBerry+Stock%3A+BlackBerry+Ltd+%28BBRY%29+Might+Gain+From+The+Tesla+Motors+Inc+Hack" > 
+			<span title="" class="fa fa-twitter-square fa-2x"></span>
+			<span class="displayNone"> Share this article on Twitter</span>
+			</a>
+		</li>
+		<li>
+			<a id="ssba_facebook_share" href="https://www.facebook.com/sharer.php?u=https://amigobulls.com/articles/blackberry-stock-why-the-tesla-motors-inc-hack-is-great-news-for-blackberry-ltd-bbry?ref=fb&amp;title=BlackBerry+Stock%3A+BlackBerry+Ltd+%28BBRY%29+Might+Gain+From+The+Tesla+Motors+Inc+Hack&amp;summary=A+Norwegian+security+firm+recently+demonstrated+how+easy+it+is+for+hackers+to+steal+Tesla+cars.+Last+month%2C+BlackBerry+Ltd.++signed+a+deal+with+Ford+for+expanded+use+of+its+QNX+and+security+software.+Can+cars+become+Blackberry%27s+next+%27mobile+device%27%3F" > 
+			<span title="" class="fa fa-facebook-square fa-2x" ></span>
+			<span class="displayNone"> Share this article on Facebook</span>
+			</a>
+		</li>
+		<li>
+			<a id="ssba_linkedin_share" class="ssba_share_link" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://amigobulls.com/articles/blackberry-stock-why-the-tesla-motors-inc-hack-is-great-news-for-blackberry-ltd-bbry?ref=ld&amp;title=BlackBerry+Stock%3A+BlackBerry+Ltd+%28BBRY%29+Might+Gain+From+The+Tesla+Motors+Inc+Hack&amp;summary=A+Norwegian+security+firm+recently+demonstrated+how+easy+it+is+for+hackers+to+steal+Tesla+cars.+Last+month%2C+BlackBerry+Ltd.++signed+a+deal+with+Ford+for+expanded+use+of+its+QNX+and+security+software.+Can+cars+become+Blackberry%27s+next+%27mobile+device%27%3F" > 
+			<span title="" class="fa fa-linkedin-square fa-2x"></span>
+			<span class="displayNone"> Share this article on linkedin</span>
+			</a>
+		</li>
+		<li>
+			<a id="ssba_google_share" href="https://plus.google.com/share?url=https://amigobulls.com/articles/blackberry-stock-why-the-tesla-motors-inc-hack-is-great-news-for-blackberry-ltd-bbry" > 
+			<span title="" class="fa fa-google-plus-square fa-2x"></span>
+			<span class="displayNone"> Share this article on GooglePlus</span>
+			</a>
+		</li>
+		<li>
+			<a id="ssba_whatsapp_share" class="ssba_share_link whatsapp-share-button desktop_tab_hide" data-count="true" href="whatsapp://send?text=BlackBerry+Stock%3A+BlackBerry+Ltd+%28BBRY%29+Might+Gain+From+The+Tesla+Motors+Inc+Hack https%3A%2F%2Famigobulls.com%2Farticles%2Fblackberry-stock-why-the-tesla-motors-inc-hack-is-great-news-for-blackberry-ltd-bbry%3Fref%3Dwp" > 
+				<span title="Share this post on WhatsApp" class="fa fa-whatsapp"></span>
+			</a>
+		</li>
+	</ul>
+</div>
+		</div>			
+			<div class="right mt5px">Is this article helpful ?&nbsp;&nbsp;&nbsp;&nbsp;</div>
+		 </div>
+         <div class='clear'></div>
+         <hr class="desktop_hide">
+        <div class="mt20px mb30px">
+					<div id='ezoic-pub-ad-placeholder-106'> 		<div id='mga_3' class="txtCen ic_div">
+		<script  type="text/javascript">
+			var responsive_type="rectangle";
+			if(device_type=="mobile"){
+				var id='mga_3';
+			  	elem = document.createElement('ins');
+			   	elem.className += "adsbygoogle";
+			 	elem.setAttribute("style", 'display:block');
+			 	elem.setAttribute("data-ad-client", "ca-pub-7431353201809691");
+				elem.setAttribute("data-ad-slot",'4182322567');
+				if(responsive_type!=""){
+					elem.setAttribute("data-ad-format",responsive_type);
+				}
+				document.getElementById(id).appendChild(elem);
+			}
+			if(device_type=="mobile"){(adsbygoogle = window.adsbygoogle || []).push({});
+			}
+		</script>
+		</div>
+		</div> 		</div> 
+
+		<!-- Display the related section for articles in aside tag -->
+		<aside>
+		<h2 class='small mt10px mobi-hideit'> More on BlackBerry stock</h2><hr><div  class='articlesMainDiv displayBlock'>			<div id='ezoic-pub-ad-placeholder-103'> 			<div id='dga_matched' class="txtCen ic_div">
+			<script  type="text/javascript">
+				var responsive_type="autorelaxed";
+				var show_tab =1;
+				if(device_type=="desktop"|| (device_type == "tablet" && show_tab)){
+					var id='dga_matched';
+				  	elem = document.createElement('ins');
+				   	elem.className += "adsbygoogle";
+				 	elem.setAttribute("style", 'display:block');
+				 	elem.setAttribute("data-ad-client", "ca-pub-7431353201809691");
+					elem.setAttribute("data-ad-slot",'4418756163');
+					if(responsive_type!=""){
+						elem.setAttribute("data-ad-format",responsive_type);
+					}
+					document.getElementById(id).appendChild(elem);
+				}
+				if(device_type=="desktop"|| (device_type == "tablet" && show_tab)){(adsbygoogle = window.adsbygoogle || []).push({});
+				}
+			</script>
+			</div>
+					</div> </div>		</aside> <!-- entire related content should be inside the aside tag -->
+
+		<div class="mt10px mb10px left author_pic" >
+		<a href="https://amigobulls.com/articles/author/sreekanth-anasa?ref=tp"><img src="https://static.amigobulls.com/profile_images/20161102_DSC_6164-(187015).png" alt="Sreekanth Anasa" class="authorbox-photo author_img"></a>
+		<span class="fs100 left" ><a class="orange" href="https://amigobulls.com/articles/author/sreekanth-anasa?ref=tp" > Sreekanth Anasa</a> </span>	
+		<span class='left'>&nbsp; on Amigobulls : </span> <div class='follow_div  orange fs120 left'><div  class='pointerCursor author_follow' data-id='213' data-post_id='64729' data-follow='1' ><i class='fa fa-plus orange'> </i>Follow </div></div>		</div>
+			<footer>
+				<div class="disclaimer" >
+				<p>Neither Amigobulls, nor any members of its staff hold positions in any of the stocks discussed in this post. The author may not be a certified/registered investment advisor, and the opinions expressed should not be treated as investment advice.</p> <p>Buying and selling of securities carries the risk of monetary losses.Readers/Viewers are advised to carry out their own due diligence and consult their investment advisors before making any investment decisions.</p> <p> Neither Amigobulls, nor the author have any business relationship with any of the companies covered in this post.</p>				</div>
+				<div class="disclaimer_more cursorPointer tickerorange right fs14px ">show more</div>
+			</footer>
+		</div><!-- .entry-content -->
+		<div class='clear'></div>
+	<div id="comments" class="">
+		<h2 class="mtb20px small"> Comments on this article and BBRY stock </h2>
+		<div class="stockComments">
+	    <div class="commentlayout commentsleft">
+	        <div id='proscomments'>
+	                        <textarea placeholder="Share your opinion on BlackBerry stock" onclick="showForm(this);" id='commentcontent_' class=' fs80 comment_box '></textarea>
+    <div class="clear"></div>
+    <div id='commentform_' class="commentform">
+        <div id="com_error_" class="comment_error">
+            <span id="com_alerticon_" class="comment_alerticon"></span>
+            <span id="com_alertmsg_"></span> 
+        </div>
+        <div class="right">
+                        <div class="comment_form">
+                <a href="javascript:;" onclick="commentPost('');"><span title='post new comment' class="fs62 post_anonymously post_anon_btn analysis_post post_button_"><span>post</span></span></a>
+                 <span class="ajaxloader_ displayNone left m10px"> <i class="fa fa-spin fa-spinner"></i></span>
+            </div>
+                    </div>
+                <div class="reply ">
+            <div class="right fs80 toggle_radio">
+                <input type="radio" value= "bullish"  class="bullish" name="toggle_option">
+                <input type="radio" value= "neutral" checked="checked" class="neutral" name="toggle_option">
+                <input type="radio" value= "bearish"  class="bearish" name="toggle_option">
+                <label class="bull">bullish</label>
+                <label class="neut neut_checked">neutral</label>
+                <label class="bear">bearish</label>
+                <div class="toggle_option_slider">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+	        </div>
+	        <div class='commentcontents'>
+	                <div class="prosconscommentdiv" itemscope itemtype='https://schema.org/Comment' id="comment_1902" data-id="1902">
+        <meta itemprop="about" content="BlackBerry Stock: BlackBerry Ltd (BBRY) Might Gain From The Tesla Motors Inc Hack">        <div class="left displayInline">
+             <i class='fa fa-3x fa-user'></i>        </div>
+        <div class="left fs80 commRightcont">
+             <div class="left displayInlineBlock  w85p">
+                <span class="left fs16px mobi_authorName"><span itemprop='creator' itemscope itemtype='https://schema.org/Person'><span itemprop='name'>ron912</span></span></span>
+                                <span class="left mobi_authorDiv fs80 authorDiv displayInlineBlock">
+                                         <span class="fs75 authorDate mobi_authorDate" itemprop='datePublished' content='2016-12-01T17:43Z' >  - Dec 01, 2016 at 12:43 PM</span>
+                </span>
+            </div>
+           <div class="right w15p">
+                 <div class=' bullish_tag tags' data-id=1902>bullish</div>            </div>
+            <div class="clear"></div>
+            <div class="comment_text fs14px w90p" itemprop='text'>
+                You seem to understand very little about BlackBerry, and tirnarounds. QNX os hardly the only bright spot. BlackBerry has made substantial progress in diverse areas, including other software applications, licensing deals, a fantastic new smart phone, integration of At Hoc, Secusmart and Good, migration to Android, expense management, and debt restructuring.  Hen has made multiple changes in just three years, and managed to keep the company cash flow positive while completely changing its mode of operation. Hardly a snail's pace. And many bright spots. It is all in place now and the focus shifts to marketing.            </div>
+            <div class="mt10px">
+                <span data-type=comment 
+					data-type_id=1902  
+			data-vote=up class='voteup enabledvoteicon  icon_text' title ='voteup'>                   
+					<span  class=' pointerCursor fa fa-thumbs-up  '></span> 
+					<span  class='votecount displayInlineBlock'></span> 
+		 	</span><span data-type=comment 
+					data-type_id=1902  
+			data-vote=down class='votedown enabledvoteicon  icon_text' title ='votedown'>                   
+					<span  class=' pointerCursor fa fa-thumbs-down  '></span> 
+					<span  class='votecount displayInlineBlock'></span> 
+		 	</span>                                    <span class="dotSeperator mlr4px"> • </span><span class="commentreply paddingLT5px pointerCursor linkblue underline" data-replyid='1902' title='write a reply'>reply</span>
+                                </div>
+        </div>
+    </div>
+            <div id='reply_1902' class='comment_reply'  data-replyid='1902'>
+            <div id='cmt_rply_txt_1902' ></div>            <div class='commentreplycontents' id='replycontent_1902'>
+                            </div>
+        </div>
+     <div class='clear comments_line'></div>
+	        </div>
+	    </div>                  
+	    <div class='clear'></div>
+	</div>
+	<div id="avathar_dialog" style="display:none;"></div>
+</div><!-- #comments -->
+</div><!-- #post-## -->
+</div>
+</article>
+<div class="sharePopup mobi-hideit" id="sharePopup" title="Enjoyed reading this article?" > Do share this awesome post <br/> <div class="sharebuttons"></div></div>
+<div  id= 'single_right' class='amigo_right'>
+	
+			<div class="article_rhs">
+		<div class='tab_lscape_rhs mb30px'><h2 class='small mb5px'>BlackBerry Stock Articles</h2> 
+		<div class="titleContainer">
+		<a  href="https://amigobulls.com/articles/2017-07-11-blackberry-ltd-amazon-com-inc-and-micron-technology-inc-todays-technical-stock-trading-ideas"><span class= 'recent_art'>BlackBerry Ltd, Amazon.com, Inc. And Micron Technology, Inc. - Today&#039;s Technical Stock Trading Ideas</span></a>     			   
+		<div class='clear'></div><div class="hr_dotted"></div></div>    
+		<div class="titleContainer">
+		<a  href="https://amigobulls.com/articles/2016-06-29-blackberry-stock-has-revenue-bottomed-out-for-blackberry-ltd"><span class= 'recent_art'>BlackBerry Stock: Has Revenue Bottomed Out For BlackBerry Ltd?</span></a>     			   
+		<div class='clear'></div><div class="hr_dotted"></div></div>    
+		<div class="titleContainer">
+		<a  href="https://amigobulls.com/articles/2017-06-26-blackberry-stock-a-disappointing-end-to-the-promising-rally-in-bbry-stock"><span class= 'recent_art'>BlackBerry Stock: A Disappointing End To The Promising Rally In BBRY Stock</span></a>     			   
+		<div class='clear'></div><div class="hr_dotted"></div></div>    
+		<div class="titleContainer">
+		<a  href="https://amigobulls.com/articles/2017-07-20-amd-stock-apple-stock-and-blackberry-stock-todays-technical-trading-ideas"><span class= 'recent_art'>Buy AMD Stock, Apple Stock And BlackBerry Stock - Today&#039;s Technical Trading Ideas</span></a>     			   
+		<div class='clear'></div><div class="hr_dotted"></div></div>    
+		<div class="titleContainer">
+		<a  href="https://amigobulls.com/articles/2017-06-27-apple-inc-blackberry-ltd-and-twitter-inc-short-interest-update"><span class= 'recent_art'>Apple Inc, BlackBerry Ltd And Twitter Inc - Short Interest Update</span></a>     			   
+		<div class='clear'></div><div class="hr_dotted"></div></div>    
+		<div class="titleContainer">
+		<a  href="https://amigobulls.com/articles/2017-06-23-blackberry-ltd-miss-gilead-sciences-inc-stock-rally-and-valeant-pharmaceuticals-intl-inc-resistance-todays-technical-stock-trading-ideas"><span class= 'recent_art'>BlackBerry Ltd Miss, Gilead Sciences, Inc, And Valeant Pharmaceuticals Intl Inc - Today&#039;s Technical Stock Trading Ideas</span></a>     			   
+		<div class='clear'></div><div class="none"></div></div>    
+		<div class="titleContainer">
+		<a  href="https://amigobulls.com/articles/2017-06-22-blackberry-ltd-netflix-inc-and-valeant-pharmaceuticals-intl-inc-todays-technical-stock-trading-ideas"><span class= 'recent_art'>BlackBerry Ltd, Netflix, Inc. And Valeant Pharmaceuticals Intl Inc - Today&#039;s Technical Stock Trading Ideas</span></a>     			   
+		<div class='clear'></div><div class="none"></div></div>   </div>			<div id='ezoic-pub-ad-placeholder-665'> 			</div> <div class='tab_lscape_rhs mb30px'><h2 class='small mb5px'>BBRY News</h2> 
+		<div class="titleContainer">
+		<a  href="https://amigobulls.com/news/blackberry-strengthens-cybersecurity-offering-for-the-canadian-and-us-government-brings-niap-certified-secusuite-stateside"><span class= 'recent_art'>BlackBerry Strengthens Cybersecurity Offering for the Canadian and U.S. Government;  Brings NIAP-Certified SecuSUITE Stateside</span></a>     			   
+		<div class='clear'></div><div class="hr_dotted"></div></div>    
+		<div class="titleContainer">
+		<a  href="https://amigobulls.com/news/why-should-you-dump-america-movil-amx-from-your-portfolio"><span class= 'recent_art'>Why Should You Dump America Movil (AMX) from Your Portfolio?</span></a>     			   
+		<div class='clear'></div><div class="hr_dotted"></div></div>    
+		<div class="titleContainer">
+		<a  href="https://amigobulls.com/news/qualcomm-qcom-tops-q3-earnings-and-revenues-estimates"><span class= 'recent_art'>Qualcomm (QCOM) Tops Q3 Earnings and Revenues Estimates</span></a>     			   
+		<div class='clear'></div><div class="hr_dotted"></div></div>    
+		<div class="titleContainer">
+		<a  href="https://amigobulls.com/news/qualcomm-loses-eu-case-slapped-with-daily-fine-of-665000"><span class= 'recent_art'>Qualcomm Loses EU Case, Slapped with Daily Fine of $6,65,000</span></a>     			   
+		<div class='clear'></div><div class="hr_dotted"></div></div>    
+		<div class="titleContainer">
+		<a  href="https://amigobulls.com/news/why-blackberry-bbry-isnt-done-growing-earnings-yet"><span class= 'recent_art'>Why BlackBerry (BBRY) Isn&#039;t Done Growing Earnings Yet</span></a>     			   
+		<div class='clear'></div><div class="hr_dotted"></div></div>    
+		<div class="titleContainer">
+		<a  href="https://amigobulls.com/news/blackberry-bbry-stock-plunges-after-q1-sales-disappoint"><span class= 'recent_art'>BlackBerry (BBRY) Stock Plunges After Q1 Sales Disappoint</span></a>     			   
+		<div class='clear'></div><div class="none"></div></div>   </div>	<div class="tab_lscape_rhs mb30px picks_box alink_parent">
+		<div class="txtCen alink_click  picks_theme">
+			<div class="mb10px fs150">One of our top stock picks has returned over 600% since 2011. See the entire list, it's free.
+			</div> 
+			<div class="mt10px">
+				<a class="alink" href="https://amigobulls.com/stocks-to-buy/top-tech-stocks/" >
+				</a>
+				<input type="button" class="mt10px" value='See our top picks'>
+			</div>
+		</div>
+	</div>
+	</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+var siteurl="https://amigobulls.com/";
+</script>
+    <script type="text/javascript">
+            var geturl="https://static.amigobulls.com/"+"1500868507_getAllStocks_gz.txt";
+          </script>
+
+	 <script type="text/javascript">
+        tickSymbol="BBRY";
+    	    		var visited_stock=498;
+    	        companyName="BlackBerry";
+        entityId="64729";
+        commentType=3;
+        stockPrice=0;
+    </script>
+<!-- #mainContent -->
+<script>var page_type=33;</script><div class="clear"></div>
+<!-- <div class='displayNone height'><span class='embed_popup tickergreen bold left heightauto' id='mail-verification' title='Email Verification'></span></div>        -->
+<div class="clear"></div>
+<div class="footer_ad mt10px txtCen"> 
+</div>
+<div id="overlay" class="mobi-hideit"><div id="overlaydiv"></div></div>
+    <footer class="footer_fixed mt10px">
+        <div class="back_color">
+        <div id="footerbg">
+             <div class="top_sec">
+                <h3 class="footertitle">Top Sections</h3>     
+                <ul>
+                    <li><a href="https://amigobulls.com" title="amigobulls - home page"> Home</a>  </li> 
+                    <li><a href="https://amigobulls.com/stocks-to-buy/top-tech-stocks/" title="internet stock picks">Stock Picks</a> </li>
+                    <li><a href="https://amigobulls.com/articles/" title="Stock Market Analysis">Articles</a> </li>
+                    <li><a href="https://amigobulls.com/news/" title="Stock Market News">News From Partners</a> </li>
+                    <li class="mobi-footermenuhide"><a href="https://amigobulls.com/sectors/computer-and-technology/internet-services" title="Technology and internet stocks">Screen Stocks</a>  </li>
+                    <li><a href="https://amigobulls.com/watchlist" title="Stock Market Watchlist">Watchlist</a> </li>
+                </ul>
+            </div>
+            <div  class="company_sec">
+                <h3 class="footertitle">Company Info</h3>
+                <ul>
+                    <li><a href="https://amigobulls.com/about"   title="About Amigobulls">About</a></li>
+                    <li><a href="https://amigobulls.com/jobs"  title="Existing careers at Amigobulls">Jobs</a></li>
+                    <li><a href="https://amigobulls.com/contact" title="Contact us  Amigobulls" >Contact</a></li>
+                    <li><a href="https://amigobulls.com/articles/author/" title="Amigobulls Authors" >Our Authors</a></li>
+                    <li><a href="https://amigobulls.com/terms"   title="Terms of use">Terms of Use</a></li>
+                    <li><a href="https://amigobulls.com/privacy" title="Privacy Policy">Privacy</a></li>
+                    <li><a href="#" title="Feedback" class="feedbackpopup" >Feedback</a></li>
+                </ul>
+            </div>
+            <div  class="widgets_sec mobi-hideit">
+                <h3 class="footertitle">Widgets &amp; Others </h3>
+                <ul>
+                    <li><a href="https://amigobulls.com/widgets/"   title="">Stock Chart Widget</a></li>
+                    <li><a href="https://amigobulls.com/articles/feed" title="RSS Feeds">RSS Feeds</a></li>
+                    <li><a href="https://amigobulls.com/glossary/" title="glossary">Glossary</a></li>
+                     <li><a href="https://amigobulls.com/companies/" title="Stocks Listing">Stocks Listing</a></li>
+                    <li><a href="https://amigobulls.com/links" title="blogroll">Blogroll</a></li>
+                </ul>
+            </div>
+         <!--    <div class="stocks_sec mobi-hideit">
+                <h3 class="footertitle ml5px">Top Stocks We Track</h3>
+                    <ul>
+                                                                        </ul>
+            </div> -->
+			<div class = "left socialdiv">
+        <div class="promo_div"><a href = "https://enrichview.in">
+          <div class="promo_text_content left">
+            <div class="promo_heading">AMIGOBULLS FOR BUSINESS</div>
+            <div class="promo_text fs80 mobi-hideit">Engage your wealth management clients with video statements.</div>
+          </div>
+          <div class="promo_img right">
+            <i class="fa fa-video-camera"></i>
+          </div>
+        </a>
+        </div>
+				<div class="socialicon">
+						<h3 class="footertitle">Join Us On</h3>                   
+							<a  target="_blank" class = "mleft" title="Follow amigobulls.com on Facebook" href="https://www.facebook.com/amigobulls">
+									<i class="fa fa-facebook-square fa-2x"></i>
+								<span class="displayNone">Follow amigobulls.com on Facebook</span>
+							</a>
+							<a  target="_blank" title="Follow amigobulls.com on Twitter" href="https://twitter.com/amigobulls">
+									<i class="fa fa-twitter-square fa-2x" ></i>
+								<span class="displayNone">Follow amigobulls.com on Twitter</span>
+							</a>
+							<a target="_blank" title="Follow amigobulls.com on LinkedIn" href="https://www.linkedin.com/company/amigobulls">
+									<i class="fa fa-linkedin-square fa-2x" ></i>
+								<span class="displayNone">Follow amigobulls.com on LinkedIn</span>
+							</a>
+							<a  target="_blank" title="Follow amigobulls.com on Google+" rel="publisher" href="https://plus.google.com/+amigobulls">
+									<i class="fa fa-google-plus-square fa-2x"></i>
+								<span class="displayNone">Follow amigobulls.com on Google+</span>
+							</a>
+              <a class="" target="_blank" title="Follow amigobulls.com on stocktwits" href="https://stocktwits.com/amigobulls">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAAAAAA6fptVAAAACklEQVR4nGP6DwABBQECz6AuzQAAAABJRU5ErkJggg==" data-src="https://static.amigobulls.com/v2images/StockTwits.svg" class="stocktwits_share lazy" alt="stocktwits"/>
+              </a>								
+				</div>
+                			</div>						
+            <div class="clear"></div>
+            <span class="fs62 footerst">Copyright<i class="fa fa-copyright"></i>2014 amigobulls.com </span>
+        </div></div>
+        <div class="fs75 footer_txt">
+            Historical, current end-of-day data, and company fundamental data provided by <a rel="nofollow" href="http://www.zacksdata.com/" class="linkblue" target="post">Zacks</a>.<br />
+        	All information provided "as is" for informational purposes only, not intended for trading purposes or advice. 
+        	Neither Amigobulls nor any of the data providers is liable for any informational errors, incompleteness, or delays, or for any actions taken in reliance on information contained herein. By accessing the amigobulls.com, you agree not to redistribute the information found therein.
+        	Please read our <a class="linkblue" href="https://amigobulls.com/terms">terms of use</a> and <a class="linkblue" href="https://amigobulls.com/privacy">privacy policy</a>.
+        </div>
+    </footer>
+    <div class="clear"></div>
+</div>
+<script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        //for main server
+                    ga('create', 'UA-39375880-1', 'auto');
+                ga('send', 'pageview');
+        if (window.ga) {
+          //send event timeonpage if a user has stayed for more than 15 seconds
+          var myintervalid = setInterval(function() {ga('send', 'event', 'timeonpage', 'timeonpage', window.location.pathname,15);},15000);
+          // clear the event after 15 mins
+          setTimeout(function(){clearInterval(myintervalid);},900000);
+        }
+</script>
+
+<div id='feedbackdivs'></div><script type="text/javascript">
+    var siteurl="https://amigobulls.com/";
+    var siteimageurl="https://static.amigobulls.com/";
+    var cssurl="https://static.amigobulls.com/css/";
+    var jsurl="https://static.amigobulls.com/js/";
+    var server_type="1";
+    var unique_id='5975b70fc384b';
+	var loggedin=false;
+	var user_email='';
+	var user_name='';
+	var user_id='';
+
+	    var limit_exceeded = '' ? 1 : 0;
+  		var visitedurl='/articles/blackberry-stock-why-the-tesla-motors-inc-hack-is-great-news-for-blackberry-ltd-bbry';
+	var referrer='/https://www.google.com/';
+	var urlquery="u=blackberry-stock-why-the-tesla-motors-inc-hack-is-great-news-for-blackberry-ltd-bbry";
+    if (typeof limit_exceeded !== 'undefined' && limit_exceeded) {
+        urlquery += '&forced=1';
+    }
+	var request_url='/articles/blackberry-stock-why-the-tesla-motors-inc-hack-is-great-news-for-blackberry-ltd-bbry';
+	var siteurl='https://amigobulls.com/';
+	var node_type='articles';
+    var trade_it_enabled = 0;
+  if (trade_it_enabled) {
+    var publisher_name ='';
+    var tradit_js = '';
+  }
+</script>
+
+<script type="text/javascript">
+  			var isArticle="";
+                   isArticle=true;
+        </script>
+<script>
+  var session_open_popup= false;
+  var session_download_limit_exceeded=false;
+</script>
+<div class="displayNone " id="footer-login">
+<div id='forcedialog' class="txtCen" title="Login with amigobulls.com">
+<div class="pad10px">
+    <div id="title"></div>
+    <div class="pad10px displayInline"><input type='submit'  class="submit_button loginfromjq"  tabindex="4" value="Login"></div>
+    <div class="pad10px displayInline"><input type='submit'  class="submit_button signupfromjq" tabindex="4" value="Sign Up"></div>
+</div>   
+</div>
+</div><div class="blackout"></div>
+      <script>
+  local_storage_access = true;
+
+  try{
+    localStorage.setItem("access","true");
+    test = localStorage.getItem("access");
+    localStorage.removeItem("access");
+  }
+  catch(err){
+    local_storage_access=false;
+  }
+  function async(u, c) {
+  var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+  o.src = u;
+  if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+  s.parentNode.insertBefore(o, s);
+}
+var jquery_lib="https://static.amigobulls.com/js/jquery_1.9.1.min.js";
+async( jquery_lib, function() {
+               common_js = document.createElement("script");
+            common_js.src = "https://static.amigobulls.com/js/combined/1500546975_jquer_amigo.min.js";
+            document.body.appendChild(common_js);
+  });   
+</script>
+<script type="text/javascript">
+/*query string to attach when show full article is clicked */
+	full_article_qs="?p=n";
+	is_single ="1";
+</script>
+<!--Begin comScore Tag--><script>var _comscore=_comscore||[];_comscore.push({c1:"2",c2:"20015427"});(function(){var s=document.createElement("script"),el=document.getElementsByTagName("script")[0];s.async=true;s.src=(document.location.protocol=="https:"?"https://sb":"http://b")+".scorecardresearch.com/beacon.js";el.parentNode.insertBefore(s,el)})();</script><noscript><img src="http://b.scorecardresearch.com/p?c1=2&c2=20015427&cv=2.0&cj=1"/></noscript><!--End comScore Tag-->
+<!--Quantcast Tag--><script type="text/javascript">var _qevents=_qevents||[];(function(){var elem=document.createElement('script');elem.src=(document.location.protocol=="https:"?"https://secure":"http://edge")+".quantserve.com/quant.js";elem.async=true;elem.type="text/javascript";var scpt=document.getElementsByTagName('script')[0];scpt.parentNode.insertBefore(elem,scpt)})();_qevents.push({qacct:"p-31iz6hfFutd16",labels:"Domain.amigobulls_com,DomainId.46056"});</script><noscript><div style="display:none;"><img src="//pixel.quantserve.com/pixel/p-31iz6hfFutd16.gif?labels=Domain.amigobulls_com,DomainId.46056"border="0"height="1"width="1"alt="Quantcast"/></div></noscript><!--End Quantcast tag-->
+<script type='text/javascript' style='display:none;' async>
+__ez.queue.addFile('edmonton.php', '//amigobulls.com/detroitchicago/edmonton.webp?a=a&cb=0&shcb=23', true, [], true, false, false, false);
+__ez.queue.addFile('jellyfish.php', '//amigobulls.com/porpoiseant/jellyfish.webp?a=a&cb=0&shcb=23', false, [], true, false, false, false);
+</script>
+</body>
+</html>

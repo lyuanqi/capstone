@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8">
+<script data-cfasync='false' data-pagespeed-no-defer>var __ez=__ez||{};__ez.evt={};__ez.ck={};__ez.dot={};__ez.template={};__ez.template.isOrig=true;__ez.evt.add=function(el,evt,handler){if(el.addEventListener){el.addEventListener(evt,handler,false)}else if(el.attachEvent){el.attachEvent('on'+evt,handler)}else{el['on'+evt]=handler()}};__ez.ck.get=function(n,e){null!==e&&(n=n+"_"+e);for(var t=n+"=",r=decodeURIComponent(document.cookie),o=r.split(";"),i=0;i<o.length;i++){for(var u=o[i];" "===u.charAt(0);)u=u.substring(1);if(0===u.indexOf(t))return u.substring(t.length,u.length)}return""};__ez.queue=function(){function g(a,b,g,h,j,k,l,m){var n=new f.file(a,b,g,h,j,k,l);!0===m?d[a]=n:e[a]=n,c[a]=n,i(n)}function h(a,g,h,j,k,l,m,n,o){!0===l&&(a=a+"_"+b++);var p=new f.func(a,g,h,j,k,m,n);!0===o?d[a]=p:e[a]=p,c[a]=p,i(p)}function i(a){!0!==j(a)&&a.process()}function j(a){if(a.blockedBy instanceof Array)for(var b=0;b<a.blockedBy.length;b++){var d=a.blockedBy[b];if(!1===c.hasOwnProperty(d))return k(a.name+" blocked = "+d),!0;if(!0===a.proceedIfError&&!0===c[d].isError)return!1;if(!1===c[d].isComplete)return k(a.name+" blocked = "+d),!0}return!1}function k(a){var b=window.location.href,c=new RegExp("[?&]ezq=([^&#]*)","i"),d=c.exec(b);"1"===(d?d[1]:null)&&console.debug(a)}function l(){++a>20||(k("let's go"),m(d),m(e))}function m(a){for(var b in a)if(!1!==a.hasOwnProperty(b)){var c=a[b];!0===c.isComplete||j(c)||!0===c.isInitialized||!0===c.isError?!0===c.isError?k(c.name+": error"):!0===c.isComplete?k(c.name+": complete already"):!0===c.isInitialized&&k(c.name+": initialized already"):c.process()}}var a=0,b=0,c=[],d=[],e=[],f={func:function(a,b,d,e,f,g,h){var i=this;this.name=a,this.funcName=b,this.parameters=null===d?null:d instanceof Array?d:[d],this.isBlock=e,this.blockedBy=f,this.deleteWhenComplete=g,this.isError=!1,this.isComplete=!1,this.isInitialized=!1,this.proceedIfError=h,this.process=function(){k("... func = "+a),i.isInitialized=!0,i.isComplete=!0;var b=i.funcName.split(".");b.length>3||(3===b.length?window[b[0]][b[1]][b[2]].apply(null,this.parameters):2===b.length?window[b[0]][b[1]].apply(null,this.parameters):window[i.funcName].apply(null,this.parameters)),!0===i.deleteWhenComplete&&delete c[a],!0===i.isBlock&&(k("----- F'D: "+i.name),l())}},file:function(a,b,c,d,e,f,g){var h=this;this.name=a,this.path=b,this.async=e,this.defer=f,this.isBlock=c,this.blockedBy=d,this.isInitialized=!1,this.isError=!1,this.isComplete=!1,this.proceedIfError=g,this.process=function(){h.isInitialized=!0,k("... file = "+a);var c=document.createElement("script");c.src=b,!0===e?c.async=!0:!0===f&&(c.defer=!0),c.onerror=function(){k("----- ERR'D: "+h.name),h.isError=!0,!0===h.isBlock&&l()},c.onreadystatechange=c.onload=function(){var a=c.readyState;k("----- F'D: "+h.name),a&&!/loaded|complete/.test(a)||(h.isComplete=!0,!0===h.isBlock&&l())},document.getElementsByTagName("head")[0].appendChild(c)}}};return{addFile:g,addFunc:h,items:c}}();var __ezDotData=function(a,b){this.name=a,this.val=b};__ez.dot.b64={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",encode:function(a){var c,d,e,f,g,h,i,b="",j=0;for(a=Base64._utf8_encode(a);j<a.length;)c=a.charCodeAt(j++),d=a.charCodeAt(j++),e=a.charCodeAt(j++),f=c>>2,g=(3&c)<<4|d>>4,h=(15&d)<<2|e>>6,i=63&e,isNaN(d)?h=i=64:isNaN(e)&&(i=64),b=b+this._keyStr.charAt(f)+this._keyStr.charAt(g)+this._keyStr.charAt(h)+this._keyStr.charAt(i);return b},decode:function(a){var c,d,e,f,g,h,i,b="",j=0;for(a=a.replace(/[^A-Za-z0-9+\/=]/g,"");j<a.length;)f=this._keyStr.indexOf(a.charAt(j++)),g=this._keyStr.indexOf(a.charAt(j++)),h=this._keyStr.indexOf(a.charAt(j++)),i=this._keyStr.indexOf(a.charAt(j++)),c=f<<2|g>>4,d=(15&g)<<4|h>>2,e=(3&h)<<6|i,b+=String.fromCharCode(c),64!=h&&(b+=String.fromCharCode(d)),64!=i&&(b+=String.fromCharCode(e));return b=Base64._utf8_decode(b)},_utf8_encode:function(a){a=a.replace(/rn/g,"n");for(var b="",c=0;c<a.length;c++){var d=a.charCodeAt(c);d<128?b+=String.fromCharCode(d):d>127&&d<2048?(b+=String.fromCharCode(d>>6|192),b+=String.fromCharCode(63&d|128)):(b+=String.fromCharCode(d>>12|224),b+=String.fromCharCode(d>>6&63|128),b+=String.fromCharCode(63&d|128))}return b},_utf8_decode:function(a){for(var b="",c=0,d=c1=c2=0;c<a.length;)d=a.charCodeAt(c),d<128?(b+=String.fromCharCode(d),c++):d>191&&d<224?(c2=a.charCodeAt(c+1),b+=String.fromCharCode((31&d)<<6|63&c2),c+=2):(c2=a.charCodeAt(c+1),c3=a.charCodeAt(c+2),b+=String.fromCharCode((15&d)<<12|(63&c2)<<6|63&c3),c+=3);return b}},__ez.dot.dataToStr=function(a){if(void 0===a)return[];try{for(var b in a)a[b].val=a[b].val+""}catch(a){}return a},__ez.dot.getCC=function(){var a="XX";return"undefined"!=typeof _ezaq&&_ezaq.hasOwnProperty("country")&&(a=_ezaq.country),a},__ez.dot.getDID=function(){var a="0";return"undefined"!=typeof _ezaq&&_ezaq.hasOwnProperty("domain_id")&&(a=_ezaq.domain_id.toString()),a},__ez.dot.getEpoch=function(a){return"undefined"!=typeof _ezaq&&_ezaq.hasOwnProperty("t_epoch")&&(a=_ezaq.t_epoch),a},__ez.dot.getURL=function(a){return("undefined"!=typeof ezJsu&&1==ezJsu||"undefined"!=typeof _ez_sa&&1==_ez_sa||"undefined"!=typeof isAmp&&!0===isAmp)&&(a="//g.ezoic.net"+a),a},__ez.dot.isValid=function(a){for(var b=0;b<a.length;b++)if(a[b]instanceof __ezDotData==!1)return console.error("Invalid data. ",a[b]),!1;return!0},__ez.dot.isDefined=function(){for(var a=0;a<arguments.length;a++)if(void 0===arguments[a]||null===arguments[a])return console.error("Argument not defined. ",arguments),!1;return!0};__ez.bit=function(){function c(a,b){d(a,b),e()}function d(b,c){__ez.dot.isDefined(b)&&__ez.dot.isValid(c)&&a.push({type:"pageview",pageview_id:b,domain_id:__ez.dot.getDID(),t_epoch:__ez.dot.getEpoch(0),data:__ez.dot.dataToStr(c)})}function e(){void 0!==document.visibilityState&&"prerender"===document.visibilityState||(__ez.dot.isDefined(a)&&a.length>0&&((new Image).src=__ez.dot.getURL(b)+"?orig="+(!0===__ez.template.isOrig?1:0)+"&ds="+btoa(JSON.stringify(a))),a=[])}var a=[],b="/detroitchicago/greenoaks.gif";return{Add:d,AddAndFire:c,Fire:e}}();</script><script data-cfasync='false' data-pagespeed-no-defer>__ez.pel=function(){function c(a,b){d(a,b,0,0,0,0,0),f()}function d(b,c,d,e,f,h,i){if(__ez.dot.isDefined(b,b.getSlotElementId)){var j=parseInt(b.getTargeting("ap")[0]),k=b.getSizes()[0],l=k.l.toString()+"x"+k.j.toString(),m=g(b),n=b.getSlotElementId();__ez.dot.isDefined(m,n)&&__ez.dot.isValid(c)&&a.push({type:"impression",impression_id:m,domain_id:__ez.dot.getDID(),unit:n,t_epoch:__ez.dot.getEpoch(0),revenue:d,est_revenue:e,ad_position:j,ad_size:l,bid_floor_filled:f,bid_floor_prev:h,stat_source_id:i,country_code:__ez.dot.getCC(),data:__ez.dot.dataToStr(c)})}}function e(b,c){var d=b.split("/");if(__ez.dot.isDefined(b)&&3===d.length&&__ez.dot.isValid(c)){var e=d[0],f=d[2];a.push({type:"impression",impression_id:f,domain_id:__ez.dot.getDID(),unit:e,t_epoch:__ez.dot.getEpoch(0),data:__ez.dot.dataToStr(c)})}}function f(){void 0!==document.visibilityState&&"prerender"===document.visibilityState||(__ez.dot.isDefined(a)&&a.length>0&&((new Image).src=__ez.dot.getURL(b)+"?orig="+(!0===__ez.template.isOrig?1:0)+"&sts="+btoa(JSON.stringify(a))),a=[])}function g(a){var b=0;try{var c=a.getTargetingMap();if(-1===a.getSlotElementId().indexOf("div-gpt-ad"))return b;if(void 0!==c)for(var e in c)if(-1!==e.indexOf("iid")&&void 0!==c[e][0]){b=c[e][0];break}}catch(a){}return b}var a=[],b="/porpoiseant/army.gif";return{Add:d,AddAndFire:c,AddById:e,Fire:f}}();var EzoicPixel=function(){this.pixels=[],this.pixelUrl="/ezoic/e.gif",("undefined"!=typeof ezJsu&&ezJsu===!0||"undefined"!=typeof _ez_sa&&_ez_sa===!0||"undefined"!=typeof window.isAmp&&isAmp===!0)&&(this.pixelUrl="//g.ezoic.net"+this.pixelUrl),this.tEpoch=0,"undefined"!=typeof _ezaq&&_ezaq.hasOwnProperty("t_epoch")&&(this.tEpoch=_ezaq.t_epoch)},EzoicPixelData=function(a,b){this.name=a,this.val=b};EzoicPixel.prototype={constructor:EzoicPixel,AddAndFireImpPixel:function(a,b){this.AddImpPixel(a,b,0,0,0,0,0),this.FirePixels()},AddAndFirePVPixel:function(a,b){this.AddPVPixel(a,b),this.FirePixels()},AddImpPixel:function(a,b,c,d,e,f,g){if(this.isDefined(a,a.getSlotElementId)){var h=parseInt(a.getTargeting("ap")[0]),i=a.getSizes()[0],j=i.l.toString()+"x"+i.j.toString(),k="0",l="XX";"undefined"!=typeof _ezaq&&_ezaq.hasOwnProperty("domain_id")&&(k=_ezaq.domain_id.toString()),"undefined"!=typeof _ezaq&&_ezaq.hasOwnProperty("country")&&(l=_ezaq.country);var m=this.getSlotIID(a),n=a.getSlotElementId();this.isDefined(m,n)&&this.validateData(b)&&(b=this.convertDataToStr(b),this.pixels.push({type:"impression",impression_id:m,domain_id:k,unit:n,t_epoch:this.tEpoch,revenue:c,est_revenue:d,ad_position:h,ad_size:j,bid_floor_filled:e,bid_floor_prev:f,stat_source_id:g,country_code:l,data:b}))}},AddImpPixelById:function(a,b){var c="0";"undefined"!=typeof _ezaq&&_ezaq.hasOwnProperty("domain_id")&&(c=_ezaq.domain_id.toString());var d=a.split("/");if(this.isDefined(a)&&3===d.length&&this.validateData(b)){var e=d[0],f=d[2];b=this.convertDataToStr(b),this.pixels.push({type:"impression",impression_id:f,domain_id:c,unit:e,t_epoch:this.tEpoch,data:b})}},AddPVPixel:function(a,b){var c="0";"undefined"!=typeof _ezaq&&_ezaq.hasOwnProperty("domain_id")&&(c=_ezaq.domain_id.toString()),this.isDefined(a)&&this.validateData(b)&&(b=this.convertDataToStr(b),this.pixels.push({type:"pageview",pageview_id:a,domain_id:c,t_epoch:this.tEpoch,data:b}))},FirePixels:function(){"undefined"!=typeof document.visibilityState&&"prerender"===document.visibilityState||(this.isDefined(this.pixels)&&this.pixels.length>0&&((new Image).src=this.pixelUrl+"?orig="+(__ez.template.isOrig===!0?1:0)+"&pixels="+encodeURIComponent(JSON.stringify(this.pixels))),this.pixels=[])},NewData:function(a,b){return new EzoicPixelData(a,b)},convertDataToStr:function(a){if("undefined"==typeof a)return[];try{for(var b in a)a[b].val=a[b].val+""}catch(a){}return a},getSlotIID:function(a){var b=0;try{var c=a.getTargetingMap(),d=a.getSlotElementId();if(d.indexOf("div-gpt-ad")===-1)return b;if("undefined"!=typeof c)for(var e in c)if(e.indexOf("iid")!==-1&&"undefined"!=typeof c[e][0]){b=c[e][0];break}}catch(a){}return b},isDefined:function(){for(var a=0;a<arguments.length;a++)if("undefined"==typeof arguments[a]||null===arguments[a])return console.error("Argument not defined. ",arguments),!1;return!0},validateData:function(a){for(var b=0;b<a.length;b++)if(a[b]instanceof EzoicPixelData==!1)return console.error("Invalid pixelData. ",a[b]),!1;return!0}};</script>
+
+<title>
+Advanced Micro Devices Inc (NASDAQ:AMD), Tesla Inc (NASDAQ:TSLA) And Plug Power Inc (NASDAQ:PLUG) - Short Interest Update</title>
+<link rel="stylesheet" type="text/css" href="https://static.amigobulls.com/css/1499152099_amigo_template.min.css"><meta name='description' content="Here's a look at the short interest changes for Advanced Micro Devices Inc (NASDAQ:AMD), Tesla Inc (NASDAQ:TSLA) And Plug Power Inc (NASDAQ:PLUG) based on the latest data." />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+<link rel="shortcut icon" href="https://static.amigobulls.com/v2images/favicon.ico" type="image/x-icon" >
+  <link rel='canonical' href='https://amigobulls.com/articles/2017-04-12-advanced-micro-devices-inc-tesla-inc-and-plug-power-inc-short-interest-update' />
+<meta property="fb:pages" content="508744769149352" />
+	<link rel="amphtml" href='https://amigobulls.com/amphtml/articles/2017-04-12-advanced-micro-devices-inc-tesla-inc-and-plug-power-inc-short-interest-update' />
+	<meta name='news_keywords' content=' AMD (NASDAQ:AMD) stock, AMD (NASDAQ:AMD) news, Stock Market News' />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Advanced Micro Devices Inc (NASDAQ:AMD), Tesla Inc (NASDAQ:TSLA) And Plug Power Inc (NASDAQ:PLUG) - Short Interest Update" />
+	<meta property="og:description" content="Here's a look at the short interest changes for Advanced Micro Devices Inc (NASDAQ:AMD), Tesla Inc (NASDAQ:TSLA) And Plug Power Inc (NASDAQ:PLUG) based on the latest data." />
+	<meta property="og:url" content="https://amigobulls.com/articles/2017-04-12-advanced-micro-devices-inc-tesla-inc-and-plug-power-inc-short-interest-update" />
+	<meta property="og:site_name" content="Amigobulls : Technology Stock Analysis" />
+	<meta property="article:publisher" content="https://www.facebook.com/amigobulls" />
+		<meta property="article:tag" content="AMD, Tesla Inc, Plug Power" />
+			<meta property="article:section" content="Stock Market News" />
+		<meta property="article:published_time" content="2017-04-12 06:32:09" />
+		<meta property="fb:app_id" content="451038928314843" />
+		<meta property="og:image:type" content="image/png" />
+	<meta property="og:image" content="https://static.amigobulls.com/articles/wp-content/uploads/2017/04/AMD-stock-Tesla-stock-and-Plug-Power-stock-short-interest-update.jpg" />
+		<meta name="twitter:card" content="summary"/>
+	<meta name="twitter:site" content="@amigobulls"/>
+	<meta name="twitter:domain" content="amigobulls.com"/>
+		<meta name="twitter:creator" content="@https://twitter.com/vikramnagarkar" />
+			<meta name="twitter:image:src" content="https://static.amigobulls.com/articles/wp-content/uploads/2017/04/AMD-stock-Tesla-stock-and-Plug-Power-stock-short-interest-update.jpg" />
+	<meta name="twitter:image" content="https://static.amigobulls.com/articles/wp-content/uploads/2017/04/AMD-stock-Tesla-stock-and-Plug-Power-stock-short-interest-update.jpg" />
+		<meta name="twitter:description" content="Here's a look at the short interest changes for Advanced Micro Devices Inc (NASDAQ:AMD), Tesla Inc (NASDAQ:TSLA) And Plug Power Inc (NASDAQ:PLUG) based on the latest data."/>
+	<meta name="twitter:title" content="Advanced Micro Devices Inc (NASDAQ:AMD), Tesla Inc (NASDAQ:TSLA) And Plug Power Inc (NASDAQ:PLUG) - Short Interest Update"/>
+	<meta name="twitter:url" content="https://amigobulls.com/articles/2017-04-12-advanced-micro-devices-inc-tesla-inc-and-plug-power-inc-short-interest-update"/>
+
+  <script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script type="text/javascript">
+    function setCookie(name,userid,domain){
+        var exdate=new Date();
+        exdate.setDate(exdate.getDate() + 10000);
+        var c_value=userid + ("; expires="+exdate.toUTCString())+(";domain="+domain+"; path=/;");
+        document.cookie=name + "=" + c_value;
+    }
+    setCookie("userid",'597717c6dc6f0','.amigobulls.com'); //set cookie for .amigobulls.com intailly
+  </script>
+<script type="text/javascript">
+    width=window.innerWidth;
+    if (width >= 1200) {
+        device_type = "desktop";
+        document.cookie = "device=desktop"+"; path=/";
+    }else if(width>=760){
+        device_type = "tablet";
+        document.cookie = "device=tablet"+"; path=/";
+    }else{
+        device_type = "mobile";
+        document.cookie = "device=mobile"+"; path=/";
+    } 
+</script>
+ 
+<script>
+var _prum = [['id', '557af72cabe53d446b5ce345'],
+             ['mark', 'firstbyte', (new Date()).getTime()]];
+(function() {
+    var s = document.getElementsByTagName('script')[0]
+      , p = document.createElement('script');
+    p.async = 'async';
+    p.src = '//rum-static.pingdom.net/prum.min.js';
+    s.parentNode.insertBefore(p, s);
+})();
+</script>
+
+<script data-cfasync="false" type="text/javascript">window.google_analytics_uacct = "UA-97831649-32";</script>
+<script data-cfasync="false" type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['e._setAccount', 'UA-97831649-32']);
+_gaq.push(['f._setAccount', 'UA-38339005-1']);
+_gaq.push(['e._setDomainName', 'amigobulls.com']);
+_gaq.push(['f._setDomainName', 'amigobulls.com']);
+_gaq.push(['e._setCustomVar',1,'template','old_site_gc',3]);
+_gaq.push(['e._setCustomVar',2,'t','126',3]);
+_gaq.push(['e._setCustomVar',3,'rid','0',2]);
+_gaq.push(['e._setCustomVar',4,'bra','mod6',3]);
+_gaq.push(['e._setAllowAnchor',true]);
+_gaq.push(['e._setSiteSpeedSampleRate', 10]);
+_gaq.push(['f._setCustomVar',1,'template','old_site_gc',3]);
+_gaq.push(['f._setCustomVar',2,'domain','amigobulls.com',3]);
+_gaq.push(['f._setSiteSpeedSampleRate', 20]);
+_gaq.push(['e._trackPageview']);
+_gaq.push(['f._trackPageview']);
+
+
+(function() {
+ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script type="text/javascript">var ezouid = "1646885373";</script><base href="https://amigobulls.com/articles/2017-04-12-advanced-micro-devices-inc-tesla-inc-and-plug-power-inc-short-interest-update"><script type='text/javascript'>
+var ezoTemplate = 'old_site_gc';
+if(typeof ezouid == 'undefined')
+{
+    var ezouid = 'none';
+}
+var ezoFormfactor = '1';
+var ezo_elements_to_check = Array();
+</script><!-- START EZHEAD -->
+<script type='text/javascript'>
+var soc_app_id = '0';
+var did = 46056;
+var ezdomain = 'amigobulls.com';
+var ezoicSearchable = 1;
+</script>
+<!--{jquery}-->
+<!-- END EZHEAD -->
+<script type="text/javascript" data-cfasync="false">var _ezaq = {"ab_test_id":"mod6","ab_test_val":"","ad_cache_level":0,"adgroup_rank_id":-1,"browser":"Chrome","browser_version":3,"country":"US","device_height":528,"device_width":1280,"domain_id":46056,"engaged_time_visit":0,"ezcache_level":0,"forensiq_score":-1,"form_factor_id":1,"ip":"10.0.2.8","is_bot":0,"landing_page_url":"https://amigobulls.com/articles/2017-04-12-advanced-micro-devices-inc-tesla-inc-and-plug-power-inc-short-interest-update","lt_cache_level":0,"os":"Windows","page_ad_positions":"","page_view_id":"9e8743dd-a058-46eb-57fc-3842789bbe2c","pv_event_count":0,"referrer_id":0,"referring_domain":"google.com","region":"us-west-1","serverid":"52.53.200.130:16923","t_epoch":1500977095,"template_id":126,"time_on_site_visit":0,"url":"https://amigobulls.com/articles/2017-04-12-advanced-micro-devices-inc-tesla-inc-and-plug-power-inc-short-interest-update","user_agent":"Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/532.0 (KHTML, like Gecko) Chrome/3.0.195.1 Safari/532.0","user_id":1646885373,"visit_id":748623210};var _ezExtraQueries = "&ez_orig=1";</script><script data-cfasync='false' type="text/javascript" src="/detroitchicago/rochester.js?cb=169-0&v=7" async></script></head>
+<body>
+    <div id="main-content" class="clearfix">
+        <div id="header">
+            <header class="new_header home_hide positionRelative" id="header_cont">
+    <nav class="all_menus">
+        <div class="mobi-hideit fs75 toprow"><div class='all_stocks'><div class='newstocks_head  colr1 left'><a class='tickerblue' href='https://amigobulls.com/stocks/AAPL/analysis'  title="Apple stock analysis">AAPL</a>&nbsp;<span class= 'mobi-hideit'><span class='fa fa-arrow-up'></span>$152.09 (1.21%)</span></div><div class='newstocks_head  colr1 left'><a class='tickerblue' href='https://amigobulls.com/stocks/FB/analysis'  title="Facebook stock analysis">FB</a>&nbsp;<span class= 'mobi-hideit'><span class='fa fa-arrow-up'></span>$166 (0.95%)</span></div><div class='newstocks_head  colr1 left'><a class='tickerblue' href='https://amigobulls.com/stocks/AMZN/analysis'  title="Amazon stock analysis">AMZN</a>&nbsp;<span class= 'mobi-hideit'><span class='fa fa-arrow-up'></span>$1038.95 (1.29%)</span></div><div class='newstocks_head  colr1 left'><a class='tickerblue' href='https://amigobulls.com/stocks/GOOG/analysis'  title="Alphabet Inc-C stock analysis">GOOG</a>&nbsp;<span class= 'mobi-hideit'><span class='fa fa-arrow-up'></span>$980.34 (0.76%)</span></div></div></div> 
+        <div class="clear separater mobi-hideit home_tab_hide"></div>
+            <div class="overlay_mask mobi_tab_hide"></div>
+            <div class ="smallmenu mobi_tab_hide">
+                <div class="logindiv fs75 toprow">
+                    <span class="hoverorange enrich active_menu"><a href="https://enrichview.in/">AMIGOBULLS FOR BUSINESS</a></span>
+                     
+                        <span class="joinus signupfromjq hoverorange">SIGN UP</span>
+                        <span class="login hoverorange loginfromjq ">LOGIN</span>
+                        <!-- <span class="hoverblack mobi_tab_hide" id="signup" ><a href='' title="Become a contributor for amigobulls" id='contributer'>CONTRIBUTE</a></span> -->
+                                    </div> 
+                <div class="right mt3px search_box">
+                                </div>
+                <div  class="bottomrow menu fs80 ">
+                    <ul class="menudiv">       
+                        <li id="index"  class="hover_parent" data-nav="primary">
+                            <a href="https://amigobulls.com" title="amigobulls - homepage"><span class="desktop_hide line_text">HOME<span class="under_line"></span></span><span class="mobi_tab_hide fa fa-home fa-lg"></span></a>
+                        </li>
+                        <li id="fundamentalpicks" class=" alink_parent" data-nav="primary" >
+                            <div class="mobi_menulist">
+                                <span class=' mainlink alink_click hoverorange'>STOCK PICKS<span class="under_line"></span></span>
+                                <i class ="marrow fa fa-chevron-down"></i>
+                            </div>
+                            <ul id='picks_ul' class="sub-menu"  >
+                                <li ><a class='alink' href="https://amigobulls.com/stocks-to-buy/top-tech-stocks/" title="Technology Stock Picks">Technology Stock Picks</a></li>
+                                <li ><a href="https://amigobulls.com/stocks-to-buy/best-stocks-to-buy-today/" title="Stocks to buy Today">Daily Stock Picks</a></li>
+                                <li ><a href="https://amigobulls.com/stocks-to-buy/top-auto-stocks/" title="Top Auto Stocks">Top Auto Stocks</a></li>
+
+                                </ul>   
+                        </li>
+                        <li id="analysis"  class=" alink_parent" data-nav="primary">
+                            <div class="mobi_menulist">
+                                <span class=' mainlink alink_click hoverorange'>ARTICLES<span class="under_line"></span></span>
+                                <i class ="marrow fa fa-chevron-down"></i>
+                            </div>
+                            <ul id='analysis_ul' class="sub-menu"  >
+                                <li ><a class='alink' href="https://amigobulls.com/articles/" title="Latest">Latest</a></li> 
+                                <li ><a href="https://amigobulls.com/articles/category/earnings-analysis" title="Earnings Analysis">Earnings Analysis</a></li> 
+                                <li ><a href="https://amigobulls.com/articles/category/finance" >Finance</a></li> 
+                                <li ><a href="https://amigobulls.com/articles/category/stock-updates" >Stock Updates</a></li>
+                                <li ><a href="https://amigobulls.com/articles/category/investing" >Investing</a></li> 
+                                <li ><a href="https://amigobulls.com/articles/category/stock-market-news" >Stock Market News</a></li>
+                                <li ><a href="https://amigobulls.com/articles/category/stock-valuation" >Stock Valuation</a></li>
+                                <li ><a href="https://amigobulls.com/articles/category/ipo">IPO</a></li>
+                                <li ><a href="https://amigobulls.com/articles/category/technical-analysis">Technical Analysis</a></li>
+                            </ul>
+                        </li>        
+                        <li id="screener" class="hover_parent" data-nav="primary">
+                            <a href="https://amigobulls.com/sectors/computer-and-technology/internet-services" class="colorgreyNew  hoverorange" title="Technology and internet stocks"><span class="line_text">SCREENER<span class="under_line"></span></span></a>
+                        </li>
+                        <li  id="mystocks"   class="hover_parent" data-nav="primary" >
+                            <a class='colorgreyNew' href="https://amigobulls.com/watchlist" title="My Stocks"><span class="line_text  hoverorange">MY STOCKS<span class="under_line"></span></span> <span class ="left fa fa-heart mr5px mt3px mobi_tab_hide"></span></a>
+                        </li>                    
+                    </ul>
+                </div>            </div> 
+            <div class="top_layer ">
+                                           <a  href="https://amigobulls.com" title="amigobulls.com - internet stock analysis" >
+                          <span class="amigo_logo"></span>
+                        </a>
+                                </div> 
+            <div class="desktop_hide  small-menu-click fa fa-bars fa-lg colorgreyNew"></div>   
+            <div  class="bottom_layer searchdiv fs80 home_tab_hide">  
+                <input title="ticker or company or video" placeholder="Ticker or Company" type="text" id="edit-search-block-form--2" data-qs="ms" data-show_video_icon="true" data-context_search='false' data-page_redirect="true" name="search_block_form" size="15" maxlength="128" class=" footer_search_input form-text ui-autocomplete-processed ui-autocomplete-input nobold" aria-autocomplete="list" > 
+                <span class="fa fa-search fa-lg mobi-hideit" ></span>
+                 <div class="clear"></div>
+            </div>
+            <div id="mobi_search_icon_1"  class="desktop_tab_hide pointerCursor fa fa-search"><div class="cross-icon  mobi_tab_hide"> &#10005;</div></div> 
+        <div class="clear"></div>
+    </nav>
+</header>
+        </div>
+        <div id="primary" class="container  clearfix scroll_loop">
+        <div id="article_1">
+        		<ol class=' breadcrumbs fs62 mobi-hideit mtn10px' itemscope itemtype="https://schema.org/BreadcrumbList">
+		<li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem' class='displayInline'><a itemprop='item'   href='https://amigobulls.com/' title='amigobulls.com'><span itemprop='name'>Home</span></a><meta itemprop='position' content='1' /></li><li class='displayInline'> &gt; </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem' class='displayInline'><a itemprop='item'   href='https://amigobulls.com/articles/' title='stock market news and research'><span itemprop='name'>Stocks Market News - Articles & Analysis</span></a><meta itemprop='position' content='2' /></li><li class='displayInline'> &gt; </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem' class='displayInline'><a itemprop='item'   href='https://amigobulls.com/articles/category/stock-market-news' title='Stock Market News'><span itemprop='name'>Stock Market News</span></a><meta itemprop='position' content='3' /></li><li class='displayInline'> &gt; </li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem' class='displayInline'><a itemprop='item'   href='https://amigobulls.com/articles/2017-04-12-advanced-micro-devices-inc-tesla-inc-and-plug-power-inc-short-interest-update' title='Advanced Micro Devices Inc, Tesla Inc And Plug Power Inc - Short Interest Update'><span itemprop='name'>Advanced Micro Devices Inc, Tesla Inc And Plug Power Inc - Short Interest Update</span></a><meta itemprop='position' content='4' /></li>		</ol>
+
+		<article id="post-71065" class="post_content_maindiv">
+			<div itemscope itemtype="https://schema.org/NewsArticle">
+		<meta itemscope itemprop="mainEntityOfPage" itemType="https://schema.org/WebPage" itemid="https://amigobulls.com/articles/2017-04-12-advanced-micro-devices-inc-tesla-inc-and-plug-power-inc-short-interest-update" content="https://amigobulls.com/articles/2017-04-12-advanced-micro-devices-inc-tesla-inc-and-plug-power-inc-short-interest-update" />
+	<meta itemprop="inlanguage" content="en-US" />
+	<div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+        <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+              <meta itemprop="url" content="https://static.amigobulls.com/v2images/amigobulls_logo.png">
+              <meta itemprop="width" content="169">
+              <meta itemprop="height" content="39">
+        </div>
+        <meta itemprop="name" content="Amigobulls">
+    </div>
+		<header>
+		<h1 itemprop="headline" class='small borderNone'>
+		Advanced Micro Devices Inc, Tesla Inc And Plug Power Inc - Short Interest Update		</h1>
+	<div class='borderBottomSolid mt10px mb5px'></div>
+		<div class="clear"></div>
+				<meta itemprop="description" content="Here's a look at the short interest changes for Advanced Micro Devices Inc (NASDAQ:AMD), Tesla Inc (NASDAQ:TSLA) And Plug Power Inc (NASDAQ:PLUG) based on the latest data.">		<meta itemprop="audience" content='NASDAQ and NYSE stock investors'>
+		<meta itemprop="url discussionUrl" content='https://amigobulls.com/articles/2017-04-12-advanced-micro-devices-inc-tesla-inc-and-plug-power-inc-short-interest-update'>
+		<meta itemprop="keywords" content='AMD stock, AMD news, AMD (NASDAQ:AMD) Stock Market News'/>
+		<meta itemprop="datePublished" content="2017-04-12T10:32:09-04:00" />
+		<meta itemprop="dateModified" content="2017-04-12T10:32:09-04:00" />
+		<meta itemprop="articleSection" content='Stock Market News' />						    <div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+				<meta itemprop="url" content="https://static.amigobulls.com/articles/wp-content/uploads/2017/04/AMD-stock-Tesla-stock-and-Plug-Power-stock-short-interest-update.jpg">
+				<meta itemprop="width" content="696">
+				<meta itemprop="height" content="392">
+		    </div>
+				</header>
+		<div class="clear"></div>
+		<div class="amigo_right mt5px">
+						<div id='ezoic-pub-ad-placeholder-102'> 			<div id='dga_3' class="txtCen ic_div">
+			<script  type="text/javascript">
+				var responsive_type="";
+				var show_tab =0;
+				if(device_type=="desktop"|| (device_type == "tablet" && show_tab)){
+					var id='dga_3';
+				  	elem = document.createElement('ins');
+				   	elem.className += "adsbygoogle";
+				 	elem.setAttribute("style", 'display:inline-block;width:300px;height:1050px;');
+				 	elem.setAttribute("data-ad-client", "ca-pub-7431353201809691");
+					elem.setAttribute("data-ad-slot",'9207178568');
+					if(responsive_type!=""){
+						elem.setAttribute("data-ad-format",responsive_type);
+					}
+					document.getElementById(id).appendChild(elem);
+				}
+				if(device_type=="desktop"|| (device_type == "tablet" && show_tab)){(adsbygoogle = window.adsbygoogle || []).push({});
+				}
+			</script>
+			</div>
+					</div> 		</div>
+		<div id='single_left' class='amigo_left'>
+	<div class="post_date">
+		<div class="left">
+		<span class="fs75 ppauthor">Posted by </span><span itemprop="author" itemscope itemtype="https://schema.org/Person"><a itemprop="url" class="tickerorange" rel="author" href="https://twitter.com/vikramnagarkar" title="Follow Vikram Nagarkar on twitter"><span itemprop="name">Vikram Nagarkar</span></a></span>
+	
+		<span class="fs75 ppauthor">on </span><a href="https://amigobulls.com/articles/2017/04/12" title="Read articles published on Apr 12, 2017" rel="bookmark"><span class="fs75 ppauthor">April 12, 2017, 06:32 AM EST</span></a>
+		</div>		
+			<span class='fs80 related-tags right'>Related Tickers: <a href='https://amigobulls.com/stocks/AMD/analysis?ref=tp' class='tickerblue newsfont' title='AMD stock analysis video'>AMD</a> , <a href='https://amigobulls.com/stocks/TSLA/analysis?ref=tp' class='tickerblue newsfont' title='Tesla Inc stock analysis video'>TSLA</a> , <a href='https://amigobulls.com/stocks/PLUG/analysis?ref=tp' class='tickerblue newsfont' title='Plug Power stock analysis video'>PLUG</a></span>		</div>
+		
+		<div class="clear"></div>
+		<div class="postbody">
+		<div class="article">			<div itemprop="articleBody">
+			<h2>The latest short interest data is out for AMD, Tesla and Plug Power. Here's how it looks.</h2>
+<div class="coverImage"><a  href="https://static.amigobulls.com/articles/wp-content/uploads/2017/04/small_width400_AMD-stock-Tesla-stock-and-Plug-Power-stock-short-interest-update.jpg?ref=il"><img class="aligncenter size-full wp-image-71116" src="https://static.amigobulls.com/articles/wp-content/uploads/2017/04/small_width400_AMD-stock-Tesla-stock-and-Plug-Power-stock-short-interest-update.jpg" alt="AMD stock Tesla stock and Plug Power stock short interest update"   /></a><br />
+<span class="imageCopyright">Flickr</span></div>
+<p>The latest short interest data is out, and possibly, the most keenly watched counters would be those of Sunnyvale, California-based <strong><a  class="tickerblue" title="AMD stock analysis" href="https://amigobulls.com/stocks/AMD/analysis?ref=il">Advanced Micro Devices Inc (NASDAQ:AMD)</a></strong>, Palo Alto, California-based <strong><a  class="tickerblue" title="Tesla Inc stock analysis" href="https://amigobulls.com/stocks/TSLA/analysis?ref=il">Tesla Inc (NASDAQ:TSLA)</a></strong>, and New York-based <strong><a  class="tickerblue" title="Plug Power stock analysis" href="https://amigobulls.com/stocks/PLUG/analysis?ref=il">Plug Power (NASDAQ:PLUG)</a></strong>. It has been an eventful month so far for AMD and Tesla, with lots of fresh news coming through. So, let's quickly look at the latest changes in short interest in these names.</p>			<div id='ezoic-pub-ad-placeholder-624'> 			</div> 			<div id='ezoic-pub-ad-placeholder-104'> 		<div id='mga_1' class="txtCen ic_div">
+		<script  type="text/javascript">
+			var responsive_type="rectangle";
+			if(device_type=="mobile"){
+				var id='mga_1';
+			  	elem = document.createElement('ins');
+			   	elem.className += "adsbygoogle";
+			 	elem.setAttribute("style", 'display:block');
+			 	elem.setAttribute("data-ad-client", "ca-pub-7431353201809691");
+				elem.setAttribute("data-ad-slot",'1679399760');
+				if(responsive_type!=""){
+					elem.setAttribute("data-ad-format",responsive_type);
+				}
+				document.getElementById(id).appendChild(elem);
+			}
+			if(device_type=="mobile"){(adsbygoogle = window.adsbygoogle || []).push({});
+			}
+		</script>
+		</div>
+		</div> 
+<h3>Short Interest In AMD Stock Cools Off A Bit.</h3>
+<p>Short interest in AMD stock fell by 3.1% as per the latest short interest data. Short interest is as of March end, but the data became available only yesterday, the 11th of April. Short interest in the preceding fortnight had <a  href="https://amigobulls.com/articles/should-you-buy-amd-stock-as-short-interest-jumps-to-near-1-year-highs?ref=il">nearly hit 1-year highs</a>, coming in at nearly 115 million shares. As of March end, short interest is down to just over 111 million shares, representing 13.4% of AMD's float. It's worth noting that in terms of the number of shares shorted, AMD is still one of most shorted stocks on NASDAQ, standing at number 3 in that list.</p>			<div id='ezoic-pub-ad-placeholder-100'> 			<div id='dga_1' class="txtCen ic_div">
+			<script  type="text/javascript">
+				var responsive_type="rectangle";
+				var show_tab =1;
+				if(device_type=="desktop"|| (device_type == "tablet" && show_tab)){
+					var id='dga_1';
+				  	elem = document.createElement('ins');
+				   	elem.className += "adsbygoogle";
+				 	elem.setAttribute("style", 'display:block');
+				 	elem.setAttribute("data-ad-client", "ca-pub-7431353201809691");
+					elem.setAttribute("data-ad-slot",'1789499762');
+					if(responsive_type!=""){
+						elem.setAttribute("data-ad-format",responsive_type);
+					}
+					document.getElementById(id).appendChild(elem);
+				}
+				if(device_type=="desktop"|| (device_type == "tablet" && show_tab)){(adsbygoogle = window.adsbygoogle || []).push({});
+				}
+			</script>
+			</div>
+					</div> 			<div id='ezoic-pub-ad-placeholder-624'> 	</div> 
+<p>The past ten days or so haven't gone too well for CPU and GPU maker AMD. Even as the company prepared to launch its <a  href="https://amigobulls.com/articles/2017-04-05-should-you-buy-advanced-micro-devices-inc-amd-stock-ahead-of-ryzen-5-launch?ref=il">much-awaited line-up of Ryzen 5 CPUs</a>, the stock continued to fall on the back of bearish commentary by some analysts. While Pacific Crest's <a  href="https://amigobulls.com/articles/2017-04-05-should-you-buy-nvidia-stock-now-after-yesterdays-crash?ref=il">Mike McConell was bearish</a> primarily on arch rival <strong><a  class="tickerblue" title="NVIDIA stock analysis" href="https://amigobulls.com/stocks/NVDA/analysis?ref=il">NVIDIA (NASDAQ:NVDA)</a></strong>, his concerns around the potential saturation in the desktop GPU market hurt AMD stock as well. The stock sold off, falling by over 3% for the day. Just two days later, the stock crashed further, this time falling by 6.3% on the back of negative commentary from Goldman Sachs' Toshiya Hari. Hari initiated his coverage of the stock with a 'sell' rating and assigned the stock with a target price of $11 a share, 22% lower than the prevailing stock price at the time. The stock fell by another 3% on Monday, the 10th of April, after a marginal uptick in between, taking this month's movement to a net 10.5% fall.</p>			<div id='ezoic-pub-ad-placeholder-662'> 			</div> 
+<p>That said, AMD stock is likely to find more support following AMD's Ryzen 5 launch yesterday, given the fact that this new line up of CPUs is expected to give Intel a tough fight. AMD's new set of chips are not only expected to be <a  href="https://amigobulls.com/articles/2017-04-11-dont-short-amd-stock-ahead-of-todays-ryzen-5-launch?ref=il">competitive in terms of performance</a> but are also priced quite aggressively. Further, AMD is now on the verge of entering oversold territory. If you see the stock fall further from here, it might be worth the effort to look at the technicals.</p>			<div id='ezoic-pub-ad-placeholder-663'> 			</div> 			<div id='ezoic-pub-ad-placeholder-105'> 		<div id='mga_2' class="txtCen ic_div">
+		<script  type="text/javascript">
+			var responsive_type="rectangle";
+			if(device_type=="mobile"){
+				var id='mga_2';
+			  	elem = document.createElement('ins');
+			   	elem.className += "adsbygoogle";
+			 	elem.setAttribute("style", 'display:block');
+			 	elem.setAttribute("data-ad-client", "ca-pub-7431353201809691");
+				elem.setAttribute("data-ad-slot",'1539798960');
+				if(responsive_type!=""){
+					elem.setAttribute("data-ad-format",responsive_type);
+				}
+				document.getElementById(id).appendChild(elem);
+			}
+			if(device_type=="mobile"){(adsbygoogle = window.adsbygoogle || []).push({});
+			}
+		</script>
+		</div>
+		</div> 
+<h3>Short Interest In Tesla Stock Actually Inched Higher.</h3>
+<p>Short interest in Tesla climbed marginally, rising by 0.9%. Short interest in the stock stood at 31.3 million shares, up from 31 million shares at the end of the preceding reporting cycle. Short interest in TSLA stock stood at a rather high ~27% of float, with days to cover at 6.6. That partly explains the sharp rally in Tesla stock following its <a  href="https://amigobulls.com/articles/2017-04-03-tesla-stock-looks-set-to-head-higher-today-heres-why?ref=il">announcement of record deliveries</a>. On April 2nd, news emerged of Tesla's record breaking delivery numbers. The carmaker delivered 25,000 vehicles during the first quarter, looking set to hit its target of 50,000 deliveries for the first six months of this FY. Tesla shares have soared 11% higher since then, with the company going past <a  class="tickerblue" title="Ford stock analysis" href="https://amigobulls.com/stocks/F/analysis?ref=il">Ford (NYSE:F)</a> and <a  class="tickerblue" title="General Motors stock analysis" href="https://amigobulls.com/stocks/GM/analysis?ref=il">General Motors (NYSE:GM)</a> to become the most valuable carmaker in the U.S. in terms of market cap.</p>			<div id='ezoic-pub-ad-placeholder-101'> 			<div id='dga_2' class="txtCen ic_div">
+			<script  type="text/javascript">
+				var responsive_type="rectangle";
+				var show_tab =1;
+				if(device_type=="desktop"|| (device_type == "tablet" && show_tab)){
+					var id='dga_2';
+				  	elem = document.createElement('ins');
+				   	elem.className += "adsbygoogle";
+				 	elem.setAttribute("style", 'display:block');
+				 	elem.setAttribute("data-ad-client", "ca-pub-7431353201809691");
+					elem.setAttribute("data-ad-slot",'3266232962');
+					if(responsive_type!=""){
+						elem.setAttribute("data-ad-format",responsive_type);
+					}
+					document.getElementById(id).appendChild(elem);
+				}
+				if(device_type=="desktop"|| (device_type == "tablet" && show_tab)){(adsbygoogle = window.adsbygoogle || []).push({});
+				}
+			</script>
+			</div>
+					</div> 			<div id='ezoic-pub-ad-placeholder-662'> 	</div> 
+<p>Given the recent developments, the next set of short interest data may be more interesting. And now that a lot of shorts have likely gotten 'fried', you could expect to see a decline in short interest. On the contrary, a further rise in short interest will be rather surprising.</p>			<div id='ezoic-pub-ad-placeholder-664'> 			</div> 			<div id='ezoic-pub-ad-placeholder-663'> 	</div> 
+<h3>Short Interest In Plug Stock Falls Further.</h3>
+<p>By the looks of it, some shorts just saved themselves a lot of pain. Short interest in Plug Power declined by close to 7%. Short interest declined from 36 million shares during the preceding fortnight, to 33.5 million shares as of March end. As a percentage of float, short interest declined from 20.2% to 18.8%. However, owing to a fall in the volumes during the period, days to cover rose from 4.1 to 6.6.</p>
+<p>Plug stock has been in the thick of the action lately after news emerged that Amazon would source fuel cells from the company and had the option to buy 23% of the company's shares. Shares of Plug Power Inc gained by 73% on 5th of April, and are now up by about 103% from the April 4th closing price. Now that's some example of the shorts getting 'fried'. Short interest data as of mid-April will be even more interesting.</p>
+<p>Looking for great tech stocks? Check out our <a  href="https://amigobulls.com/stocks-to-buy/top-tech-stocks/?ref=il">top stock picks</a>, which have beaten the NASDAQ by over 132%.</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="clear"></div>
+		<div class="mb10px">
+			<div class="right">
+		<span data-type=article 
+					data-type_id=71065  
+			data-vote=up class='voteup enabledvoteicon  icon_text' title ='voteup'>                   
+					<span  class=' pointerCursor fa fa-thumbs-up fs150 '></span> 
+					<span  class='votecount displayInlineBlock'>11</span> 
+		 	</span><span data-type=article 
+					data-type_id=71065  
+			data-vote=down class='votedown enabledvoteicon  icon_text' title ='votedown'>                   
+					<span  class=' pointerCursor fa fa-thumbs-down fs150 '></span> 
+					<span  class='votecount displayInlineBlock'>2</span> 
+		 	</span>		</div>
+		<div class="left">
+					<div id="ssba">
+	<ul>
+		<li class="mobi-hideit">
+			<a id="ssba_email_share" class="ssba_share_link" href="mailto:?Subject=Advanced Micro Devices Inc, Tesla Inc And Plug Power Inc - Short Interest Update by Amigobulls&amp;Body=Hi%20Friend%2C%0AI%20thought%20you%20might%20find%20this%20article%20on%20Amigobulls%20interesting%3A%0A%09Here%27s%20a%20look%20at%20the%20short%20interest%20changes%20for%20AMD%2C%20Tesla%20And%20Plug%20Power%20based%20on%20the%20latest%20data.%0ATo%20continue%20reading%20please%20click%20on%20the%20link%20below%3A%0Ahttps%3A%2F%2Famigobulls.com%2Farticles%2F2017-04-12-advanced-micro-devices-inc-tesla-inc-and-plug-power-inc-short-interest-update%3Fref%3Dma"> 
+			<span title="Email this article" class="fa fa-envelope fa-2x"></span>
+			<span class="displayNone"> Share this article via Email</span>
+			</a>
+		</li>
+		<li>
+			<a id="ssba_twitter_share" href="https://twitter.com/share?url=https://amigobulls.com/articles/2017-04-12-advanced-micro-devices-inc-tesla-inc-and-plug-power-inc-short-interest-update?ref=tw&amp;text=Advanced+Micro+Devices+Inc%2C+Tesla+Inc+And+Plug+Power+Inc+-+Short+Interest+Update" > 
+			<span title="" class="fa fa-twitter-square fa-2x"></span>
+			<span class="displayNone"> Share this article on Twitter</span>
+			</a>
+		</li>
+		<li>
+			<a id="ssba_facebook_share" href="https://www.facebook.com/sharer.php?u=https://amigobulls.com/articles/2017-04-12-advanced-micro-devices-inc-tesla-inc-and-plug-power-inc-short-interest-update?ref=fb&amp;title=Advanced+Micro+Devices+Inc%2C+Tesla+Inc+And+Plug+Power+Inc+-+Short+Interest+Update&amp;summary=Here%27s+a+look+at+the+short+interest+changes+for+AMD%2C+Tesla+And+Plug+Power+based+on+the+latest+data." > 
+			<span title="" class="fa fa-facebook-square fa-2x" ></span>
+			<span class="displayNone"> Share this article on Facebook</span>
+			</a>
+		</li>
+		<li>
+			<a id="ssba_linkedin_share" class="ssba_share_link" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://amigobulls.com/articles/2017-04-12-advanced-micro-devices-inc-tesla-inc-and-plug-power-inc-short-interest-update?ref=ld&amp;title=Advanced+Micro+Devices+Inc%2C+Tesla+Inc+And+Plug+Power+Inc+-+Short+Interest+Update&amp;summary=Here%27s+a+look+at+the+short+interest+changes+for+AMD%2C+Tesla+And+Plug+Power+based+on+the+latest+data." > 
+			<span title="" class="fa fa-linkedin-square fa-2x"></span>
+			<span class="displayNone"> Share this article on linkedin</span>
+			</a>
+		</li>
+		<li>
+			<a id="ssba_google_share" href="https://plus.google.com/share?url=https://amigobulls.com/articles/2017-04-12-advanced-micro-devices-inc-tesla-inc-and-plug-power-inc-short-interest-update" > 
+			<span title="" class="fa fa-google-plus-square fa-2x"></span>
+			<span class="displayNone"> Share this article on GooglePlus</span>
+			</a>
+		</li>
+		<li>
+			<a id="ssba_whatsapp_share" class="ssba_share_link whatsapp-share-button desktop_tab_hide" data-count="true" href="whatsapp://send?text=Advanced+Micro+Devices+Inc%2C+Tesla+Inc+And+Plug+Power+Inc+-+Short+Interest+Update https%3A%2F%2Famigobulls.com%2Farticles%2F2017-04-12-advanced-micro-devices-inc-tesla-inc-and-plug-power-inc-short-interest-update%3Fref%3Dwp" > 
+				<span title="Share this post on WhatsApp" class="fa fa-whatsapp"></span>
+			</a>
+		</li>
+	</ul>
+</div>
+		</div>			
+			<div class="right mt5px">Is this article helpful ?&nbsp;&nbsp;&nbsp;&nbsp;</div>
+		 </div>
+         <div class='clear'></div>
+         <hr class="desktop_hide">
+        <div class="mt20px mb30px">
+					<div id='ezoic-pub-ad-placeholder-106'> 		<div id='mga_3' class="txtCen ic_div">
+		<script  type="text/javascript">
+			var responsive_type="rectangle";
+			if(device_type=="mobile"){
+				var id='mga_3';
+			  	elem = document.createElement('ins');
+			   	elem.className += "adsbygoogle";
+			 	elem.setAttribute("style", 'display:block');
+			 	elem.setAttribute("data-ad-client", "ca-pub-7431353201809691");
+				elem.setAttribute("data-ad-slot",'4182322567');
+				if(responsive_type!=""){
+					elem.setAttribute("data-ad-format",responsive_type);
+				}
+				document.getElementById(id).appendChild(elem);
+			}
+			if(device_type=="mobile"){(adsbygoogle = window.adsbygoogle || []).push({});
+			}
+		</script>
+		</div>
+		</div> 		</div> 
+
+		<!-- Display the related section for articles in aside tag -->
+		<aside>
+		<h2 class='small mt10px mobi-hideit'> More on AMD stock</h2><hr><div  class='articlesMainDiv displayBlock'>			<div id='ezoic-pub-ad-placeholder-103'> 			<div id='dga_matched' class="txtCen ic_div">
+			<script  type="text/javascript">
+				var responsive_type="autorelaxed";
+				var show_tab =1;
+				if(device_type=="desktop"|| (device_type == "tablet" && show_tab)){
+					var id='dga_matched';
+				  	elem = document.createElement('ins');
+				   	elem.className += "adsbygoogle";
+				 	elem.setAttribute("style", 'display:block');
+				 	elem.setAttribute("data-ad-client", "ca-pub-7431353201809691");
+					elem.setAttribute("data-ad-slot",'4418756163');
+					if(responsive_type!=""){
+						elem.setAttribute("data-ad-format",responsive_type);
+					}
+					document.getElementById(id).appendChild(elem);
+				}
+				if(device_type=="desktop"|| (device_type == "tablet" && show_tab)){(adsbygoogle = window.adsbygoogle || []).push({});
+				}
+			</script>
+			</div>
+					</div> </div>		</aside> <!-- entire related content should be inside the aside tag -->
+
+		<div class="mt10px mb10px left author_pic" >
+		<a href="https://amigobulls.com/articles/author/vikram?ref=tp"><img src="https://static.amigobulls.com/profile_images/1444022977_4169.png" alt="Vikram Nagarkar" class="authorbox-photo author_img"></a>
+		<span class="fs100 left" ><a class="orange" href="https://amigobulls.com/articles/author/vikram?ref=tp" > Vikram Nagarkar</a> </span>	
+		<span class='left'>&nbsp; on Amigobulls : </span> <div class='follow_div  orange fs120 left'><div  class='pointerCursor author_follow' data-id='4' data-post_id='71065' data-follow='1' ><i class='fa fa-plus orange'> </i>Follow </div></div>		</div>
+			<footer>
+				<div class="disclaimer" >
+				<p>Neither Amigobulls, nor any members of its staff hold positions in any of the stocks discussed in this post. The author may not be a certified/registered investment advisor, and the opinions expressed should not be treated as investment advice.</p> <p>Buying and selling of securities carries the risk of monetary losses.Readers/Viewers are advised to carry out their own due diligence and consult their investment advisors before making any investment decisions.</p> <p> Neither Amigobulls, nor the author have any business relationship with any of the companies covered in this post.</p>				</div>
+				<div class="disclaimer_more cursorPointer tickerorange right fs14px ">show more</div>
+			</footer>
+		</div><!-- .entry-content -->
+		<div class='clear'></div>
+	<div id="comments" class="">
+		<h2 class="mtb20px small"> Comments on this article and AMD stock </h2>
+		<div class="stockComments">
+	    <div class="commentlayout commentsleft">
+	        <div id='proscomments'>
+	                        <textarea placeholder="Share your opinion on AMD stock" onclick="showForm(this);" id='commentcontent_' class=' fs80 comment_box '></textarea>
+    <div class="clear"></div>
+    <div id='commentform_' class="commentform">
+        <div id="com_error_" class="comment_error">
+            <span id="com_alerticon_" class="comment_alerticon"></span>
+            <span id="com_alertmsg_"></span> 
+        </div>
+        <div class="right">
+                        <div class="comment_form">
+                <a href="javascript:;" onclick="commentPost('');"><span title='post new comment' class="fs62 post_anonymously post_anon_btn analysis_post post_button_"><span>post</span></span></a>
+                 <span class="ajaxloader_ displayNone left m10px"> <i class="fa fa-spin fa-spinner"></i></span>
+            </div>
+                    </div>
+                <div class="reply ">
+            <div class="right fs80 toggle_radio">
+                <input type="radio" value= "bullish"  class="bullish" name="toggle_option">
+                <input type="radio" value= "neutral" checked="checked" class="neutral" name="toggle_option">
+                <input type="radio" value= "bearish"  class="bearish" name="toggle_option">
+                <label class="bull">bullish</label>
+                <label class="neut neut_checked">neutral</label>
+                <label class="bear">bearish</label>
+                <div class="toggle_option_slider">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+	        </div>
+	        <div class='commentcontents'>
+	            	        </div>
+	    </div>                  
+	    <div class='clear'></div>
+	</div>
+	<div id="avathar_dialog" style="display:none;"></div>
+</div><!-- #comments -->
+</div><!-- #post-## -->
+</div>
+</article>
+<div class="sharePopup mobi-hideit" id="sharePopup" title="Enjoyed reading this article?" > Do share this awesome post <br/> <div class="sharebuttons"></div></div>
+<div  id= 'single_right' class='amigo_right'>
+	
+			<div class="article_rhs">
+		<div class='tab_lscape_rhs mb30px'><h2 class='small mb5px'>AMD Stock Articles</h2> 
+		<div class="titleContainer">
+		<a  href="https://amigobulls.com/articles/2017-07-21-amd-stock-all-set-for-an-earnings-beat"><span class= 'recent_art'>AMD Stock: All Set For An Earnings Beat</span></a>     			   
+		<div class='clear'></div><div class="hr_dotted"></div></div>    
+		<div class="titleContainer">
+		<a  href="https://amigobulls.com/articles/2017-07-20-amd-stock-apple-stock-and-blackberry-stock-todays-technical-trading-ideas"><span class= 'recent_art'>Buy AMD Stock, Apple Stock And BlackBerry Stock - Today&#039;s Technical Trading Ideas</span></a>     			   
+		<div class='clear'></div><div class="hr_dotted"></div></div>    
+		<div class="titleContainer">
+		<a  href="https://amigobulls.com/articles/2017-07-19-why-amd-stock-could-bounce-back-once-again-advanced-micro-devices-inc-nasdaq-amd"><span class= 'recent_art'>Why AMD Stock Could Bounce Back Once Again - Advanced Micro Devices, Inc (NASDAQ:AMD)</span></a>     			   
+		<div class='clear'></div><div class="hr_dotted"></div></div>    
+		<div class="titleContainer">
+		<a  href="https://amigobulls.com/articles/2017-07-13-advanced-micro-devices-inc-tesla-inc-and-valeant-pharmaceuticals-short-interest-update"><span class= 'recent_art'>Advanced Micro Devices, Inc., Tesla Inc And Valeant Pharmaceuticals- Short Interest Update</span></a>     			   
+		<div class='clear'></div><div class="hr_dotted"></div></div>    
+		<div class="titleContainer">
+		<a  href="https://amigobulls.com/articles/2017-07-12-amd-stock-still-a-good-buy-in-spite-of-rising-competition-from-intel-advanced-micro-devices-inc"><span class= 'recent_art'>AMD Stock Still A Good Buy In Spite Of Rising Competition From Intel Corporation - Advanced Micro Devices, Inc</span></a>     			   
+		<div class='clear'></div><div class="hr_dotted"></div></div>    
+		<div class="titleContainer">
+		<a  href="https://amigobulls.com/articles/2017-07-06-one-amd-stock-chart-every-bull-should-see-advanced-micro-devices-inc"><span class= 'recent_art'>One AMD Stock Chart Every Bull Should See: Advanced Micro Devices, inc.</span></a>     			   
+		<div class='clear'></div><div class="none"></div></div>    
+		<div class="titleContainer">
+		<a  href="https://amigobulls.com/articles/2017-07-14-nvidia-corporation-nvda-stock-is-riding-on-exponential-growth"><span class= 'recent_art'>NVIDIA Corporation (NVDA) Stock Is Riding On Exponential Growth</span></a>     			   
+		<div class='clear'></div><div class="none"></div></div>   </div>			<div id='ezoic-pub-ad-placeholder-665'> 			</div> <div class='tab_lscape_rhs mb30px'><h2 class='small mb5px'>AMD News</h2> 
+		<div class="titleContainer">
+		<a  href="https://amigobulls.com/news/can-advanced-micro-amd-pull-an-earnings-surprise-in-q2"><span class= 'recent_art'>Can Advanced Micro (AMD) Pull an Earnings Surprise in Q2?</span></a>     			   
+		<div class='clear'></div><div class="hr_dotted"></div></div>    
+		<div class="titleContainer">
+		<a  href="https://amigobulls.com/news/check-point-chkp-tops-q2-earnings-down-on-soft-q3-view"><span class= 'recent_art'>Check Point (CHKP) Tops Q2 Earnings, Down on Soft Q3 View</span></a>     			   
+		<div class='clear'></div><div class="hr_dotted"></div></div>    
+		<div class="titleContainer">
+		<a  href="https://amigobulls.com/news/zacks-investment-ideas-feature-highlights-microsoft-ibm-nvidia-and-advanced-micro-devices"><span class= 'recent_art'>Zacks Investment Ideas feature highlights: Microsoft, IBM, Nvidia and Advanced Micro Devices</span></a>     			   
+		<div class='clear'></div><div class="hr_dotted"></div></div>    
+		<div class="titleContainer">
+		<a  href="https://amigobulls.com/news/ethereum-etf-the-bitcoin-crushing-digital-currency-explained"><span class= 'recent_art'>Ethereum ETF? The Bitcoin Crushing Digital Currency Explained</span></a>     			   
+		<div class='clear'></div><div class="hr_dotted"></div></div>    
+		<div class="titleContainer">
+		<a  href="https://amigobulls.com/news/will-advanced-micro-devices-amd-reach-a-new-52-week-high"><span class= 'recent_art'>Will Advanced Micro Devices (AMD) Reach a New 52-Week High?</span></a>     			   
+		<div class='clear'></div><div class="hr_dotted"></div></div>    
+		<div class="titleContainer">
+		<a  href="https://amigobulls.com/news/options-traders-expect-huge-moves-in-advanced-micro-devices-amd-stock"><span class= 'recent_art'>Options Traders Expect Huge Moves in Advanced Micro Devices (AMD) Stock</span></a>     			   
+		<div class='clear'></div><div class="none"></div></div>   </div>	<div class="tab_lscape_rhs mb30px picks_box alink_parent">
+		<div class="txtCen alink_click  picks_theme">
+			<div class="mb10px fs150">One of our top stock picks has returned over 600% since 2011. See the entire list, it's free.
+			</div> 
+			<div class="mt10px">
+				<a class="alink" href="https://amigobulls.com/stocks-to-buy/top-tech-stocks/" >
+				</a>
+				<input type="button" class="mt10px" value='See our top picks'>
+			</div>
+		</div>
+	</div>
+	</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+var siteurl="https://amigobulls.com/";
+</script>
+    <script type="text/javascript">
+            var geturl="https://static.amigobulls.com/"+"1500954907_getAllStocks_gz.txt";
+          </script>
+
+	 <script type="text/javascript">
+        tickSymbol="AMD";
+    	    		var visited_stock=1086;
+    	        companyName="AMD";
+        entityId="71065";
+        commentType=3;
+        stockPrice=0;
+    </script>
+<!-- #mainContent -->
+<script>var page_type=33;</script><div class="clear"></div>
+<!-- <div class='displayNone height'><span class='embed_popup tickergreen bold left heightauto' id='mail-verification' title='Email Verification'></span></div>        -->
+<div class="clear"></div>
+<div class="footer_ad mt10px txtCen"> 
+</div>
+<div id="overlay" class="mobi-hideit"><div id="overlaydiv"></div></div>
+    <footer class="footer_fixed mt10px">
+        <div class="back_color">
+        <div id="footerbg">
+             <div class="top_sec">
+                <h3 class="footertitle">Top Sections</h3>     
+                <ul>
+                    <li><a href="https://amigobulls.com" title="amigobulls - home page"> Home</a>  </li> 
+                    <li><a href="https://amigobulls.com/stocks-to-buy/top-tech-stocks/" title="internet stock picks">Stock Picks</a> </li>
+                    <li><a href="https://amigobulls.com/articles/" title="Stock Market Analysis">Articles</a> </li>
+                    <li><a href="https://amigobulls.com/news/" title="Stock Market News">News From Partners</a> </li>
+                    <li class="mobi-footermenuhide"><a href="https://amigobulls.com/sectors/computer-and-technology/internet-services" title="Technology and internet stocks">Screen Stocks</a>  </li>
+                    <li><a href="https://amigobulls.com/watchlist" title="Stock Market Watchlist">Watchlist</a> </li>
+                </ul>
+            </div>
+            <div  class="company_sec">
+                <h3 class="footertitle">Company Info</h3>
+                <ul>
+                    <li><a href="https://amigobulls.com/about"   title="About Amigobulls">About</a></li>
+                    <li><a href="https://amigobulls.com/jobs"  title="Existing careers at Amigobulls">Jobs</a></li>
+                    <li><a href="https://amigobulls.com/contact" title="Contact us  Amigobulls" >Contact</a></li>
+                    <li><a href="https://amigobulls.com/articles/author/" title="Amigobulls Authors" >Our Authors</a></li>
+                    <li><a href="https://amigobulls.com/terms"   title="Terms of use">Terms of Use</a></li>
+                    <li><a href="https://amigobulls.com/privacy" title="Privacy Policy">Privacy</a></li>
+                    <li><a href="#" title="Feedback" class="feedbackpopup" >Feedback</a></li>
+                </ul>
+            </div>
+            <div  class="widgets_sec mobi-hideit">
+                <h3 class="footertitle">Widgets &amp; Others </h3>
+                <ul>
+                    <li><a href="https://amigobulls.com/widgets/"   title="">Stock Chart Widget</a></li>
+                    <li><a href="https://amigobulls.com/articles/feed" title="RSS Feeds">RSS Feeds</a></li>
+                    <li><a href="https://amigobulls.com/glossary/" title="glossary">Glossary</a></li>
+                     <li><a href="https://amigobulls.com/companies/" title="Stocks Listing">Stocks Listing</a></li>
+                    <li><a href="https://amigobulls.com/links" title="blogroll">Blogroll</a></li>
+                </ul>
+            </div>
+         <!--    <div class="stocks_sec mobi-hideit">
+                <h3 class="footertitle ml5px">Top Stocks We Track</h3>
+                    <ul>
+                                                                        </ul>
+            </div> -->
+			<div class = "left socialdiv">
+        <div class="promo_div"><a href = "https://enrichview.in">
+          <div class="promo_text_content left">
+            <div class="promo_heading">AMIGOBULLS FOR BUSINESS</div>
+            <div class="promo_text fs80 mobi-hideit">Engage your wealth management clients with video statements.</div>
+          </div>
+          <div class="promo_img right">
+            <i class="fa fa-video-camera"></i>
+          </div>
+        </a>
+        </div>
+				<div class="socialicon">
+						<h3 class="footertitle">Join Us On</h3>                   
+							<a  target="_blank" class = "mleft" title="Follow amigobulls.com on Facebook" href="https://www.facebook.com/amigobulls">
+									<i class="fa fa-facebook-square fa-2x"></i>
+								<span class="displayNone">Follow amigobulls.com on Facebook</span>
+							</a>
+							<a  target="_blank" title="Follow amigobulls.com on Twitter" href="https://twitter.com/amigobulls">
+									<i class="fa fa-twitter-square fa-2x" ></i>
+								<span class="displayNone">Follow amigobulls.com on Twitter</span>
+							</a>
+							<a target="_blank" title="Follow amigobulls.com on LinkedIn" href="https://www.linkedin.com/company/amigobulls">
+									<i class="fa fa-linkedin-square fa-2x" ></i>
+								<span class="displayNone">Follow amigobulls.com on LinkedIn</span>
+							</a>
+							<a  target="_blank" title="Follow amigobulls.com on Google+" rel="publisher" href="https://plus.google.com/+amigobulls">
+									<i class="fa fa-google-plus-square fa-2x"></i>
+								<span class="displayNone">Follow amigobulls.com on Google+</span>
+							</a>
+              <a class="" target="_blank" title="Follow amigobulls.com on stocktwits" href="https://stocktwits.com/amigobulls">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAAAAAA6fptVAAAACklEQVR4nGP6DwABBQECz6AuzQAAAABJRU5ErkJggg==" data-src="https://static.amigobulls.com/v2images/StockTwits.svg" class="stocktwits_share lazy" alt="stocktwits"/>
+              </a>								
+				</div>
+                			</div>						
+            <div class="clear"></div>
+            <span class="fs62 footerst">Copyright<i class="fa fa-copyright"></i>2014 amigobulls.com </span>
+        </div></div>
+        <div class="fs75 footer_txt">
+            Historical, current end-of-day data, and company fundamental data provided by <a rel="nofollow" href="http://www.zacksdata.com/" class="linkblue" target="post">Zacks</a>.<br />
+        	All information provided "as is" for informational purposes only, not intended for trading purposes or advice. 
+        	Neither Amigobulls nor any of the data providers is liable for any informational errors, incompleteness, or delays, or for any actions taken in reliance on information contained herein. By accessing the amigobulls.com, you agree not to redistribute the information found therein.
+        	Please read our <a class="linkblue" href="https://amigobulls.com/terms">terms of use</a> and <a class="linkblue" href="https://amigobulls.com/privacy">privacy policy</a>.
+        </div>
+    </footer>
+    <div class="clear"></div>
+</div>
+<script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        //for main server
+                    ga('create', 'UA-39375880-1', 'auto');
+                ga('send', 'pageview');
+        if (window.ga) {
+          //send event timeonpage if a user has stayed for more than 15 seconds
+          var myintervalid = setInterval(function() {ga('send', 'event', 'timeonpage', 'timeonpage', window.location.pathname,15);},15000);
+          // clear the event after 15 mins
+          setTimeout(function(){clearInterval(myintervalid);},900000);
+        }
+</script>
+
+<div id='feedbackdivs'></div><script type="text/javascript">
+    var siteurl="https://amigobulls.com/";
+    var siteimageurl="https://static.amigobulls.com/";
+    var cssurl="https://static.amigobulls.com/css/";
+    var jsurl="https://static.amigobulls.com/js/";
+    var server_type="1";
+    var unique_id='597717c6dc6f0';
+	var loggedin=false;
+	var user_email='';
+	var user_name='';
+	var user_id='';
+
+	    var limit_exceeded = '' ? 1 : 0;
+  		var visitedurl='/articles/2017-04-12-advanced-micro-devices-inc-tesla-inc-and-plug-power-inc-short-interest-update';
+	var referrer='/https://www.google.com/';
+	var urlquery="u=2017-04-12-advanced-micro-devices-inc-tesla-inc-and-plug-power-inc-short-interest-update";
+    if (typeof limit_exceeded !== 'undefined' && limit_exceeded) {
+        urlquery += '&forced=1';
+    }
+	var request_url='/articles/2017-04-12-advanced-micro-devices-inc-tesla-inc-and-plug-power-inc-short-interest-update';
+	var siteurl='https://amigobulls.com/';
+	var node_type='articles';
+    var trade_it_enabled = 0;
+  if (trade_it_enabled) {
+    var publisher_name ='';
+    var tradit_js = '';
+  }
+</script>
+
+<script type="text/javascript">
+  			var isArticle="";
+                   isArticle=true;
+        </script>
+<script>
+  var session_open_popup= false;
+  var session_download_limit_exceeded=false;
+</script>
+<div class="displayNone " id="footer-login">
+<div id='forcedialog' class="txtCen" title="Login with amigobulls.com">
+<div class="pad10px">
+    <div id="title"></div>
+    <div class="pad10px displayInline"><input type='submit'  class="submit_button loginfromjq"  tabindex="4" value="Login"></div>
+    <div class="pad10px displayInline"><input type='submit'  class="submit_button signupfromjq" tabindex="4" value="Sign Up"></div>
+</div>   
+</div>
+</div><div class="blackout"></div>
+      <script>
+  local_storage_access = true;
+
+  try{
+    localStorage.setItem("access","true");
+    test = localStorage.getItem("access");
+    localStorage.removeItem("access");
+  }
+  catch(err){
+    local_storage_access=false;
+  }
+  function async(u, c) {
+  var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+  o.src = u;
+  if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+  s.parentNode.insertBefore(o, s);
+}
+var jquery_lib="https://static.amigobulls.com/js/jquery_1.9.1.min.js";
+async( jquery_lib, function() {
+               common_js = document.createElement("script");
+            common_js.src = "https://static.amigobulls.com/js/combined/1500546975_jquer_amigo.min.js";
+            document.body.appendChild(common_js);
+  });   
+</script>
+<script type="text/javascript">
+/*query string to attach when show full article is clicked */
+	full_article_qs="?p=n";
+	is_single ="1";
+</script>
+<!--Begin comScore Tag--><script>var _comscore=_comscore||[];_comscore.push({c1:"2",c2:"20015427"});(function(){var s=document.createElement("script"),el=document.getElementsByTagName("script")[0];s.async=true;s.src=(document.location.protocol=="https:"?"https://sb":"http://b")+".scorecardresearch.com/beacon.js";el.parentNode.insertBefore(s,el)})();</script><noscript><img src="http://b.scorecardresearch.com/p?c1=2&c2=20015427&cv=2.0&cj=1"/></noscript><!--End comScore Tag-->
+<!--Quantcast Tag--><script type="text/javascript">var _qevents=_qevents||[];(function(){var elem=document.createElement('script');elem.src=(document.location.protocol=="https:"?"https://secure":"http://edge")+".quantserve.com/quant.js";elem.async=true;elem.type="text/javascript";var scpt=document.getElementsByTagName('script')[0];scpt.parentNode.insertBefore(elem,scpt)})();_qevents.push({qacct:"p-31iz6hfFutd16",labels:"Domain.amigobulls_com,DomainId.46056"});</script><noscript><div style="display:none;"><img src="//pixel.quantserve.com/pixel/p-31iz6hfFutd16.gif?labels=Domain.amigobulls_com,DomainId.46056"border="0"height="1"width="1"alt="Quantcast"/></div></noscript><!--End Quantcast tag-->
+<script type='text/javascript' style='display:none;' async>
+__ez.queue.addFile('edmonton.php', '//amigobulls.com/detroitchicago/edmonton.webp?a=a&cb=0&shcb=23', true, [], true, false, false, false);
+__ez.queue.addFile('jellyfish.php', '//amigobulls.com/porpoiseant/jellyfish.webp?a=a&cb=0&shcb=23', false, [], true, false, false, false);
+</script>
+</body>
+</html>

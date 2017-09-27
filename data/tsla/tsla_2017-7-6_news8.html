@@ -1,0 +1,1273 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" xmlns:fb="http://www.facebook.com/2008/fbml" >
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UQ8EUVRACQAFVVdbAQk="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(15),c={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,o.indexOf("dev")!==-1&&(c.dev=!0),o.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&i.on("internal-error",function(t){r(t.stack)}),c.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,o){try{d?d-=1:i("err",[o||new UncaughtException(t,e,n)])}catch(c){try{i("ierr",[c,(new Date).getTime(),!0])}catch(s){}}return"function"==typeof f&&f.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t){i("err",[t,(new Date).getTime()])}var i=t("handle"),a=t(16),c=t("ee"),s=t("loader"),f=window.onerror,u=!1,d=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(8),t(7),"addEventListener"in window&&t(5),s.xhrWrappable&&t(9),u=!0)}c.on("fn-start",function(t,e,n){u&&(d+=1)}),c.on("fn-err",function(t,e,n){u&&(this.thrown=!0,o(n))}),c.on("fn-end",function(){u&&!this.thrown&&d>0&&(d-=1)}),c.on("internal-error",function(t){i("ierr",[t,(new Date).getTime(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),c=t(7),s="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState";t("loader").features.stn=!0,t(6);var g=NREUM.o.EV;o.on(m,function(t,e){var n=t[0];n instanceof g&&(this.bstStart=Date.now())}),o.on(w,function(t,e){var n=t[0];n instanceof g&&i("bst",[n,e,this.bstStart,Date.now()])}),a.on(m,function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),a.on(w,function(t,e){i(v,[e,this.bstStart,Date.now(),this.bstType])}),c.on(m,function(){this.bstStart=Date.now()}),c.on(w,function(t,e){i(v,[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=Date.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+s]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+s]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+s]()},!1)),document[f]("scroll",r,!1),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){c.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),c=t(17)(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,e,n){var r=t("ee").get("history"),o=t(17)(r);e.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,e,n){var r=t("ee").get("raf"),o=t(17)(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration="number"==typeof t[1]?t[1]:0,t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t(17)(i),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(s+u,r),i.on(c+u,o)},{}],9:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,w,"fn-",c)}function i(t){v.push(t),h&&(g=-g,b.data=g)}function a(){for(var t=0;t<v.length;t++)r([],v[t]);v.length&&(v=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t(17)(u),l=NREUM.o,p=l.XHR,h=l.MO,m="readystatechange",w=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],v=[];e.exports=u;var y=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(m,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(p,y),y.prototype=p.prototype,d.inPlace(y.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),h){var g=1,b=document.createTextNode(g);new h(a).observe(b,{characterData:!0})}else f.on("fn-end",function(t){t[0]&&t[0].type===m||a()})},{}],10:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!e.aborted){if(n.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var i=o(t,this.lastSize);if(i&&(n.rxSize=i),this.sameOrigin){var a=t.getResponseHeader("X-NewRelic-App-Data");a&&(e.cat=a.split(", ").pop())}}else e.status=0;n.cbTime=this.cbTime,f.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime])}}}function o(t,e){var n=t.responseType;if("json"===n&&null!==e)return e;var r="arraybuffer"===n||"blob"===n||"json"===n?t.response:t.responseText;return h(r)}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=h(r);i&&(n.txSize=i)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{f.emit("internal-error",[n])}catch(r){}}};for(var a=0;a<d;a++)e.addEventListener(u[a],this.listener,!1)}),f.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),f.on("xhr-load-added",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],e)}),f.on("removeEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],e)}),f.on("fn-start",function(t,e,n){e instanceof m&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),f.on("fn-end",function(t,e){this.xhrCbStart&&f.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{}],11:[function(t,e,n){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],12:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[(new Date).getTime()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(15),c=t(16),s=t("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var u=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit"],d="api-",l=d+"ixn-";a(u,function(t,e){f[e]=o(d+e,!0,"api")}),f.addPageAction=o(d+"addPageAction",!0),f.setCurrentRouteName=o(d+"routeName",!0),e.exports=newrelic,f.interaction=function(){return(new r).get()};var p=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[Date.now(),t,n],r),function(){if(s.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return e.apply(this,arguments)}finally{s.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){p[e]=o(l+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,(new Date).getTime()])}},{}],13:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],14:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],15:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],16:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],17:[function(t,e,n){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",c=Object.prototype.hasOwnProperty,s=!1;e.exports=function(t,e){function n(t,e,n,o){function nrWrapper(){var r,a,c,s;try{a=this,r=i(arguments),c="function"==typeof n?n(r,a):n||{}}catch(f){l([f,"",[r,a,o],c])}u(e+"start",[r,a,o],c);try{return s=t.apply(a,r)}catch(d){throw u(e+"err",[r,a,d],c),d}finally{u(e+"end",[r,a,s],c)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,e,o,i){o||(o="");var a,c,s,f="-"===o.charAt(0);for(s=0;s<e.length;s++)c=e[s],a=t[c],r(a)||(t[c]=n(a,f?c+o:o,i,c))}function u(n,r,o){if(!s||e){var i=s;s=!0;try{t.emit(n,r,o)}catch(a){l([a,n,r,o])}s=i}}function d(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){l([r])}for(var o in t)c.call(t,o)&&(e[o]=t[o]);return e}function l(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),n.inPlace=f,n.flag=a,n}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?s(t,c,i):i()}function n(n,r,o){if(!l.aborted){t&&t(n,r,o);for(var i=e(o),a=h(n),c=a.length,s=0;s<c;s++)a[s].apply(i,r);var f=u[y[n]];return f&&f.push([g,n,r,i]),i}}function p(t,e){v[t]=h(t).concat(e)}function h(t){return v[t]||[]}function m(t){return d[t]=d[t]||o(n)}function w(t,e){f(t,function(t,n){e=e||"feature",y[n]=e,e in u||(u[e]=[])})}var v={},y={},g={on:p,emit:n,get:m,listeners:h,context:e,buffer:w,abort:a,aborted:!1};return g}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var c="nr@context",s=t("gos"),f=t(15),u={},d={},l=e.exports=o();l.backlog=u},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!b++){var t=g.info=NREUM.info,e=d.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();s(v,function(e,n){t[e]||(t[e]=n)}),c("mark",["onload",a()],null,"api");var n=d.createElement("script");n.src="https://"+t.agent,e.parentNode.insertBefore(n,e)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var c=t("handle"),s=t(15),f=t("ee"),u=window,d=u.document,l="addEventListener",p="attachEvent",h=u.XMLHttpRequest,m=h&&h.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:h,REQ:u.Request,EV:u.Event,PR:u.Promise,MO:u.MutationObserver},t(12);var w=""+location,v={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-998.min.js"},y=h&&m&&m[l]&&!/CriOS/.test(navigator.userAgent),g=e.exports={offset:a(),origin:w,features:{},xhrWrappable:y};d[l]?(d[l]("DOMContentLoaded",i,!1),u[l]("load",r,!1)):(d[p]("onreadystatechange",o),u[p]("onload",r)),c("mark",["firstbyte",a()],null,"api");var b=0},{}]},{},["loader",2,10,4,3]);</script>
+    <title>Tesla's bloodbath racks up $1.4 billion profit for short sellers - Business Insider</title>
+    <meta name="date" content="2017-07-06" />
+<meta name="sailthru.date" content="2017-07-06" />
+<meta name="news_keywords" content="Stocks, Stock Market, Short Selling, Tesla, Elon Musk, Joe Ciolli" />
+<meta name="sailthru.tags" content="Stocks, Stock Market, Short Selling, Tesla, Elon Musk, Joe Ciolli" />
+<meta name="description" content="Tesla short sellers have raked in $1.4 billion in profits this week alone as the stock has tumbled 13.6%, its biggest three-day decline since February 2016." />
+<meta name="sailthru.description" content="Tesla short sellers have raked in $1.4 billion in profits this week alone as the stock has tumbled 13.6%, its biggest three-day decline since February 2016." />
+<meta name="title" content="Tesla's bloodbath racks up a $1.4 billion profit for short sellers in just 3 days" />
+<meta name="sailthru.verticals" content="moneygame,clusterstock,transportation" />
+<meta name="sailthru.title" content="Tesla's bloodbath racks up a $1.4 billion profit for short sellers in just 3 days" />
+<meta name="tbi-image" content="http://static5.businessinsider.com/image/57878d664321f1362f8b7868/teslas-bloodbath-racks-up-a-14-billion-profit-for-short-sellers-in-just-3-days.jpg" />
+<meta name="sailthru.image.full" content="http://static5.businessinsider.com/image/57878d664321f1362f8b7868/teslas-bloodbath-racks-up-a-14-billion-profit-for-short-sellers-in-just-3-days.jpg" />
+<meta name="sailthru.image.thumb" content="http://static2.businessinsider.com/image/57878d664321f1362f8b7868-50-50/teslas-bloodbath-racks-up-a-14-billion-profit-for-short-sellers-in-just-3-days.jpg" />
+<meta name="sailthru.author" content="Joe Ciolli" />
+<meta property="og:title" content="Tesla's bloodbath racks up a $1.4 billion profit for short sellers in just 3 days" />
+<meta property="og:description" content="Tesla short sellers have raked in $1.4 billion in profits this week alone as the stock has tumbled 13.6%, its biggest three-day decline since February 2016." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.businessinsider.com/tesla-stock-price-short-seller-profit-14-billion-2017-7" />
+<meta property="og:site_name" content="Business Insider" />
+<meta property="fb:app_id" content="155043519637" />
+<meta property="article:publisher" content="businessinsider" />
+<meta property="author" content="Joe Ciolli" />
+<meta name="twitter:url" content="http://www.businessinsider.com/tesla-stock-price-short-seller-profit-14-billion-2017-7" />
+<meta name="twitter:title" content="Tesla's bloodbath racks up a $1.4 billion profit for short sellers in just 3 days" />
+<meta name="twitter:description" content="Tesla short sellers have raked in $1.4 billion in profits this week alone as the stock has tumbled 13.6%, its biggest three-day decline since February 2016." />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://static1.businessinsider.com/image/57878d7d4321f11b008b820e-506-253/teslas-bloodbath-racks-up-a-14-billion-profit-for-short-sellers-in-just-3-days.jpg" />
+<meta name="twitter:creator" content="JoeCiolli" />
+<meta name="twitter:site" content="themoneygame" />
+<meta property="article:author" content="http://www.businessinsider.com/author/joe-ciolli" />
+<meta property="og:image" content="http://static5.businessinsider.com/image/57878d7d4321f11b008b820e-1190-625/teslas-bloodbath-racks-up-a-14-billion-profit-for-short-sellers-in-just-3-days.jpg" />    
+<link rel="canonical" href="http://www.businessinsider.com/tesla-stock-price-short-seller-profit-14-billion-2017-7">
+<link rel="alternate" href="http://www.businessinsider.de/tesla-stock-price-short-seller-profit-14-billion-2017-7" hreflang="en-DE">
+<link rel="alternate" href="http://uk.businessinsider.com/tesla-stock-price-short-seller-profit-14-billion-2017-7" hreflang="en-GB">
+<link rel="alternate" href="http://www.businessinsider.com/tesla-stock-price-short-seller-profit-14-billion-2017-7" hreflang="en-US">
+<link rel="alternate" href="http://www.businessinsider.com/tesla-stock-price-short-seller-profit-14-billion-2017-7" hreflang="x-default">
+    <link href="http://static1.businessinsider.com/assets/css/min-base-us.css?1500926955" media="screen" rel="stylesheet" type="text/css" />
+<link href="http://static2.businessinsider.com/assets/css/min-post-us.css?1500926955" media="screen" rel="stylesheet" type="text/css" />
+<link rel="syndication-source" />
+<link href="https://amp.businessinsider.com/tesla-stock-price-short-seller-profit-14-billion-2017-7" rel="amphtml" />    <link type="text/css" rel="stylesheet" media="print" href="http://static3.businessinsider.com/assets/css/print.css?1500926955" />
+
+    <!-- detect adblock users for Piano and set cookie appropriately -->
+    <script>
+
+    // CustomEvent polyfill
+    (function () {
+
+      if ( typeof window.CustomEvent === "function" ) return false;
+
+      function CustomEvent ( event, params ) {
+        params = params || { bubbles: false, cancelable: false, detail: undefined };
+        var evt = document.createEvent( 'CustomEvent' );
+        evt.initCustomEvent( event, params.bubbles, params.cancelable, params.detail );
+        return evt;
+       }
+
+      CustomEvent.prototype = window.Event.prototype;
+
+      window.CustomEvent = CustomEvent;
+    })();
+
+    var setAdblockerCookie = function(adblocker) {
+        var d = new Date();
+        d.setTime(d.getTime() + 60 * 60 * 24 * 30 * 1000);
+        document.cookie = "__adblocker=" + (adblocker ? "true" : "false") + "; expires=" + d.toUTCString() + "; path=/";
+
+        var event = new CustomEvent('piano_set', {'detail' : adblocker});
+        document.dispatchEvent(event);
+    }
+
+    var script = document.createElement("script");
+    script.setAttribute("async", true);
+    script.setAttribute("src", "//www.npttech.com/advertising.js");
+    script.setAttribute("onerror", "setAdblockerCookie(true);");
+    script.setAttribute("onload", "setAdblockerCookie(false);");
+    document.getElementsByTagName("head")[0].appendChild(script);
+    </script>
+
+    <!-- Krux - Control Tag- Start -->
+    <!-- BEGIN Krux ControlTag for "businessinsider.com" -->
+<script class="kxct" data-id="I2I9M2yx" data-timing="async" data-version="3.0" type="text/javascript">
+  window.Krux||((Krux=function(){Krux.q.push(arguments)}).q=[]);
+  (function(){
+    var k=document.createElement('script');k.type='text/javascript';k.async=true;
+    k.src=(location.protocol==='https:'?'https:':'http:')+'//cdn.krxd.net/controltag/I2I9M2yx.js';
+    var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(k,s);
+  }());
+</script>
+<!-- END Krux ControlTag -->    <!-- Krux - Control Tag- End -->
+
+    <!-- Krux - Start -->
+    <script class="kxint" type="text/javascript">
+      window.Krux||((Krux=function(){Krux.q.push(arguments);}).q=[]);
+      (function(){
+        function retrieve(n){
+          var m, k='kx'+n,ls=(function(){
+              try{
+                return window.localStorage;
+              }catch(e){
+                return null;
+              }
+            })();
+          if (ls) {
+              return ls[k] || "";
+          } else if (navigator.cookieEnabled) {
+              m = document.cookie.match(k+'=([^;]*)');
+              return (m && unescape(m[1])) || "";
+          } else {
+              return '';
+          }
+        }
+
+        Krux.user = retrieve('user');
+        Krux.segments = retrieve('segs') ? retrieve('segs').split(',') : [];
+      })();
+    </script>
+    <!-- Krux - End -->
+
+    <script type="text/javascript">
+    	var vertical = 'moneygame';
+        var index_ad_hierarch = 'finance/moneygame';
+
+        window.headertag = window.headertag || {};
+        var PageType = window.headertag.pagetype = "post";
+
+        var post_id = '';
+        var _sf_startpt=(new Date()).getTime();
+    </script>
+
+    <!-- Index Exchange - start -->
+                <script type="text/javascript" src="http://js.indexww.com/ht/ls-business-insider.js" async></script>
+        <!-- Index Exchange - end -->
+
+    <script type="text/javascript">
+        //this should be refactored to the BI.Google_Plus object, however the BI core library will need to be moved to above the headScript call
+        window.gPlusConfigs = {client_id : '551214076990-h27puiaonnlg9a9772gq3qbe9nk6qnno.apps.googleusercontent.com', base_domain: 'businessinsider.com'};
+    </script>
+
+    <!-- IAS -->
+    <script type="text/javascript">
+        window.BI_adHierarchy = 'desktop/finance/moneygame/post';
+    </script>
+    <!-- IAS end -->
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="http://static3.businessinsider.com/assets/js/min2.js?1500926955"></script>
+<script type="application/ld+json">
+    //<![CDATA[
+    {"@context":"http:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"http:\/\/www.businessinsider.com\/tesla-stock-price-short-seller-profit-14-billion-2017-7"},"headline":"Tesla\u0027s bloodbath racks up a $1.4 billion profit for short sellers in just 3 days","thumbnailUrl":"http:\/\/static5.businessinsider.com\/image\/57878d664321f1362f8b7868\/teslas-bloodbath-racks-up-a-14-billion-profit-for-short-sellers-in-just-3-days.jpg","image":{"@type":"ImageObject","url":"http:\/\/static5.businessinsider.com\/image\/57878d664321f1362f8b7868\/teslas-bloodbath-racks-up-a-14-billion-profit-for-short-sellers-in-just-3-days.jpg","height":1433,"width":1911},"datePublished":"2017-07-06T18:12:00Z","dateModified":"2017-07-07T01:54:12Z","dateCreated":"2017-07-06T18:12:00Z","keywords":["Stocks","Stock Market","Short Selling","Tesla","Elon Musk"],"author":{"@type":"Person","name":"Joe Ciolli"},"name":"tesla-stock-price-short-seller-profit-14-billion-2017-7","publisher":{"@type":"Organization","name":"Business Insider","logo":{"@type":"ImageObject","url":"http:\/\/static2.businessinsider.com\/assets\/images\/us\/logos\/ogimagelogo.png"}},"description":"As Tesla\u0027s stock enters bear market territory..."}    //]]>
+</script>
+<script type="text/javascript">
+    //<![CDATA[
+    BI.post.isSlideshow=false;    //]]>
+</script>
+<script type="text/javascript">
+    //<![CDATA[
+    post = {"id":"595e7229d084cca0008b7beb","uri":"http:\/\/www.businessinsider.com\/tesla-stock-price-short-seller-profit-14-billion-2017-7","thumb":"http:\/\/static1.businessinsider.com\/image\/57878d664321f1362f8b7868-90-90\/teslas-bloodbath-racks-up-a-14-billion-profit-for-short-sellers-in-just-3-days.jpg","author":"Joe Ciolli","author_ids":"","post_type":"post"};    //]]>
+</script>
+<script type="text/javascript">
+    //<![CDATA[
+    
+        Author = "Joe Ciolli";
+        Category = "Stocks|Stock Market|Short Selling|Tesla|Elon Musk";
+        AuthorType = "Staff";
+        OriginalID = "";
+        Editor = "Jonathan Garber";
+        BIISub = "none"
+            //]]>
+</script>
+<script type="text/javascript">
+    //<![CDATA[
+    
+        BI.nav_select = "Finance";
+        BI.highTrafficMode = 0;
+        BI.post.isDraft = 0;
+        BI.post.url = "http://www.businessinsider.com/tesla-stock-price-short-seller-profit-14-billion-2017-7";
+        BI.post.name = "tesla-stock-price-short-seller-profit-14-billion-2017-7";
+        BI.post.vertical =  "moneygame";
+        BI.post.author =  ["Joe Ciolli"];
+        BI.post.categories =  ["Stocks","Stock Market","Short Selling","Tesla","Elon Musk"];
+        BI.post.views =  24368;
+        BI.comments.currentPage = 0;
+        BI.comments.filterPundits = 1;
+        BI.comments.getAllComments = 1;
+            //]]>
+</script>
+<script type="text/javascript">
+    //<![CDATA[
+    BI.post.perfect_market = 1;    //]]>
+</script>
+<script type="text/javascript" src="http://widget.perfectmarket.com/wwwbusinessinsider/load.js"></script>
+    <!-- purrrf performance library reference point -->
+    <script type="text/javascript">
+        window._purrrf.setStart();
+    </script>
+
+    <!-- Video Scripts -->
+            <!-- Ooyala Head -->
+        <script type="text/javascript">
+            var ooyalaDiscovery = true        </script>
+        <script src="http://player.ooyala.com/static/v4/production/core.min.js"></script>
+        <script>
+            (function() {
+                var playerCreate = OO.Player.create;
+
+                OO.Player.create = function(elementId, asset, params) {
+                    if (params && params.skin && params.skin.config) {
+                        params.skin.config = '//player.ooyala.com/static/v4/production/skin-plugin/skin.json';
+                    }
+
+                    return playerCreate.call(OO.Player, elementId, asset, params);
+                };
+            })();
+        </script>
+        <script src="http://player.ooyala.com/static/v4/production/skin-plugin/html5-skin.min.js"></script>
+            <script src="http://player.ooyala.com/static/v4/production/other-plugin/discovery_api.min.js"></script>
+            <script src="http://player.ooyala.com/static/v4/production/video-plugin/bit_wrapper.min.js"></script>
+        <script src="http://player.ooyala.com/static/v4/production/video-plugin/main_html5.min.js"></script>
+        <script src="http://player.ooyala.com/static/v4/production/ad-plugin/google_ima.min.js"></script>
+
+    <link rel="stylesheet" href="//player.ooyala.com/static/v4/production/skin-plugin/html5-skin.min.css">
+        <!-- /Ooyala Head -->
+    
+    <!-- optimizely desktop -->
+        <!-- End optimizely desktop -->
+    <!--Tech Insider Pinterest-->
+    
+    <!-- Facebook Instant Start -->
+    <meta property="fb:pages" content="20446254070" />
+    <!-- Facebook Instant Start -->
+    
+    
+    <meta name="tbi-vertical" content="moneygame" />
+    <meta name="viewport" content="width=1024" />
+
+    <!--[if gte IE 9]>
+    <style type="text/css">
+        .gradient {
+            filter: none;
+        }
+    </style>
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+        <link type="text/css" rel="stylesheet" media="all" href="http://static5.businessinsider.com/assets/css/ie8.css" />
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <script type="text/javascript" src="http://static3.businessinsider.com/assets/js/vendor/ie8/placeholders.min.js"></script>
+    <![endif]-->
+
+    <!--[if IE 9]>
+        <link type="text/css" rel="stylesheet" media="all" href="http://static4.businessinsider.com/assets/css/ie9.css" />
+        <script type="text/javascript" src="http://static5.businessinsider.com/assets/js/shims/Element.classList.js"></script>
+    <![endif]-->
+
+    <!--Tech Insider if IE 9 -->
+    
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/TheMoneyGame" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="http://static4.businessinsider.com/assets/images/us/favicons/apple-touch-icon.png?v=BI-US-2017-06-22" />
+<link rel="icon" type="image/png" sizes="32x32" href="http://static1.businessinsider.com/assets/images/us/favicons/favicon-32x32.png?v=BI-US-2017-06-22" />
+<link rel="icon" type="image/png" sizes="16x16" href="http://static5.businessinsider.com/assets/images/us/favicons/favicon-16x16.png?v=BI-US-2017-06-22" />
+<link rel="manifest" href="http://static5.businessinsider.com/assets/images/us/favicons/manifest.json?v=BI-US-2017-06-22" />
+<link rel="mask-icon" href="http://static6.businessinsider.com/assets/images/us/favicons/safari-pinned-tab.svg?v=BI-US-2017-06-22" color="#1D607C" />
+<link rel="shortcut icon" href="http://static3.businessinsider.com/assets/images/us/favicons/favicon.ico?v=BI-US-2017-06-22" />
+<meta name="msapplication-config" content="http://static2.businessinsider.com/assets/images/us/favicons/browserconfig.xml?v=BI-US-2017-06-22" />
+<meta name="theme-color" content="#1D607C" />
+<meta name="linkedin:owner" content="mid:1d5f7b" />
+
+    <!--[if gte IE 9]>
+        <meta name="application-name" content="Business Insider - moneygame"/>
+        <meta name="msapplication-tooltip" content="Start the page in Site Mode"/>
+        <meta name="msapplication-starturl" content="http://www.businessinsider.com/moneygame"/>
+        <meta name="msapplication-window" content="width=800;height=600"/>
+        <meta name="msapplication-navbutton-color" content="#4C7C8D"/>
+
+        <meta name="msapplication-task" content="name=Tech;action-uri=http://www.businessinsider.com/sai;icon-uri=http://www.businessinsider.com/favicon.ico"/>
+        <meta name="msapplication-task" content="name=Media;action-uri=http://www.businessinsider.com/thewire;icon-uri=http://www.businessinsider.com/favicon.ico"/>
+        <meta name="msapplication-task" content="name=Wall Street;action-uri=http://www.businessinsider.com/clusterstock;icon-uri=http://www.businessinsider.com/favicon.ico"/>
+        <meta name="msapplication-task" content="name=Markets;action-uri=http://www.businessinsider.com/moneygame;icon-uri=http://www.businessinsider.com/favicon.ico"/>
+        <meta name="msapplication-task" content="name=Strategy;action-uri=http://www.businessinsider.com/warroom;icon-uri=http://www.businessinsider.com/favicon.ico"/>
+    <![endif]-->
+
+    <script type="text/javascript">BI.site = 'US';</script>
+    <script type="text/javascript">BI.siteURI = 'http://www.businessinsider.com';</script>
+    <script type="text/javascript">BI.secureURI = 'https://www.businessinsider.com';</script>
+    <script type="text/javascript">BI.staticURI = 'http://static1.businessinsider.com';</script>
+    <script type="text/javascript">BI.env.setDomain('http://www.businessinsider.com');</script>
+    <script type="text/javascript">BI.sailthruHorizonURI = 'horizon.businessinsider.com';</script>
+
+            <!-- *************** ANALYTICS *************** -->
+    <script>
+        BI.ANALYTICS_SERVICE_URL = '//analytics.businessinsider.com';
+    </script>
+    <!-- *************** END ANALYTICS *************** -->
+    
+        <script type="text/javascript">BI.vertical='Markets';</script>
+
+    <script type="text/javascript">BI.configs.ads.post_load_ad_buffer= 50;</script>
+    <script type="text/javascript">BI.configs.ads.subnav_sticky_ad_buffer = 250;</script>
+    <script type="text/javascript">
+        BI.flags = BI.flags || {};
+        BI.flags.bii_facebook_tracking = 1;
+        BI.flags.bii_facebook_tracking_verticals = ["Apps and Platforms","Digital Media","Payments","Internet of Things","E-Commerce","eCommerce","Fintech"];
+    </script>
+
+
+    
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <script type="text/javascript" src="//platform.linkedin.com/in.js">
+       api_key: x4dbohswv62d
+       authorize: true
+       scope: r_basicprofile r_emailaddress w_share
+    </script>
+
+<!-- Taboola head -->
+
+        <!-- Standard Taboola Script -->
+        <script type="text/javascript">
+            window._taboola = window._taboola || [];
+            _taboola.push({article:'auto'});
+            !function (e, f, u) {
+                e.async = 1;
+                e.src = u;
+                f.parentNode.insertBefore(e, f);
+            }(
+                document.createElement('script'),
+                document.getElementsByTagName('script')[0],
+                'http://cdn.taboola.com/libtrc/businessinsider/loader.js'
+            );
+        </script>
+<!-- / Taboola head -->
+
+<!-- Pinterest JS -->
+<script type="text/javascript">
+(function(d){
+    var f = d.getElementsByTagName('SCRIPT')[0], p = d.createElement('SCRIPT');
+    p.type = 'text/javascript';
+    p.async = true;
+    p.src = '//assets.pinterest.com/js/pinit.js';
+    f.parentNode.insertBefore(p, f);
+}(document));
+</script>
+
+<!-- Piano -->
+
+
+    
+    <script>
+        // Piano: custom vars
+        tp = window.tp || [];
+        tp.push(["setUseTinypassAccounts", true ]);
+        tp.push(['setCustomVariable', 'PageType', PageType]);
+        tp.push(["setAid", 'B6sIXKLiin']);
+
+        tp.push(["setSandbox", false]);
+
+        (function(src){var a=document.createElement("script");a.type="text/javascript";a.async=true;a.src=src;var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)})("//cdn.tinypass.com/api/tinypass.min.js");
+
+        tp.push(['init', function () {
+            tp.experience.init();
+        }]);
+
+        // refresh on login
+        tp.push(["addHandler", "loginSuccess", function(){
+            tp.api.callApi('/access/list', {}, function(data){
+                if (typeof data.data != "undefined"){
+                    for ( var i in data.data ){
+                        // If user has access to something
+                        if ( data.data[i].granted ){
+                            tp.offer.close();
+                            location.reload();
+                        }
+                    }
+                }
+            });
+        }]);
+
+                    // post vars
+            tp.push(['setTags', ["Stocks","Stock Market","Short Selling","Tesla","Elon Musk"]]);
+            tp.push(['setCustomVariable', 'PrimaryVertical', 'moneygame']);
+
+                        tp.push(['setCustomVariable', 'SecondaryVertical_Clusterstock', 1]);
+                        tp.push(['setCustomVariable', 'SecondaryVertical_Transportation', 1]);
+                    
+        // Get current page location and store as cookie
+        var primeReferrer = window.location.href;
+        BI.cookies.set('__pref', primeReferrer, 2592e3);
+    </script>
+
+<!-- / PIANO -->
+
+<!-- Chartbeat -->
+    <script type="text/javascript">
+        // chartbeat wants the vars in global
+        window._sf_async_config = window._sf_async_config || {};
+        window._sf_async_config.uid = 14447;
+        window._sf_async_config.domain = 'businessinsider.com';
+        window._sf_async_config.flickerControl = false;
+        window._sf_async_config.useCanonical = false;
+        window._sf_startpt = (new Date()).getTime();
+    </script>
+    <script async src="https://static.chartbeat.com/js/chartbeat_mab.js"></script>
+<!-- / Chartbeat -->
+
+
+</head>
+
+
+<body class="responsive ">
+
+<div data-cookie-notice-container></div>
+<!-- print only -->
+<img class="print" src="http://static2.businessinsider.com/assets/images/us/logos/logo-print-v1.png" />
+
+<!-- FB Connect -->
+<div id="fb-root" data-bi-facebook-root="155043519637"></div>
+<!-- / FB Connect -->
+
+<!--[if lt IE 9]>
+    <div class="container>
+        <div class="row">
+            <div class="alert alert-error alert-block">
+                <h4>Warning!</h4>
+                You are using an outdated version of Internet Explorer.  For security reasons you should <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie" target="_blank" title="Upgrade IE">upgrade your browser</a>. Please go to Windows Updates and install the latest version.
+            </div>
+        </div>
+    </div>
+<![endif]-->
+
+<!-- masthead -->
+<div class="masthead">
+    <div class="container">
+        <div class="row-fluid">
+            <div class="span3 span3-mh">
+                                <div data-hamburger class="menu">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                                <a href="/" class="sprites logo"></a>
+            </div>
+            <div class="span6 span6-mh">
+                                    
+                        <h2 class="vert-name ellipsis"><a href="http://www.businessinsider.com/moneygame">Markets</a></h2>
+
+                                                </div>
+            <!-- links -->
+            <div class="span3 span3-mh links list-pipes list-right no-pipe">
+                <ul class="search">
+                    <li>
+                        <a data-search-icon-open href="#" title="Search" class="display-none"><span class="svg sprites search-icon"></span></a>
+                        <a data-search-icon-close href="#" class="close-x display-none">
+                            <span></span>
+                            <span></span>
+                        </a>
+                    </li>
+                </ul>
+                <div>
+                    <ul class="links-promo">
+                                                    
+
+    <li class="social">
+        <a href="//www.facebook.com/businessinsider" title="Like us on Facebook" aria-label="Like us on Facebook" target="_blank"><i class="fa fa-facebook ks-header-facebook"></i></a>
+    </li>
+
+    <li class="social">
+        <a href="//twitter.com/businessinsider" title="Follow us on Twitter" aria-label="Follow us on Twitter" target="_blank"><i class="fa fa-twitter ks-header-twitter"></i></a>
+    </li>
+
+    <li class="social">
+        <a href="//www.linkedin.com/company/businessinsider" title="Connect with us on LinkedIn" aria-label="Connect with us on LinkedIn" target="_blank"><i class="fa fa-linkedin ks-header-linkedin"></i></a>
+    </li>
+                        
+                                                    <li class=""><a href="http://intelligence.businessinsider.com/?utm_source=businessinsider&utm_medium=site_header&utm_term=bi_site_header&utm_content=bi_site_header&utm_campaign=bi_site_header">BI Intelligence</a></li>
+                        
+                                                    <li class="login"><a href="/events">Events</a></li>
+                                            </ul>
+
+                    <ul class="links-user">
+                        
+                        
+                        
+                                                                        <span data-bi-ajax-route="/esi/user_menubar?0=json%3A%7B%22viking%22%3Atrue%7D"></span>                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Search Area -->
+    <div data-search-over class="nav-over transition">
+        <div class="container transition search">
+            <form method="get" action="/s" class="search-field">
+                <input data-search-input name="q" type="text" placeholder="Search" autocomplete="off">
+            </form>
+        </div>
+    </div>
+    <!-- Nav area -->
+            <div data-nav-over class="nav-over transition">
+    
+        <div class="transition">
+            <div class="list-pipes nav-sections">
+                <ul class="verticals">
+
+                    
+                                            <li>
+                                                <a class="item vertical-anchor" data-dropdown-id="dropdown-Trending" href="/trending">
+                                Trending                            </a>
+                        </li>
+
+                    
+                                            <li>
+                                                <a class="item vertical-anchor" data-dropdown-id="dropdown-Tech Insider" href="/sai">
+                                Tech Insider                            </a>
+                        </li>
+
+                    
+                                            <li class="active">
+                                                <a class="item vertical-anchor" data-dropdown-id="dropdown-Finance" href="/clusterstock">
+                                Finance                            </a>
+                        </li>
+
+                    
+                                            <li>
+                                                <a class="item vertical-anchor" data-dropdown-id="dropdown-Politics" href="/politics">
+                                Politics                            </a>
+                        </li>
+
+                    
+                                            <li>
+                                                <a class="item vertical-anchor" data-dropdown-id="dropdown-Strategy" href="/warroom">
+                                Strategy                            </a>
+                        </li>
+
+                    
+                                            <li>
+                                                <a class="item vertical-anchor" data-dropdown-id="dropdown-Life" href="/thelife">
+                                Life                            </a>
+                        </li>
+
+                    
+                                            <li>
+                                                <a class="item vertical-anchor" data-dropdown-id="dropdown-Sports" href="/sportspage">
+                                Sports                            </a>
+                        </li>
+
+                    
+                                            <li>
+                                                <a class="item vertical-anchor" data-dropdown-id="dropdown-Video" href="/video">
+                                Video                            </a>
+                        </li>
+
+                    
+                                            <li>
+                                                <a class="item vertical-anchor" data-dropdown-id="dropdown-All" href="/">
+                                All                            </a>
+                        </li>
+
+                                    </ul>
+            </div>
+                            <div class="main-nav-dropdown ks-nav-dropdown"></div>
+                    </div>
+    </div>
+</div>
+
+<!-- / masthead -->
+
+
+
+
+<div id="main-content">
+                                                            <div class="ad-subnav-container" data-ad-container>
+                        <div class="subnav-content leaderboard" data-sticky="leaderboard">
+                            
+	<div data-bi-ad data-ad-container class="ad dfp" data-adunit="desktop/finance/moneygame/post" data-authors="joe-ciolli" data-pagetype="post" data-pos="atf" data-region="Subnav" data-responsive="null" data-sizes="728x90,970x250,970x90" data-tag="stocks,stock-market,short-selling,tesla,elon-musk" data-url="/tesla-stock-price-short-seller-profit-14-billion-2017-7" data-views="10001-500000">
+	</div>
+
+	<script type="text/javascript">
+		(function() {
+			'use strict';
+			// Notify the DFP code that a new ad has just been rendered
+			amplify.publish('adRender');
+		}());
+	</script>
+                        </div>
+                    </div>
+                                        
+    <div class="container">
+        <!-- flash messages -->
+                <div class="siteskin-dropshadow">
+            <div class="row primary-row">
+                                    <div class="breaking-module-rendered" id="breaking-module-rendered">
+                        <div class="page-top">
+                        <span data-bi-ajax-route="/esi/breaking_module"></span>                        </div>
+                    </div>
+                                <div class="span8">
+                    <div class="breaking-module-siteskin" id="breaking-module-siteskin"></div>
+    
+<a name="post-top"></a>
+
+<div id="share-email-tmpl">
+  <div id="shareEmailModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="shareEmailModalLabel" aria-hidden="true">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+      <h3 id="shareEmailModalLabel"></h3>
+    </div>
+  
+    <div class="modal-body">
+      <div class="share-email-error alert alert-error"></div>
+
+      <div class="share-email-body">
+        <div class="register">
+          <form id="form_form" class="form-horizontal share-email-form" action="#" method="post">
+            <div class="control-group">
+              <label for="mail_from" class="control-label">From</label>
+
+              <div class="controls">
+                <input type="text" name="mail_from" class="mail-from share-email-input" placeholder="Your Email Address" />
+              </div>
+            </div>
+              
+            <div class="control-group">
+              <label for="mail_to" class="control-label">To</label>
+
+              <div class="controls">
+                <input type="text" name="mail_to" class="mail-to share-email-input" placeholder="Friend's Email Address" />
+              </div>
+            </div>
+              
+            <div class="share-email-captcha-container">
+              <div class="g-recaptcha" data-sitekey="6Lci0AUAAAAAALxy_wOu05bblbmrVjz8L7HU3d4S"></div>            </div>
+              
+            <input type="hidden" name="action" value="email" />
+              
+            <div class="control-group">
+              <div class="controls share-email-submit-container">
+                <input type="submit" class="btn submit email-post" value="Send" />
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="share-email-success" style="display:none">
+        <div class="alert alert-success">
+          You have successfully emailed the post.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="share-embed-tmpl">
+    <div id="shareEmbedModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="shareEmbedModalLabel" aria-hidden="true">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="shareEmbedModalLabel"></h3>
+      </div>
+      <div class="modal-body">
+
+     
+<textarea rows="10" class="embed-textarea">
+     
+
+</textarea>
+
+
+      </div>
+   </div>
+</div>
+
+<div  class="content post js-post">
+    <div class="sl-layout-post">
+        
+<!-- Sponsored Post Tag -->
+    
+<h1>Tesla's bloodbath racks up a $1.4 billion profit for short sellers in just 3 days</h1>
+
+<div id="content" class="content">
+    <div class="post-top">
+        <!-- Byline -->
+        <div class="flex byline">
+			<div class="flex-auto byline-icon">
+							<a class="author-photo author-photo-square" href="http://www.businessinsider.com/author/joe-ciolli">
+                    <img class="author" src="http://static2.businessinsider.com/image/58f637b8f40daef5008b5256-100-100/joe-ciolli.jpg">
+                </a>
+					</div>
+	    
+	
+	<div class="flex-item">
+		<div class="list-pipes no-pipe">
+			<ul>
+																		<li class="single-author"><a href="http://www.businessinsider.com/author/joe-ciolli" rel="author">Joe Ciolli</a></li>
+		                <li>
+    <div class="contact">
+        
+                    <a href="mailto:jciolli@businessinsider.com" data-toggle="tooltip" data-placement="top" title="" data-original-title="jciolli@businessinsider.com"><i class="fa fa-envelope-o"></i></a>
+        
+        
+        
+        
+                    <a href="http://twitter.com/JoeCiolli" data-toggle="tooltip" data-placement="top" title="" data-original-title="Twitter feed"><i class="fa fa-twitter"></i></a>
+        
+        
+    </div>
+
+    </li>
+					                
+				                    </ul>
+                </div>
+                <div class="list-pipes no-pipe">
+                    <ul>
+                		        			        <li class="river-post__date">
+	<span class="svg sprites date-icon"></span>
+	<span data-bi-format="date" rel="1499364720">Jul.  6, 2017,  2:12 PM</span>
+</li>		        			
+		    				<li class="pageviews">
+					<span class="svg sprites very-hot views"></span>
+					<span class="very-hot" title="Engagement">24,368</span>
+				</li>
+		    
+		    
+			</ul>
+
+		</div>
+	</div>
+</div>        <!-- Sharing -->
+        <div class="share">
+			
+<!-- RRSSB start -->
+<div class="rrssb-baseline share-container ks-share-top clearfix" data-share style="display:block;">
+    <!-- buttons start here -->
+    <ul class="rrssb-buttons rrssb-top clearfix">
+                <li class="facebook ks-byline-fb">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.businessinsider.com/tesla-stock-price-short-seller-profit-14-billion-2017-7" title="facebook" class="popup">
+                <i class="fa fa-facebook-square"></i>
+                <span class="text">facebook</span>
+            </a>
+        </li>
+        
+                <li class="linkedin ks-byline-linkedin">
+            <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.businessinsider.com/tesla-stock-price-short-seller-profit-14-billion-2017-7&amp;title=Tesla's bloodbath racks up a $1.4 billion profit for short sellers in just 3 days&amp;summary=Tesla short sellers have raked in $1.4 billion in profits this week alone as the stock has tumbled 13.6%, its biggest three-day decline since February 2016." title="linkedin" class="popup">
+                <i class="fa fa-linkedin"></i>
+                <span class="text">linkedin</span>
+            </a>
+        </li>
+        
+                <li class="twitter ks-byline-tweet">
+            <a href="http://twitter.com/share?url=http://read.bi/2tlKEMe&amp;via=themoneygame&amp;text=Tesla%27s+bloodbath+racks+up+a+%241.4+billion+profit+for+short+sellers+in+just+3+days" title="twitter" class="popup">
+                <i class="fa fa-twitter"></i>
+                <span class="text">twitter</span>
+            </a>
+        </li>
+        
+        
+                <li class="email button-email ks-byline-email" data-href="http://www.businessinsider.com/tesla-stock-price-short-seller-profit-14-billion-2017-7">
+            <a href="#" title="email">
+                <i class="icon-email light"></i>
+                <span class="text">email</span>
+            </a>
+        </li>
+        
+
+                                    <li class="printbtn ks-byline-print">
+                    <a href="javascript:window.print()" title="print">
+                        <i class="fa fa-print"></i>
+                        <span class="text">print</span>
+                    </a>
+                </li>
+                    
+        
+            </ul>
+    <!-- buttons end here -->
+</div>
+<!-- RRSSB end -->        </div>
+    </div>
+
+    <!-- Perfect Market content ad-->
+    
+			<div class="perfect-market byline"></div>
+		 <!-- END Perfect Market content ad-->
+
+    <div class="clear-both">
+		<div class="KonaBody post-content">
+			
+            
+<div class="KonaFilter image-container float_right"><div data-post-image class="image on-image"><img src="http://static6.businessinsider.com/image/57878d664321f1362f8b7868-480/elon-musk.png" alt="Elon Musk" width="480" /><span class="caption-source"><span class='caption'>Tesla founder Elon Musk is incredulous that short sellers are profiting so much from betting against his company.</span><span class="source"><span><a href="http://pictures.reuters.com/C.aspx?VP3=SearchResult&VBID=2C0FCIA5YI1LH&SMLS=1&RW=1395&RH=861#/SearchResult&VBID=2C0FCIA5YI1LH&SMLS=1&RW=1395&RH=861&PN=2&POPUPPN=75&POPUPIID=2C0BF1OGF4PY3">Reuters/Mike Blake</a></span></span></span></div><div class="perfect-market article-ad-image"></div>
+<p></div><p>As Tesla's stock <a href="http://markets.businessinsider.com/news/stocks/tesla-stock-price-close-to-bear-market-2017-7-1002152711">enters bear market territory</a>, short sellers are laughing all the way to the bank.</p>
+<p>They've raked in a whopping $1.4 billion in profit this week alone as the stock has tumbled 14.6%, its biggest three-day decline since February 2016, according to data compiled by financial analytics firm <a href="https://www.s3partners.net/">S3 Partners</a>.</p>
+<p>Tesla short sellers have been waiting patiently for a bloodbath like this. Even as the company's stock surged as much as 79% year-to-date through June 23, costing the speculators upwards of $5 billion, they hung tight.</p>
+<p>Short interest actually reached a record high of $11 billion as recently mid-June before the traders pared the position slightly. As of Thursday, the measure still sat at nearly $9 billion, according to S3 data.</p>
+<p>Tesla's stock price issues started in earnest on Wednesday, when <a href="http://markets.businessinsider.com/news/stocks/tesla-stock-price-goldman-sachs-downgrades-2017-7-1002149536?utm_source=markets&amp;utm_medium=ingest">Goldman Sachs said it sees the company's production levels plateauing</a>. As a result, the firm cut its 12-month price target on Tesla from $190 to $180. That's roughly 40% below Thursday's trading price.</p>
+<p>It continued on Thursday amid signs of mounting competition. Volvo <a href="http://www.businessinsider.com/volvo-all-cars-electric-hybrid-2019-2017-7">announced that all of its cars produced during and after 2019</a> will be either fully electric or hybrid. <span>Additionally, </span><a href="http://www.businessinsider.com/jaguar-i-pace-electric-suv-prototype-red-photos-features-2017-6?utm_source=markets&amp;utm_medium=ingest" target="_blank" rel="noopener noreferrer">Jaguar is set to release its first electric SUV</a><span>, a direct competitor to Tesla's Model X, in 2018.</span></p>
+<p>In fact, CEO <a href="http://www.businessinsider.com/tesla-stock-price-too-high-elon-musk-2017-5?utm_source=markets&amp;utm_medium=ingest" target="_blank" rel="noopener noreferrer">Elon Musk himself has called his company's valuation into question</a>. Back in May, he told The Guardian, "I do believe this market cap is higher than we have any right to deserve." </p>
+<p>But even amid all of this sudden negativity surrounding Tesla's stock, speculators that have held the stock short for all of 2017 have still lost about $3.4 billion year-to-date, S3 finds.</p>
+<p>With that in mind, don't expect them to give up their pessimistic view any time soon. While some short sellers may be closing out positions in order to take profit, S3 still sees short interest stabilizing in the $9-10 billion range.</p>
+<p>In other words, they've finally seen some results, and they're not stopping now.</p>
+<p><span class="KonaFilter image-container display-table"><span><span data-post-image class="image on-image"><img style="display: block; margin-left: auto; margin-right: auto;" src="http://static3.businessinsider.com/image/595e7b7ea3630f2c008b7de5-686/screen%20shot%202017-07-06%20at%2020249%20pm.png" alt="Screen Shot 2017 07 06 at 2.02.49 PM" data-mce-source="S3 Partners" data-mce-caption="Tesla short interest has closely tracked the company's stock price." data-link="https://www.s3partners.net/"><span class="caption-source"><span class='caption'>Tesla short interest has closely tracked the company's stock price.</span><span class="source"><span><a href="https://www.s3partners.net/">S3 Partners</a></span></span></span></span><p></span></span></p>
+            <p class="tagline">Get the latest Tesla stock price<a href="http://markets.businessinsider.com/stock/TSLA-Quote"> <strong>here.</strong></a></p>                            <!-- See Also Text Links -->
+        <div id="see-also-links" class="see-also">
+                            <h3><span class="all-caps">SEE ALSO:</span> <a href="http://www.businessinsider.com/wall-street-analysts-at-war-with-traders-over-future-of-bank-financial-stocks-2017-7" >Wall Street is at war with traders over the future of bank stocks</a>
+                </h3>
+                    </div>
+    <!--  / See Also Text Links -->
+                                                                
+    <div class="margin-top popular-video">
+        <h3>NOW WATCH: <a href="http://www.businessinsider.com/economist-explains-trump-pulls-us-out-nafta-2017-6">An economist explains what could happen if Trump pulls the US out of NAFTA</a></h3>
+        <!-- ooyala-video-player -->
+                <div
+                    class="now-watch-video-player"
+                    data-ooyala-player-id="6e12e8b3387a44daacfb73afba25a76e"
+                    data-ooyala-video-id="5jZTNsYjE6V8r9y4OiTCRi5w7Ti-XOGh"
+                    data-device="Desktop"
+                    data-auto-play="false"
+                    data-video-post-vertical="moneygame"
+                    data-video-tags="Video,Market,NAFTA,Trump,BI-Original-Video,Economist,Gregory-Daco,Canada,Mexico,Inflation,Jobs,automotive-industry,Economy"
+                    data-video-authors="Nathaniel-Lee,Bob-Bryan,Lamar-Salter"
+                    data-preroll="true"
+                    id=""
+                >
+                    <!-- BI Loading Spinner -->
+                    <div class="bi-spinner-wrapper">
+                        <div class="sprites bi-spinner">
+                            <div class="rotating"></div>
+                        </div>
+                        <div class="spinner-text">Loading video...</div>
+                    </div>
+                    <!-- /BI Loading Spinner -->
+                </div>
+    </div>
+
+
+
+
+                            
+					</div>
+
+        
+        <!-- Post category tags -->
+		    <div class="category-wrapper" data-category-wrapper>
+
+        <div class="tags-top align-right">
+            More:
+
+                                                        <a href="/category/stocks">Stocks</a>
+                                            <a href="/category/stock-market">Stock Market</a>
+                                            <a href="/category/short-selling">Short Selling</a>
+                                            <a href="/category/tesla">Tesla</a>
+                            
+                                                <span href="#" id="tags-top-popover" class="" title=""><i class="fa fa-chevron-down"></i>
+                        <div class="popover bottom">
+                            <div class="popover-content">
+                
+                <a href="/category/elon-musk">Elon Musk</a>
+
+                                            </div>
+                        </div>
+                    </span>
+                                    </div>
+    </div>
+
+    </div>
+</div>
+
+        <div id="social-reader-notification" class="alert clear-both" style="display:none;"></div>
+
+        <div id="facebook-notification" class="alert" style="display:none;"></div>
+
+            </div>
+
+    
+        <div class="bottom-share-module clearfix clear-both">
+            <!-- RRSSB BOTTOM POST CALL -->
+            
+<!-- RRSSB start -->
+<div class="rrssb-baseline share-container ks-share-bottom margin-top margin-bottom clearfix" style="display:none;">
+    <!-- buttons start here -->
+    <ul class="rrssb-buttons rrssb-bottom clearfix">
+               <li class="facebook ks-byline-fb">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.businessinsider.com/tesla-stock-price-short-seller-profit-14-billion-2017-7" title="facebook" class="popup">
+                <i class="fa fa-facebook-square"></i>
+                <span class="text">facebook</span>
+            </a>
+        </li>
+        
+                <li class="linkedin ks-byline-linkedin">
+            <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.businessinsider.com/tesla-stock-price-short-seller-profit-14-billion-2017-7&amp;title=Tesla's bloodbath racks up a $1.4 billion profit for short sellers in just 3 days&amp;summary=Tesla short sellers have raked in $1.4 billion in profits this week alone as the stock has tumbled 13.6%, its biggest three-day decline since February 2016." title="linkedin" class="popup">
+                <i class="fa fa-linkedin"></i>
+                <span class="text">linkedin</span>
+            </a>
+        </li>
+        
+                <li class="twitter ks-byline-tweet">
+            <a href="http://twitter.com/share?url=http://read.bi/2tlKEMe&amp;via=themoneygame&amp;text=Tesla%27s+bloodbath+racks+up+a+%241.4+billion+profit+for+short+sellers+in+just+3+days" title="twitter" class="popup">
+                <i class="fa fa-twitter"></i>
+                <span class="text">twitter</span>
+            </a>
+        </li>
+        
+        
+                <li class="email button-email ks-byline-email" data-href="http://www.businessinsider.com/tesla-stock-price-short-seller-profit-14-billion-2017-7">
+            <a href="#" title="email">
+                <i class="icon-email light"></i>
+                <span class="text">email</span>
+            </a>
+        </li>
+        
+                                    <li class="printbtn ks-byline-print">
+                    <a href="javascript:window.print()" title="print">
+                        <i class="fa fa-print"></i>
+                        <span class="text">print</span>
+                    </a>
+                </li>
+                        
+            </ul>
+    <!-- buttons end here -->
+</div>
+<!-- RRSSB end -->
+
+<!-- This Empty div tells sailthru where to fly out the concierge promo. -->
+<div id="bottom-share-links"></div>
+        </div>
+
+                                    <!-- Standard Taboola Script -->
+                                    <div id="taboola-below-main-column"></div>
+                    <script type="text/javascript">
+                        window._taboola = window._taboola || [];
+                                                    _taboola.push({mode:'thumbs-1r', container:'taboola-below-main-column', placement:'below-main-column'});
+                                            </script>
+                                <div class="clearfix"></div>
+                    
+        
+                    <!-- Perfect Market "Recommended For You" stories -->
+            <div class="perfect-market recommended-small"></div>
+            <!-- End of Perfect Market "Recommended For You" stories -->
+            <div class="clearfix"></div>
+        
+                    <!-- Perfect Market ad at bottom of post -->
+            <div class="perfect-market article-ad-bottom"></div>
+            <!-- End of Perfect Market ad at bottom of post -->
+            <div class="clearfix"></div>
+        
+                     <!-- Perfect Market ad at bottom of post -->
+            <div class="perfect-market slide-ad-bottom"></div>
+            <!-- End of Perfect Market ad at bottom of post -->
+            <div class="clearfix"></div>
+        
+                
+        <!-- Schema.org/Article metadata -->
+<div style="display:none;" itemscope itemtype="http://schema.org/Article">
+    <h1 itemprop="name">Tesla's bloodbath racks up a $1.4 billion profit for short sellers in just 3 days</h1>
+    <a href="http://www.businessinsider.com/tesla-stock-price-short-seller-profit-14-billion-2017-7" itemprop="url">Tesla's bloodbath racks up a $1.4 billion profit for short sellers in just 3 days</a>
+    <img src="http://static3.businessinsider.com/image/57878d664321f1362f8b7868-100-100/teslas-bloodbath-racks-up-a-14-billion-profit-for-short-sellers-in-just-3-days.jpg"  itemprop="image" />
+    <div itemprop="description"><p>As Tesla's stock enters bear market territory...</p></div>
+</div>
+<!-- / Schema.org/Article metadata -->
+
+
+    
+    <!-- Simple Reach (all post types) -->
+    
+</div>
+
+                    </div>
+                                            <div class="span4">
+                            <div class="main-rail">
+                                
+<div id="right-rail" class="right-rail">
+	<div class="sl-layout-post">
+		<!-- PERFECT MARKET RR -->
+					
+			
+			<!-- Facebook App -->
+			<div class="facebook-app-container" style="display:none;">
+	        <h3 class="underlined thin">Welcome, <span id="fb-username"></span>!</h3>
+    	<div class="facebook-app media">
+
+		<div class="fb-profile-pic pull-left"></div>
+
+		<div class="media-body">
+
+			<h5>You are logged into Facebook</h5>
+
+			<h5>Social: <a class="switch-off" href=""></a></h5>
+
+			<ul class="clearfix">
+				<li class="bi-popover activity"><a href="">Your Activity</a><span>|</span>
+					<div class="popover bottom">
+						<div class="arrow"></div>
+						<h3 class="popover-title">These articles have been shared on your timeline. You can remove them here:</h3>
+						<div class="popover-content">
+							<div class="fb-remove-articles"></div>
+						</div>
+					</div>
+				</li>
+				<li class="bi-popover options"><a href="">Options</a>
+					<div class="popover bottom">
+						<div class="arrow"></div>
+						<h3 class="popover-title">Notify me when a story is shared.</h3>
+						<div class="popover-content">
+							<div>
+								<form id="fb-app-form">
+									<label class="radio inline">
+										<input type="radio" name="shared" value="true" id="notify_yes">Yes</label>
+									<label class="radio inline">
+										<input type="radio" name="shared" value="false" id="notify_no">No</label>
+								</form>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+
+		</div>
+
+	</div>
+</div>
+
+	        <!-- Google App -->
+	        <div class="google-app-container" style="display:none;">
+            <h3 class="underlined thin">Welcome, <span id="gp-username"></span>!</h3>
+        <div class="google-app media">
+
+        <div class="gp-profile-pic pull-left"></div>
+
+        <div class="media-body">
+
+            <h5>You are logged in with Google</h5>
+
+            <h5>Social: <a class="switch-off" href=""></a></h5>
+
+            <ul class="clearfix">
+                <li class="bi-popover activity"><a href="">Your Activity</a><span>|</span>
+                    <div class="popover bottom">
+                        <div class="arrow"></div>
+                        <h3 class="popover-title">These articles have been added to your Google activity log. You can remove them here:</h3>
+                        <div class="popover-content">
+                            <div class="gp-remove-articles"></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="bi-popover options"><a href="">Options</a>
+                    <div class="popover bottom">
+                        <div class="arrow"></div>
+                        <h3 class="popover-title">Notify me when a story is shared.</h3>
+                        <div class="popover-content">
+                            <div>
+                                <form id="gp-app-form">
+                                    <label class="radio inline">
+                                        <input type="radio" name="shared" value="true" id="notify_yes">Yes</label>
+                                    <label class="radio inline">
+                                        <input type="radio" name="shared" value="false" id="notify_no">No</label>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+
+    </div>
+</div>
+
+							<div class="right-ad" data-ad-container>
+					<div class="min-height-250">
+						
+	<div data-bi-ad data-ad-container class="ad dfp" data-adunit="desktop/finance/moneygame/post" data-authors="joe-ciolli" data-pagetype="post" data-region="Upper 300" data-responsive="null" data-sizes="300x250,300x600,300x400,300x1050" data-tag="stocks,stock-market,short-selling,tesla,elon-musk" data-url="/tesla-stock-price-short-seller-profit-14-billion-2017-7" data-views="10001-500000">
+	</div>
+
+	<script type="text/javascript">
+		(function() {
+			'use strict';
+			// Notify the DFP code that a new ad has just been rendered
+			amplify.publish('adRender');
+		}());
+	</script>
+					</div>
+				</div>
+			
+			<!-- Perfect Market Rail ads-->
+	        		        <div class="perfect-market right-rail-popular"></div>
+		        <div class="perfect-market right-rail-ad"></div>
+	        			<!-- /PERFECT MARKET RR -->
+			</div>
+</div>
+                            </div>
+                        </div>
+                    
+                </div>
+            </div>
+
+            
+            </div>
+            <div class="footer" data-bi-footer>
+
+                <div class="container">
+
+                    <section class="top">
+                        <a href="/" class="sprites logo"></a>
+                        <section class="social-icons">
+                            <span class="social-prompt">Follow us on:</span>
+
+                            <ul class="links-user">
+                                                                    
+
+    <li class="social">
+        <a href="//www.facebook.com/businessinsider" title="Like us on Facebook" aria-label="Like us on Facebook" target="_blank"><i class="fa fa-facebook ks-header-facebook"></i></a>
+    </li>
+
+    <li class="social">
+        <a href="//twitter.com/businessinsider" title="Follow us on Twitter" aria-label="Follow us on Twitter" target="_blank"><i class="fa fa-twitter ks-header-twitter"></i></a>
+    </li>
+
+    <li class="social">
+        <a href="//www.linkedin.com/company/businessinsider" title="Connect with us on LinkedIn" aria-label="Connect with us on LinkedIn" target="_blank"><i class="fa fa-linkedin ks-header-linkedin"></i></a>
+    </li>
+                                
+                                
+                                                        </section>
+                        <div class="sister-sites-container">
+                            <span class="sister-site-prompt">Also check out:</span>
+
+                            <a href="//www.thisisinsider.com" class="sister-sites sister-one"></a>
+                            <a href="//markets.businessinsider.com" class="sister-sites sister-two"></a>
+                        </div>
+
+                    </section>
+
+                    <div class="list-pipes">
+                        <ul>
+                        <li>* Copyright &copy; 2017 Business Insider Inc. All rights reserved. <span class="nowrap">Registration on or use of this site constitutes acceptance of our
+                                                                <a href="/terms">Terms of Service</a>                                and
+                                                                                                <a href="/privacy-policy">Privacy Policy</a>.</span>
+                            </li>
+                            <li><a href="/disclaimer">Disclaimer</a></li>
+                                                            <li><a href="/commerce-on-business-insider">Commerce Policy</a></li>
+                                                                                        <li><a href="http://nytm.org/made">Made in NYC</a></li>
+                                                    </ul>
+                    </div>
+                    <div class="list-pipes">
+                        <ul>
+                                                                                    <li>Stock quotes by <a href="http://www.finanzen.net/">finanzen.net</a></li>
+                                                    </ul>
+                    </div>
+                    <div class="international-links list-pipes">
+                        <ul><li>International Editions:</li>
+                            <li><a href="http://uk.businessinsider.com?IR=C">UK</a></li><li><a href="http://www.businessinsider.de?IR=C">DE</a></li><li><a href="http://www.businessinsider.com.au/">AUS</a></li><li><a href="http://www.businessinsider.in/">IN</a></li><li><a href="http://www.businessinsider.my/">MY</a></li><li><a href="http://www.businessinsider.sg/">SG</a></li><li><a href="http://www.businessinsider.com.pl/?IR=C">PL</a></li><li><a href="http://nordic.businessinsider.com/?IR=C">SE</a></li><li><a href="http://www.businessinsider.nl?IR=C">NL</a></li><li><a href="http://www.businessinsider.fr/?IR=C">FR</a></li><li><a href="https://it.businessinsider.com">IT</a></li><li><a href="http://www.businessinsider.jp">JP</a></li>                        </ul>
+                    </div>
+                                           </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+<script type="text/javascript" src="http://static5.businessinsider.com/assets/js/min-foot.js?1500926955"></script>
+
+<!--[if gte IE 9]>
+<script type="text/javascript">amplify.publish("ie9-pinned-site", {"hid":null,"vertical":"moneygame"});</script><![endif]-->
+
+<!-- Google Tag Manager -->
+<noscript><iframe src=""//www.googletagmanager.com/ns.html?id=GTM-NS64GV"" height=""0"" width=""0"" style=""display:none;visibility:hidden""></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NS64GV');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Piano -->
+<!-- End Piano -->
+
+<!-- Twitter widget.js -->
+<script type="text/javascript">
+    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){
+        js=d.createElement(s);
+        js.id=id;
+        js.src="https://platform.twitter.com/widgets.js";
+        js.async=true;
+        fjs.parentNode.insertBefore(js,fjs);
+    }}(document,"script","twitter-wjs");
+</script>
+<!-- /Twitter widget.js -->
+
+    
+    <!-- Begin comScore Tag -->
+    <script type="text/javascript">
+        var _comscore = _comscore || [];
+        _comscore.push({ c1: "2", c2: "9900186"
+            , options:{ url_append:"comscorekw = moneygame"}        });
+        (function() {
+            var s = document.createElement("script"), el = document.getElementsByTagName("script")[0];
+            s.async = true;
+            s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+            el.parentNode.insertBefore(s, el);
+        })();
+    </script>
+    <noscript>
+        <img src="http://b.scorecardresearch.com/p?c1=2&c2=9900186&cv=2.0&cj=1" />
+    </noscript>
+    <!-- End comScore Tag -->
+
+        <!-- Chartbeat -->
+    <script type="text/javascript">
+        // chartbeat wants the vars in global
+        window._sf_async_config.sections = 'moneygame';
+        window._sf_async_config.authors = 'Joe Ciolli';
+
+        //only set the following if on a video post
+        
+        //only set the following if on a sponsored post
+        
+        (function(){
+          function loadChartbeat() {
+            window._sf_endpt=(new Date()).getTime();
+            var e = document.createElement('script');
+            e.setAttribute('language', 'javascript');
+            e.setAttribute('type', 'text/javascript');
+            e.setAttribute('src',
+               (('https:' === document.location.protocol) ? 'https://s3.amazonaws.com/' : 'http://') +
+               'static.chartbeat.com/js/chartbeat_video.js');
+            document.body.appendChild(e);
+          }
+          var oldonload = window.onload;
+          window.onload = (typeof window.onload != 'function') ?
+             loadChartbeat : function() { oldonload(); loadChartbeat(); };
+        })();
+    </script>
+    <!-- / Chartbeat -->
+    
+            <!-- Sailthru Concierge -->
+        <script type="text/javascript" src="http://ak.sail-horizon.com/horizon/v1.js"></script>
+        <script type="text/javascript" src="http://ak.sail-horizon.com/scout/v1.js"></script>
+        <script type="text/javascript">
+        $(function() {
+            // Sailthru Concierge
+            if (window.Sailthru) {
+                var sailthruOpts = {
+                    domain: 'horizon.businessinsider.com'
+                                            , concierge: { from: 'top', threshold: $('#bottom-share-links') }
+                                    };
+                if (window.outerWidth < 800) { //on small screens we dont want the flyout to appear
+                    delete sailthruOpts.concierge;
+                }
+                Sailthru.setup(sailthruOpts);
+            }
+        });
+        </script>
+        <!-- / Sailthru Concierge -->
+            
+<!-- Perfect market JS -->
+            <script src="http://widget.perfectmarket.com/wwwbusinessinsider/load.js"></script>
+    <!-- End Perfect market JS-->
+
+<!-- taboola foot -->
+    <script type="text/javascript">
+        window._taboola = window._taboola || [];
+        _taboola.push({flush: true});
+    </script>
+
+
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"4b4136998e","applicationID":"13516968","transactionName":"ZVZVZRBVXEJVVkJRDVwcdEQRQF1cG0VZSxY=","queueTime":0,"applicationTime":162,"atts":"SRFCE1hPTx0WVBQCGU9O","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

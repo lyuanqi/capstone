@@ -1,0 +1,2686 @@
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en"   >
+  <head>
+  <script>
+    // usmf-django
+function getScript(t,e){var n=document,a="script",o=n.createElement(a),r=n.getElementsByTagName(a)[0];n.async="async",o.src="//"+t,e&&(o.readyState?o.onreadystatechange=function(){"loaded"!=o.readyState&&"complete"!=o.readyState||(o.onreadystatechange=null,e())}:o.addEventListener("load",function(t){e(null,t)},!1)),r.parentNode.insertBefore(o,r)}window.top!=window&&(window.analytics=window.top.analytics,window.inIframe=!0);var segmentKey="16mdwrvy5p",segmentUrl=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+segmentKey+"/analytics.min.js",infotrackUrl="//g.foolcdn.com/mms/resources/js/infotrack_min.js",trackerMaker=function(t){var e=[];e.invoked=!1,e.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","page","once","off","on"],t&&(e.methods=e.methods.concat(t));var n=function(t){var n=function(){var n=Array.prototype.slice.call(arguments,0),a=[t].concat(n);e.push(a)};return n.stub=!0,n},a=function(){for(var t=0;t<e.methods.length;t++){var a=e.methods[t];e[a]=n(a)}},o=function(t){if(e.invoked)return void(window.console&&console.error&&console.error("Tracking snippet included twice."));var n=document.createElement("script");n.type="text/javascript",n.async=!0,n.src=t;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a),e.invoked=!0};return a(),e.load=o,e},analytics=window.analytics=window.analytics||trackerMaker();analytics.initialize||(analytics.SNIPPET_VERSION="3.1.0",analytics.load(segmentUrl));var Infotrack=window.Infotrack=window.Infotrack||trackerMaker(["initialize"]);getScript("//www.fool.com/common/js/marketing/infocookie.js",function(){Infotrack.load(infotrackUrl)});
+  </script>
+  <meta name="infotrackSnippetVersion" content="2.1.0" data-tracker-key="infotrackSnippetVersion">
+
+        
+
+    <script type="text/javascript">
+        var googletag = googletag || {}; googletag.cmd = googletag.cmd || [];
+        googletag.cmd.push(function() { googletag.setAdIframeTitle("Advertisement"); });
+        var adUnits = [];
+        var slots = slots || {};
+        var adCount = 0;
+    </script>
+
+    
+    <script type="text/javascript" src="//motleyfool-d.openx.net/w/1.0/jstag?nc=3910-fool"></script>
+    
+
+    
+        <script async src="https://js-sec.indexww.com/ht/p/185242-157626374316823.js"></script>
+    
+    <script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+
+    
+    <!-- BEGIN Krux ControlTag for "Motley Fool" -->
+        <script class="kxct" data-id="ral3af1zw" data-timing="async" data-version="3.0" type="text/javascript">
+          window.Krux||((Krux=function(){Krux.q.push(arguments)}).q=[]);
+          (function(){
+            var k=document.createElement('script');k.type='text/javascript';k.async=true;
+            k.src=(location.protocol==='https:'?'https:':'http:')+'//cdn.krxd.net/controltag/ral3af1zw.js';
+            var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(k,s);
+          }());
+        </script>
+        <script class="kxint" type="text/javascript">
+          window.Krux||((Krux=function(){Krux.q.push(arguments);}).q=[]);
+          (function(){
+            function retrieve(n){
+              var m, k='kxfool_'+n,ls=(function(){
+                  try{
+                    return window.localStorage;
+                  }catch(e){
+                    return null;
+                  }
+                })();
+              if (ls) {
+                  return ls[k] || "";
+              } else if (navigator.cookieEnabled) {
+                  m = document.cookie.match(k+'=([^;]*)');
+                  return (m && unescape(m[1])) || "";
+              } else {
+                  return '';
+              }
+            }
+
+            Krux.user = retrieve('user');
+            Krux.segments = retrieve('segs') ? retrieve('segs').split(',') : [];
+          })();
+        </script>
+        <!-- END Krux ControlTag -->
+    
+
+
+
+
+        
+
+        
+         <script>
+            var adsRefresh = function(adSlots) {
+                var targetingIds = [];
+                for (var i in adSlots) {
+                    var adSlot = adSlots[i];
+                    targetingIds.push(adSlot.code);
+                }
+
+                var newAdSlots = [];
+
+                Object.keys(slots).forEach(function(key) {
+                    if (targetingIds.indexOf(key) > -1) {
+                        newAdSlots.push(slots[key]);
+                    }
+                });
+                // Refresh all ads on ajaxed article
+                // which will cause of updating correlator value
+                googletag.cmd.push(function() {
+                    googletag.pubads().refresh(newAdSlots);
+                });
+            };
+
+            var postEndlessScrollArticleAdded = function() {
+                var scrollingAdUnits = window.scrollingAdUnits || [];
+                adsRefresh(scrollingAdUnits);
+                window.scrollingAdUnits = [];
+            };
+        </script>
+
+        
+
+    <script type='text/javascript'>
+        
+            googletag.cmd.push(function() {
+                if (typeof(Krux) !== "undefined") {
+                    googletag.pubads().setTargeting("ksg", Krux.segments);
+                    googletag.pubads().setTargeting("kuid", Krux.user);
+                }
+                
+                googletag.pubads().setTargeting('test_bucket', '62')
+                googletag.pubads().setTargeting('bureau', 'usmf-investment-planning')
+                googletag.pubads().setTargeting('collection', 'None')
+                googletag.pubads().setTargeting('headline', 'The Worst IPOs of 2015')
+                googletag.pubads().setTargeting('tickers', ["AMZN", "SUNEQ", "TEP", "ETSY", "GLBL", "TEGP", "NVTA", "WOWO"])
+                googletag.pubads().setTargeting('adtags', ["yahoo-money"])
+                googletag.pubads().setTargeting('sessionCount', '0')
+                googletag.pubads().setTargeting('tenOrMoreSessions', 'False')
+                googletag.pubads().setTargeting('services', [])
+                googletag.pubads().setTargeting('uid', '');
+            });
+        
+    </script>
+
+
+
+    <script type='text/javascript'>
+        
+            
+                googletag.cmd.push(function() {
+                    slots['div-header_desk_sticky-29932'] = googletag.defineSlot('/3910/investing/header_desk_sticky', [[728, 90], [970, 90]], 'div-header_desk_sticky-29932')
+                        .addService(googletag.pubads())
+                        
+                            .setTargeting('pos', adCount)
+                        
+                        .setTargeting('placement', 'header_desk_sticky')
+                        
+                        .setCollapseEmptyDiv(true);
+                });
+
+            
+        
+    </script>
+
+
+
+    <script type='text/javascript'>
+        
+            
+                googletag.cmd.push(function() {
+                    slots['div-content1_desk-37894'] = googletag.defineSlot('/3910/investing/content1_desk', [300, 250], 'div-content1_desk-37894')
+                        .addService(googletag.pubads())
+                        
+                            .setTargeting('pos', '1')
+                        
+                        .setTargeting('placement', 'content1_desk')
+                        
+                            .setTargeting('ArticleNum', 'article-1')
+                        
+                        .setCollapseEmptyDiv(true);
+                });
+
+            
+        
+    </script>
+
+
+
+    <script type='text/javascript'>
+        
+            
+                googletag.cmd.push(function() {
+                    slots['div-content2_desk-36286'] = googletag.defineSlot('/3910/investing/content2_desk', [300, 250], 'div-content2_desk-36286')
+                        .addService(googletag.pubads())
+                        
+                            .setTargeting('pos', '2')
+                        
+                        .setTargeting('placement', 'content2_desk')
+                        
+                            .setTargeting('ArticleNum', 'article-1')
+                        
+                        .setCollapseEmptyDiv(true);
+                });
+
+            
+        
+    </script>
+
+
+
+    <script type='text/javascript'>
+        
+            
+                googletag.cmd.push(function() {
+                    slots['div-content3_desk-13123'] = googletag.defineSlot('/3910/investing/content3_desk', [300, 250], 'div-content3_desk-13123')
+                        .addService(googletag.pubads())
+                        
+                            .setTargeting('pos', '3')
+                        
+                        .setTargeting('placement', 'content3_desk')
+                        
+                            .setTargeting('ArticleNum', 'article-1')
+                        
+                        .setCollapseEmptyDiv(true);
+                });
+
+            
+        
+    </script>
+
+
+
+    <script type='text/javascript'>
+        
+            
+                googletag.cmd.push(function() {
+                    slots['div-sidebar1_desk-85639'] = googletag.defineSlot('/3910/investing/sidebar1_desk', [[300, 250], [300, 600]], 'div-sidebar1_desk-85639')
+                        .addService(googletag.pubads())
+                        
+                            .setTargeting('pos', adCount)
+                        
+                        .setTargeting('placement', 'sidebar1_desk')
+                        
+                            .setTargeting('ArticleNum', 'article-1')
+                        
+                        .setCollapseEmptyDiv(true);
+                });
+
+            
+        
+    </script>
+
+
+
+    <script type='text/javascript'>
+        
+            
+                googletag.cmd.push(function() {
+                    slots['div-lemora-20709'] = googletag.defineSlot('/3910/investing/lemora', [237, 90], 'div-lemora-20709')
+                        .addService(googletag.pubads())
+                        
+                            .setTargeting('pos', adCount)
+                        
+                        .setTargeting('placement', 'lemora')
+                        
+                            .setTargeting('ArticleNum', 'article-1')
+                        
+                        .setCollapseEmptyDiv(true);
+                });
+
+            
+        
+    </script>
+
+
+
+    <script type='text/javascript'>
+        
+            
+                googletag.cmd.push(function() {
+                    slots['div-sidebar2_desk-60299'] = googletag.defineSlot('/3910/investing/sidebar2_desk', [[300, 250], [300, 600]], 'div-sidebar2_desk-60299')
+                        .addService(googletag.pubads())
+                        
+                            .setTargeting('pos', adCount)
+                        
+                        .setTargeting('placement', 'sidebar2_desk')
+                        
+                            .setTargeting('ArticleNum', 'article-1')
+                        
+                        .setCollapseEmptyDiv(true);
+                });
+
+            
+        
+    </script>
+
+
+
+    <script type='text/javascript'>
+        
+            
+                googletag.cmd.push(function() {
+                    slots['div-footer1_desk-75055'] = googletag.defineSlot('/3910/investing/footer1_desk', [100, 140], 'div-footer1_desk-75055')
+                        .addService(googletag.pubads())
+                        
+                            .setTargeting('pos', 'hlp_1')
+                        
+                        .setTargeting('placement', 'footer1_desk')
+                        
+                        .setCollapseEmptyDiv(true);
+                });
+
+            
+        
+    </script>
+
+
+
+    <script type='text/javascript'>
+        
+            
+                googletag.cmd.push(function() {
+                    slots['div-footer2_desk-64370'] = googletag.defineSlot('/3910/investing/footer2_desk', [100, 140], 'div-footer2_desk-64370')
+                        .addService(googletag.pubads())
+                        
+                            .setTargeting('pos', 'hlp_2')
+                        
+                        .setTargeting('placement', 'footer2_desk')
+                        
+                        .setCollapseEmptyDiv(true);
+                });
+
+            
+        
+    </script>
+
+
+
+    <script type='text/javascript'>
+        
+            
+                googletag.cmd.push(function() {
+                    slots['div-footer3_desk-35064'] = googletag.defineSlot('/3910/investing/footer3_desk', [100, 140], 'div-footer3_desk-35064')
+                        .addService(googletag.pubads())
+                        
+                            .setTargeting('pos', 'hlp_3')
+                        
+                        .setTargeting('placement', 'footer3_desk')
+                        
+                        .setCollapseEmptyDiv(true);
+                });
+
+            
+        
+    </script>
+
+
+
+    <script type='text/javascript'>
+        
+            
+                googletag.cmd.push(function() {
+                    slots['div-footer4_desk-39317'] = googletag.defineSlot('/3910/investing/footer4_desk', [100, 140], 'div-footer4_desk-39317')
+                        .addService(googletag.pubads())
+                        
+                            .setTargeting('pos', 'hlp_4')
+                        
+                        .setTargeting('placement', 'footer4_desk')
+                        
+                        .setCollapseEmptyDiv(true);
+                });
+
+            
+        
+    </script>
+
+
+
+    <script type='text/javascript'>
+        
+            
+                googletag.cmd.push(function() {
+                    slots['div-Interstitial-208'] = googletag.defineOutOfPageSlot('/3910/investing/Interstitial', 'div-Interstitial-208')
+                        .addService(googletag.pubads())
+                        .setTargeting('placement', 'Interstitial')
+                        
+                });
+            
+        
+    </script>
+
+
+        
+    
+
+
+
+     <script>
+        googletag.cmd.push(function() {
+            googletag.pubads().enableSingleRequest();
+            googletag.pubads().disableInitialLoad();
+            googletag.enableServices();
+            googletag.pubads().addEventListener('slotOnload', function(e) {
+                var slot = e.slot;
+                var path = slot.getAdUnitPath();
+                var n = path.search(/sticky|header_mobtab/);
+                if ( n > 0 ) {
+                    var leaderboard = $('.sticky-header-ads-container');
+                    if( leaderboard.length > 0 && leaderboard.css('position') === 'fixed' ) {
+                        var ADwrapper = $('#sticky-wrapper');
+                        ADwrapper.height(leaderboard.outerHeight());
+                        setTimeout(function () {
+                            leaderboard.css('position','static');
+                        }, 3000);
+                    }
+                }
+            });
+            // googletag.pubads().addEventListener('impressionViewable', function(e) {
+            //     var slot = e.slot;
+            //     var path = slot.getAdUnitPath();
+            //     var n = path.search('sticky');
+            //     if ( n > 0 ) {
+            //         var leaderboard = $('.sticky-header-ads-container');
+            //         if( leaderboard.length > 0 && leaderboard.css('position') === 'fixed' ) {
+            //             var ADwrapper = $('#sticky-wrapper');
+            //             ADwrapper.height(leaderboard.outerHeight());
+            //             leaderboard.css('position','static');
+            //         }
+            //     }
+            // });
+            // Get ads for all slots that presence on the page right now
+            //googletag.pubads().refresh();
+        });
+    </script>
+
+        <!-- Favicon -->
+        
+        <link rel="shortcut icon" href="//g.foolcdn.com/static/dubs/elvis/images/favicon.13af4883f3a3.ico">
+        <link rel="apple-touch-icon" href="//g.foolcdn.com/static/dubs/elvis/images/apple-touch-icon.91bb1b01ecea.png">
+        
+        
+    
+    
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+
+            
+    <meta name="ResponsiveALP" content="1Ses_inv-control-90_control_100" data-tracker-key="ResponsiveALP" />
+    <meta name="headline" content="The Worst IPOs of 2015" data-tracker-key="article_headline" />
+    <meta name="STORY_UID" content="14b287c6-a45f-11e5-830e-0050569d4be0" />
+    <meta name="author" content="Matthew Frankel" data-tracker-key="article_author" />
+    
+    <meta name="date" content="2016-01-12T18:09:00Z"/>
+    <meta name="gsa_date" content="2016 01 12" data-tracker-key="article_publish_date"/>
+    <meta name="publish_time" content="13:09" data-tracker-key="article_publish_time" />
+    
+    <meta name="promo" content="2015 wasn&#39;t a great year for IPOs, but these five performed especially poorly." />
+    <meta name="bureau" content="usmf-investment-planning" data-tracker-key="article_bureau" />
+    <meta name="tags" content="Yahoo" data-tracker-key="article_tags" />
+    <meta name="pitch" content="3186" />
+    <meta name="tickers" content="AMZN,SUNEQ,TEP,ETSY,GLBL,TEGP,NVTA,WOWO" data-tracker-key="article_tickers" />
+    <meta name="article_type" content="article" data-tracker-key="article_type" />
+    <meta name="collection" content="" data-tracker-key="collection" />
+    <meta property="article:published_time" content="13:09" />
+    <meta property="article:tag" content="usmf-investment-planning" />
+    <meta property="article:section" content="" />
+
+    <link rel="canonical" href="https://www.fool.com/investing/general/2016/01/12/the-worst-ipos-of-2015.aspx" />
+    <link rel="amphtml" href="https://www.fool.com/amp/investing/general/2016/01/12/the-worst-ipos-of-2015.aspx">
+
+    <!-- Additional Twitter Card data -->
+    <meta name="twitter:title" content="The Worst IPOs of 2015 @themotleyfool #stocks $AMZN, $SUNEQ, $TEP, $ETSY, $GLBL, $TEGP, $NVTA, $WOWO">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://g.foolcdn.com/editorial/images/188828/ipo.jpg"/>
+
+    <!-- Additional Open Graph data -->
+    <meta property="og:type" content="article"/>
+    <meta property="fb:pages" content="7240312795" />
+
+
+            <meta property="og:site_name" content="The Motley Fool" />
+            <meta property="fb:app_id" content="50808187550" />
+
+        
+    <meta name="msvalidate.01" content="8D40D58712924715BAA79D135A6C8DDA" />
+    <script>
+        var dataLayer = dataLayer || [];
+    </script>
+    
+
+
+
+
+
+    
+        <meta property="og:image"  content="https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F188828%2Fipo.jpg&h=630&w=1200&op=resize"/>
+    
+
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "NewsArticle",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://www.fool.com"
+        },
+        "headline": "The Worst IPOs of 2015",
+        "datePublished": "2016-01-12T18:09:00Z",
+        "dateModified": "2016-01-12T18:09:00Z",
+        "author": {
+          "@type": "Person",
+          "name": "Matthew Frankel"
+        },
+        "about":[
+            
+                {
+                    "@type": "Corporation",
+                    "tickerSymbol": "NASDAQ AMZN"
+                },
+            
+                {
+                    "@type": "Corporation",
+                    "tickerSymbol": "NASDAQOTH SUNEQ"
+                },
+            
+                {
+                    "@type": "Corporation",
+                    "tickerSymbol": "NYSE TEP"
+                },
+            
+                {
+                    "@type": "Corporation",
+                    "tickerSymbol": "NASDAQ ETSY"
+                },
+            
+                {
+                    "@type": "Corporation",
+                    "tickerSymbol": "NASDAQ GLBL"
+                },
+            
+                {
+                    "@type": "Corporation",
+                    "tickerSymbol": "NYSE TEGP"
+                },
+            
+                {
+                    "@type": "Corporation",
+                    "tickerSymbol": "NYSE NVTA"
+                },
+            
+                {
+                    "@type": "Corporation",
+                    "tickerSymbol": "NASDAQ WOWO"
+                }
+            
+        ],
+        "publisher": {
+          "@type": "Organization",
+          "name": "The Motley Fool",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://g.foolcdn.com/assets/images/fool/tmf-logo.png",
+            "width": 311,
+            "height": 56
+          }
+        },
+        "description": "2015 wasn&#39;t a great year for IPOs, but these five performed especially poorly.",
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F188828%2Fipo.jpg&h=630&w=1200&op=resize",
+          "height": 630,
+          "width": 1200
+        }
+      }
+    </script>
+
+
+        <title>
+            
+    The Worst IPOs of 2015 -- The Motley Fool
+
+        </title>
+
+        
+    
+    <link rel="stylesheet" href="//g.foolcdn.com/static/dubs/CACHE/css/9a22a49f7496.css" type="text/css" /><link rel="stylesheet" href="//g.foolcdn.com/static/dubs/CACHE/css/c9bdb3e390b9.css" type="text/css" media="print" />
+
+	<link rel="stylesheet" href="//g.foolcdn.com/static/dubs/CACHE/css/46c633126308.css" type="text/css" />
+
+
+        
+    <!-- Adding in the latest Font Awesome -->
+    <script src="https://use.fontawesome.com/6ee36f699c.js"></script>
+
+    <script type="text/javascript" src="//g.foolcdn.com/static/dubs/CACHE/js/73f33898bd89.js" async></script>
+
+    <script type='text/javascript' async>
+        // Keep ref to this jQuery in case other jQuery loaded (aync by 3rd parties).
+        var $jq = jQuery;
+    </script>
+
+        
+
+        
+        
+    <script>var _roost = _roost || []; _roost.push(['autoprompt', false]);</script>              <script src='//cdn.goroost.com/roostjs/hsjvkv8myitdndcz44r9lua9os6hxjeh' async></script></head>
+
+
+    <body class="fool yolo content-service-" >
+    <!-- maintenance_banner -->
+
+
+
+    <script>
+        var infotronStubMaker = function(methods)  {
+            var stubQueue = [];
+            stubQueue.invoked = false;
+            stubQueue.methods = methods;
+
+            var addToMethodQueue = function(method)  {
+                var func = function() {
+                    var args = Array.prototype.slice.call(arguments, 0);
+                    var newArgs = [method].concat(args);
+                    stubQueue.push(newArgs);
+                };
+                func.stub = true;
+                return func;
+            };
+            var generateMethods = function()  {
+                for (var i=0; i < stubQueue.methods.length; i++)  {
+                    var key = stubQueue.methods[i];
+                    stubQueue[key] = addToMethodQueue(key);
+                }
+            };
+            var loadTracker = function(scriptUrl)  {
+                if (stubQueue.invoked)  {
+                    if (window.console && console.error)  {
+                        console.error('Queue snippet included twice.');
+                    }
+                    return;
+                }
+                var trackerScript = document.createElement('script');
+                trackerScript.type = 'text/javascript';
+                trackerScript.async = true;
+                trackerScript.src = scriptUrl;
+                var firstScript = document.getElementsByTagName('script')[0];
+                firstScript.parentNode.insertBefore(trackerScript, firstScript);
+                stubQueue.invoked = true;
+            };
+            generateMethods();
+            stubQueue.load = loadTracker;
+            return stubQueue;
+        };
+
+        var PitchEngine = infotronStubMaker([
+                'initialize',
+                'get',
+                'pitcherDone',
+                'placeInPage',
+                'pitcherError',
+                'RegisterQueue',
+                'UnRegisterQueue'
+            ]);
+        var PitcherAds = infotronStubMaker(
+                ['get', 'OnDomReady', 'PlaceAdInPage', 'makeDFPAd', 'RegisterQueue', 'UnRegisterQueue']
+        );
+
+        var isLive = window.location.host.split('.').length === 3; // length = 4 for mockup, staging, test, dev/localhost
+        PitchEngine.load((isLive ? '//j.foolcdn.com' : '') + '/common/js/infotron-async.min.js');
+    </script>
+
+
+
+    <!-- Main Container wrapping the whole page -->
+    <div class="main-container">
+
+
+        <!-- The Universal Fool Top Hat black bar -->
+        
+    
+        <div class="fool-tophat-container">
+            
+
+
+
+
+
+<div class="fool-tophat-container">
+ <div class="fool-tophat" data-tabbable-selector="ul.dropMenu,#logOut a">
+    <div id="tophatWrap">
+
+        <!-- Aligned Left -->
+        <div class="fool-tophat-left" role="menubar">
+            <a class="skip-main" href="#main-content" target="_self">Skip to main content</a>
+
+            <!--  Country Dropdown -->
+            <ul id="countries-dropdown" class="dropMenu site-nav-hide">
+
+                 
+
+
+
+	<li class="topLevel countryIcon" >
+	    <a href="/" class="dropdown-toggle country-select-item" type="button" id="dropdownMenuCountries" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="fa fa-globe"><span class="globe-text">The Motley Fool</span></span><span class="caret"></span></a>
+	    <ul class="country-select dropdown-menu" aria-labelledby="dropdownMenuCountries">
+	        <li role="menuitem" aria-setsize="8" aria-posinset="1">
+	            <a class="us" href="/">Fool.com</a>
+	        </li>
+	        <li role="menuitem" aria-setsize="8" aria-posinset="2">
+	            <a class="uk" href="https://www.fool.co.uk/">Fool.co.uk</a>
+	        </li>
+	        <li role="menuitem" aria-setsize="8" aria-posinset="3">
+	            <a class="au" href="https://www.fool.com.au/">Fool.com.au</a>
+	        </li>
+	        <li role="menuitem" aria-setsize="8" aria-posinset="4">
+	            <a class="ca" href="https://www.fool.ca/">Fool.ca</a>
+	        </li>
+	        <li role="menuitem" aria-setsize="8" aria-posinset="5">
+	            <a class="sg" href="https://www.fool.sg">Fool.sg</a>
+	        </li>
+	        <li role="menuitem" aria-setsize="8" aria-posinset="6">
+	            <a class="de" href="https://www.fool.de">Fool.de</a>
+	        </li>
+	    </ul>
+	</li>
+
+
+
+            </ul>
+
+            
+            <div id="tophat-motto">
+                Helping the world invest better since 1993.
+            </div>
+            
+        </div>
+
+
+        <!-- Aligned Right -->
+        <div id="userTools" class="fool-tophat-right">
+
+            <!-- My Fool -->
+            
+                <span id="myFool" style="width:100px"><li>Hi, Fool!</li></span>
+            
+
+            <!-- Premium Services -->
+            
+            <ul id="premium" style="width:140px">
+                <li class="topLevel">
+                    <a href="https://www.fool.com/#services-section" aria-haspopup="true">
+                    Premium Advice</a>
+                </li>
+            </ul>
+            
+
+            <!-- Help -->
+            <ul id="Help" class="dropMenu" >
+                <li class="topLevel">
+                    <a href="javascript:void(0)" class="select" aria-haspopup="true">
+                    Help</a>
+
+                    <ul aria-label="Help" class="site-nav-hide" >
+
+                        
+
+
+
+    
+
+            <li><i class="fa fa-info-circle icon-help"></i> <a href="https://www.fool.com/answers/" class="last">Fool Answers</a></li>
+
+            <li><i class="fa fa-envelope"></i> <a href="https://www.fool.com/answers/contact-customer-service/" class="last">Contact Us</a></li>
+
+            
+
+
+    
+
+
+
+
+
+                    </ul>
+                </li>
+            </ul>        
+
+            
+
+
+
+	
+    <span name="logIn" id="logIn" class="top-hat-element">
+        <a class="" href="https://www.fool.com/secure/login.aspx?source=ilgsittph0000001">Login</a>
+    </span>
+    
+
+
+
+        </div>
+    </div>
+</div>
+</div>
+        </div>
+        
+
+
+        <!-- Mobile Nav ~ not needed for Fool, still used in Premium services ~GR 09/15 -->
+        
+        
+
+
+        <!-- Page Grid Container sets max-width and centers for older Premium services ~GR 09/15-->
+        
+        <div class="page-grid-container">
+
+            <!-- Nav section -->
+            
+    <section class="usmf-article-nav">
+        
+                    
+                        
+
+<link rel="stylesheet" href="//g.foolcdn.com/static/dubs/premium_skinner/css/navigation.8f5f25549079.css" type="text/css">
+
+<header class="navigation" role="banner">
+    <div class="navigation-wrapper">
+        <a href="https://www.fool.com" class="logo">
+            <img src="https://g.foolcdn.com/art/fool15/bg/fool-logo.png" alt="The Motley Fool">
+        </a>
+
+        <!--Desktop Nav Menu-->
+<nav>
+    <ul class="nav-menu main-menu">
+        <li class="nav-item main-menu-item">
+            <a id="topnav-picks" href="https://www.fool.com/#services-section"  class="nav-link-stock-picks">Latest Stock Picks</a>
+        </li>
+        <!--Stocks and Services-->
+        <li class="nav-item main-menu-item dropdown">
+            <a id="topnav-stocks" href="javascript:void(0)">Stocks</a>
+            <div class="sub-nav sub-menu">
+                <div class="mega-menu-wrapper">
+                    
+
+<div class="mega-menu-wrapper-content sub-nav">
+    <div class="columns" id="stocks-subnav">
+        <div class="column promo-box-column">
+	    
+	    
+
+            <div class="sub-menu-header">Premium Services</div>
+            <div class="stocks-info-table sub-nav-group">
+                <div class="stocks-info-item head">
+                    <div class="td name"></div>
+                    <div class="td">Return</div>
+                    <div class="td">S&P</div>
+                </div>
+                <div class="stocks-info-item">
+                    <div class="td name">
+                        <a id="stocks-sa" href="">Stock Advisor</a>
+                        <small>Flagship service</small>
+                    </div>
+                    <div class="td return">244%</div>
+                    <div class="td">70%</div>
+                </div>
+                <div class="stocks-info-item">
+                    <div class="td name">
+                        <a id="stocks-rb" href="">Rule Breakers</a>
+                        <small>High-growth stocks</small>
+                    </div>
+                    <div class="td return">115%</div>
+                    <div class="td">58%</div>
+                </div>
+                <div class="stocks-info-item">
+                    <div class="td name">
+                        <a id="stocks-ii" href="">Income Investor</a>
+                        <small>Dividend stocks</small>
+                    </div>
+                    <div class="td return">45%</div>
+                    <div class="td">43%</div>
+                </div>
+                <div class="stocks-info-item">
+                    <div class="td name">
+                        <a id="stocks-hg" href="">Hidden Gems</a>
+                        <small>Small-cap stocks</small>
+                    </div>
+                    <div class="td return">55%</div>
+                    <div class="td">55%</div>
+                </div>
+                <div class="stocks-info-item">
+                    <div class="td name">
+                        <a id="stocks-iv" href="">Inside Value</a>
+                        <small>Undervalued stocks</small>
+                    </div>
+                    <div class="td return">51%</div>
+                    <div class="td">31%</div>
+                </div>
+                <p align="center"><small><em>Returns as of 8/18/2017</em></small></p>
+            </div>
+	    
+        </div>
+        <div class="column">
+            <ul class="sub-nav-group">
+                <div class="sub-menu-header">Stock Market News</div>
+                <li class="sub-menu-link">
+                    <a id="stocks-news" href="https://www.fool.com/investing-news/">Latest Investing News</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="stocks-movers" href="https://www.fool.com/tag/series/10percent/Index.aspx">Gainers & Losers in the Market Today</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="stocks-top-div" href="https://www.fool.com/investing/2017/02/28/3-top-dividend-stocks-to-buy-now-2.aspx">3 Top Dividend Stocks to Buy Now</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="stocks-begin-div" href="https://www.fool.com/investing/2017/02/27/the-5-best-dividend-stocks-for-beginning-investors.aspx">Dividend Paying Stocks for Beginners</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="stocks-top-growth" href="https://www.fool.com/investing/2017/02/18/the-top-growth-stock-to-buy-in-2017.aspx">Top Growth Stock for 2017</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="stocks-high-growth" href="https://www.fool.com/investing/high-growth/index.aspx">Discover High Growth Stocks</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="stocks-10best-free-report" href="https://www.fool.com/mms/mark/op-sa-bbn-eg/?source=isasittn0010001">
+                        10 Best Stocks Right Now
+                        <i class="fa fa-dollar text-red"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="column">
+            <ul class="sub-nav-group">
+                <div class="sub-menu-header">Popular Stocks</div>
+                <li class="sub-menu-link">
+                    <a id="stocks-aapl" href="https://www.fool.com/quote/nasdaq/apple/aapl">Apple Stock (AAPL)</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="stocks-fb" href="https://www.fool.com/quote/nasdaq/facebook/fb">Facebook Stock (FB)</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="stocks-tsla" href="https://www.fool.com/quote/nasdaq/tesla-motors/tsla">Tesla Stock (TSLA)</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="stocks-nflx" href="https://www.fool.com/quote/nasdaq/netflix/nflx">Netflix Stock (NFLX)</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="stocks-goog" href="https://www.fool.com/quote/nasdaq/alphabet-c-shares/goog">Google Stock (GOOG)</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="stocks-amzn" href="https://www.fool.com/quote/nasdaq/amazon/amzn">Amazon Stock (AMZN)</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="stocks-ge" href="https://www.fool.com/quote/nyse/general-electric/ge">GE Stock (GE)</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="stocks-dis" href="https://www.fool.com/quote/nyse/walt-disney/dis">Disney Stock (DIS)</a>
+                </li>
+                <li id="stocks-twtr" class="sub-menu-link">
+                    <a href="https://www.fool.com/quote/nyse/twitter/twtr">Twitter Stock (TWTR)</a>
+                </li>
+                <li id="stocks-snap" class="sub-menu-link">
+                    <a href="https://www.fool.com/quote/nyse/snap-inc/snap">Snapchat Stock (SNAP)</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+                    <!-- <div class="color-line">
+    <div class="color blue"></div>
+    <div class="color yellow"></div>
+    <div class="color red"></div>
+    <div class="color green"></div>
+    <div class="color blue"></div>
+    <div class="color yellow"></div>
+</div> -->
+                </div>
+            </div>
+        </li>
+
+        <!--How To Invest-->
+        <li class="nav-item main-menu-item dropdown">
+            <a id="topnav-hti" href="javascript:void(0)">How to Invest</a>
+            <div class="sub-nav sub-menu">
+                <div class="mega-menu-wrapper">
+                    <div class="mega-menu-wrapper-content dub-nav">
+    <div class="columns" id="hti-subnav">
+        <!-- Ad loaded dynamically via postLoastHeaderLinks.js -->
+        <div class="column ">
+            <ul class="sub-nav-group">
+                <div class="sub-menu-header">Learn How to Invest</div>
+                <li class="sub-menu-link">
+                    <a id="hti-stocks" href="https://www.fool.com/how-to-invest/">How to Invest in Stocks</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="hti-start-100" href="https://www.fool.com/how-to-invest/best-way-to-invest-100-a-month.aspx">Start Investing with $100 a Month</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="hti-knowledge-center" href="https://www.fool.com/knowledge-center/index.aspx">Investing Knowledge Center</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="hti-options" href="https://www.fool.com/investing/options/options-a-foolish-introduction.aspx">Learn Options Trading</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="hti-etf" href="https://www.fool.com/investing/etf/mutual-funds-v-etfs.aspx">Guide to Index, Mutual & ETF Funds</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="hti-dividends" href="https://www.fool.com/investing/2016/10/15/building-a-dividend-portfolio-that-can-stand-the-t.aspx">How to Build a Dividend Portfolio</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="hti-retirement" href="https://www.fool.com/retirement/">Investing for Retirement</a>
+                </li>
+            </ul>
+        </div>
+        <div class="column">
+            <ul class="sub-nav-group">
+                <div class="sub-menu-header">Track Your Performance</div>
+                <li class="sub-menu-link">
+                    <a id="hti-scorecard" href="https://scorecard.fool.com">Portfolio Tracker</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="hti-caps" href="https://caps.fool.com/">Rate & Research Stocks - CAPS</a>
+                </li>
+                <div class="sub-menu-header">Investing Accounts</div>
+                <li class="sub-menu-link">
+                    <a id="hti-brokerage-accounts" href="https://www.fool.com/how-to-invest/broker/index.aspx">Compare Brokerage Accounts</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="hti-ira-accounts" href="https://www.fool.com/retirement/ira/compare.aspx">Compare IRA Accounts</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+                    <!-- <div class="color-line">
+    <div class="color blue"></div>
+    <div class="color yellow"></div>
+    <div class="color red"></div>
+    <div class="color green"></div>
+    <div class="color blue"></div>
+    <div class="color yellow"></div>
+</div> -->
+                </div>
+            </div>
+        </li>
+
+        <!--Retirement-->
+        <li class="nav-item main-menu-item dropdown">
+            <a id="topnav-retire" href="javascript:void(0)">Retirement</a>
+            <div class="sub-nav sub-menu">
+                <div class="mega-menu-wrapper">
+                    <div class="mega-menu-wrapper-content sub-nav">
+    <div class="columns" id="retirement-subnav">
+        <!-- Ad loaded dynamically via postLoastHeaderLinks.js -->
+        <div class="column">
+            <ul class="sub-nav-group">
+                <div class="sub-menu-header">Retirement Planning</div>
+                <li class="sub-menu-link">
+                    <a id="retire-401ks" href="https://www.fool.com/retirement/401k/401kintro-is-your-retirement-plan-foolish.aspx">401Ks</a> | <a href="https://www.fool.com/retirement/ira/index.aspx">IRAs</a> | <a href="https://www.fool.com/retirement/assetallocation/introduction-to-asset-allocation.aspx">Asset Allocation</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="retire-step-guide" href="https://www.fool.com/retirement/general/how-to-retire-in-style.aspx">Step by step guide to retirement</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="retire-guide-plans" href="https://www.fool.com/retirement/2017/01/22/your-2017-guide-to-retirement-planning.aspx">Your 2017 Guide to Retirement Plans</a>                    
+                </li>
+                <li class="sub-menu-link">
+                    <a id="retire-socsec-exist" href="https://www.fool.com/retirement/general/2016/03/19/will-social-security-last-until-i-retire.aspx">Will Social Security be there for me?</a>
+                </li>
+                <li class="sub-menu-link">
+                   Retirement Guide: <a id="retire-guide-20s" href="https://www.fool.com/retirement/2016/12/19/the-perfect-retirement-strategy-for-20-somethings.aspx">20s</a> | <a id="retire-guide-30s" href="https://www.fool.com/retirement/2016/07/16/the-perfect-retirement-strategy-for-people-in-thei.aspx">30s</a> | <a id="retire-guide-40s" href="https://www.fool.com/retirement/2016/12/19/the-perfect-retirement-strategy-for-40-somethings.aspx">40s</a> | <a id="retire-guide-50s" href="https://www.fool.com/retirement/2016/12/20/the-perfect-retirement-strategy-for-50-somethings.aspx">50s</a>
+                 </li>
+                <li class="sub-menu-link">
+                    <a id="retire-college-retirement" href="https://www.fool.com/retirement/save-for-college-or-retirement.aspx">Save for College or Retirement?</a>
+                </li>
+                <li class="sub-menu-link"><a id="retire-socsec-free-report" href="http://www.fool.com/mms/mark/ecap-foolcom-social-security/?aid=8727&source=irrsittn0010002">$16,122 Social Security Bonus <i class="fa fa-dollar text-red"></i></a></li>
+            </ul>
+        </div>
+        <div class="column">
+            <ul class="sub-nav-group">
+                <div class="sub-menu-header">Already Retired</div>
+                <li class="sub-menu-link">
+                    <a id="retire-now-what" href="https://www.fool.com/retirement/general/2015/05/09/so-youre-about-to-retire-now-what.aspx">Time to Retire, Now What?</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="retire-60s" href="https://www.fool.com/retirement/2016/06/04/the-perfect-retirement-strategy-for-seniors-in-the.aspx">Living in Retirement in Your 60s</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="retire-reverse-mortgage" href="https://www.fool.com/retirement/2016/10/09/read-this-before-you-get-a-reverse-mortgage.aspx">Should I Reverse Mortgage My Home?</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="retire-longtermcare" href="https://www.fool.com/investing/general/2016/05/21/your-2016-guide-to-long-term-care-and-long-term-ca.aspx">Should I Get a Long Term Care Policy?</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="retire-socsec-guide" href="https://www.fool.com/retirement/2017/01/01/your-2017-guide-to-social-security-benefits.aspx">Your 2017 Guide to Social Security</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+                    <!-- <div class="color-line">
+    <div class="color blue"></div>
+    <div class="color yellow"></div>
+    <div class="color red"></div>
+    <div class="color green"></div>
+    <div class="color blue"></div>
+    <div class="color yellow"></div>
+</div> -->
+                </div>
+            </div>
+        </li>
+
+        <!--Personal Finance -->
+        <li class="nav-item main-menu-item dropdown">
+            <a id="topnav-pf" href="javascript:void(0)">Personal Finance</a>
+            <div class="sub-nav sub-menu">
+                <div class="mega-menu-wrapper">
+                    <div class="mega-menu-wrapper-content dub-nav">
+    <div class="columns">
+        <div class="column">
+            <ul class="sub-nav-group">
+                <a class="sub-menu-header" id="cc-heading" href="https://www.fool.com/credit-cards/">Credit Cards</a>
+                <li class="sub-menu-link">
+                    <a id="cc-best-overall" href="https://www.fool.com/credit-cards/best-credit-cards-of-2017/">Best Credit Cards of 2017</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="cc-bonuses" href="https://www.fool.com/credit-cards/best-credit-card-sign-up-bonuses/">Best Credit Card Sign-Up Bonuses</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="cc-transfer" href="https://www.fool.com/credit-cards/best-balance-transfer-credit-cards/">Best Balance-Transfer Credit Cards</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="cc-travel" href="https://www.fool.com/credit-cards/best-travel-credit-cards/">Best Travel Credit Cards</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="cc-cash" href="https://www.fool.com/credit-cards/best-cash-back-credit-cards/">Best Cash-Back Credit Cards</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="cc-nofee" href="https://www.fool.com/credit-cards/best-no-annual-fee-credit-cards/">Best No-Annual-Fee Credit Cards</a>
+                </li>
+            </ul>
+        </div>
+        <div class="column">
+            <ul class="sub-nav-group">
+                <a id="mortgage-heading" href="https://www.fool.com/mortgages/index.aspx" class="sub-menu-header">Mortgages</a>
+                <li class="sub-menu-link">
+                    <a id="mortgage-compare" href="https://www.fool.com/mortgages/compare-mortgage-rates/">Compare Mortgage Rates</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="mortgage-approved" href="https://www.fool.com/mortgages/get-pre-approved.aspx/">Get Pre-Approved</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="mortgage-afford" href="https://www.fool.com/mortgages/how-much-house-can-i-afford.aspx">How Much House Can I Afford?</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="mortgage-free-report" href="http://www.fool.com/ecap/the_motley_fool/mortgage-playbook-11-essentials/?source=izieditxt0000003&aid=8946">11 Mortgage Essentials Demystified</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="column">
+            <ul class="sub-nav-group">
+                <a class="sub-menu-header" id="tax-heading" href="https://www.fool.com/taxes/index.aspx">Taxes</a>
+                <li class="sub-menu-link">
+                    <a id="tax-reduce" href="https://www.fool.com/personal-finance/taxes/60-second-guide-to-cutting-your-taxes.aspx">How to Reduce Your Taxes</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="tax-deductions" href="https://www.fool.com/personal-finance/taxes/6-deductions-even-pros-overlook.aspx">Deductions Even Pros Overlook</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="tax-audit-proof" href="https://www.fool.com/personal-finance/taxes/audit-proof-your-tax-return.aspx">Audit-Proof Your Tax Return</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="tax-keep" href="https://www.fool.com/personal-finance/taxes/get-organized-for-the-irs.aspx">What Info Should I Keep?</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="column">
+            <ul class="sub-nav-group">
+                <a id="saving-heading" href="https://www.fool.com/how-to-invest/personal-finance/savings/index.aspx" class="sub-menu-header">Saving & Budgeting</a>
+                <li class="sub-menu-link"><a id="saving-debt" href="https://www.fool.com/personal-finance/credit/60-second-guide-to-getting-out-of-debt.aspx">Getting Out of Debt</a></li>
+                <li class="sub-menu-link"><a id="saving-emergency" href="https://www.fool.com/investing/2016/07/09/9-steps-to-saving-a-10000-emergency-fund.aspx">Create an Emergency Fund</a></li>
+                <li class="sub-menu-link"><a id="saving-accounts" href="https://www.fool.com/personal-finance/saving/where-to-park-your-cash.aspx">Which Accounts Should I Use?</a></li>
+                <li class="sub-menu-link"> <a id="saving-college" href="https://www.fool.com/personal-finance/saving/60-second-guide-to-college-savings-strategies.aspx">College Savings</a> </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+                    <!-- <div class="color-line">
+    <div class="color blue"></div>
+    <div class="color yellow"></div>
+    <div class="color red"></div>
+    <div class="color green"></div>
+    <div class="color blue"></div>
+    <div class="color yellow"></div>
+</div> -->
+                </div>
+            </div>
+        </li>
+
+        <!--Community-->
+        <li class="nav-item main-menu-item dropdown">
+            <a id="topnav-community" href="javascript:void(0)">Community</a>
+            <div class="sub-nav sub-menu">
+                <div class="mega-menu-wrapper">
+                    <div class="mega-menu-wrapper-content sub-nav">
+    <div class="columns" id="community-subnav">
+        <div class="column">
+            <div class="sub-menu-header">
+                Our Mission:<br/ >Helping the World Invest — Better
+            </div>
+            <p>Founded in 1993 by brothers Tom and David Gardner, The Motley Fool helps millions of people attain financial freedom through our website, podcasts, books, newspaper column, radio show, and premium investing services.</p>
+        </div>
+        <!-- links loaded dynamically via postLoastHeaderLinks.js -->
+    </div>
+</div>
+
+                    <!-- <div class="color-line">
+    <div class="color blue"></div>
+    <div class="color yellow"></div>
+    <div class="color red"></div>
+    <div class="color green"></div>
+    <div class="color blue"></div>
+    <div class="color yellow"></div>
+</div> -->
+                </div>
+            </div>
+        </li>
+    </ul>
+</nav>
+
+        <button class="navigation-menu-button" id="mobile-menu-toggle" role="button">
+    <i class="fa fa-bars"></i>
+</button>
+<nav class="mobile-nav-container">
+    <ul class="mobile-nav">
+        
+            <li class="main-menu-item">
+                <a id="m-topnav-picks" href="https://www.fool.com/#services-section">Latest Stock Picks</a>
+            </li>
+        
+
+        <!--Stocks and Services-->
+        <li class="main-menu-item dropdown">
+            <div class="main-menu-item-link-wrapper" onclick="return true">
+                <span class="main-menu-item-link">
+                    <span class="dropdown">Stocks</span>
+                </span>
+            </div>
+            <ul class="sub-menu">
+                <div class="mega-menu-wrapper">
+                    <header class="sub-menu-name">
+                        Stocks
+                        <button class="btn-level-up">
+                            <i class="fa fa-chevron-left"></i>
+                        </button>
+                    </header>
+                    
+
+<div class="mega-menu-wrapper-content sub-nav">
+    <div class="columns" id="stocks-subnav">
+        <div class="column promo-box-column">
+	    
+	    
+
+            <div class="sub-menu-header">Premium Services</div>
+            <div class="stocks-info-table sub-nav-group">
+                <div class="stocks-info-item head">
+                    <div class="td name"></div>
+                    <div class="td">Return</div>
+                    <div class="td">S&P</div>
+                </div>
+                <div class="stocks-info-item">
+                    <div class="td name">
+                        <a id="stocks-sa" href="">Stock Advisor</a>
+                        <small>Flagship service</small>
+                    </div>
+                    <div class="td return">244%</div>
+                    <div class="td">70%</div>
+                </div>
+                <div class="stocks-info-item">
+                    <div class="td name">
+                        <a id="stocks-rb" href="">Rule Breakers</a>
+                        <small>High-growth stocks</small>
+                    </div>
+                    <div class="td return">115%</div>
+                    <div class="td">58%</div>
+                </div>
+                <div class="stocks-info-item">
+                    <div class="td name">
+                        <a id="stocks-ii" href="">Income Investor</a>
+                        <small>Dividend stocks</small>
+                    </div>
+                    <div class="td return">45%</div>
+                    <div class="td">43%</div>
+                </div>
+                <div class="stocks-info-item">
+                    <div class="td name">
+                        <a id="stocks-hg" href="">Hidden Gems</a>
+                        <small>Small-cap stocks</small>
+                    </div>
+                    <div class="td return">55%</div>
+                    <div class="td">55%</div>
+                </div>
+                <div class="stocks-info-item">
+                    <div class="td name">
+                        <a id="stocks-iv" href="">Inside Value</a>
+                        <small>Undervalued stocks</small>
+                    </div>
+                    <div class="td return">51%</div>
+                    <div class="td">31%</div>
+                </div>
+                <p align="center"><small><em>Returns as of 8/18/2017</em></small></p>
+            </div>
+	    
+        </div>
+        <div class="column">
+            <ul class="sub-nav-group">
+                <div class="sub-menu-header">Stock Market News</div>
+                <li class="sub-menu-link">
+                    <a id="stocks-news" href="https://www.fool.com/investing-news/">Latest Investing News</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="stocks-movers" href="https://www.fool.com/tag/series/10percent/Index.aspx">Gainers & Losers in the Market Today</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="stocks-top-div" href="https://www.fool.com/investing/2017/02/28/3-top-dividend-stocks-to-buy-now-2.aspx">3 Top Dividend Stocks to Buy Now</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="stocks-begin-div" href="https://www.fool.com/investing/2017/02/27/the-5-best-dividend-stocks-for-beginning-investors.aspx">Dividend Paying Stocks for Beginners</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="stocks-top-growth" href="https://www.fool.com/investing/2017/02/18/the-top-growth-stock-to-buy-in-2017.aspx">Top Growth Stock for 2017</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="stocks-high-growth" href="https://www.fool.com/investing/high-growth/index.aspx">Discover High Growth Stocks</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="stocks-10best-free-report" href="https://www.fool.com/mms/mark/op-sa-bbn-eg/?source=isasittn0010001">
+                        10 Best Stocks Right Now
+                        <i class="fa fa-dollar text-red"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="column">
+            <ul class="sub-nav-group">
+                <div class="sub-menu-header">Popular Stocks</div>
+                <li class="sub-menu-link">
+                    <a id="stocks-aapl" href="https://www.fool.com/quote/nasdaq/apple/aapl">Apple Stock (AAPL)</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="stocks-fb" href="https://www.fool.com/quote/nasdaq/facebook/fb">Facebook Stock (FB)</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="stocks-tsla" href="https://www.fool.com/quote/nasdaq/tesla-motors/tsla">Tesla Stock (TSLA)</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="stocks-nflx" href="https://www.fool.com/quote/nasdaq/netflix/nflx">Netflix Stock (NFLX)</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="stocks-goog" href="https://www.fool.com/quote/nasdaq/alphabet-c-shares/goog">Google Stock (GOOG)</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="stocks-amzn" href="https://www.fool.com/quote/nasdaq/amazon/amzn">Amazon Stock (AMZN)</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="stocks-ge" href="https://www.fool.com/quote/nyse/general-electric/ge">GE Stock (GE)</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="stocks-dis" href="https://www.fool.com/quote/nyse/walt-disney/dis">Disney Stock (DIS)</a>
+                </li>
+                <li id="stocks-twtr" class="sub-menu-link">
+                    <a href="https://www.fool.com/quote/nyse/twitter/twtr">Twitter Stock (TWTR)</a>
+                </li>
+                <li id="stocks-snap" class="sub-menu-link">
+                    <a href="https://www.fool.com/quote/nyse/snap-inc/snap">Snapchat Stock (SNAP)</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+                </div>
+            </ul>
+        </li>
+
+        <!--How To Invest-->
+        <li class="main-menu-item dropdown">
+            <div class="main-menu-item-link-wrapper" onclick="return true">
+                <span class="main-menu-item-link">
+                    <span class="dropdown">How to Invest</span>
+                </span>
+            </div>
+            <ul class="sub-menu">
+                <div class="mega-menu-wrapper">
+                    <header class="sub-menu-name">
+                        How to Invest
+                        <button class="btn-level-up">
+                            <i class="fa fa-chevron-left"></i>
+                        </button>
+                    </header>
+                    <div class="mega-menu-wrapper-content dub-nav">
+    <div class="columns" id="hti-subnav">
+        <!-- Ad loaded dynamically via postLoastHeaderLinks.js -->
+        <div class="column ">
+            <ul class="sub-nav-group">
+                <div class="sub-menu-header">Learn How to Invest</div>
+                <li class="sub-menu-link">
+                    <a id="hti-stocks" href="https://www.fool.com/how-to-invest/">How to Invest in Stocks</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="hti-start-100" href="https://www.fool.com/how-to-invest/best-way-to-invest-100-a-month.aspx">Start Investing with $100 a Month</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="hti-knowledge-center" href="https://www.fool.com/knowledge-center/index.aspx">Investing Knowledge Center</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="hti-options" href="https://www.fool.com/investing/options/options-a-foolish-introduction.aspx">Learn Options Trading</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="hti-etf" href="https://www.fool.com/investing/etf/mutual-funds-v-etfs.aspx">Guide to Index, Mutual & ETF Funds</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="hti-dividends" href="https://www.fool.com/investing/2016/10/15/building-a-dividend-portfolio-that-can-stand-the-t.aspx">How to Build a Dividend Portfolio</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="hti-retirement" href="https://www.fool.com/retirement/">Investing for Retirement</a>
+                </li>
+            </ul>
+        </div>
+        <div class="column">
+            <ul class="sub-nav-group">
+                <div class="sub-menu-header">Track Your Performance</div>
+                <li class="sub-menu-link">
+                    <a id="hti-scorecard" href="https://scorecard.fool.com">Portfolio Tracker</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="hti-caps" href="https://caps.fool.com/">Rate & Research Stocks - CAPS</a>
+                </li>
+                <div class="sub-menu-header">Investing Accounts</div>
+                <li class="sub-menu-link">
+                    <a id="hti-brokerage-accounts" href="https://www.fool.com/how-to-invest/broker/index.aspx">Compare Brokerage Accounts</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="hti-ira-accounts" href="https://www.fool.com/retirement/ira/compare.aspx">Compare IRA Accounts</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+                </div>
+            </ul>
+        </li>
+
+        <!--Retirement-->
+        <li class="main-menu-item dropdown">
+            <div class="main-menu-item-link-wrapper" onclick="return true">
+                <span class="main-menu-item-link">
+                    <span class="dropdown">Retirement</span>
+                </span>
+            </div>
+            <ul class="sub-menu">
+                <div class="mega-menu-wrapper">
+                    <header class="sub-menu-name">
+                        Retirement
+                        <button class="btn-level-up">
+                            <i class="fa fa-chevron-left"></i>
+                        </button>
+                    </header>
+                    <div class="mega-menu-wrapper-content">
+    <div class="columns">
+        <div class="column">
+            <div class="sub-menu-header">Retirement Planning</div>
+            <li class="sub-menu-link">
+                <a id="retire-401ks" href="https://www.fool.com/retirement/401k/401kintro-is-your-retirement-plan-foolish.aspx">401Ks</a>
+            </li>
+            <li class="sub-menu-link">
+                <a id="retire-iras" href="https://www.fool.com/retirement/ira/index.aspx?source=ifltnvsnv0000001">IRAs</a>
+            </li>
+            <li class="sub-menu-link">
+                <a id="retire-allocation" href="https://www.fool.com/retirement/assetallocation/introduction-to-asset-allocation.aspx?source=ifltnvsnv0000001">Asset Allocation</a>
+            </li>
+            <li class="sub-menu-link">
+                <a id="retire-steps-guide" href="https://www.fool.com/retirement/general/how-to-retire-in-style.aspx">Step by step guide to retirement</a>
+            </li>
+            <li class="sub-menu-link">               
+                <a id="retire-guide-plans" href="https://www.fool.com/retirement/2017/01/22/your-2017-guide-to-retirement-planning.aspx">Your 2017 Guide to Retirement Plans</a>
+            </li>
+            <li class="sub-menu-link">
+                <a id="retire-socsec-exist" href="https://www.fool.com/retirement/general/2016/03/19/will-social-security-last-until-i-retire.aspx">Will Social Security be there for me?</a>
+            </li>
+            <li class="sub-menu-link">
+                <a id="retire-guide-20s" href="https://www.fool.com/retirement/2016/12/19/the-perfect-retirement-strategy-for-20-somethings.aspx">Retirement Guide: 20s</a>
+            </li>
+            <li class="sub-menu-link">
+                <a id="retire-guide-30s" href="https://www.fool.com/retirement/2016/07/16/the-perfect-retirement-strategy-for-people-in-thei.aspx">Retirement Guide: 30s</a>
+            </li>
+            <li class="sub-menu-link">
+                <a id="retire-guide-40s" href="https://www.fool.com/retirement/2016/12/19/the-perfect-retirement-strategy-for-40-somethings.aspx">Retirement Guide: 40s</a>
+            </li>
+            <li class="sub-menu-link">
+                <a id="retire-guide-50s" href="https://www.fool.com/retirement/2016/12/20/the-perfect-retirement-strategy-for-50-somethings.aspx">Retirement Guide: 50s</a>
+            </li>
+            <li class="sub-menu-link">
+                <a id="retire-college-retire" href="https://www.fool.com/retirement/save-for-college-or-retirement.aspx">Save for College or Retirement?</a>
+            </li>
+            <li class="sub-menu-link"><a id="retire-socsec-free-report" href="http://www.fool.com/mms/mark/ecap-foolcom-social-security/?aid=8727&source=irrsittn0010002">$16,122 Social Security Bonus <i class="fa fa-dollar text-red"></i></a></li>
+        </div>
+        <div class="column">
+            <div class="sub-menu-header">Already Retired</div>
+            <li class="sub-menu-link">
+                <a id="retire-now-what" href="https://www.fool.com/retirement/general/2015/05/09/so-youre-about-to-retire-now-what.aspx">Time to Retire, Now What?</a>
+            </li>
+            <li class="sub-menu-link">
+                <a id="retire-60s" href="https://www.fool.com/retirement/2016/06/04/the-perfect-retirement-strategy-for-seniors-in-the.aspx">Living in Retirement in Your 60s</a>
+            </li>
+            <li class="sub-menu-link">
+                <a id="retire-reverse-mortgage" href="https://www.fool.com/retirement/2016/10/09/read-this-before-you-get-a-reverse-mortgage.aspx">Should I reverse Mortgage My Home?</a>
+            </li>
+            <li class="sub-menu-link">
+                <a id="retire-longtermcare" href="https://www.fool.com/investing/general/2016/05/21/your-2016-guide-to-long-term-care-and-long-term-ca.aspx">Should I Get a Long Term Care Policy?</a>
+            </li>
+            <li class="sub-menu-link">                
+                <a id="retire-socsec-guide" href="https://www.fool.com/retirement/general/2015/12/28/your-2016-guide-to-social-security-benefits.aspx">Your 2016 Guide to Social Security</a>
+            </li>
+        </div>
+    </div>
+</div>
+
+                </div>
+            </ul>
+        </li>
+
+        <!--Personal Finance -->
+        <li class="main-menu-item dropdown">
+            <div class="main-menu-item-link-wrapper" onclick="return true">
+                <span class="main-menu-item-link">
+                    <span class="dropdown">Personal Finance</span>
+                </span>
+            </div>
+            <ul class="sub-menu">
+                <div class="mega-menu-wrapper">
+                    <header class="sub-menu-name">
+                        Personal Finance
+                        <button class="btn-level-up">
+                            <i class="fa fa-chevron-left"></i>
+                        </button>
+                    </header>
+                    <div class="mega-menu-wrapper-content dub-nav">
+    <div class="columns">
+        <div class="column">
+            <ul class="sub-nav-group">
+                <a class="sub-menu-header" id="cc-heading" href="https://www.fool.com/credit-cards/">Credit Cards</a>
+                <li class="sub-menu-link">
+                    <a id="cc-best-overall" href="https://www.fool.com/credit-cards/best-credit-cards-of-2017/">Best Credit Cards of 2017</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="cc-bonuses" href="https://www.fool.com/credit-cards/best-credit-card-sign-up-bonuses/">Best Credit Card Sign-Up Bonuses</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="cc-transfer" href="https://www.fool.com/credit-cards/best-balance-transfer-credit-cards/">Best Balance-Transfer Credit Cards</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="cc-travel" href="https://www.fool.com/credit-cards/best-travel-credit-cards/">Best Travel Credit Cards</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="cc-cash" href="https://www.fool.com/credit-cards/best-cash-back-credit-cards/">Best Cash-Back Credit Cards</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="cc-nofee" href="https://www.fool.com/credit-cards/best-no-annual-fee-credit-cards/">Best No-Annual-Fee Credit Cards</a>
+                </li>
+            </ul>
+        </div>
+        <div class="column">
+            <ul class="sub-nav-group">
+                <a id="mortgage-heading" href="https://www.fool.com/mortgages/index.aspx" class="sub-menu-header">Mortgages</a>
+                <li class="sub-menu-link">
+                    <a id="mortgage-compare" href="https://www.fool.com/mortgages/compare-mortgage-rates/">Compare Mortgage Rates</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="mortgage-approved" href="https://www.fool.com/mortgages/get-pre-approved.aspx/">Get Pre-Approved</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="mortgage-afford" href="https://www.fool.com/mortgages/how-much-house-can-i-afford.aspx">How Much House Can I Afford?</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="mortgage-free-report" href="http://www.fool.com/ecap/the_motley_fool/mortgage-playbook-11-essentials/?source=izieditxt0000003&aid=8946">11 Mortgage Essentials Demystified</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="column">
+            <ul class="sub-nav-group">
+                <a class="sub-menu-header" id="tax-heading" href="https://www.fool.com/taxes/index.aspx">Taxes</a>
+                <li class="sub-menu-link">
+                    <a id="tax-reduce" href="https://www.fool.com/personal-finance/taxes/60-second-guide-to-cutting-your-taxes.aspx">How to Reduce Your Taxes</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="tax-deductions" href="https://www.fool.com/personal-finance/taxes/6-deductions-even-pros-overlook.aspx">Deductions Even Pros Overlook</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="tax-audit-proof" href="https://www.fool.com/personal-finance/taxes/audit-proof-your-tax-return.aspx">Audit-Proof Your Tax Return</a>
+                </li>
+                <li class="sub-menu-link">
+                    <a id="tax-keep" href="https://www.fool.com/personal-finance/taxes/get-organized-for-the-irs.aspx">What Info Should I Keep?</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="column">
+            <ul class="sub-nav-group">
+                <a id="saving-heading" href="https://www.fool.com/how-to-invest/personal-finance/savings/index.aspx" class="sub-menu-header">Saving & Budgeting</a>
+                <li class="sub-menu-link"><a id="saving-debt" href="https://www.fool.com/personal-finance/credit/60-second-guide-to-getting-out-of-debt.aspx">Getting Out of Debt</a></li>
+                <li class="sub-menu-link"><a id="saving-emergency" href="https://www.fool.com/investing/2016/07/09/9-steps-to-saving-a-10000-emergency-fund.aspx">Create an Emergency Fund</a></li>
+                <li class="sub-menu-link"><a id="saving-accounts" href="https://www.fool.com/personal-finance/saving/where-to-park-your-cash.aspx">Which Accounts Should I Use?</a></li>
+                <li class="sub-menu-link"> <a id="saving-college" href="https://www.fool.com/personal-finance/saving/60-second-guide-to-college-savings-strategies.aspx">College Savings</a> </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+                </div>
+            </ul>
+        </li>
+
+        <!--Community-->
+        <li class="main-menu-item dropdown">
+            <div class="main-menu-item-link-wrapper" onclick="return true">
+                <span class="main-menu-item-link">
+                    <span >Community</span>
+                </span>
+            </div>
+            <ul class="sub-menu">
+                <div class="mega-menu-wrapper">
+                    <header class="sub-menu-name">
+                        Community
+                        <button class="btn-level-up">
+                            <i class="fa fa-chevron-left"></i>
+                        </button>
+                    </header>
+                    
+<div class="mega-menu-wrapper-content" id="community-mob-subnav">
+    <div class="columns">
+        <!-- links loaded dynamically via postLoastHeaderLinks.js -->
+    </div>
+</div>
+
+                </div>
+            </ul>
+        </li>
+
+        
+            <li class="main-menu-item" id="logIn">
+                <a id="m-topnav-login" href="https://www.fool.com/secure/login.aspx?source=ilgsittph0000001">Login</a>
+            </li>
+        
+    </ul>
+</nav>
+<div class="mobile-nav-overlay"></div>
+
+
+        <!--  nav search -->
+        <div class="header-search-wrapper">
+            <button class="header-search-wrapper-toggle"></button>
+            <div class="header-search-form-wrapper">
+                
+
+<form name="lookup" action="/fooldotcom/searchredirect/" class="header-search-form">
+	<span class="sr-only">Search</span>
+	<label for="fool-search" class="fool-search-label" style="display:none;">
+	    Search:
+	</label>
+	<input name="query" label="search" id="fool-search" class="ticker-input-input" placeholder="Ticker or Keyword" role="search" aria-hidden="false" aria-haspopup="true" autocomplete="off"/>
+    <input type="submit" class="sr-only" value="Go">
+    <div id="header-search-submit"><i class="fa fa-search"></i></div>
+</form>
+
+
+            </div>
+        </div>
+        <!--  nav search -->
+    </div>
+
+    <div class="color-line">
+    <div class="color blue"></div>
+    <div class="color yellow"></div>
+    <div class="color red"></div>
+    <div class="color green"></div>
+    <div class="color blue"></div>
+    <div class="color yellow"></div>
+</div>
+</header>
+
+                    
+
+            
+    </section>
+
+
+
+            <!-- Header & Nav section with default -->
+            
+            
+
+            <!-- Content Container sets max-width and centers for themes with full bleed nav/footer/etc (Yolo, Precious)  ~GR 09/15-->
+            <div class="content-container">
+
+            <!-- Main Body section where individual apps reside -->
+            
+    
+        <div id="sticky-wrapper">
+            <header class="header-ads-container sticky-header-ads-container" >
+                
+
+<section class="header-ads ad">
+    
+        
+
+
+    <!-- Create container for ad -->
+    <div id='div-header_desk_sticky-29932' class='dfp-ads wide'>
+        <script type="text/javascript">
+            googletag.cmd.push(function() {
+                googletag.display('div-header_desk_sticky-29932');
+            });
+        </script>
+    </div>
+
+    
+
+
+    
+</section>
+
+            </header>
+        </div>
+    
+
+    <section class="main-content-section page-body" id="article-page">
+        <section id="main-content">
+                <div class="endless-body">
+
+                    
+    
+
+
+
+
+
+
+
+
+
+<div class="full_article" style="overflow:hidden" id="article-1">
+    <section class="usmf-new article-header">
+        
+            <header>
+                <div id="adv_text" class="adv-heading"></div>
+                <h1>The Worst IPOs of 2015</h1>
+                <h2>2015 wasn&#39;t a great year for IPOs, but these five performed especially poorly.</h2>
+            </header>
+        
+    </section>
+
+
+    <div class="main-col">
+        <!--placeholder-->
+        
+
+            
+                
+
+
+<div class="row author-tagline author-inline">
+    <div class="author-avatar">
+        
+            <img src="https://g.foolcdn.com/avatar/1738086916/large.ashx" alt=""/>
+        
+    </div>
+    <div class="author-and-date">
+        <div class="author-byline">
+            <div class="author-name">
+                Matthew Frankel
+            </div>
+            
+            <div class="author-username">
+                (<a href="https://my.fool.com/profile/TMFMathGuy/activity.aspx">TMFMathGuy</a>)</div>
+            
+        </div>
+        <div class="article-pub-date">
+            <div class="publication-date">
+            
+            Jan 12, 2016 at 1:09PM
+            
+            </div>
+        </div>
+    </div>
+</div>
+            
+
+            <section class="usmf-new article-body">
+                <span class="article-content">
+                    
+                        
+                            <p><img alt="Ipo" src="https://g.foolcdn.com/editorial/images/188828/ipo2_large.jpg"/></p>
+<p class="caption">Photo: <a href="http://www.gotcredit.com" target="_blank">www.gotcredit.com</a> via <a href="https://www.flickr.com/photos/jakerust/16836487531" target="_blank">Flickr</a>.</p>
+<p>2015 wasn't a great year for IPOs. In fact, the performance of IPOs was generally pretty dismal compared to previous years.</p>
+<p>To put things in perspective, consider that companies that hit the markets in 2014 are up by an average of 21%, while companies from the IPO class of 2013 are doing even better, up 40% on average. Meanwhile, the average 2015 IPO has averaged a total return of <em>negative</em> 5%.</p>
+<p>Last year was also a slow one for the U.S. IPO market. In fact, the volume of IPO proceeds raised fell by more than 64% from 2014 to $30 billion -- the lowest level since 2009. Just 229 companies decided to go public in 2015 -- a big drop-off from 364 the year before.</p>
+<div class="table-responsive"><table border="1" cellpadding="0" cellspacing="0">
+<thead>
+<tr><th>
+<p>Year</p>
+</th><th>
+<p>Number of IPOs</p>
+</th><th>
+<p>Total Proceeds</p>
+</th><th>
+<p>Average Return Since IPO</p>
+</th></tr>
+</thead>
+<tbody>
+<tr>
+<td valign="top" width="160">
+<p><strong>2013</strong></p>
+</td>
+<td valign="top" width="160">
+<p>222</p>
+</td>
+<td valign="top" width="160">
+<p>$54.9 billion</p>
+</td>
+<td valign="top" width="160">
+<p>40%</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="160">
+<p><strong>2014</strong></p>
+</td>
+<td valign="top" width="160">
+<p>275</p>
+</td>
+<td valign="top" width="160">
+<p>$85.2 billion</p>
+</td>
+<td valign="top" width="160">
+<p>21%</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="160">
+<p><strong>2015</strong></p>
+</td>
+<td valign="top" width="160">
+<p>169</p>
+</td>
+<td valign="top" width="160">
+<p>$30 billion</p>
+</td>
+<td valign="top" width="160">
+<p>(5%)</p>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="caption">Data source: <a href="http://www.RenaissanceCapital.com" target="_blank">Renaissance Capital</a>.</p><div class="interad">
+<!-- Create container for ad -->
+<div class="dfp-ads ad" id="div-content1_desk-37894">
+<script type="text/javascript">
+            googletag.cmd.push(function() {
+                googletag.display('div-content1_desk-37894');
+            });
+        </script>
+</div>
+</div>
+<p>There have been a few IPOs that have produced impressive returns, but others are trading for far less than their IPO price less than a year after going public.</p>
+<p>Let's go over the five worst IPOs of 2015 based on their performance since going public, excluding the minnows with market capitalizations of less than $250 million. Here are the five whose share prices have lost the most since their IPO pricing.</p>
+<p><strong>1.</strong> <strong>Etsy </strong><span class="ticker" data-id="335084">(<a href="https://www.fool.com/quote/nasdaq/etsy/etsy">NASDAQ:ETSY</a>)</span><strong>: Down 74% from IPO price</strong><br/> Etsy is well-known for its online marketplace of handmade goods, but investors were spooked by the emergence of <strong>Amazon.com</strong>'s "handmade" offering. Etsy is taking steps to adjust, but the market isn't convinced just yet.</p>
+<p>Despite the lackluster performance, Etsy is still growing rapidly, with year-over year revenue growth of 37.9% in the third quarter. Further, the number of active sellers and buyers increased significantly, up 19.4% and 24.9%, respectively. It will be interesting to see how Etsy fared during the holiday season, as the company feels that its holiday marketing efforts in 2015 were its strongest to date.</p><div class="interad">
+<!-- Create container for ad -->
+<div class="dfp-ads ad" id="div-content2_desk-36286">
+<script type="text/javascript">
+            googletag.cmd.push(function() {
+                googletag.display('div-content2_desk-36286');
+            });
+        </script>
+</div>
+</div>
+<p><strong>2.</strong> <strong>WOWO Ltd.</strong> <span class="ticker" data-id="335071">(<a href="https://www.fool.com/quote/nasdaq/wowo-ltd-spon-adr-ea-repr-ord/wowo">NASDAQ:WOWO</a>)</span><strong>: Down 49% from IPO price</strong><br/> This Chinese e-commerce company, which specializes in entertainment and lifestyle services, picked an unfortunate time to go public, as Chinese Internet stocks had a pretty weak 2015 overall. Shareholders may also be unsure about WOWO's future, as revenue fell by 17% year over year and losses accelerated. In fact, for fiscal year 2014, the company's net loss was even more than its revenue. </p>
+<p><strong>3.</strong> <strong>Invitae</strong> <span class="ticker" data-id="334966">(<a href="https://www.fool.com/quote/nyse/invitae/nvta">NYSE:NVTA</a>)</span><strong>: Down 58% from IPO price</strong><br/> Invitae specializes in genetic diagnostics for hereditary disorders, and it has missed earnings estimates in its first three quarters as a public company. The company's negative cash flow has been a turnoff to investors, and the stock seems extremely risky at this point.</p>
+<p>However, there have been a few reasons for shareholders to smile. During the third quarter, Invitae's volume of billable genetic tests grew 360% from the previous year, and the cost of each test dropped by about 12%. For the full year, the company raised its guidance from 16,000-18,000 billable tests to 17,000-19,000. If the company can continue its rapid growth and keep cutting costs, then it may only be a matter of time before a profit is achieved.</p>
+<p><strong>4. Tallgrass Energy GP</strong> <span class="ticker" data-id="335130">(<a href="https://www.fool.com/quote/nyse/tallgrass-energy-gp/tegp">NYSE:TEGP</a>)</span><strong>: Down 48.2% from IPO price</strong><br/> 2015 was an unfortunate year for the energy industry all around. Tallgrass Energy is a limited partnership that owns and manages oil and gas assets, designed to be a pure-play general partnership version of <strong>Tallgrass Energy Partners</strong> <span class="ticker" data-id="287909">(<a href="https://www.fool.com/quote/nyse/tallgrass-energy-partners/tep">NYSE:TEP</a>)</span>. Much of the decline in price can be attributed to low commodity prices, and an oil price rebound could give shares a much-needed boost. In the meantime, shareholders are paid a 3.61% dividend yield, which management expects to increase by 20% by 2017.</p><div class="interad">
+<!-- Create container for ad -->
+<div class="dfp-ads ad" id="div-content3_desk-13123">
+<script type="text/javascript">
+            googletag.cmd.push(function() {
+                googletag.display('div-content3_desk-13123');
+            });
+        </script>
+</div>
+</div>
+<p><strong>5.</strong> <strong>TerraForm Global</strong> <span class="ticker" data-id="335443">(<a href="https://www.fool.com/quote/nasdaq/terraform-global-class-a/glbl">NASDAQ:GLBL</a>)</span><strong>: Down 70% from IPO price</strong><br/> TerraForm is a yieldco that operates clean power generation assets in emerging markets such as China, Brazil, and India. Yieldcos are companies created by parent companies (in this case <strong>SunEdison</strong>), designed to hold assets and generate predictable cash flows, and therefore produce a reliable dividend stream for shareholders. In 2015, Yieldcos had a rough year in general; low oil and gas prices tend to make solar and wind assets less attractive to investors, as does the prospect of rising interest rates. Additionally, since TerraForm's assets are all in emerging markets, this further increases the risk involved. However, the current 12.2% dividend yield may persuade some long-term investors to take the chance while prices are so low.</p>
+<p><a href="http://ycharts.com/companies/WOWO/chart/" target="_blank"><img alt="WOWO Chart" src="https://media.ycharts.com/charts/da300a00e8d10f891a23ac79a2bd5889.png"/></a></p>
+<p class="caption"><a href="http://ycharts.com/companies/WOWO" target="_blank">WOWO</a> data by <a href="http://ycharts.com" target="_blank">YCharts</a>.</p>
+<p><strong>The bottom line on IPOs<br/> </strong>One thing is for certain: IPO investing is volatile, and while some IPOs double in their first year, many others get hammered. These are some extreme examples of what can go wrong, but most IPOs are speculative investments and should be treated as such when you're deciding whether to invest or not.</p>
+<p></p><div id="pitch"></div>
+                        
+                    
+                </span>
+                <span class="article-disclosure">
+                    <p><em><a href="http://my.fool.com/profile/KWMatt82/info.aspx">Matthew Frankel</a> has no position in any stocks mentioned. The Motley Fool owns shares of and recommends Amazon.com. The Motley Fool owns shares of Etsy, Inc.. Try any of our Foolish newsletter services <a href="http://www.fool.com/shop/newsletters/index.aspx?source=isiedilnk018048">free for 30 days</a>. We Fools may not all hold the same opinions, but we all believe that <a href="http://wiki.fool.com/Motley">considering a diverse range of insights</a> makes us better investors. The Motley Fool has a <a href="http://www.fool.com/Legal/fool-disclosure-policy.aspx">disclosure policy</a>.</em></p>
+                </span>
+
+                
+                <div class="special-message">
+
+                    <div class="promoboxAd">
+                        <div id='div-promobox-37582' data-adparams='{"primary_tickers_companies": [], "uid": "", "divId": "div-promobox-37582", "pos": 0, "collection": null, "height": 300, "seg": "default", "test_bucket": 74, "adtags": "[\"yahoo-money\"]", "services": [], "tstrId": "1Ses_inv-control-90_control_100", "segment": "default", "pitchId": 3186, "placement": "promobox", "primary_tickers": [], "headline": "The Worst IPOs of 2015", "session_count": 0, "width": 470, "ten_or_more_sessions": false, "bureau": "usmf-investment-planning", "position": 0, "tickers": "[\"AMZN\", \"SUNEQ\", \"TEP\", \"ETSY\", \"GLBL\", \"TEGP\", \"NVTA\", \"WOWO\"]"}' data-dfpextra='{"primary_tickers_companies": [], "uid": "", "headline": "The Worst IPOs of 2015", "session_count": 0, "collection": null, "primary_tickers": [], "test_bucket": 74, "ten_or_more_sessions": false, "bureau": "usmf-investment-planning", "adtags": "[\"yahoo-money\"]", "services": [], "tickers": "[\"AMZN\", \"SUNEQ\", \"TEP\", \"ETSY\", \"GLBL\", \"TEGP\", \"NVTA\", \"WOWO\"]", "pitchId": 3186}' class='dfp-ad ad'></div><script type='text/javascript'>PitcherAds.get({"primary_tickers_companies": [], "uid": "", "divId": "div-promobox-37582", "pos": 0, "collection": null, "height": 300, "seg": "default", "test_bucket": 74, "adtags": "[\"yahoo-money\"]", "services": [], "tstrId": "1Ses_inv-control-90_control_100", "segment": "default", "pitchId": 3186, "placement": "promobox", "primary_tickers": [], "headline": "The Worst IPOs of 2015", "session_count": 0, "width": 470, "ten_or_more_sessions": false, "bureau": "usmf-investment-planning", "position": 0, "tickers": "[\"AMZN\", \"SUNEQ\", \"TEP\", \"ETSY\", \"GLBL\", \"TEGP\", \"NVTA\", \"WOWO\"]"});</script>
+                    </div>
+
+                </div>
+                
+
+            </section>
+        
+    </div>
+
+
+    
+        
+
+
+
+
+
+
+<div class="side-col article-page">
+    <section class="related-content">
+        <div class="info-card ad">
+            
+                
+                    
+
+
+    <!-- Create container for ad -->
+    <div id='div-sidebar1_desk-85639' class='dfp-ads ad'>
+        <script type="text/javascript">
+            googletag.cmd.push(function() {
+                googletag.display('div-sidebar1_desk-85639');
+            });
+        </script>
+    </div>
+
+    
+
+
+                
+            
+        </div>
+
+        
+            <!-- Author Byline Section -->
+            <section class="author-card">
+                <div class="wayfinder with-rule">
+                    <hr class="wayfinder-rule" />
+                    <h2>Author</h2>
+                </div>
+
+                <div class="expander author-tagline">
+                    <div class="author-avatar">
+                        
+                         <img src="https://g.foolcdn.com/avatar/1738086916/large.ashx" alt="Matthew Frankel"/>
+                        
+                    </div>
+                    <div class="author-and-date">
+                        <div class="author-byline">
+                            <div class="author-name">
+                                Matthew Frankel
+                            </div>
+
+                            <div class="author-username">
+                                (<a href="https://my.fool.com/profile/TMFMathGuy/activity.aspx">TMFMathGuy</a>)
+                            </div>
+
+                        </div>
+                        <p class="primary_author-bio">Matt brought his love of teaching and investing to the Fool in 2012 in order to help people invest better. Matt specializes in writing about the best opportunities in bank stocks, REITs, and personal finance, but loves any investment at the right price. Follow me on Twitter to keep up with all of the best financial coverage!
+<a href="https://twitter.com/TMFMathGuy" class="twitter-follow-button" data-show-count="true" data-size="large">Follow @TMFMathGuy</a>
+
+
+</p>
+                    </div>
+                </div>
+            </section>
+        
+
+        <!-- Article Info Section -->
+        <div class="info-card">
+            <div class="wayfinder with-rule">
+                <hr class="wayfinder-rule" />
+                <h2>Article Info</h2>
+            </div>
+            <ul class="topic-list">
+                <li>
+                    <span class="left-icon time"><i class="reverse-icon"></i></span>
+                    
+                    Jan 12, 2016 at 1:09PM
+                    
+                </li>
+
+                
+                <li>
+                    <span class="left-icon bureau-usmf-investment-planning" id="usmf-investment-planning"><i class="reverse-icon"></i></span>
+                    Investment Planning
+                </li>
+                
+
+                
+            </ul>
+        </div>
+
+        
+            
+<div style="text-align: center; margin-top:30px">
+    
+
+
+    <!-- Create container for ad -->
+    <div id='div-lemora-20709' class='dfp-ads ad'>
+        <script type="text/javascript">
+            googletag.cmd.push(function() {
+                googletag.display('div-lemora-20709');
+            });
+        </script>
+    </div>
+
+    
+
+
+</div>
+
+        
+
+        <!-- Related Tickers Section -->
+        
+        <section class="related-tickers">
+            <div class="wayfinder with-rule">
+                <hr class="wayfinder-rule" />
+                <h2>Stocks</h2>
+            </div>
+
+            
+                
+                    <div class="ticker-row" data-instrument-id="202816">
+                        <div>
+                            <span class="image-wrap">
+                                <a href="https://www.fool.com/quote/nasdaq/amazon/amzn">
+                                    <img alt="Amazon Stock Quote"
+                                    data-img-src="https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Fart%2Fcompanylogos%2Fmark%2FAMZN.png&h=64&w=64&op=resize"
+                                    src="https://g.foolcdn.com/p/86400/placeholdit.imgix.net/~text?txtsize=20&bg=e6e6e6&txtclr=111111&txt=AMZN&w=64&h=64" />
+                                </a>
+                            </span>
+                            <h3>Amazon</h3>
+                            <h4 class="h-margin-b">
+                                <span class="ticker">
+                                    <a title="Amazon Stock Quote" href="https://www.fool.com/quote/nasdaq/amazon/amzn">
+                                        NASDAQ:<span class="symbol">AMZN</span>
+                                    </a>
+                                </span>
+                            </h4>
+                            <aside class="price-quote-container smaller">
+                                <h4 class="current-price">
+                                    $961.66
+                                </h4>
+                                <h4 class="price-change-arrow price-pos">
+                                <span style="position:absolute;left:-999em;">up</span>
+                                <i class="fool-icon-arrow-up"></i>
+
+                                </h4>
+                                <h4 class="price-change-amount price-pos">
+                                    $1.09
+                                </h4>
+                                <h4 class="price-change-percent price-pos">
+                                    (0.11%)
+                                </h4>
+                            </aside>
+                        </div>
+                    </div>
+                
+            
+                
+                    <div class="ticker-row" data-instrument-id="206055">
+                        <div>
+                            <span class="image-wrap">
+                                <a href="https://www.fool.com/quote/nasdaqoth/sunedison/suneq">
+                                    <img alt="SunEdison Stock Quote"
+                                    data-img-src="https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Fart%2Fcompanylogos%2Fmark%2FSUNEQ.png&h=64&w=64&op=resize"
+                                    src="https://g.foolcdn.com/p/86400/placeholdit.imgix.net/~text?txtsize=20&bg=e6e6e6&txtclr=111111&txt=SUNEQ&w=64&h=64" />
+                                </a>
+                            </span>
+                            <h3>SunEdison</h3>
+                            <h4 class="h-margin-b">
+                                <span class="ticker">
+                                    <a title="SunEdison Stock Quote" href="https://www.fool.com/quote/nasdaqoth/sunedison/suneq">
+                                        NASDAQOTH:<span class="symbol">SUNEQ</span>
+                                    </a>
+                                </span>
+                            </h4>
+                            <aside class="price-quote-container smaller">
+                                <h4 class="current-price">
+                                    $0.01
+                                </h4>
+                                <h4 class="price-change-arrow price-pos">
+                                <span style="position:absolute;left:-999em;">up</span>
+                                <i class="fool-icon-arrow-up"></i>
+
+                                </h4>
+                                <h4 class="price-change-amount price-pos">
+                                    $0.00
+                                </h4>
+                                <h4 class="price-change-percent price-pos">
+                                    (5.88%)
+                                </h4>
+                            </aside>
+                        </div>
+                    </div>
+                
+            
+                
+                    <div class="ticker-row" data-instrument-id="287909">
+                        <div>
+                            <span class="image-wrap">
+                                <a href="https://www.fool.com/quote/nyse/tallgrass-energy-partners/tep">
+                                    <img alt="Tallgrass Energy Partners Stock Quote"
+                                    data-img-src="https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Fart%2Fcompanylogos%2Fmark%2FTEP.png&h=64&w=64&op=resize"
+                                    src="https://g.foolcdn.com/p/86400/placeholdit.imgix.net/~text?txtsize=20&bg=e6e6e6&txtclr=111111&txt=TEP&w=64&h=64" />
+                                </a>
+                            </span>
+                            <h3>Tallgrass Energy Partners</h3>
+                            <h4 class="h-margin-b">
+                                <span class="ticker">
+                                    <a title="Tallgrass Energy Partners Stock Quote" href="https://www.fool.com/quote/nyse/tallgrass-energy-partners/tep">
+                                        NYSE:<span class="symbol">TEP</span>
+                                    </a>
+                                </span>
+                            </h4>
+                            <aside class="price-quote-container smaller">
+                                <h4 class="current-price">
+                                    $45.21
+                                </h4>
+                                <h4 class="price-change-arrow price-neg">
+                                <span style="position:absolute;left:-999em;">down</span>
+                                <i class="fool-icon-arrow-down"></i>
+
+                                </h4>
+                                <h4 class="price-change-amount price-neg">
+                                    $0.54
+                                </h4>
+                                <h4 class="price-change-percent price-neg">
+                                    (-1.18%)
+                                </h4>
+                            </aside>
+                        </div>
+                    </div>
+                
+            
+                
+                    <div class="ticker-row" data-instrument-id="335084">
+                        <div>
+                            <span class="image-wrap">
+                                <a href="https://www.fool.com/quote/nasdaq/etsy/etsy">
+                                    <img alt="Etsy Stock Quote"
+                                    data-img-src="https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Fart%2Fcompanylogos%2Fmark%2FETSY.png&h=64&w=64&op=resize"
+                                    src="https://g.foolcdn.com/p/86400/placeholdit.imgix.net/~text?txtsize=20&bg=e6e6e6&txtclr=111111&txt=ETSY&w=64&h=64" />
+                                </a>
+                            </span>
+                            <h3>Etsy</h3>
+                            <h4 class="h-margin-b">
+                                <span class="ticker">
+                                    <a title="Etsy Stock Quote" href="https://www.fool.com/quote/nasdaq/etsy/etsy">
+                                        NASDAQ:<span class="symbol">ETSY</span>
+                                    </a>
+                                </span>
+                            </h4>
+                            <aside class="price-quote-container smaller">
+                                <h4 class="current-price">
+                                    $15.65
+                                </h4>
+                                <h4 class="price-change-arrow price-pos">
+                                <span style="position:absolute;left:-999em;">up</span>
+                                <i class="fool-icon-arrow-up"></i>
+
+                                </h4>
+                                <h4 class="price-change-amount price-pos">
+                                    $0.07
+                                </h4>
+                                <h4 class="price-change-percent price-pos">
+                                    (0.45%)
+                                </h4>
+                            </aside>
+                        </div>
+                    </div>
+                
+            
+                
+                    <div class="ticker-row" data-instrument-id="335443">
+                        <div>
+                            <span class="image-wrap">
+                                <a href="https://www.fool.com/quote/nasdaq/terraform-global-class-a/glbl">
+                                    <img alt="TerraForm Global (Class A) Stock Quote"
+                                    data-img-src="https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Fart%2Fcompanylogos%2Fmark%2FGLBL.png&h=64&w=64&op=resize"
+                                    src="https://g.foolcdn.com/p/86400/placeholdit.imgix.net/~text?txtsize=20&bg=e6e6e6&txtclr=111111&txt=GLBL&w=64&h=64" />
+                                </a>
+                            </span>
+                            <h3>TerraForm Global (Class A)</h3>
+                            <h4 class="h-margin-b">
+                                <span class="ticker">
+                                    <a title="TerraForm Global (Class A) Stock Quote" href="https://www.fool.com/quote/nasdaq/terraform-global-class-a/glbl">
+                                        NASDAQ:<span class="symbol">GLBL</span>
+                                    </a>
+                                </span>
+                            </h4>
+                            <aside class="price-quote-container smaller">
+                                <h4 class="current-price">
+                                    $5.05
+                                </h4>
+                                <h4 class="price-change-arrow price-pos">
+                                <span style="position:absolute;left:-999em;">up</span>
+                                <i class="fool-icon-arrow-up"></i>
+
+                                </h4>
+                                <h4 class="price-change-amount price-pos">
+                                    $0.03
+                                </h4>
+                                <h4 class="price-change-percent price-pos">
+                                    (0.50%)
+                                </h4>
+                            </aside>
+                        </div>
+                    </div>
+                
+            
+                
+                    <div class="ticker-row" data-instrument-id="335130">
+                        <div>
+                            <span class="image-wrap">
+                                <a href="https://www.fool.com/quote/nyse/tallgrass-energy-gp/tegp">
+                                    <img alt="Tallgrass Energy GP Stock Quote"
+                                    data-img-src="https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Fart%2Fcompanylogos%2Fmark%2FTEGP.png&h=64&w=64&op=resize"
+                                    src="https://g.foolcdn.com/p/86400/placeholdit.imgix.net/~text?txtsize=20&bg=e6e6e6&txtclr=111111&txt=TEGP&w=64&h=64" />
+                                </a>
+                            </span>
+                            <h3>Tallgrass Energy GP</h3>
+                            <h4 class="h-margin-b">
+                                <span class="ticker">
+                                    <a title="Tallgrass Energy GP Stock Quote" href="https://www.fool.com/quote/nyse/tallgrass-energy-gp/tegp">
+                                        NYSE:<span class="symbol">TEGP</span>
+                                    </a>
+                                </span>
+                            </h4>
+                            <aside class="price-quote-container smaller">
+                                <h4 class="current-price">
+                                    $23.88
+                                </h4>
+                                <h4 class="price-change-arrow price-none">
+                                <span style="position:absolute;left:-999em;">no change</span>
+                                <i class=""></i>
+
+                                </h4>
+                                <h4 class="price-change-amount price-none">
+                                    
+                                </h4>
+                                <h4 class="price-change-percent price-none">
+                                    (0.00%)
+                                </h4>
+                            </aside>
+                        </div>
+                    </div>
+                
+            
+                
+                    <div class="ticker-row" data-instrument-id="334966">
+                        <div>
+                            <span class="image-wrap">
+                                <a href="https://www.fool.com/quote/nyse/invitae/nvta">
+                                    <img alt="Invitae Stock Quote"
+                                    data-img-src="https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Fart%2Fcompanylogos%2Fmark%2FNVTA.png&h=64&w=64&op=resize"
+                                    src="https://g.foolcdn.com/p/86400/placeholdit.imgix.net/~text?txtsize=20&bg=e6e6e6&txtclr=111111&txt=NVTA&w=64&h=64" />
+                                </a>
+                            </span>
+                            <h3>Invitae</h3>
+                            <h4 class="h-margin-b">
+                                <span class="ticker">
+                                    <a title="Invitae Stock Quote" href="https://www.fool.com/quote/nyse/invitae/nvta">
+                                        NYSE:<span class="symbol">NVTA</span>
+                                    </a>
+                                </span>
+                            </h4>
+                            <aside class="price-quote-container smaller">
+                                <h4 class="current-price">
+                                    $9.60
+                                </h4>
+                                <h4 class="price-change-arrow price-pos">
+                                <span style="position:absolute;left:-999em;">up</span>
+                                <i class="fool-icon-arrow-up"></i>
+
+                                </h4>
+                                <h4 class="price-change-amount price-pos">
+                                    $0.05
+                                </h4>
+                                <h4 class="price-change-percent price-pos">
+                                    (0.52%)
+                                </h4>
+                            </aside>
+                        </div>
+                    </div>
+                
+            
+                
+                    <div class="ticker-row" data-instrument-id="335071">
+                        <div>
+                            <span class="image-wrap">
+                                <a href="https://www.fool.com/quote/nasdaq/wowo-ltd-spon-adr-ea-repr-ord/wowo">
+                                    <img alt="WOWO LTD SPON ADR EA REPR ORD Stock Quote"
+                                    data-img-src="https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Fart%2Fcompanylogos%2Fmark%2FWOWO.png&h=64&w=64&op=resize"
+                                    src="https://g.foolcdn.com/p/86400/placeholdit.imgix.net/~text?txtsize=20&bg=e6e6e6&txtclr=111111&txt=WOWO&w=64&h=64" />
+                                </a>
+                            </span>
+                            <h3>WOWO LTD SPON ADR EA REPR ORD</h3>
+                            <h4 class="h-margin-b">
+                                <span class="ticker">
+                                    <a title="WOWO LTD SPON ADR EA REPR ORD Stock Quote" href="https://www.fool.com/quote/nasdaq/wowo-ltd-spon-adr-ea-repr-ord/wowo">
+                                        NASDAQ:<span class="symbol">WOWO</span>
+                                    </a>
+                                </span>
+                            </h4>
+                            <aside class="price-quote-container smaller">
+                                <h4 class="current-price">
+                                    
+                                </h4>
+                                <h4 class="price-change-arrow price-none">
+                                <span style="position:absolute;left:-999em;">no change</span>
+                                <i class=""></i>
+
+                                </h4>
+                                <h4 class="price-change-amount price-none">
+                                    
+                                </h4>
+                                <h4 class="price-change-percent price-none">
+                                    (0.00%)
+                                </h4>
+                            </aside>
+                        </div>
+                    </div>
+                
+            
+        </section>
+        
+
+        <!-- Related Articles Section -->
+        <section class="read-more-section">
+            
+            <div class="wayfinder with-rule">
+                <hr class="wayfinder-rule" />
+                <h2 rv-text="headline">Read More</h2>
+            </div>
+            <ul class="two-line-list">
+                
+                <li rv-each-article="articles">
+                    <a rv-href="article.legacy_uri" href="/retirement/2017/08/17/3-reasons-it-pays-to-have-a-roth-ira.aspx" rv-text="article.headline">3 Reasons It Pays to Have a Roth IRA</a>
+                </li>
+                
+                <li rv-each-article="articles">
+                    <a rv-href="article.legacy_uri" href="/investing/2017/08/18/the-dow-just-plunged-274-points-the-horror-well-no.aspx" rv-text="article.headline">The Dow Just &#39;Plunged&#39; 274 Points -- The Horror! Well, Not Really...</a>
+                </li>
+                
+                <li rv-each-article="articles">
+                    <a rv-href="article.legacy_uri" href="/careers/2017/08/17/3-career-tips-from-our-happiest-workers.aspx" rv-text="article.headline">3 Career Tips From Our Happiest Workers</a>
+                </li>
+                
+                <li rv-each-article="articles">
+                    <a rv-href="article.legacy_uri" href="/retirement/2017/08/17/where-to-put-your-portfolio-when-you-hit-50.aspx" rv-text="article.headline">Where to Put Your Portfolio When You Hit 50</a>
+                </li>
+                
+                <li rv-each-article="articles">
+                    <a rv-href="article.legacy_uri" href="/credit-cards/2017/08/18/3-myths-that-could-tank-your-credit-score.aspx" rv-text="article.headline">3 Myths That Could Tank Your Credit Score</a>
+                </li>
+                
+            </ul>
+            
+        </section>
+        
+
+        <hr class="wayfinder-rule ad-scroll-marker" />
+
+        <div class="info-card ad ad-scroll">
+            
+                
+                    
+
+
+    <!-- Create container for ad -->
+    <div id='div-sidebar2_desk-60299' class='dfp-ads ad'>
+        <script type="text/javascript">
+            googletag.cmd.push(function() {
+                googletag.display('div-sidebar2_desk-60299');
+            });
+        </script>
+    </div>
+
+    
+
+
+                
+            
+        </div>
+    </section>
+</div>
+
+    
+
+    <div id="taboola-below-article-thumbnails-article-1"></div>
+</div>
+
+
+
+
+                    
+                    <!-- new inserted-->
+                </div>
+            <div class="article-page-end">
+                
+
+                
+
+<div class="compare-brokers">
+    <div class="wayfinder with-rule">
+        <hr class="wayfinder-rule" />
+        <h2>Compare Brokers</h2>
+    </div>
+    <div class="brokers-offers">
+        <div class="broker-offer-1">
+            
+
+
+    <!-- Create container for ad -->
+    <div id='div-footer1_desk-75055' class='dfp-ads broker-ad ad'>
+        <script type="text/javascript">
+            googletag.cmd.push(function() {
+                googletag.display('div-footer1_desk-75055');
+            });
+        </script>
+    </div>
+
+    
+
+
+        </div>
+        <div class="broker-offer-2">
+             
+
+
+    <!-- Create container for ad -->
+    <div id='div-footer2_desk-64370' class='dfp-ads broker-ad ad'>
+        <script type="text/javascript">
+            googletag.cmd.push(function() {
+                googletag.display('div-footer2_desk-64370');
+            });
+        </script>
+    </div>
+
+    
+
+
+        </div>
+        <div class="broker-offer-3">
+            
+
+
+    <!-- Create container for ad -->
+    <div id='div-footer3_desk-35064' class='dfp-ads broker-ad ad'>
+        <script type="text/javascript">
+            googletag.cmd.push(function() {
+                googletag.display('div-footer3_desk-35064');
+            });
+        </script>
+    </div>
+
+    
+
+
+        </div>
+        <div class="broker-offer-4">
+            
+
+
+    <!-- Create container for ad -->
+    <div id='div-footer4_desk-39317' class='dfp-ads broker-ad ad'>
+        <script type="text/javascript">
+            googletag.cmd.push(function() {
+                googletag.display('div-footer4_desk-39317');
+            });
+        </script>
+    </div>
+
+    
+
+
+        </div>
+    </div>
+</div>
+
+
+
+                
+
+                
+
+
+
+
+    <!-- Create container for ad -->
+    <div id='div-Interstitial-208' class='dfp-ads ad'>
+        <script type="text/javascript">
+            googletag.cmd.push(function() {
+                googletag.display('div-Interstitial-208');
+            });
+        </script>
+    </div>
+
+    
+
+
+
+            </div>
+        </section>
+  </section>
+
+   
+
+
+            </div> <!-- ./ content-container -->
+
+            <!-- Footer section -->
+            
+
+                    
+                        <footer class="footer" id="usmf-footer">
+    <!-- links loaded dynamically via postLoastHeaderLinks.js -->
+</footer>
+
+                    
+            
+    
+
+
+
+        </div><!-- ./ page-grid-container -->
+        
+
+    </div> <!-- ./ main-container -->
+    <!-- Target for aria-describedby when link is active -->
+    <div id="currently-active-desc" style="display:none;">Current</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+    googletag.cmd.push(function() {
+        googletag.pubads().refresh();
+    });
+    </script>
+    <!-- facebook comments -->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+    <script type="text/javascript" src="//g.foolcdn.com/static/dubs/CACHE/js/558c1616dcea.js" async></script>
+
+    <span id="twitter_title" style="display: none">The Worst IPOs of 2015 @themotleyfool #stocks $AMZN, $SUNEQ, $TEP, $ETSY, $GLBL, $TEGP, $NVTA, $WOWO</span>
+<div id="share-box">
+    <script>
+        var socialShare = function(network) {
+            var url = encodeURI(window.location.href);
+            var title = document.title;
+            var twitter_title = encodeURIComponent($('#twitter_title').text());
+            var shareUrls = [];
+            shareUrls['Facebook'] = "https://facebook.com/sharer/sharer.php?u=" + url;
+            shareUrls['Twitter'] = "https://twitter.com/intent/tweet/?text=" + twitter_title + "&url=" + url;
+            shareUrls['Google+'] = "https://plus.google.com/share?url=" + url;
+            shareUrls['Tumblr'] = "http://tumblr.com/widgets/share/tool?canonicalUrl=" + url + '&shareSource=tumblr_share_button';
+            shareUrls['mailto'] = "mailto:?subject=" + title + "&body=" + url;
+            shareUrls['LinkedIn'] = "https://www.linkedin.com/shareArticle?mini=true&url=" + url + "&title=" + title + "&summary=" + title + "&source=" + url;
+
+            if (network != "mailto"){
+                analytics.ready(function() {
+                    ga('send', {
+                      hitType: 'social',
+                      socialNetwork: network,
+                      socialAction: 'like',
+                      socialTarget: window.location.href.toString()
+                    });
+                });
+            }
+
+            if (typeof(shareUrls[network]) !== "undefined") {
+                window.location = shareUrls[network];
+            }
+        };
+    </script>
+    
+    <!-- Sharingbutton Facebook -->
+    <a class="item" id="share-facebook" name="facebookShareButton" onclick="socialShare('Facebook')" target="_blank" aria-label="Share on Facebook">
+        <i class="fa fa-facebook"></i>
+    </a>
+
+    <!-- Sharingbutton Twitter -->
+    <a class="item" id="share-twitter" name="twitterShareButton" onclick="socialShare('Twitter')" target="_blank" aria-label="Share on Twitter">
+        <i class="fa fa-twitter"></i>
+    </a>
+
+    <!-- Sharingbutton Google+ -->
+    <a class="item" id="share-google" name="gPlusShareButton" onclick="socialShare('Google+')" target="_blank" aria-label="Share on Google+">
+      <i class="fa fa-google-plus"></i>
+    </a>
+
+    <!-- Sharingbutton Tumblr -->
+    <a class="item" id="share-tumblr" name="tumblrShareButton" onclick="socialShare('Tumblr')" target="_blank" aria-label="Share on Tumblr">
+      <i class="fa fa-tumblr"></i>
+    </a>
+
+    <!-- Sharingbutton E-Mail -->
+    <a class="item" id="share-email" name="emailShareButton" onclick="socialShare('mailto')" target="_self" aria-label="Share by E-Mail">
+      <i class="fa fa-envelope"></i>
+    </a>
+
+    <!-- Sharingbutton LinkedIn -->
+    <a class="item" id="share-linkedin" name="linkedinShareButton" onclick="socialShare('LinkedIn')" target="_blank" aria-label="Share on LinkedIn">
+      <i class="fa fa-linkedin"></i>
+    </a>
+</div>
+
+    <script>
+        $(document).ready(function() {
+            if (typeof(window.InfotronQueue) !== "undefined")
+                window.InfotronQueue.EndOfPage('articlePageView');
+        });
+    </script>
+
+    <script type="text/javascript" src="//static.criteo.net/js/ld/ld.js" async></script>
+<script type="text/javascript">
+window.criteo_q = window.criteo_q || [];
+var deviceType = /iPad/.test(navigator.userAgent)?"t":/Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Silk/.test(navigator.userAgent)?"m":"d";
+window.criteo_q.push(
+{ event: "setAccount", account: 27608},
+{ event: "setSiteType", type: deviceType},
+{ event: "setEmail", email: unescape(encodeURIComponent('d41d8cd98f00b204e9800998ecf8427e')).trim().toLowerCase()},
+{ event: "viewHome"});
+</script>
+
+
+
+
+
+
+
+  <script>
+    if (typeof window.Infotrack !== "undefined")  {
+        window.Infotrack.initialize("usmf");
+    }
+  </script>
+  </body>
+</html>

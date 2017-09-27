@@ -1,0 +1,854 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<script data-cfasync='false' data-pagespeed-no-defer>var __ez=__ez||{};__ez.evt={};__ez.ck={};__ez.dot={};__ez.template={};__ez.template.isOrig=false;__ez.evt.add=function(el,evt,handler){if(el.addEventListener){el.addEventListener(evt,handler,false)}else if(el.attachEvent){el.attachEvent('on'+evt,handler)}else{el['on'+evt]=handler()}};__ez.ck.get=function(n,e){null!==e&&(n=n+"_"+e);for(var t=n+"=",r=decodeURIComponent(document.cookie),o=r.split(";"),i=0;i<o.length;i++){for(var u=o[i];" "===u.charAt(0);)u=u.substring(1);if(0===u.indexOf(t))return u.substring(t.length,u.length)}return""};__ez.queue=function(){function g(a,b,g,h,j,k,l,m){var n=new f.file(a,b,g,h,j,k,l);!0===m?d[a]=n:e[a]=n,c[a]=n,i(n)}function h(a,g,h,j,k,l,m,n,o){!0===l&&(a=a+"_"+b++);var p=new f.func(a,g,h,j,k,m,n);!0===o?d[a]=p:e[a]=p,c[a]=p,i(p)}function i(a){!0!==j(a)&&a.process()}function j(a){if(a.blockedBy instanceof Array)for(var b=0;b<a.blockedBy.length;b++){var d=a.blockedBy[b];if(!1===c.hasOwnProperty(d))return k(a.name+" blocked = "+d),!0;if(!0===a.proceedIfError&&!0===c[d].isError)return!1;if(!1===c[d].isComplete)return k(a.name+" blocked = "+d),!0}return!1}function k(a){var b=window.location.href,c=new RegExp("[?&]ezq=([^&#]*)","i"),d=c.exec(b);"1"===(d?d[1]:null)&&console.debug(a)}function l(){++a>20||(k("let's go"),m(d),m(e))}function m(a){for(var b in a)if(!1!==a.hasOwnProperty(b)){var c=a[b];!0===c.isComplete||j(c)||!0===c.isInitialized||!0===c.isError?!0===c.isError?k(c.name+": error"):!0===c.isComplete?k(c.name+": complete already"):!0===c.isInitialized&&k(c.name+": initialized already"):c.process()}}var a=0,b=0,c=[],d=[],e=[],f={func:function(a,b,d,e,f,g,h){var i=this;this.name=a,this.funcName=b,this.parameters=null===d?null:d instanceof Array?d:[d],this.isBlock=e,this.blockedBy=f,this.deleteWhenComplete=g,this.isError=!1,this.isComplete=!1,this.isInitialized=!1,this.proceedIfError=h,this.process=function(){k("... func = "+a),i.isInitialized=!0,i.isComplete=!0;var b=i.funcName.split(".");b.length>3||(3===b.length?window[b[0]][b[1]][b[2]].apply(null,this.parameters):2===b.length?window[b[0]][b[1]].apply(null,this.parameters):window[i.funcName].apply(null,this.parameters)),!0===i.deleteWhenComplete&&delete c[a],!0===i.isBlock&&(k("----- F'D: "+i.name),l())}},file:function(a,b,c,d,e,f,g){var h=this;this.name=a,this.path=b,this.async=e,this.defer=f,this.isBlock=c,this.blockedBy=d,this.isInitialized=!1,this.isError=!1,this.isComplete=!1,this.proceedIfError=g,this.process=function(){h.isInitialized=!0,k("... file = "+a);var c=document.createElement("script");c.src=b,!0===e?c.async=!0:!0===f&&(c.defer=!0),c.onerror=function(){k("----- ERR'D: "+h.name),h.isError=!0,!0===h.isBlock&&l()},c.onreadystatechange=c.onload=function(){var a=c.readyState;k("----- F'D: "+h.name),a&&!/loaded|complete/.test(a)||(h.isComplete=!0,!0===h.isBlock&&l())},document.getElementsByTagName("head")[0].appendChild(c)}}};return{addFile:g,addFunc:h,items:c}}();var __ezDotData=function(a,b){this.name=a,this.val=b};__ez.dot.b64={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",encode:function(a){var c,d,e,f,g,h,i,b="",j=0;for(a=Base64._utf8_encode(a);j<a.length;)c=a.charCodeAt(j++),d=a.charCodeAt(j++),e=a.charCodeAt(j++),f=c>>2,g=(3&c)<<4|d>>4,h=(15&d)<<2|e>>6,i=63&e,isNaN(d)?h=i=64:isNaN(e)&&(i=64),b=b+this._keyStr.charAt(f)+this._keyStr.charAt(g)+this._keyStr.charAt(h)+this._keyStr.charAt(i);return b},decode:function(a){var c,d,e,f,g,h,i,b="",j=0;for(a=a.replace(/[^A-Za-z0-9+\/=]/g,"");j<a.length;)f=this._keyStr.indexOf(a.charAt(j++)),g=this._keyStr.indexOf(a.charAt(j++)),h=this._keyStr.indexOf(a.charAt(j++)),i=this._keyStr.indexOf(a.charAt(j++)),c=f<<2|g>>4,d=(15&g)<<4|h>>2,e=(3&h)<<6|i,b+=String.fromCharCode(c),64!=h&&(b+=String.fromCharCode(d)),64!=i&&(b+=String.fromCharCode(e));return b=Base64._utf8_decode(b)},_utf8_encode:function(a){a=a.replace(/rn/g,"n");for(var b="",c=0;c<a.length;c++){var d=a.charCodeAt(c);d<128?b+=String.fromCharCode(d):d>127&&d<2048?(b+=String.fromCharCode(d>>6|192),b+=String.fromCharCode(63&d|128)):(b+=String.fromCharCode(d>>12|224),b+=String.fromCharCode(d>>6&63|128),b+=String.fromCharCode(63&d|128))}return b},_utf8_decode:function(a){for(var b="",c=0,d=c1=c2=0;c<a.length;)d=a.charCodeAt(c),d<128?(b+=String.fromCharCode(d),c++):d>191&&d<224?(c2=a.charCodeAt(c+1),b+=String.fromCharCode((31&d)<<6|63&c2),c+=2):(c2=a.charCodeAt(c+1),c3=a.charCodeAt(c+2),b+=String.fromCharCode((15&d)<<12|(63&c2)<<6|63&c3),c+=3);return b}},__ez.dot.dataToStr=function(a){if(void 0===a)return[];try{for(var b in a)a[b].val=a[b].val+""}catch(a){}return a},__ez.dot.getCC=function(){var a="XX";return"undefined"!=typeof _ezaq&&_ezaq.hasOwnProperty("country")&&(a=_ezaq.country),a},__ez.dot.getDID=function(){var a="0";return"undefined"!=typeof _ezaq&&_ezaq.hasOwnProperty("domain_id")&&(a=_ezaq.domain_id.toString()),a},__ez.dot.getEpoch=function(a){return"undefined"!=typeof _ezaq&&_ezaq.hasOwnProperty("t_epoch")&&(a=_ezaq.t_epoch),a},__ez.dot.getURL=function(a){return("undefined"!=typeof ezJsu&&1==ezJsu||"undefined"!=typeof _ez_sa&&1==_ez_sa||"undefined"!=typeof isAmp&&!0===isAmp)&&(a="//g.ezoic.net"+a),a},__ez.dot.isValid=function(a){for(var b=0;b<a.length;b++)if(a[b]instanceof __ezDotData==!1)return console.error("Invalid data. ",a[b]),!1;return!0},__ez.dot.isDefined=function(){for(var a=0;a<arguments.length;a++)if(void 0===arguments[a]||null===arguments[a])return console.error("Argument not defined. ",arguments),!1;return!0};__ez.bit=function(){function c(a,b){d(a,b),e()}function d(b,c){__ez.dot.isDefined(b)&&__ez.dot.isValid(c)&&a.push({type:"pageview",pageview_id:b,domain_id:__ez.dot.getDID(),t_epoch:__ez.dot.getEpoch(0),data:__ez.dot.dataToStr(c)})}function e(){void 0!==document.visibilityState&&"prerender"===document.visibilityState||(__ez.dot.isDefined(a)&&a.length>0&&((new Image).src=__ez.dot.getURL(b)+"?orig="+(!0===__ez.template.isOrig?1:0)+"&ds="+btoa(JSON.stringify(a))),a=[])}var a=[],b="/detroitchicago/greenoaks.gif";return{Add:d,AddAndFire:c,Fire:e}}();</script><script data-cfasync='false' data-pagespeed-no-defer>__ez.pel=function(){function c(a,b){d(a,b,0,0,0,0,0),f()}function d(b,c,d,e,f,h,i){if(__ez.dot.isDefined(b,b.getSlotElementId)){var j=parseInt(b.getTargeting("ap")[0]),k=b.getSizes()[0],l=k.l.toString()+"x"+k.j.toString(),m=g(b),n=b.getSlotElementId();__ez.dot.isDefined(m,n)&&__ez.dot.isValid(c)&&a.push({type:"impression",impression_id:m,domain_id:__ez.dot.getDID(),unit:n,t_epoch:__ez.dot.getEpoch(0),revenue:d,est_revenue:e,ad_position:j,ad_size:l,bid_floor_filled:f,bid_floor_prev:h,stat_source_id:i,country_code:__ez.dot.getCC(),data:__ez.dot.dataToStr(c)})}}function e(b,c){var d=b.split("/");if(__ez.dot.isDefined(b)&&3===d.length&&__ez.dot.isValid(c)){var e=d[0],f=d[2];a.push({type:"impression",impression_id:f,domain_id:__ez.dot.getDID(),unit:e,t_epoch:__ez.dot.getEpoch(0),data:__ez.dot.dataToStr(c)})}}function f(){void 0!==document.visibilityState&&"prerender"===document.visibilityState||(__ez.dot.isDefined(a)&&a.length>0&&((new Image).src=__ez.dot.getURL(b)+"?orig="+(!0===__ez.template.isOrig?1:0)+"&sts="+btoa(JSON.stringify(a))),a=[])}function g(a){var b=0;try{var c=a.getTargetingMap();if(-1===a.getSlotElementId().indexOf("div-gpt-ad"))return b;if(void 0!==c)for(var e in c)if(-1!==e.indexOf("iid")&&void 0!==c[e][0]){b=c[e][0];break}}catch(a){}return b}var a=[],b="/porpoiseant/army.gif";return{Add:d,AddAndFire:c,AddById:e,Fire:f}}();var EzoicPixel=function(){this.pixels=[],this.pixelUrl="/ezoic/e.gif",("undefined"!=typeof ezJsu&&ezJsu===!0||"undefined"!=typeof _ez_sa&&_ez_sa===!0||"undefined"!=typeof window.isAmp&&isAmp===!0)&&(this.pixelUrl="//g.ezoic.net"+this.pixelUrl),this.tEpoch=0,"undefined"!=typeof _ezaq&&_ezaq.hasOwnProperty("t_epoch")&&(this.tEpoch=_ezaq.t_epoch)},EzoicPixelData=function(a,b){this.name=a,this.val=b};EzoicPixel.prototype={constructor:EzoicPixel,AddAndFireImpPixel:function(a,b){this.AddImpPixel(a,b,0,0,0,0,0),this.FirePixels()},AddAndFirePVPixel:function(a,b){this.AddPVPixel(a,b),this.FirePixels()},AddImpPixel:function(a,b,c,d,e,f,g){if(this.isDefined(a,a.getSlotElementId)){var h=parseInt(a.getTargeting("ap")[0]),i=a.getSizes()[0],j=i.l.toString()+"x"+i.j.toString(),k="0",l="XX";"undefined"!=typeof _ezaq&&_ezaq.hasOwnProperty("domain_id")&&(k=_ezaq.domain_id.toString()),"undefined"!=typeof _ezaq&&_ezaq.hasOwnProperty("country")&&(l=_ezaq.country);var m=this.getSlotIID(a),n=a.getSlotElementId();this.isDefined(m,n)&&this.validateData(b)&&(b=this.convertDataToStr(b),this.pixels.push({type:"impression",impression_id:m,domain_id:k,unit:n,t_epoch:this.tEpoch,revenue:c,est_revenue:d,ad_position:h,ad_size:j,bid_floor_filled:e,bid_floor_prev:f,stat_source_id:g,country_code:l,data:b}))}},AddImpPixelById:function(a,b){var c="0";"undefined"!=typeof _ezaq&&_ezaq.hasOwnProperty("domain_id")&&(c=_ezaq.domain_id.toString());var d=a.split("/");if(this.isDefined(a)&&3===d.length&&this.validateData(b)){var e=d[0],f=d[2];b=this.convertDataToStr(b),this.pixels.push({type:"impression",impression_id:f,domain_id:c,unit:e,t_epoch:this.tEpoch,data:b})}},AddPVPixel:function(a,b){var c="0";"undefined"!=typeof _ezaq&&_ezaq.hasOwnProperty("domain_id")&&(c=_ezaq.domain_id.toString()),this.isDefined(a)&&this.validateData(b)&&(b=this.convertDataToStr(b),this.pixels.push({type:"pageview",pageview_id:a,domain_id:c,t_epoch:this.tEpoch,data:b}))},FirePixels:function(){"undefined"!=typeof document.visibilityState&&"prerender"===document.visibilityState||(this.isDefined(this.pixels)&&this.pixels.length>0&&((new Image).src=this.pixelUrl+"?orig="+(__ez.template.isOrig===!0?1:0)+"&pixels="+encodeURIComponent(JSON.stringify(this.pixels))),this.pixels=[])},NewData:function(a,b){return new EzoicPixelData(a,b)},convertDataToStr:function(a){if("undefined"==typeof a)return[];try{for(var b in a)a[b].val=a[b].val+""}catch(a){}return a},getSlotIID:function(a){var b=0;try{var c=a.getTargetingMap(),d=a.getSlotElementId();if(d.indexOf("div-gpt-ad")===-1)return b;if("undefined"!=typeof c)for(var e in c)if(e.indexOf("iid")!==-1&&"undefined"!=typeof c[e][0]){b=c[e][0];break}}catch(a){}return b},isDefined:function(){for(var a=0;a<arguments.length;a++)if("undefined"==typeof arguments[a]||null===arguments[a])return console.error("Argument not defined. ",arguments),!1;return!0},validateData:function(a){for(var b=0;b<a.length;b++)if(a[b]instanceof EzoicPixelData==!1)return console.error("Invalid pixelData. ",a[b]),!1;return!0}};</script>
+<script type="text/javascript">
+	var __banger_pmp_deals=[{"SlotName":"/1254144/amigobulls_com-banner-2","Deals":[]},{"SlotName":"/1254144/amigobulls_com-large-billboard-2","Deals":[{"DealId":18,"Floor":25}]},{"SlotName":"/1254144/amigobulls_com-medrectangle-4","Deals":[{"DealId":18,"Floor":25},{"DealId":19,"Floor":100}]},{"SlotName":"/1254144/amigobulls_com-medrectangle-3","Deals":[{"DealId":18,"Floor":25}]},{"SlotName":"/1254144/amigobulls_com-leader-1","Deals":[{"DealId":18,"Floor":25},{"DealId":19,"Floor":100}]},{"SlotName":"/1254144/amigobulls_com-large-leaderboard-2","Deals":[{"DealId":17,"Floor":160},{"DealId":18,"Floor":25},{"DealId":19,"Floor":100},{"DealId":7,"Floor":150},{"DealId":8,"Floor":200}]},{"SlotName":"/1254144/amigobulls_com-box-4","Deals":[{"DealId":17,"Floor":160},{"DealId":18,"Floor":25},{"DealId":19,"Floor":100},{"DealId":7,"Floor":150},{"DealId":8,"Floor":200}]},{"SlotName":"/1254144/amigobulls_com-banner-1","Deals":[{"DealId":18,"Floor":25}]},{"SlotName":"/1254144/amigobulls_com-medrectangle-1","Deals":[{"DealId":18,"Floor":25}]}];
+</script>
+<script data-cfasync="false" data-pagespeed-no-defer type='text/javascript'>
+function ez_isclean( data ) {
+    if (typeof data === 'undefined') { data = document.URL; }
+    var re = /(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))(@|%2540|%40)((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))/;
+    var isClean = !re.test(data);
+    return isClean;
+}
+
+var ez_queue = new Array();
+function sort_queue(a, b)
+{
+  if( a.priority < b.priority ) return -1;
+  else if( a.priority == b.priority ) return 0;
+  else return 1;
+}
+function execute_ez_queue()
+{
+  ez_queue.sort( sort_queue );
+
+  for( var i in ez_queue )
+  {
+        if(typeof ez_queue[i].method != "undefined")
+        {
+            try{
+                ez_queue[i].method.call( null );
+            }
+            catch (err) {
+
+            }
+        }
+  }
+}
+
+window.ez_ad_units = new Array();
+window.ezslots = new Array();
+function ez_write_tag(d) {
+    if(ez_isclean() && d instanceof Array) {
+
+		ez_ad_units[ez_ad_units.length] = d;
+        var ezcmd = "googletag.cmd.push(function() {var divid = 'div-gpt-ad-"+d[1]+"-0';if(typeof ezlrarn == 'function'){ezlrarn(divid);}googletag.display(divid);var to = 0;if("+d[2]+".getTargeting('ga')[0] == '0'){to = 500;console.log('"+d[2]+" - no google');}if(window.ezDisableInitialLoad==true){setTimeout(function(){googletag.pubads().refresh(["+d[2]+"])},to);}});";
+		return ezcmd;
+    }
+    else {
+        return "1+1";
+    }
+}
+function in_array(needle, haystack) {
+    var length = haystack.length;
+    for(var i = 0; i < length; i++) {
+        if(haystack[i] == needle) return true;
+    }
+    return false;
+}
+</script><script data-cfasync="false" data-pagespeed-no-defer type='text/javascript'>var ezrpos = new Array();var ez_current_interval;var ez_current_load = 0;</script>
+<script data-cfasync="false" type="text/javascript" data-pagespeed-no-defer src="//go.ezoic.net/porpoiseant/dall.js" async></script>
+<script data-cfasync="false" type="text/javascript" data-pagespeed-no-defer>
+function epbjsRefreshSlot(e){epbjs.que.push(function(){epbjs.requestBids({adUnitCodes:[e.getSlotElementId()],bidsBackHandler:function(){epbjs.setTargetingForGPTAsync([e.getSlotElementId()])}})})}var epbjs=epbjs||{};epbjs.bidderTimeout=2000,epbjs.useAdj=true,epbjs.que=epbjs.que||[],epbjs.ezdss=epbjs.ezdss||[],epbjs.ezobid=epbjs.ezobid||[],epbjs.que.push(function(){var e=[{code: 'div-gpt-ad-amigobulls_com-banner-2-0', sizes: [[160,600]], bids: [{bidder: 'districtm', params: { placementId: '11586111' }},{bidder: 'pulsepoint', params: { cf: '160X600', cp: 560269, ct: 472595 }},{bidder: 'sonobi', params: { placement_id: '507eb80cf92592557f50' }},{bidder: 'criteo', params: { zoneId: '739916' }}] },{code: 'div-gpt-ad-amigobulls_com-large-billboard-2-0', sizes: [[336,280],[300,250]], bids: [{bidder: 'districtm', params: { placementId: '11586111' }},{bidder: 'pulsepoint', params: { cf: '300X250', cp: 560269, ct: 472597 }},{bidder: 'sonobi', params: { placement_id: '507eb80cf92592557f50' }},{bidder: 'criteo', params: { zoneId: '739917' }}] },{code: 'div-gpt-ad-amigobulls_com-medrectangle-4-0', sizes: [[580,400],[336,280],[300,250]], bids: [{bidder: 'districtm', params: { placementId: '11586111' }},{bidder: 'pulsepoint', params: { cf: '300X250', cp: 560269, ct: 472597 }},{bidder: 'sonobi', params: { placement_id: '507eb80cf92592557f50' }},{bidder: 'criteo', params: { zoneId: '739917' }}] },{code: 'div-gpt-ad-amigobulls_com-leader-1-0', sizes: [[250,250]], bids: [{bidder: 'sonobi', params: { placement_id: '507eb80cf92592557f50' }}] },{code: 'div-gpt-ad-amigobulls_com-large-leaderboard-2-0', sizes: [[250,250]], bids: [{bidder: 'sonobi', params: { placement_id: '507eb80cf92592557f50' }}] },{code: 'div-gpt-ad-amigobulls_com-box-4-0', sizes: [[336,280],[300,250]], bids: [{bidder: 'districtm', params: { placementId: '11586111' }},{bidder: 'pulsepoint', params: { cf: '300X250', cp: 560269, ct: 472597 }},{bidder: 'sonobi', params: { placement_id: '507eb80cf92592557f50' }},{bidder: 'criteo', params: { zoneId: '739917' }}] },{code: 'div-gpt-ad-amigobulls_com-banner-1-0', sizes: [[250,250]], bids: [{bidder: 'sonobi', params: { placement_id: '507eb80cf92592557f50' }}] },{code: 'div-gpt-ad-amigobulls_com-medrectangle-1-0', sizes: [[336,280],[300,250]], bids: [{bidder: 'districtm', params: { placementId: '11586111' }},{bidder: 'pulsepoint', params: { cf: '300X250', cp: 560269, ct: 472597 }},{bidder: 'sonobi', params: { placement_id: '507eb80cf92592557f50' }},{bidder: 'criteo', params: { zoneId: '739917' }}] ,sizeMapping: [
+			{
+				minWidth: 336,
+				sizes: [[336,280]]
+			}]}];epbjs.addAdUnits(e);epbjs.aliasBidder('appnexus', 'districtm');epbjs.SS={"criteo":10050,"districtm":10035,"pulsepoint":10019,"sonobi":10048},epbjs.bidderSettings={districtm: { bidCpmAdjustment: function(bidCpm) { var adj1 = bidCpm * 0.850000; var adj2 = adj1 * 1.200000; return adj2; }},pulsepoint: { bidCpmAdjustment: function(bidCpm) { var adj1 = bidCpm * 0.750000; var adj2 = adj1 * 1.200000; return adj2; }},sonobi: { bidCpmAdjustment: function(bidCpm) { var adj1 = bidCpm * 0.700000; var adj2 = adj1 * 1.200000; return adj2; }},criteo: { bidCpmAdjustment: function(bidCpm) { var adj1 = bidCpm * 0.720000; var adj2 = adj1 * 1.200000; return adj2; }},standard:{adserverTargeting:[{key:"hb_bidder",val:function(e){return e.bidderCode}},{key:"hb_adid",val:function(e){return e.adId}},{key:"hb_pb",val:function(e){var s=e.cpm;return 5>s?(Math.floor(100*s)/100).toFixed(2):(Math.floor(10*s)/10).toFixed(2)}},{key:"hb_ssid",val:function(e){return"ehb"==e.bidder?0:"undefined"!=typeof epbjs.SS[e.bidder]?epbjs.SS[e.bidder]:(console.error("epbjs: NO MATCH"),0)}}]}},epbjs.onEvent("bidWon",function(e){"ehb"==e.bidder?epbjs.ezdss[e.adUnitCode]=e.ss:"undefined"!=typeof epbjs.SS[e.bidder]?(epbjs.ezdss[e.adUnitCode]=epbjs.SS[e.bidder],1==epbjs.useAdj&&["sovrn","openx","pulsepoint","defymedia","aol","conversant","districtm","admedia","brealtime","sonobi","criteo"].indexOf(e.bidder)>-1&&(epbjs.ezobid[e.adUnitCode]=e.cpm/1.200000)):console.error("epbjs: NO MATCH")}),epbjs.requestBids({bidsBackHandler:function(e){epbjs.setTargetingForGPTAsync()}})});
+</script><script data-cfasync="false" data-pagespeed-no-defer type='text/javascript'>window.isEZABL=false;window.ezmadspc=300;</script><script data-cfasync="false" data-pagespeed-no-defer type='text/javascript'>window.ezDisableInitialLoad=false;</script><script data-cfasync="false" data-pagespeed-no-defer type='text/javascript'>
+window.googletag = window.googletag || {};
+googletag.cmd = googletag.cmd || [];
+(function() {
+var gads = document.createElement('script');
+gads.async = true;
+gads.type = 'text/javascript';
+var useSSL = 'https:' == document.location.protocol;
+gads.src = (useSSL ? 'https:' : 'http:') +
+'//www.googletagservices.com/tag/js/gpt.js';
+var node = document.getElementsByTagName('script')[0];
+node.parentNode.insertBefore(gads, node);
+})();
+
+
+
+</script>
+<script data-cfasync="false" data-pagespeed-no-defer type='text/javascript'>
+googletag.cmd.push(function() {if(typeof window.isEZABL == 'undefined' || window.isEZABL != true) {ezslot_0 = googletag.defineSlot('/1254144/amigobulls_com-banner-2',[160,600],'div-gpt-ad-amigobulls_com-banner-2-0').addService(googletag.pubads()).setTargeting('iid5','493917').setTargeting('t','134').setTargeting('d','46056').setTargeting('t1','134').setTargeting('pvc','0').setTargeting('ap','1102').setTargeting('sap','1102').setTargeting('a','|3|').setTargeting('as','revenue').setTargeting('plat','1').setTargeting('bra','mod6').setTargeting('ic','1').setTargeting('at','mbf').setTargeting('adr','399').setTargeting('reft','tf').setTargeting('refs','120').setTargeting('ga','2497208').setTargeting('rid','99998').setTargeting('pt','18').setTargeting('al','1031').setTargeting('compid','2').setTargeting('tap','amigobulls_com-banner-2-493917').setTargeting('bv','17').setCollapseEmptyDiv(false).setTargeting('br1','10').setTargeting('br2','10').setTargeting('ezoic','1').setTargeting('deal1',[17,18,19,20,21,22,23,24,25,26,7,8,9,10,11,12,13,14,15,16]);ezslot_0.set('adsense_ad_types','text_image').set('adsense_background_color','FFFFFF').set('adsense_border_color','FFFFFF').set('adsense_channel_ids','1702401361').set('adsense_link_color','0000FF').set('adsense_text_color','000000').set('adsense_url_color','828282');ezrpos[0]="0";ezslot_1 = googletag.defineSlot('/1254144/amigobulls_com-large-billboard-2',[336,280],'div-gpt-ad-amigobulls_com-large-billboard-2-0').addService(googletag.pubads()).setTargeting('iid5','438717').setTargeting('t','134').setTargeting('d','46056').setTargeting('t1','134').setTargeting('pvc','0').setTargeting('ap','1665').setTargeting('sap','1665').setTargeting('a','|3|').setTargeting('as','revenue').setTargeting('plat','1').setTargeting('bra','mod6').setTargeting('ic','1').setTargeting('at','mbf').setTargeting('adr','399').setTargeting('reft','tf').setTargeting('refs','30').setTargeting('ga','2497208').setTargeting('rid','99998').setTargeting('pt','0').setTargeting('al','1034').setTargeting('compid','0').setTargeting('tap','amigobulls_com-large-billboard-2-438717').setTargeting('bv','14').setCollapseEmptyDiv(false).setTargeting('br1','60').setTargeting('br2','30').setTargeting('ezoic','1').setTargeting('deal1',[17,19,20,21,22,23,24,25,26,7,8,9,10,11,12,13,14,15,16]);ezslot_1.set('adsense_ad_types','text_image').set('adsense_background_color','FFFFFF').set('adsense_border_color','FFFFFF').set('adsense_channel_ids','1702401361').set('adsense_link_color','0000FF').set('adsense_text_color','000000').set('adsense_url_color','828282');ezrpos[1]="1";ezslot_2 = googletag.defineSlot('/1254144/amigobulls_com-medrectangle-4',[580,400],'div-gpt-ad-amigobulls_com-medrectangle-4-0').addService(googletag.pubads()).setTargeting('iid5','428067').setTargeting('t','134').setTargeting('d','46056').setTargeting('t1','134').setTargeting('pvc','0').setTargeting('ap','1100').setTargeting('sap','1100').setTargeting('a','|3|').setTargeting('as','revenue').setTargeting('plat','1').setTargeting('bra','mod6').setTargeting('ic','1').setTargeting('at','mbf').setTargeting('adr','399').setTargeting('reft','n').setTargeting('refs','120').setTargeting('ga','2497208').setTargeting('rid','99998').setTargeting('pt','9').setTargeting('al','1022').setTargeting('compid','2').setTargeting('tap','amigobulls_com-medrectangle-4-428067').setTargeting('bv','14').setCollapseEmptyDiv(false).setTargeting('br1','140').setTargeting('br2','70').setTargeting('ezoic','1').setTargeting('deal1',[17,20,21,22,23,24,25,26,7,8,9,10,11,12,13,14,15,16]);ezslot_2.set('adsense_ad_types','text_image').set('adsense_background_color','FFFFFF').set('adsense_border_color','FFFFFF').set('adsense_channel_ids','1702401361').set('adsense_link_color','0000FF').set('adsense_text_color','000000').set('adsense_url_color','828282');ezrpos[2]="2";ezslot_3 = googletag.defineSlot('/1254144/amigobulls_com-medrectangle-3',[300,250],'div-gpt-ad-amigobulls_com-medrectangle-3-0').addService(googletag.pubads()).setTargeting('iid5','494067').setTargeting('t','134').setTargeting('d','46056').setTargeting('t1','134').setTargeting('pvc','0').setTargeting('ap','1624').setTargeting('sap','1624').setTargeting('a','|3|').setTargeting('as','revenue').setTargeting('plat','1').setTargeting('bra','mod6').setTargeting('ic','1').setTargeting('at','mbf').setTargeting('adr','399').setTargeting('reft','n').setTargeting('refs','120').setTargeting('ga','2497208').setTargeting('rid','99998').setTargeting('pt','8').setTargeting('al','1021').setTargeting('compid','1').setTargeting('tap','amigobulls_com-medrectangle-3-494067').setTargeting('bv','11').setCollapseEmptyDiv(false).setTargeting('br1','90').setTargeting('br2','40').setTargeting('ezoic','1').setTargeting('deal1',[17,19,20,21,22,23,24,25,26,7,8,9,10,11,12,13,14,15,16]);ezslot_3.set('adsense_ad_types','text_image').set('adsense_background_color','FFFFFF').set('adsense_border_color','FFFFFF').set('adsense_channel_ids','1702401361').set('adsense_link_color','0000FF').set('adsense_text_color','000000').set('adsense_url_color','828282');ezrpos[3]="3";ezslot_4 = googletag.defineSlot('/1254144/amigobulls_com-leader-1',[250,250],'div-gpt-ad-amigobulls_com-leader-1-0').addService(googletag.pubads()).setTargeting('iid5','478617').setTargeting('t','134').setTargeting('d','46056').setTargeting('t1','134').setTargeting('pvc','0').setTargeting('ap','1664').setTargeting('sap','1664').setTargeting('a','|3|').setTargeting('as','revenue').setTargeting('plat','1').setTargeting('bra','mod6').setTargeting('ic','1').setTargeting('at','mbf').setTargeting('adr','399').setTargeting('reft','n').setTargeting('refs','120').setTargeting('ga','2497208').setTargeting('rid','99998').setTargeting('pt','0').setTargeting('al','1037').setTargeting('compid','2').setTargeting('tap','amigobulls_com-leader-1-478617').setTargeting('bv','16').setCollapseEmptyDiv(false).setTargeting('br1','140').setTargeting('br2','70').setTargeting('ezoic','1').setTargeting('deal1',[17,20,21,22,23,24,25,26,7,8,9,10,11,12,13,14,15,16]);ezslot_4.set('adsense_ad_types','text_image').set('adsense_background_color','FFFFFF').set('adsense_border_color','FFFFFF').set('adsense_channel_ids','1702401361').set('adsense_link_color','0000FF').set('adsense_text_color','000000').set('adsense_url_color','828282');ezrpos[4]="4";ezslot_5 = googletag.defineSlot('/1254144/amigobulls_com-large-leaderboard-2',[250,250],'div-gpt-ad-amigobulls_com-large-leaderboard-2-0').addService(googletag.pubads()).setTargeting('iid5','489567').setTargeting('t','134').setTargeting('d','46056').setTargeting('t1','134').setTargeting('pvc','0').setTargeting('ap','1101').setTargeting('sap','1101').setTargeting('a','|3|').setTargeting('as','revenue').setTargeting('plat','1').setTargeting('bra','mod6').setTargeting('ic','1').setTargeting('at','mbf').setTargeting('adr','399').setTargeting('reft','tf').setTargeting('refs','30').setTargeting('ga','2497208').setTargeting('rid','99998').setTargeting('pt','0').setTargeting('al','1036').setTargeting('compid','0').setTargeting('tap','amigobulls_com-large-leaderboard-2-489567').setTargeting('bv','20').setCollapseEmptyDiv(false).setTargeting('br1','260').setTargeting('br2','120').setTargeting('ezoic','1').setTargeting('deal1',[20,21,22,23,24,25,26,9,10,11,12,13,14,15,16]);ezslot_5.set('adsense_ad_types','text_image').set('adsense_background_color','FFFFFF').set('adsense_border_color','FFFFFF').set('adsense_channel_ids','1702401361').set('adsense_link_color','0000FF').set('adsense_text_color','000000').set('adsense_url_color','828282');ezrpos[5]="5";ezslot_6 = googletag.defineSlot('/1254144/amigobulls_com-box-4',[336,280],'div-gpt-ad-amigobulls_com-box-4-0').addService(googletag.pubads()).setTargeting('iid5','444567').setTargeting('t','134').setTargeting('d','46056').setTargeting('t1','134').setTargeting('pvc','0').setTargeting('ap','1662').setTargeting('sap','1662').setTargeting('a','|3|').setTargeting('as','revenue').setTargeting('plat','1').setTargeting('bra','mod6').setTargeting('ic','1').setTargeting('at','mbf').setTargeting('adr','399').setTargeting('reft','tf').setTargeting('refs','120').setTargeting('ga','2497208').setTargeting('rid','99998').setTargeting('pt','6').setTargeting('al','1003').setTargeting('compid','2').setTargeting('tap','amigobulls_com-box-4-444567').setTargeting('bv','15').setCollapseEmptyDiv(false).setTargeting('br1','200').setTargeting('br2','100').setTargeting('ezoic','1').setTargeting('deal1',[20,21,22,23,24,25,26,9,10,11,12,13,14,15,16]);ezslot_6.set('adsense_ad_types','text_image').set('adsense_background_color','FFFFFF').set('adsense_border_color','FFFFFF').set('adsense_channel_ids','1702401361').set('adsense_link_color','0000FF').set('adsense_text_color','000000').set('adsense_url_color','828282');ezrpos[6]="6";ezslot_7 = googletag.defineSlot('/1254144/amigobulls_com-banner-1',[250,250],'div-gpt-ad-amigobulls_com-banner-1-0').addService(googletag.pubads()).setTargeting('iid5','438717').setTargeting('t','134').setTargeting('d','46056').setTargeting('t1','134').setTargeting('pvc','0').setTargeting('ap','1663').setTargeting('sap','1663').setTargeting('a','|3|').setTargeting('as','revenue').setTargeting('plat','1').setTargeting('bra','mod6').setTargeting('ic','1').setTargeting('at','mbf').setTargeting('adr','399').setTargeting('reft','n').setTargeting('refs','120').setTargeting('ga','2497208').setTargeting('rid','99998').setTargeting('pt','5').setTargeting('al','1030').setTargeting('compid','2').setTargeting('tap','amigobulls_com-banner-1-438717').setTargeting('bv','15').setCollapseEmptyDiv(false).setTargeting('br1','40').setTargeting('br2','20').setTargeting('ezoic','1').setTargeting('deal1',[17,19,20,21,22,23,24,25,26,7,8,9,10,11,12,13,14,15,16]);ezslot_7.set('adsense_ad_types','text_image').set('adsense_background_color','FFFFFF').set('adsense_border_color','FFFFFF').set('adsense_channel_ids','1702401361').set('adsense_link_color','0000FF').set('adsense_text_color','000000').set('adsense_url_color','828282');ezrpos[7]="7";ezslot_8 = googletag.defineSlot('/1254144/amigobulls_com-medrectangle-1',[336,280],'div-gpt-ad-amigobulls_com-medrectangle-1-0').addService(googletag.pubads()).setTargeting('iid5','453869').setTargeting('t','134').setTargeting('d','46056').setTargeting('t1','134').setTargeting('pvc','0').setTargeting('ap','1683').setTargeting('sap','1683').setTargeting('a','|3|').setTargeting('as','revenue').setTargeting('plat','1').setTargeting('bra','mod6').setTargeting('ic','1').setTargeting('at','mbf').setTargeting('adr','399').setTargeting('reft','tf').setTargeting('refs','30').setTargeting('ga','2497208').setTargeting('rid','99998').setTargeting('pt','4').setTargeting('al','1004').setTargeting('compid','2').setTargeting('tap','amigobulls_com-medrectangle-1-453869').setTargeting('bv','13').setTargeting('acptad','1').setCollapseEmptyDiv(false).setTargeting('br1','90').setTargeting('br2','40').setTargeting('ezoic','1').setTargeting('deal1',[17,19,20,21,22,23,24,25,26,7,8,9,10,11,12,13,14,15,16]).defineSizeMapping(googletag.sizeMapping().addSize([336,0], [336,280]).addSize([0,0], []).build());ezslot_8.set('adsense_ad_types','text_image').set('adsense_background_color','FFFFFF').set('adsense_border_color','FFFFFF').set('adsense_channel_ids','1702401361').set('adsense_link_color','0000FF').set('adsense_text_color','000000').set('adsense_url_color','828282');ezrpos[8]="8";}else{window.ezHideLocations=[];window.ezHideLocations.push('div-gpt-ad-amigobulls_com-banner-2-0');window.ezHideLocations.push('div-gpt-ad-amigobulls_com-large-billboard-2-0');window.ezHideLocations.push('div-gpt-ad-amigobulls_com-medrectangle-4-0');window.ezHideLocations.push('div-gpt-ad-amigobulls_com-medrectangle-3-0');window.ezHideLocations.push('div-gpt-ad-amigobulls_com-leader-1-0');window.ezHideLocations.push('div-gpt-ad-amigobulls_com-large-leaderboard-2-0');window.ezHideLocations.push('div-gpt-ad-amigobulls_com-box-4-0');window.ezHideLocations.push('div-gpt-ad-amigobulls_com-banner-1-0');ezslot_8 = googletag.defineSlot('/1254144/amigobulls_com-medrectangle-1',[336,280],'div-gpt-ad-amigobulls_com-medrectangle-1-0').addService(googletag.pubads()).setTargeting('iid5','453869').setTargeting('t','134').setTargeting('d','46056').setTargeting('t1','134').setTargeting('pvc','0').setTargeting('ap','1683').setTargeting('sap','1683').setTargeting('a','|3|').setTargeting('as','revenue').setTargeting('plat','1').setTargeting('bra','mod6').setTargeting('ic','1').setTargeting('at','mbf').setTargeting('adr','399').setTargeting('reft','tf').setTargeting('refs','30').setTargeting('ga','2497208').setTargeting('rid','99998').setTargeting('pt','4').setTargeting('al','1004').setTargeting('compid','2').setTargeting('tap','amigobulls_com-medrectangle-1-453869').setTargeting('bv','13').setTargeting('acptad','1').setCollapseEmptyDiv(false).setTargeting('br1','90').setTargeting('br2','40').setTargeting('ezoic','1').setTargeting('deal1',[17,19,20,21,22,23,24,25,26,7,8,9,10,11,12,13,14,15,16]).defineSizeMapping(googletag.sizeMapping().addSize([336,0], [336,280]).addSize([0,0], []).build());ezslot_8.set('adsense_ad_types','text_image').set('adsense_background_color','FFFFFF').set('adsense_border_color','FFFFFF').set('adsense_channel_ids','1702401361').set('adsense_link_color','0000FF').set('adsense_text_color','000000').set('adsense_url_color','828282');ezrpos[8]="8";}googletag.pubads().addEventListener('slotRenderEnded', function(event) { __ez.queue.addFunc("ezbanger", "ezbanger", event, false, ['banger.js'], true, true, false, true); });googletag.pubads().addEventListener('impressionViewable', function(event) { __ez.queue.addFunc("ezvb", "ezvb", event, false, ['banger.js'], true, true, false, true); });googletag.pubads().addEventListener('slotVisibilityChanged', function(event) { __ez.queue.addFunc("ezvbc", "ezvbc", event, false, ['banger.js'], true, true, false, true); });googletag.enableServices();});if(typeof window.isEZABL == 'undefined' || window.isEZABL != true) {ezslots.push("ezslot_0");ezslots.push("ezslot_1");ezslots.push("ezslot_2");ezslots.push("ezslot_3");ezslots.push("ezslot_4");ezslots.push("ezslot_5");ezslots.push("ezslot_6");ezslots.push("ezslot_7");ezslots.push("ezslot_8");}else{ezslots.push("ezslot_8");}</script>
+<script>(function(){function a(g,h,i){var j=new Date;j.setTime(j.getTime()+1e3*(60*(60*(24*i))));var k="expires="+j.toUTCString(),l=g+"="+h+";"+k+";path=/;";"undefined"!=typeof ezdomain&&(l+="domain="+ezdomain),document.cookie=l}var b=window.addEventListener?"addEventListener":"attachEvent",c=window[b],f="attachEvent"==b?"onmessage":"message";c(f,function(g){"undefined"!=typeof g.data.ezstatus&&(__ez.bit.AddAndFire(_ezaq.page_view_id,[new __ezDotData("dg",g.data.ezstatus)]),a("ezdg",g.data.ezstatus,730))})})();</script>
+<script type="text/javascript" data-cfasync="false">var _ezaq = {"ad_cache_level":1,"ad_location_ids":"31,34,22,21,37,36,3,30,4,95","adx_ad_count":2,"bidder_version":3,"city":"","country":"US","days_since_last_visit":-1,"display_ad_count":9,"domain_id":46056,"ds_adsize_opt_id":-1,"engaged_time_visit":0,"ezcache_level":0,"forensiq_score":-1,"form_factor_id":1,"has_bad_words":0,"iab_category":"","is_bot":0,"is_return_visitor":false,"last_page_load":"","last_pageview_id":"","lt_cache_level":0,"max_ads":10,"metro_code":0,"page_ad_positions":"1100,1101,1102,1103,1624,1662,1663,1664,1665,1683","page_view_count":0,"page_view_id":"54a60dd2-f514-4125-5bc8-313ba8b71223","pv_event_count":0,"response_time_orig":293,"serverid":"54.153.115.140:13036","sub_page_ad_positions":"1100,1101,1102,1103,1624,1662,1663,1664,1665,1683","t_epoch":1500806181,"template_id":134,"time_on_site_visit":0,"url":"https://amigobulls.com/articles/why-tesla-motors-inc-stock-didnt-tank-post-the-q2-earnings-miss","user_id":1956374582,"weather_precipitation":0,"weather_summary":"","weather_temperature":0,"word_count":1670};var _ezim_d = {"amigobulls_com-banner-1":{"adx_ad_count":2,"full_id":"amigobulls_com-banner-1/2017-07-23/438717","height":"250","position_id":1663,"sub_position_id":1663,"width":"250"},"amigobulls_com-banner-2":{"adx_ad_count":2,"full_id":"amigobulls_com-banner-2/2017-07-23/493917","height":"600","position_id":1102,"sub_position_id":1102,"width":"160"},"amigobulls_com-box-4":{"adx_ad_count":2,"full_id":"amigobulls_com-box-4/2017-07-23/444567","height":"280","position_id":1662,"sub_position_id":1662,"width":"336"},"amigobulls_com-large-billboard-2":{"adx_ad_count":2,"full_id":"amigobulls_com-large-billboard-2/2017-07-23/438717","height":"280","position_id":1665,"sub_position_id":1665,"width":"336"},"amigobulls_com-large-leaderboard-2":{"adx_ad_count":2,"full_id":"amigobulls_com-large-leaderboard-2/2017-07-23/489567","height":"250","position_id":1101,"sub_position_id":1101,"width":"250"},"amigobulls_com-leader-1":{"adx_ad_count":2,"full_id":"amigobulls_com-leader-1/2017-07-23/478617","height":"250","position_id":1664,"sub_position_id":1664,"width":"250"},"amigobulls_com-medrectangle-1":{"adx_ad_count":2,"full_id":"amigobulls_com-medrectangle-1/2017-07-23/453869","height":"280","position_id":1683,"sub_position_id":1683,"width":"336"},"amigobulls_com-medrectangle-3":{"adx_ad_count":2,"full_id":"amigobulls_com-medrectangle-3/2017-07-23/494067","height":"250","position_id":1624,"sub_position_id":1624,"width":"300"},"amigobulls_com-medrectangle-4":{"adx_ad_count":2,"full_id":"amigobulls_com-medrectangle-4/2017-07-23/428067","height":"400","position_id":1100,"sub_position_id":1100,"width":"580"},"amigobulls_com-nativedouble-1":{"adx_ad_count":2,"full_id":"amigobulls_com-nativedouble-1/2017-07-23/449367","height":"480","position_id":1103,"sub_position_id":1103,"width":"100"}};var _ezat = {"domain_id":46056,"form_factor_id":1,"pageview_date":"2017-07-23","pageview_id":"54a60dd2-f514-4125-5bc8-313ba8b71223","template_id":134,"url":"https://amigobulls.com/articles/why-tesla-motors-inc-stock-didnt-tank-post-the-q2-earnings-miss","visit_uuid":"7834b2ff-5e09-43e7-7b05-1a71f1045c1a"};</script><script data-cfasync='false' type="text/javascript" src="/detroitchicago/rochester.js?cb=169-0&v=7" async></script><script data-pagespeed-no-defer data-cfasync='false' type="text/javascript">__ez.queue.addFile('banger.js', '/porpoiseant/banger.js?cb=169-0&bv=2&v=15&PageSpeed=off', true, [], true, false, false, true);</script><script data-pagespeed-no-defer data-cfasync='false'>
+function create_ezolpl() {
+    var d = new Date();
+    d.setTime(d.getTime() + (365*24*60*60*1000));
+    var expires = "expires="+d.toUTCString();
+    document.cookie = "ezux_lpl_46056=" + new Date().getTime() + "|54a60dd2-f514-4125-5bc8-313ba8b71223; " + expires;
+}
+function attach_ezolpl() {
+    if(window.attachEvent) {
+        window.attachEvent('onload', create_ezolpl);
+    } else {
+        if(window.onload) {
+            var curronload = window.onload;
+            var newonload = function(evt) {
+                curronload(evt);
+                create_ezolpl();
+            };
+            window.onload = newonload;
+        } else {
+            window.onload = create_ezolpl;
+        }
+    }
+}
+attach_ezolpl();
+</script>
+
+<title>
+Why Tesla Motors Inc (NASDAQ:TSLA) Stock Didn’t Tank Post The Q2 Miss</title>
+<link rel="stylesheet" type="text/css" href="https://static.amigobulls.com/css/1499152099_amigo_template.min.css"><meta name="description" content="Tesla Motors Inc (NASDAQ:TSLA) beat revenue estimates but missed earnings estimates by a big margin in Q2. Here's why Tesla stock didn't tank post earnings.">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+<link rel="shortcut icon" href="https://static.amigobulls.com/v2images/favicon.ico" type="image/x-icon">
+  <link rel="canonical" href="https://amigobulls.com/articles/why-tesla-motors-inc-stock-didnt-tank-post-the-q2-earnings-miss">
+<meta property="fb:pages" content="508744769149352">
+	<link rel="amphtml" href="https://amigobulls.com/amphtml/articles/why-tesla-motors-inc-stock-didnt-tank-post-the-q2-earnings-miss">
+	<meta name="news_keywords" content=" Tesla Inc (NASDAQ:TSLA) stock, Tesla Inc (NASDAQ:TSLA) news, Earnings Review">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="Why Tesla Motors Inc (NASDAQ:TSLA) Stock Didn’t Tank Post The Q2 Miss">
+	<meta property="og:description" content="Tesla Motors Inc (NASDAQ:TSLA) beat revenue estimates but missed earnings estimates by a big margin in Q2. Here's why Tesla stock didn't tank post earnings.">
+	<meta property="og:url" content="https://amigobulls.com/articles/why-tesla-motors-inc-stock-didnt-tank-post-the-q2-earnings-miss">
+	<meta property="og:site_name" content="Amigobulls : Technology Stock Analysis">
+	<meta property="article:publisher" content="https://www.facebook.com/amigobulls">
+		<meta property="article:tag" content="Tesla Inc">
+			<meta property="article:section" content="Earnings Review News">
+		<meta property="article:published_time" content="2016-08-11 02:35:26">
+		<meta property="fb:app_id" content="451038928314843">
+		<meta property="og:image:type" content="image/png">
+	<meta property="og:image" content="https://static.amigobulls.com/articles/wp-content/uploads/2016/08/Why-Tesla-Motors-Inc-Stock-Didnt-Tank-Post-The-Q2-Earnings-Miss.jpg">
+		<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="@amigobulls">
+	<meta name="twitter:domain" content="amigobulls.com">
+		<meta name="twitter:creator" content="@http://www.twitter.com/shudeepc">
+			<meta name="twitter:image:src" content="https://static.amigobulls.com/articles/wp-content/uploads/2016/08/Why-Tesla-Motors-Inc-Stock-Didnt-Tank-Post-The-Q2-Earnings-Miss.jpg">
+	<meta name="twitter:image" content="https://static.amigobulls.com/articles/wp-content/uploads/2016/08/Why-Tesla-Motors-Inc-Stock-Didnt-Tank-Post-The-Q2-Earnings-Miss.jpg">
+		<meta name="twitter:description" content="Tesla Motors Inc (NASDAQ:TSLA) beat revenue estimates but missed earnings estimates by a big margin in Q2. Here's why Tesla stock didn't tank post earnings.">
+	<meta name="twitter:title" content="Why Tesla Motors Inc (NASDAQ:TSLA) Stock Didn’t Tank Post The Q2 Miss">
+	<meta name="twitter:url" content="https://amigobulls.com/articles/why-tesla-motors-inc-stock-didnt-tank-post-the-q2-earnings-miss">
+
+  <script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script type="text/javascript">
+    function setCookie(name,userid,domain){
+        var exdate=new Date();
+        exdate.setDate(exdate.getDate() + 10000);
+        var c_value=userid + ("; expires="+exdate.toUTCString())+(";domain="+domain+"; path=/;");
+        document.cookie=name + "=" + c_value;
+    }
+    setCookie("userid",'59747c264580b','.amigobulls.com'); //set cookie for .amigobulls.com intailly
+  </script>
+<script type="text/javascript">
+    width=window.innerWidth;
+    if (width >= 1200) {
+        device_type = "desktop";
+        document.cookie = "device=desktop"+"; path=/";
+    }else if(width>=760){
+        device_type = "tablet";
+        document.cookie = "device=tablet"+"; path=/";
+    }else{
+        device_type = "mobile";
+        document.cookie = "device=mobile"+"; path=/";
+    } 
+</script>
+ 
+<script>
+var _prum = [['id', '557af72cabe53d446b5ce345'],
+             ['mark', 'firstbyte', (new Date()).getTime()]];
+(function() {
+    var s = document.getElementsByTagName('script')[0]
+      , p = document.createElement('script');
+    p.async = 'async';
+    p.src = '//rum-static.pingdom.net/prum.min.js';
+    s.parentNode.insertBefore(p, s);
+})();
+</script>
+
+<style>
+	.ezmob-footer {
+	    position: fixed; left: 0px; bottom: 0px; height: 50px; width: 100%; background: white; z-index: 1000;
+	}
+    body {
+        padding-bottom: 50px;
+    }
+</style>
+<style>.ezoic-ad.large-billboard-2 { display:block !important;float:none !important;margin-bottom:2px !important;margin-left:0px !important;margin-right:0px !important;margin-top:2px !important;min-height:300px;min-width:336px;text-align:center !important; }
+.ezoic-ad.medrectangle-3 { display:block !important;float:none;margin-bottom:2px !important;margin-left:0px !important;margin-right:0px !important;margin-top:2px !important;min-height:270px;min-width:300px;text-align:center !important; }
+.ezoic-ad.large-leaderboard-2 { display:block !important;float:none;margin-bottom:2px !important;margin-left:0px !important;margin-right:0px !important;margin-top:2px !important;min-height:270px;min-width:250px;text-align:center !important; }
+.ezoic-ad.banner-2 { display:block !important;float:none !important;margin-bottom:2px !important;margin-left:0px !important;margin-right:0px !important;margin-top:2px !important;min-height:620px;min-width:160px;text-align:center !important; }
+.ezoic-ad.medrectangle-4 { display:block !important;float:none;margin-bottom:2px !important;margin-left:0px !important;margin-right:0px !important;margin-top:2px !important;min-height:420px;min-width:580px;text-align:center !important; }
+.ezoic-ad.box-4 { display:block !important;float:none !important;margin-bottom:2px !important;margin-left:0px !important;margin-right:0px !important;margin-top:2px !important;min-height:300px;min-width:336px;text-align:center !important; }
+.ezoic-ad.banner-1 { display:block !important;float:none !important;margin-bottom:2px !important;margin-left:0px !important;margin-right:0px !important;margin-top:2px !important;min-height:270px;min-width:250px;text-align:center !important; }
+.ezoic-ad.leader-1 { display:block !important;float:none !important;margin-bottom:2px !important;margin-left:0px !important;margin-right:0px !important;margin-top:2px !important;min-height:270px;min-width:250px; }
+.ezoic-ad.nativedouble-1 { display:block !important;float:none !important;margin-bottom:2px !important;margin-left:0px !important;margin-right:0px !important;margin-top:2px !important;min-height:480px;min-width:100%;text-align:center !important; }
+.ezoic-ad.medrectangle-1 { display:block !important;float:none;margin-bottom:2px !important;margin-left:0px !important;margin-right:0px !important;margin-top:2px !important;min-height:300px;min-width:336px;text-align:center !important; }
+.ezoic-ad{display:inline-block;}
+.ezoic-floating-bottom { display: none!important; }</style>
+<script data-cfasync="false" type="text/javascript">window.google_analytics_uacct = "UA-97831649-32";</script>
+<script data-cfasync="false" type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['e._setAccount', 'UA-97831649-32']);
+_gaq.push(['f._setAccount', 'UA-38339005-1']);
+_gaq.push(['e._setDomainName', 'amigobulls.com']);
+_gaq.push(['f._setDomainName', 'amigobulls.com']);
+_gaq.push(['e._setCustomVar',1,'template','pub_site',3]);
+_gaq.push(['e._setCustomVar',2,'t','134',3]);
+_gaq.push(['e._setCustomVar',3,'rid','0',2]);
+_gaq.push(['e._setCustomVar',4,'bra','mod6',3]);
+_gaq.push(['e._setAllowAnchor',true]);
+_gaq.push(['e._setSiteSpeedSampleRate', 10]);
+_gaq.push(['f._setCustomVar',1,'template','pub_site',3]);
+_gaq.push(['f._setCustomVar',2,'domain','amigobulls.com',3]);
+_gaq.push(['f._setSiteSpeedSampleRate', 20]);
+_gaq.push(['e._trackPageview']);
+_gaq.push(['f._trackPageview']);
+
+
+(function() {
+ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script type="text/javascript">var ezouid = "1956374582";</script><base href="https://amigobulls.com/articles/why-tesla-motors-inc-stock-didnt-tank-post-the-q2-earnings-miss"><script type='text/javascript'>
+var ezoTemplate = 'pub_site';
+if(typeof ezouid == 'undefined')
+{
+    var ezouid = 'none';
+}
+var ezoFormfactor = '1';
+var ezo_elements_to_check = Array();
+</script><!-- START EZHEAD -->
+<script type='text/javascript'>
+var soc_app_id = '0';
+var did = 46056;
+var ezdomain = 'amigobulls.com';
+var ezoicSearchable = 1;
+</script>
+<!--{jquery}-->
+<!-- END EZHEAD -->
+<script data-pagespeed-no-defer data-cfasync='false' type='text/javascript' style='display:none'>
+__ez.queue.addFile('__ezf_ezosuigeneris', '//g.ezoic.net/ezosuigeneris.js', true, [], true, false, false, false);
+var __ez_ezosuigenerisEvt = function() { __ez.bit.AddAndFire(_ezaq['page_view_id'], [(new __ezDotData('universal_user_id', ezosuigeneris))]); };
+__ez.queue.addFunc('__ez_ezosuigenerisEvt', '__ez_ezosuigenerisEvt', null, false, ['__ezf_ezosuigeneris'], false, false, false, false);</script><script data-pagespeed-no-defer data-cfasync='false' type='text/javascript' style='display:none'>__ez.queue.addFile('__ezf_ezosuigenerisc', '//g.ezoic.net/ezosuigenerisc.js?nogen=1', true, [], true, false, false, false);</script></head>
+<body>
+    <div id="main-content" class="clearfix">
+        <div id="header">
+            <header class="new_header home_hide positionRelative" id="header_cont">
+    <nav class="all_menus">
+        <div class="mobi-hideit fs75 toprow"><div class="all_stocks"><div class="newstocks_head  colr2 left"><a class="tickerblue" href="https://amigobulls.com/stocks/AAPL/analysis" title="Apple stock analysis">AAPL</a>&nbsp;<span class="mobi-hideit"><span class="fa fa-arrow-down"></span>$150.27 (0.05%)</span></div><div class="newstocks_head  colr2 left"><a class="tickerblue" href="https://amigobulls.com/stocks/FB/analysis" title="Facebook stock analysis">FB</a>&nbsp;<span class="mobi-hideit"><span class="fa fa-arrow-down"></span>$164.43 (0.06%)</span></div><div class="newstocks_head  colr2 left"><a class="tickerblue" href="https://amigobulls.com/stocks/AMZN/analysis" title="Amazon stock analysis">AMZN</a>&nbsp;<span class="mobi-hideit"><span class="fa fa-arrow-down"></span>$1025.67 (0.29%)</span></div><div class="newstocks_head  colr1 left"><a class="tickerblue" href="https://amigobulls.com/stocks/GOOG/analysis" title="Alphabet Inc-C stock analysis">GOOG</a>&nbsp;<span class="mobi-hideit"><span class="fa fa-arrow-up"></span>$972.92 (0.49%)</span></div></div></div> 
+        <div class="clear separater mobi-hideit home_tab_hide"></div>
+            <div class="overlay_mask mobi_tab_hide"></div>
+            <div class="smallmenu mobi_tab_hide">
+                <div class="logindiv fs75 toprow">
+                    <span class="hoverorange enrich active_menu"><a href="https://enrichview.in/">AMIGOBULLS FOR BUSINESS</a></span>
+                     
+                        <span class="joinus signupfromjq hoverorange">SIGN UP</span>
+                        <span class="login hoverorange loginfromjq ">LOGIN</span>
+                        <!-- <span class="hoverblack mobi_tab_hide" id="signup" ><a href='' title="Become a contributor for amigobulls" id='contributer'>CONTRIBUTE</a></span> -->
+                                    </div> 
+                <div class="right mt3px search_box">
+                                </div>
+                <div class="bottomrow menu fs80 ">
+                    <ul class="menudiv">       
+                        <li id="index" class="hover_parent" data-nav="primary">
+                            <a href="https://amigobulls.com" title="amigobulls - homepage"><span class="desktop_hide line_text">HOME<span class="under_line"></span></span><span class="mobi_tab_hide fa fa-home fa-lg"></span></a>
+                        </li>
+                        <li id="fundamentalpicks" class=" alink_parent" data-nav="primary">
+                            <div class="mobi_menulist">
+                                <span class=" mainlink alink_click hoverorange">STOCK PICKS<span class="under_line"></span></span>
+                                <i class="marrow fa fa-chevron-down"></i>
+                            </div>
+                            <ul id="picks_ul" class="sub-menu">
+                                <li><a class="alink" href="https://amigobulls.com/stocks-to-buy/top-tech-stocks/" title="Technology Stock Picks">Technology Stock Picks</a></li>
+                                <li><a href="https://amigobulls.com/stocks-to-buy/best-stocks-to-buy-today/" title="Stocks to buy Today">Daily Stock Picks</a></li>
+                                <li><a href="https://amigobulls.com/stocks-to-buy/top-auto-stocks/" title="Top Auto Stocks">Top Auto Stocks</a></li>
+
+                                </ul>   
+                        </li>
+                        <li id="analysis" class=" alink_parent" data-nav="primary">
+                            <div class="mobi_menulist">
+                                <span class=" mainlink alink_click hoverorange">ARTICLES<span class="under_line"></span></span>
+                                <i class="marrow fa fa-chevron-down"></i>
+                            </div>
+                            <ul id="analysis_ul" class="sub-menu">
+                                <li><a class="alink" href="https://amigobulls.com/articles/" title="Latest">Latest</a></li> 
+                                <li><a href="https://amigobulls.com/articles/category/earnings-analysis" title="Earnings Analysis">Earnings Analysis</a></li> 
+                                <li><a href="https://amigobulls.com/articles/category/finance">Finance</a></li> 
+                                <li><a href="https://amigobulls.com/articles/category/stock-updates">Stock Updates</a></li>
+                                <li><a href="https://amigobulls.com/articles/category/investing">Investing</a></li> 
+                                <li><a href="https://amigobulls.com/articles/category/stock-market-news">Stock Market News</a></li>
+                                <li><a href="https://amigobulls.com/articles/category/stock-valuation">Stock Valuation</a></li>
+                                <li><a href="https://amigobulls.com/articles/category/ipo">IPO</a></li>
+                                <li><a href="https://amigobulls.com/articles/category/technical-analysis">Technical Analysis</a></li>
+                            </ul>
+                        </li>        
+                        <li id="screener" class="hover_parent" data-nav="primary">
+                            <a href="https://amigobulls.com/sectors/computer-and-technology/internet-services" class="colorgreyNew  hoverorange" title="Technology and internet stocks"><span class="line_text">SCREENER<span class="under_line"></span></span></a>
+                        </li>
+                        <li id="mystocks" class="hover_parent" data-nav="primary">
+                            <a class="colorgreyNew" href="https://amigobulls.com/watchlist" title="My Stocks"><span class="line_text  hoverorange">MY STOCKS<span class="under_line"></span></span> <span class="left fa fa-heart mr5px mt3px mobi_tab_hide"></span></a>
+                        </li>                    
+                    </ul>
+                </div>            </div> 
+            <div class="top_layer ">
+                                           <a href="https://amigobulls.com" title="amigobulls.com - internet stock analysis">
+                          <span class="amigo_logo"></span>
+                        </a>
+                                </div> 
+            <div class="desktop_hide  small-menu-click fa fa-bars fa-lg colorgreyNew"></div>   
+            <div class="bottom_layer searchdiv fs80 home_tab_hide">  
+                <input title="ticker or company or video" placeholder="Ticker or Company" type="text" id="edit-search-block-form--2" data-qs="ms" data-show_video_icon="true" data-context_search="false" data-page_redirect="true" name="search_block_form" size="15" maxlength="128" class=" footer_search_input form-text ui-autocomplete-processed ui-autocomplete-input nobold" aria-autocomplete="list"> 
+                <span class="fa fa-search fa-lg mobi-hideit"></span>
+                 <div class="clear"></div>
+            </div>
+            <div id="mobi_search_icon_1" class="desktop_tab_hide pointerCursor fa fa-search"><div class="cross-icon  mobi_tab_hide"> ✕</div></div> 
+        <div class="clear"></div>
+    </nav>
+</header>
+        </div>
+        <div id="primary" class="container  clearfix scroll_loop">
+        <div id="article_1">
+        		<ol class=" breadcrumbs fs62 mobi-hideit mtn10px" itemscope="" itemtype="https://schema.org/BreadcrumbList">
+		<li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem" class="displayInline"><a itemprop="item" href="https://amigobulls.com/" title="amigobulls.com"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"></li><li class="displayInline"> &gt; </li><li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem" class="displayInline"><a itemprop="item" href="https://amigobulls.com/articles/" title="stock market news and research"><span itemprop="name">Stocks Market News - Articles &amp; Analysis</span></a><meta itemprop="position" content="2"></li><li class="displayInline"> &gt; </li><li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem" class="displayInline"><a itemprop="item" href="https://amigobulls.com/articles/category/earnings-analysis" title="earnings news and review"><span itemprop="name">Earnings Analysis</span></a><meta itemprop="position" content="3"></li><li class="displayInline"> &gt; </li><li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem" class="displayInline"><a itemprop="item" href="https://amigobulls.com/articles/why-tesla-motors-inc-stock-didnt-tank-post-the-q2-earnings-miss" title="Why Tesla Motors Inc Stock Didn’t Tank Post The Q2 Earnings Miss"><span itemprop="name">Why Tesla Motors Inc Stock Didn’t Tank Post The Q2 Earnings Miss</span></a><meta itemprop="position" content="4"></li>		</ol>
+
+		<article id="post-56763" class="post_content_maindiv">
+			<div itemscope="" itemtype="https://schema.org/NewsArticle">
+		<meta itemscope="" itemprop="mainEntityOfPage" itemtype="https://schema.org/WebPage" itemid="https://amigobulls.com/articles/why-tesla-motors-inc-stock-didnt-tank-post-the-q2-earnings-miss" content="https://amigobulls.com/articles/why-tesla-motors-inc-stock-didnt-tank-post-the-q2-earnings-miss">
+	<meta itemprop="inlanguage" content="en-US">
+	<div itemprop="publisher" itemscope="" itemtype="https://schema.org/Organization">
+        <div itemprop="logo" itemscope="" itemtype="https://schema.org/ImageObject">
+              <meta itemprop="url" content="https://static.amigobulls.com/v2images/amigobulls_logo.png">
+              <meta itemprop="width" content="169">
+              <meta itemprop="height" content="39">
+        </div>
+        <meta itemprop="name" content="Amigobulls">
+    </div>
+		<header>
+		<h1 itemprop="headline" class="small borderNone">
+		Why Tesla Motors Inc Stock Didn’t Tank Post The Q2 Earnings Miss		</h1>
+	<div class="borderBottomSolid mt10px mb5px"></div>
+		<div class="clear"></div>
+				<meta itemprop="description" content="Tesla Motors Inc (NASDAQ:TSLA) beat revenue estimates but missed earnings estimates by a big margin in Q2. Here's why Tesla stock didn't tank post earnings.">		<meta itemprop="audience" content="NASDAQ and NYSE stock investors">
+		<meta itemprop="url discussionUrl" content="https://amigobulls.com/articles/why-tesla-motors-inc-stock-didnt-tank-post-the-q2-earnings-miss">
+		<meta itemprop="keywords" content="TSLA stock, TSLA news, Tesla Inc (NASDAQ:TSLA) Earnings Review">
+		<meta itemprop="datePublished" content="2016-08-11T07:35:26-04:00">
+		<meta itemprop="dateModified" content="2016-08-11T07:35:26-04:00">
+		<meta itemprop="articleSection" content="Earnings Review News">						    <div itemprop="image" itemscope="" itemtype="https://schema.org/ImageObject">
+				<meta itemprop="url" content="https://static.amigobulls.com/articles/wp-content/uploads/2016/08/Why-Tesla-Motors-Inc-Stock-Didnt-Tank-Post-The-Q2-Earnings-Miss.jpg">
+				<meta itemprop="width" content="696">
+				<meta itemprop="height" content="392">
+		    </div><span id='ezoic-pub-ad-placeholder-685' class="ezoic-adpicker-ad"></span>
+				</header>
+		<div class="clear"></div>
+		<div class="amigo_right mt5px">
+						<span id='ezoic-pub-ad-placeholder-102'></span><span style='display:block !important;float:none !important;margin-bottom:2px !important;margin-left:0px !important;margin-right:0px !important;margin-top:2px !important;min-height:620px;min-width:160px;text-align:center !important;' class='ezoic-ad banner-2 adtester-container adtester-container-102' data-ez-name='amigobulls_com-banner-2'><span id='div-gpt-ad-amigobulls_com-banner-2-0' ezaw='160' ezah='600' style='position:relative;z-index:0;display:inline-block;' class='ezoic-ad'><script data-cfasync='false' type='text/javascript' style='display:none;'>eval(ez_write_tag([[160,600],'amigobulls_com-banner-2','ezslot_0']));</script></span></span> 		</div>
+		<div id="single_left" class="amigo_left">
+	<div class="post_date">
+		<div class="left">
+		<span class="fs75 ppauthor">Posted by </span><span itemprop="author" itemscope="" itemtype="https://schema.org/Person"><a itemprop="url" class="tickerorange" rel="author" href="http://www.twitter.com/shudeepc" title="Follow Shudeep Chandrasekhar on twitter"><span itemprop="name">Shudeep Chandrasekhar</span></a></span>
+	
+		<span class="fs75 ppauthor">on </span><a href="https://amigobulls.com/articles/2016/08/11" title="Read articles published on Aug 11, 2016" rel="bookmark"><span class="fs75 ppauthor">August 11, 2016, 02:35 AM EST</span></a>
+		</div>		
+			<span class="fs80 related-tags right">Related Ticker: <a href="https://amigobulls.com/stocks/TSLA/analysis?ref=tp" class="tickerblue newsfont" title="Tesla Inc stock analysis video">TSLA</a></span>		</div>
+		
+		<div class="clear"></div>
+		<div class="postbody">
+		<div class="article">			<div itemprop="articleBody">
+			<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">It’s an oddity that Tesla stock didn’t slide on the EPS miss in Q2.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Despite the miss and the delivery mess up last quarter, the stock moved up.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Will SolarCity prove to be a major distraction at this critical time?</span></li>
+</ul>
+<div class="coverImage"><a href="https://static.amigobulls.com/articles/wp-content/uploads/2016/08/small_width400_Why-Tesla-Motors-Inc-Stock-Didnt-Tank-Post-The-Q2-Earnings-Miss.jpg?ref=il"><img class="alignnone size-full wp-image-56792" src="https://static.amigobulls.com/articles/wp-content/uploads/2016/08/small_width400_Why-Tesla-Motors-Inc-Stock-Didnt-Tank-Post-The-Q2-Earnings-Miss.jpg" alt="Why Tesla Motors Inc Stock Didnt Tank Post The Q2 Earnings Miss"></a><br>
+<span class="imageCopyright"><a rel="nofollow" target="_blank" href="https://www.flickr.com/photos/benjiecastillo/3501823015/in/photolist-6krKYT-8wWjWf-cNc9Sy-9BfSV7-KN4da-9Bd1g6-6ZE811-6ZE7qd-9mf2sW-jfecVq-oogMSf-f7WzYJ-dcZVKX-ePvDQ2-4yt7kS-f7WvB3-nV5xoC-e1c3TF-6kwyEZ-a4YmWZ-a4MSur-8PRK6H-4tcX85-ojPHY8-bVU3Ma-6kAGXC-ntBvxk-4tcXMJ-D1Ho92-6krU6P-f7Wvgw-dXMDoz-72j2Fz-f7GjtR-f7GiLr-dXMDkF-dXTjfY-dXMDqB-f7GkdK-f7WzKj-3avJSA-4NDeMD-dXTjdG-f7GjfK-5t88ou-6Jjd63-f7Ww6L-f7GmqF-f7GhVc-f7WymU?ref=il">Flickr</a></span></div>
+<p><a class="tickerblue" title="Tesla stock analysis" href="https://amigobulls.com/stocks/TSLA/analysis?ref=il">Tesla's (NASDAQ:TSLA)</a><span id='ezoic-pub-ad-placeholder-696' class="ezoic-adpicker-ad"></span>&nbsp;<a href="https://amigobulls.com/news/tesla-tsla-q2-loss-wider-than-expected-revenues-beat?ref=il">earnings miss</a> during the Q2 report may not have come as much of a surprise to most investors, but it seems that analysts are far off the mark when it comes to estimates. Despite Tesla’s delivery numbers for Q2 being released a month before the earnings call, they estimated a loss of only 52 cents. The actual EPS figure came in at $1.06 - nearly double what analysts predicted they would lose.</p>			<span id='ezoic-pub-ad-placeholder-624'></span><span style='display:none !important;float:none;margin-bottom:2px !important;margin-left:0px !important;margin-right:0px !important;margin-top:2px !important;min-height:270px;min-width:300px;text-align:center !important;' class='ezoic-ad medrectangle-3 adtester-container adtester-container-624' data-ez-name='amigobulls_com-medrectangle-3'><span id='div-gpt-ad-amigobulls_com-medrectangle-3-0' ezaw='300' ezah='250' style='position:relative;z-index:0;display:none;' class='ezoic-ad'><!--script-placeholder--></span></span><script>var ezzns21 = {0.10:504141,0.70:504558,0.80:504559,1.90:504656,3.50:504665,5.00:504669,1.10:504648,1.20:504649,1.80:504655,0.30:504551,0.45:504555,1.00:504647,1.40:504651,2.40:504659,0.05:504099,0.15:504144,0.50:504556,1.50:504652,1.70:504654,4.00:504666,2.60:504660,4.50:504667,0.40:504554,1.30:504650,2.20:504658,2.80:504661,3.00:504664,0.25:504548,0.60:504557,1.60:504653,2.00:504657,0.20:504145,0.35:504552,0.90:504560,};</script><script type="text/javascript" src="//static.criteo.net/js/ld/publishertag.js" ></script>
+<div class="ezflad-47" style="display:inline-block" adunitname="amigobulls_com-medrectangle-3" id="crt-21">
+<script type="text/javascript">
+var ezoflbf_2_21 = function() { __ez.queue.addFunc('ReloadFromP_1624', 'IL11ILILIIlLLLILILLLLIILLLIIL11111LLILiiLIliLlILlLiiLLIiILL.ReloadFromP', 1624, false, ['banger.js'], false, false, false, true); };
+var ezoflbf_21 = function() { eval(ez_write_tag([[300,250],'amigobulls_com-medrectangle-3','ezslot_3']));
+		};</script><script type="text/javascript">Criteo.DisplayAd({
+    zoneid: 504559, containerid: 'crt-21', passbackcode: ezoflbf_21
+});
+</script></div>
+<script type='text/javascript'>
+	var __ezfl_sss_1624 = function() {
+		setTimeout(function(){
+			var ezflaun = IL11ILILIIlLLLILILLLLIILLLIIL11111LLILiiLIliLlILlLiiLLIiILL.GetNameFromPositionId(1624);
+			if (typeof ezflaun != 'undefined' && ezflaun.length > 0) {
+				if (typeof ez_ad_units != undefined) {
+					for (i = 0; i < ez_ad_units.length; i++) {
+						if (ezflaun.indexOf(ez_ad_units[i][1]) >= 0) {
+							return false;
+						}
+					}
+				}
+				IL11ILILIIlLLLILILLLLIILLLIIL11111LLILiiLIliLlILlLiiLLIiILL.StoreStatSource(ezflaun, 47, 0.80);
+				IL11ILILIIlLLLILILLLLIILLLIIL11111LLILiiLIliLlILlLiiLLIiILL.RemoveSlotById(ezflaun);
+			}
+		}, 4000);
+	};
+	__ez.queue.addFunc('__ezfl_sss_1624', '__ezfl_sss_1624', null, false, ['banger.js'], false, false, false, true);
+</script><!--ezoicfl--> 			<span id='ezoic-pub-ad-placeholder-104'></span><!-- placeholder 104 blocked.  Reason : no sizes --> 
+<p><span style="font-weight: 400;">But that’s not really the surprising part either. The truth is that Tesla’s stock does not depend on how much they earn. Investors are well-attuned to the fact that it’s deliveries that matter the most. You can see that in the way Tesla stock moved up after the earnings call despite the dismal performance on earnings.</span></p>			<span id='ezoic-pub-ad-placeholder-100'></span><span style='display:block !important;float:none;margin-bottom:2px !important;margin-left:0px !important;margin-right:0px !important;margin-top:2px !important;min-height:420px;min-width:580px;text-align:center !important;' class='ezoic-ad medrectangle-4 adtester-container adtester-container-100' data-ez-name='amigobulls_com-medrectangle-4'><span id='div-gpt-ad-amigobulls_com-medrectangle-4-0' ezaw='580' ezah='400' style='position:relative;z-index:0;display:inline-block;' class='ezoic-ad'><script data-cfasync='false' type='text/javascript' style='display:none;'>eval(ez_write_tag([[580,400],'amigobulls_com-medrectangle-4','ezslot_2']));</script></span></span> 			 
+<p><strong><strong><br>
+<a href="https://static.amigobulls.com/articles/wp-content/uploads/2016/08/tslastockprice.jpg?ref=il"><img class="aligncenter size-full wp-image-56765" src="https://static.amigobulls.com/articles/wp-content/uploads/2016/08/tslastockprice.jpg" alt="tslastockprice"></a><br>
+</strong></strong><span id='ezoic-pub-ad-placeholder-698' class="ezoic-adpicker-ad"></span><span id='ezoic-pub-ad-placeholder-699' class="ezoic-adpicker-ad"></span></p>			<span id='ezoic-pub-ad-placeholder-662'></span><span style='display:block !important;float:none !important;margin-bottom:2px !important;margin-left:0px !important;margin-right:0px !important;margin-top:2px !important;min-height:300px;min-width:336px;text-align:center !important;' class='ezoic-ad box-4 adtester-container adtester-container-662' data-ez-name='amigobulls_com-box-4'><span id='div-gpt-ad-amigobulls_com-box-4-0' ezaw='336' ezah='280' style='position:relative;z-index:0;display:inline-block;' class='ezoic-ad'><script data-cfasync='false' type='text/javascript' style='display:none;'>eval(ez_write_tag([[336,280],'amigobulls_com-box-4','ezslot_6']));</script></span></span> 
+<p><span style="font-weight: 400;">Now back to its pre-earnings-call level of around $225, TSLA is obviously a stock that moves not on quarterly results, but news from the company. The upward movement was primarily because the company stood by its full fiscal delivery estimates.</span></p>			<span id='ezoic-pub-ad-placeholder-663'></span><span style='display:block !important;float:none !important;margin-bottom:2px !important;margin-left:0px !important;margin-right:0px !important;margin-top:2px !important;min-height:270px;min-width:250px;text-align:center !important;' class='ezoic-ad banner-1 adtester-container adtester-container-663' data-ez-name='amigobulls_com-banner-1'><span id='div-gpt-ad-amigobulls_com-banner-1-0' ezaw='250' ezah='250' style='position:relative;z-index:0;display:inline-block;' class='ezoic-ad'><script data-cfasync='false' type='text/javascript' style='display:none;'>eval(ez_write_tag([[250,250],'amigobulls_com-banner-1','ezslot_7']));</script></span></span> 			<span id='ezoic-pub-ad-placeholder-105'></span><!-- placeholder 105 blocked.  Reason : no sizes --> 
+<h2>The Delivery Factor</h2>
+<p><span style="font-weight: 400;">The vehicle delivery misses over the last two quarters seem to have already been priced into the stock heading into the earnings call. That’s the reason it didn’t dip despite an adjusted loss of nearly double what analysts expected. On the revenue front, they did exceed the $1.56 billion expectation, reporting $1.6 billion for the quarter. Quoting from an earlier <a rel="nofollow" target="_blank" href="http://ir.tesla.com/releasedetail.cfm?ReleaseID=978031&amp;ref=il">press release by Tesla</a>:</span></p>			<span id='ezoic-pub-ad-placeholder-101'></span><span style='display:block !important;float:none;margin-bottom:2px !important;margin-left:0px !important;margin-right:0px !important;margin-top:2px !important;min-height:270px;min-width:250px;text-align:center !important;' class='ezoic-ad large-leaderboard-2 adtester-container adtester-container-101' data-ez-name='amigobulls_com-large-leaderboard-2'><span id='div-gpt-ad-amigobulls_com-large-leaderboard-2-0' ezaw='250' ezah='250' style='position:relative;z-index:0;display:inline-block;' class='ezoic-ad'><script data-cfasync='false' type='text/javascript' style='display:none;'>eval(ez_write_tag([[250,250],'amigobulls_com-large-leaderboard-2','ezslot_5']));</script></span></span> 			 
+<blockquote><p><i><span style="font-weight: 400;">“Due to the extreme production ramp in Q2 and the high mix of customer-ordered vehicles still on trucks and ships at the end of the quarter, Tesla Q2 deliveries were lower than anticipated at 14,370 vehicles, consisting of 9,745 Model S and 4,625 Model X. In total, 5,150 customer-ordered vehicles were still in transit at the end of the quarter and will be delivered in early Q3. That amount was higher than expected (there were 2,615 vehicles in transit to customers at the end of Q1) and is more than a third of the number of cars that completed delivery in Q2.”</span></i></p>			<span id='ezoic-pub-ad-placeholder-664'></span><span style='display:block !important;float:none !important;margin-bottom:2px !important;margin-left:0px !important;margin-right:0px !important;margin-top:2px !important;min-height:270px;min-width:250px;' class='ezoic-ad leader-1 adtester-container adtester-container-664' data-ez-name='amigobulls_com-leader-1'><span id='div-gpt-ad-amigobulls_com-leader-1-0' ezaw='250' ezah='250' style='position:relative;z-index:0;display:inline-block;' class='ezoic-ad'><script data-cfasync='false' type='text/javascript' style='display:none;'>eval(ez_write_tag([[250,250],'amigobulls_com-leader-1','ezslot_4']));</script></span></span> 			 </blockquote>
+<h2>What’s Keeping the Stock Up?</h2>
+<p><span style="font-weight: 400;">To put it another way, morale is still high because Tesla expects to at least meet the lower end of their 80,000 to 90,000 deliveries for the whole year. Q3 deliveries are expected at 2,220 per week and Q4 is expected to show 2,400 per week. That will bring them up to 50,000 for the third and fourth quarter combined, for a grand total of near 80,000 for the year.</span></p>
+<p><span id='ezoic-pub-ad-placeholder-604' class="ezoic-adpicker-ad"></span><span id='ezoic-pub-ad-placeholder-605' class="ezoic-adpicker-ad"></span><span style="font-weight: 400;">Now, whether or not that will happen remains to be seen, but this is where the rubber meets the road for Tesla. They’ve effectively pushed any major market judgment on the stock by two quarters. If Q3 doesn’t come on track towards the target of 80,000 for the full fiscal, we could see a pullback of sorts after the next delivery announcement. Again, I don’t think Tesla will be taking a hit on the Q3 call, but the delivery numbers are critical to the stock’s performance.</span><span id='ezoic-pub-ad-placeholder-603' class="ezoic-adpicker-ad"></span></p>
+<p><span style="font-weight: 400;">Another major reason why they didn’t take a hit this quarter is due to the expectation of break-even revenues for the full fiscal. Quoting&nbsp;Jason S. Wheeler, Tesla’s Chief Financial Officer, from the <a rel="nofollow" target="_blank" href="http://seekingalpha.com/article/3995504-tesla-motors-tsla-ceo-elon-reeve-musk-q2-2016-results-earnings-call-transcript?part=single&amp;ref=il">Q2 Earnings Call</a>:</span></p>
+<p><i><span style="font-weight: 400;">“</span></i><i><span style="font-weight: 400;">If we can execute on our production and our delivery goals in the second half of the year, we got a great chance to be non-GAAP profitable.”</span></i></p>
+<h2>In the News</h2>
+<p><span style="font-weight: 400;"><a href="https://amigobulls.com/articles/is-the-proposed-tesla-solar-city-deal-a-big-mistake?ref=il">Tesla’s decision to buy SolarCity</a> is not something that I think should be happening at this critical time in the company’s history. Why? Because there’s tremendous pressure on Tesla Motors to deliver at least 50,000 cars in the next five months, and they cannot afford the kind of distraction that the acquisition will surely bring.</span></p>
+<p><span style="font-weight: 400;">But it’s not even about the distraction. It’s the money they need for their ramp up plans to execute those deliveries. The Gigafactory may not be participating in this fiscal’s production needs, but it is nonetheless taking up huge resources from Tesla Motors from a financial standpoint.</span></p>
+<p><span style="font-weight: 400;">The best thing that came out of the earnings call, in my opinion, is their announcement of yet another car - a compact crossover dubbed the Model Y.</span></p>
+<p><span style="font-weight: 400;">If you look at Tesla’s lineup of cars since the Roadster, you’ll see a definite trend towards greater affordability. Compared to the $109,000 tag of the Roadster, the Model 3 only costs one-third of that. If Tesla can bring in the Model Y at an even more attractive price point, they have the opportunity to stretch the bounds of the current market for electric vehicles.</span></p>
+<p><span style="font-weight: 400;">This is what CEO Elon Musk said about the Model Y during the </span><a rel="nofollow" target="_blank" href="http://seekingalpha.com/article/3995504-tesla-motors-tsla-ceo-elon-reeve-musk-q2-2016-results-earnings-call-transcript?part=single&amp;ref=il"><span style="font-weight: 400;">Q2 Earnings Call</span></a><span style="font-weight: 400;">:</span></p>
+<p><i><span style="font-weight: 400;">“I mean, also to be clear like the priority vehicle development after the Model 3 would be the Model Y, I guess, the compact SUV, because that's also a car that where we expect to see demand in the 500,000 to 1,000,000 unit per year level. So it's the obvious priority after the Model 3.”</span></i></p>
+<p><strong><span style="font-weight: 400;">With major plans afoot and an expectant Mr. Market waiting for Tesla to fail so it can hammer the stock to much lower levels, the SolarCity bid is something that will pose a challenge to the time, money and energy that Tesla executives currently put into managing car deliveries.</span></strong></p>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="clear"></div>
+		<div class="mb10px">
+			<div class="right">
+		<span data-type="article" data-type_id="56763" data-vote="up" class="voteup enabledvoteicon  icon_text" title="voteup">                   
+					<span class=" pointerCursor fa fa-thumbs-up fs150 "></span> 
+					<span class="votecount displayInlineBlock">7</span> 
+		 	</span><span data-type="article" data-type_id="56763" data-vote="down" class="votedown enabledvoteicon  icon_text" title="votedown">                   
+					<span class=" pointerCursor fa fa-thumbs-down fs150 "></span> 
+					<span class="votecount displayInlineBlock">3</span> 
+		 	</span>		</div>
+		<div class="left">
+					<div id="ssba">
+	<ul>
+		<li class="mobi-hideit">
+			<a id="ssba_email_share" class="ssba_share_link" href="mailto:?Subject=Why Tesla Motors Inc Stock Didn’t Tank Post The Q2 Earnings Miss by Amigobulls&amp;Body=Hi%20Friend%2C%0AI%20thought%20you%20might%20find%20this%20article%20on%20Amigobulls%20interesting%3A%0A%09It%E2%80%99s%20an%20oddity%20that%20Tesla%20stock%20didn%E2%80%99t%20slide%20on%20the%20EPS%20miss%20during%20the%20Q2%20call.%20Despite%20the%20miss%20and%20the%20delivery%20mess%20up%20last%20quarter%2C%20the%20stock%20moved%20up.%20Will%20SolarCity%20prove%20to%20be%20a%20major%20distraction%20at%20this%20critical%20time%3F%0ATo%20continue%20reading%20please%20click%20on%20the%20link%20below%3A%0Ahttps%3A%2F%2Famigobulls.com%2Farticles%2Fwhy-tesla-motors-inc-stock-didnt-tank-post-the-q2-earnings-miss%3Fref%3Dma"> 
+			<span title="Email this article" class="fa fa-envelope fa-2x"></span>
+			<span class="displayNone"> Share this article via Email</span>
+			</a>
+		</li>
+		<li>
+			<a id="ssba_twitter_share" href="https://twitter.com/share?url=https://amigobulls.com/articles/why-tesla-motors-inc-stock-didnt-tank-post-the-q2-earnings-miss?ref=tw&amp;text=Why+Tesla+Motors+Inc+Stock+Didn%E2%80%99t+Tank+Post+The+Q2+Earnings+Miss"> 
+			<span title="" class="fa fa-twitter-square fa-2x"></span>
+			<span class="displayNone"> Share this article on Twitter</span>
+			</a>
+		</li>
+		<li>
+			<a id="ssba_facebook_share" href="https://www.facebook.com/sharer.php?u=https://amigobulls.com/articles/why-tesla-motors-inc-stock-didnt-tank-post-the-q2-earnings-miss?ref=fb&amp;title=Why+Tesla+Motors+Inc+Stock+Didn%E2%80%99t+Tank+Post+The+Q2+Earnings+Miss&amp;summary=It%E2%80%99s+an+oddity+that+Tesla+stock+didn%E2%80%99t+slide+on+the+EPS+miss+during+the+Q2+call.+Despite+the+miss+and+the+delivery+mess+up+last+quarter%2C+the+stock+moved+up.+Will+SolarCity+prove+to+be+a+major+distraction+at+this+critical+time%3F"> 
+			<span title="" class="fa fa-facebook-square fa-2x"></span>
+			<span class="displayNone"> Share this article on Facebook</span>
+			</a>
+		</li>
+		<li>
+			<a id="ssba_linkedin_share" class="ssba_share_link" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://amigobulls.com/articles/why-tesla-motors-inc-stock-didnt-tank-post-the-q2-earnings-miss?ref=ld&amp;title=Why+Tesla+Motors+Inc+Stock+Didn%E2%80%99t+Tank+Post+The+Q2+Earnings+Miss&amp;summary=It%E2%80%99s+an+oddity+that+Tesla+stock+didn%E2%80%99t+slide+on+the+EPS+miss+during+the+Q2+call.+Despite+the+miss+and+the+delivery+mess+up+last+quarter%2C+the+stock+moved+up.+Will+SolarCity+prove+to+be+a+major+distraction+at+this+critical+time%3F"> 
+			<span title="" class="fa fa-linkedin-square fa-2x"></span>
+			<span class="displayNone"> Share this article on linkedin</span>
+			</a>
+		</li>
+		<li>
+			<a id="ssba_google_share" href="https://plus.google.com/share?url=https://amigobulls.com/articles/why-tesla-motors-inc-stock-didnt-tank-post-the-q2-earnings-miss"> 
+			<span title="" class="fa fa-google-plus-square fa-2x"></span>
+			<span class="displayNone"> Share this article on GooglePlus</span>
+			</a>
+		</li>
+		<li>
+			<a id="ssba_whatsapp_share" class="ssba_share_link whatsapp-share-button desktop_tab_hide" data-count="true" href="whatsapp://send?text=Why+Tesla+Motors+Inc+Stock+Didn%E2%80%99t+Tank+Post+The+Q2+Earnings+Miss https%3A%2F%2Famigobulls.com%2Farticles%2Fwhy-tesla-motors-inc-stock-didnt-tank-post-the-q2-earnings-miss%3Fref%3Dwp"> 
+				<span title="Share this post on WhatsApp" class="fa fa-whatsapp"></span>
+			</a>
+		</li>
+	</ul>
+</div>
+		</div>			
+			<div class="right mt5px">Is this article helpful ?&nbsp;&nbsp;&nbsp;&nbsp;</div>
+		 </div>
+         <div class="clear"></div>
+         <hr class="desktop_hide">
+        <div class="mt20px mb30px">
+					<span id='ezoic-pub-ad-placeholder-106'></span><!-- placeholder 106 blocked.  Reason : no sizes --> 		</div> 
+
+		<!-- Display the related section for articles in aside tag -->
+		<aside>
+		<h2 class="small mt10px mobi-hideit"> More on Tesla Inc stock</h2><hr><div class="articlesMainDiv displayBlock">			<span id='ezoic-pub-ad-placeholder-103'></span><span style='display:block !important;float:none !important;margin-bottom:2px !important;margin-left:0px !important;margin-right:0px !important;margin-top:2px !important;min-height:480px;min-width:100%;text-align:center !important;' class='ezoic-ad nativedouble-1 adtester-container adtester-container-103' data-ez-name='amigobulls_com-nativedouble-1'><div class="OUTBRAIN" data-src="http://outbrain.ezoic.net/?variant=46056_1_103_100x480" data-widget-id="AR_1" data-ob-template="ezoic"></div>
+<script type="text/javascript" async="async" src="//widgets.outbrain.com/outbrain.js"></script></span> </div>		</aside> <!-- entire related content should be inside the aside tag -->
+
+		<div class="mt10px mb10px left author_pic">
+		<a href="https://amigobulls.com/articles/author/shudeepc?ref=tp"><img src="https://static.amigobulls.com/profile_images/1465550206_21782.png" alt="Shudeep Chandrasekhar" class="authorbox-photo author_img"></a>
+		<span class="fs100 left"><a class="orange" href="https://amigobulls.com/articles/author/shudeepc?ref=tp"> Shudeep Chandrasekhar</a> </span>	
+		<span class="left">&nbsp; on Amigobulls : </span> <div class="follow_div  orange fs120 left"><div class="pointerCursor author_follow" data-id="175" data-post_id="56763" data-follow="1"><i class="fa fa-plus orange"> </i>Follow </div></div>		</div>
+			<footer>
+				<div class="disclaimer">
+				<div class="dis_tit">Author's Disclosures &amp; Disclaimers:</div><ul><li>I do not hold any positions in the stocks mentioned in this post and don't intend to initiate a position in the next 72 hours</li><li>I am not an investment advisor, and my opinion should not be treated as investment advice.</li><li>I am not being compensated for this post (except possibly by Amigobulls).</li><li>I do not have any business relationship with the companies mentioned in this post.</li></ul><div class="dis_tit">Amigobulls Disclosures &amp; Disclaimers:</div><p>This post has been submitted by an independent external contributor. This author may or may not hold any positions in the stocks discussed. Neither Amigobulls, nor any members of its staff hold positions in any of the stocks discussed in this post. Amigobulls has not verified the author’s positions in the stocks discussed, and does not provide any guarantees in this regard. The author may be paid by Amigobulls for this contribution, under the paid contributors program. However, Amigobulls does not guarantee the authenticity or accuracy of the information provided by the author in this post.</p><p>The author may not be a qualified investment advisor. The opinions stated in the post should not be treated as investment advice. Buying and selling of securities carries the risk of monetary losses. Readers/Viewers are advised to carry out their own due diligence and consult their investment advisors before making any investment decisions.</p><p>Amigobulls does not have any business relationship with any of the companies covered in this post. This post represents the views of the author/contributor and may not reflect the views of Amigobulls.</p>				</div>
+				<div class="disclaimer_more cursorPointer tickerorange right fs14px ">show more</div>
+			</footer>
+		</div><!-- .entry-content -->
+		<div class="clear"></div>
+	<div id="comments" class="">
+		<h2 class="mtb20px small"> Comments on this article and TSLA stock </h2>
+		<div class="stockComments">
+	    <div class="commentlayout commentsleft">
+	        <div id="proscomments">
+	                        <textarea placeholder="Share your opinion on Tesla Inc stock" onclick="showForm(this);" id="commentcontent_" class=" fs80 comment_box "></textarea>
+    <div class="clear"></div>
+    <div id="commentform_" class="commentform">
+        <div id="com_error_" class="comment_error">
+            <span id="com_alerticon_" class="comment_alerticon"></span>
+            <span id="com_alertmsg_"></span> 
+        </div>
+        <div class="right">
+                        <div class="comment_form">
+                <a href="javascript:;" onclick="commentPost('');"><span title="post new comment" class="fs62 post_anonymously post_anon_btn analysis_post post_button_"><span>post</span></span></a>
+                 <span class="ajaxloader_ displayNone left m10px"> <i class="fa fa-spin fa-spinner"></i></span>
+            </div>
+                    </div>
+                <div class="reply ">
+            <div class="right fs80 toggle_radio">
+                <input type="radio" value="bullish" class="bullish" name="toggle_option">
+                <input type="radio" value="neutral" checked="checked" class="neutral" name="toggle_option">
+                <input type="radio" value="bearish" class="bearish" name="toggle_option">
+                <label class="bull">bullish</label>
+                <label class="neut neut_checked">neutral</label>
+                <label class="bear">bearish</label>
+                <div class="toggle_option_slider">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+	        </div>
+	        <div class="commentcontents">
+	            	        </div>
+	    </div>                  
+	    <div class="clear"></div>
+	</div>
+	<div id="avathar_dialog" style="display:none;"></div>
+</div><!-- #comments -->
+</div><!-- #post-## -->
+</div>
+</article>
+<div class="sharePopup mobi-hideit" id="sharePopup" title="Enjoyed reading this article?"> Do share this awesome post <br> <div class="sharebuttons"></div></div>
+<div id="single_right" class="amigo_right">
+	
+			<div class="article_rhs">
+		<div class="tab_lscape_rhs mb30px"><h2 class="small mb5px">Tesla Inc Stock Articles</h2> 
+		<div class="titleContainer">
+		<a href="https://amigobulls.com/articles/2017-07-18-tesla-stock-looks-set-for-a-bounce-higher-tesla-inc"><span class="recent_art">Tesla Stock Looks Set For A Bounce Higher: Tesla Inc.</span></a>     			   
+		<div class="clear"></div><div class="hr_dotted"></div></div>    
+		<div class="titleContainer">
+		<a href="https://amigobulls.com/articles/2017-07-10-tesla-inc-stock-why-53-growth-was-not-good-enough"><span class="recent_art">Tesla Inc Stock: Why 53% Growth Was Not Good Enough</span></a>     			   
+		<div class="clear"></div><div class="hr_dotted"></div></div>    
+		<div class="titleContainer">
+		<a href="https://amigobulls.com/articles/2017-07-07-shorting-tesla-stock-now-is-a-big-risk-tesla-inc"><span class="recent_art">Shorting Tesla Stock Now Is A Big Risk: Tesla Inc.</span></a>     			   
+		<div class="clear"></div><div class="hr_dotted"></div></div>    
+		<div class="titleContainer">
+		<a href="https://amigobulls.com/articles/2017-07-06-facebook-inc-stock-tesla-inc-and-amazon-com-inc-todays-technical-stock-trading-ideas"><span class="recent_art">Facebook Inc Stock, Tesla Inc And Amazon.com Inc - Today's Technical Stock Trading Ideas</span></a>     			   
+		<div class="clear"></div><div class="hr_dotted"></div></div>    
+		<div class="titleContainer">
+		<a href="https://amigobulls.com/articles/2017-07-03-tesla-inc-hits-another-milestone-should-you-buy-tesla-stock"><span class="recent_art">Tesla Inc Hits Another Milestone. Should You Buy Tesla Stock?</span></a>     			   
+		<div class="clear"></div><div class="hr_dotted"></div></div>    
+		<div class="titleContainer">
+		<a href="https://amigobulls.com/articles/2017-06-28-tesla-inc-nvidia-corporation-and-alphabet-inc-todays-technical-stock-trading-ideas"><span class="recent_art">Tesla Inc, NVIDIA Corporation And Alphabet Inc - Today's Technical Stock Trading Ideas</span></a>     			   
+		<div class="clear"></div><div class="none"></div></div>    
+		<div class="titleContainer">
+		<a href="https://amigobulls.com/articles/2017-07-21-amazon-strikes-again-rival-stocks-tumble"><span class="recent_art">Amazon Strikes Again, Rival Stocks Tumble</span></a>     			   
+		<div class="clear"></div><div class="none"></div></div>   </div>			<span id='ezoic-pub-ad-placeholder-665'></span><span style='display:block !important;float:none !important;margin-bottom:2px !important;margin-left:0px !important;margin-right:0px !important;margin-top:2px !important;min-height:300px;min-width:336px;text-align:center !important;' class='ezoic-ad large-billboard-2 adtester-container adtester-container-665' data-ez-name='amigobulls_com-large-billboard-2'><span id='div-gpt-ad-amigobulls_com-large-billboard-2-0' ezaw='336' ezah='280' style='position:relative;z-index:0;display:inline-block;' class='ezoic-ad'><script data-cfasync='false' type='text/javascript' style='display:none;'>eval(ez_write_tag([[336,280],'amigobulls_com-large-billboard-2','ezslot_1']));</script></span></span> <div class="tab_lscape_rhs mb30px"><h2 class="small mb5px">TSLA News</h2> 
+		<div class="titleContainer">
+		<a href="https://amigobulls.com/news/heres-why-tesla-tsla-stock-fell-today"><span class="recent_art">Here's Why Tesla (TSLA) Stock Fell Today</span></a>     			   
+		<div class="clear"></div><div class="hr_dotted"></div></div>    
+		<div class="titleContainer">
+		<a href="https://amigobulls.com/news/tesla-announces-date-for-second-quarter-2017-financial-results-and-webcast"><span class="recent_art">Tesla Announces Date for Second Quarter 2017 Financial Results and Webcast</span></a>     			   
+		<div class="clear"></div><div class="hr_dotted"></div></div>    
+		<div class="titleContainer">
+		<a href="https://amigobulls.com/news/3-inspirational-elon-musk-quotes-about-the-future"><span class="recent_art">3 Inspirational Elon Musk Quotes About the Future</span></a>     			   
+		<div class="clear"></div><div class="hr_dotted"></div></div>    
+		<div class="titleContainer">
+		<a href="https://amigobulls.com/news/tesla-tsla-secures-big-battery-contract-in-australia"><span class="recent_art">Tesla (TSLA) Secures Big Battery Contract in Australia</span></a>     			   
+		<div class="clear"></div><div class="hr_dotted"></div></div>    
+		<div class="titleContainer">
+		<a href="https://amigobulls.com/news/advanced-microgrid-solutions-raises-34-million-in-series-b-energy-leaders-see-der-optimization-as-major-growth-market"><span class="recent_art">Advanced Microgrid Solutions Raises $34 Million in Series B, Energy Leaders See DER Optimization as Major Growth Market</span></a>     			   
+		<div class="clear"></div><div class="hr_dotted"></div></div>    
+		<div class="titleContainer">
+		<a href="https://amigobulls.com/news/qvc-hsn-merger-nvidia-ai-deal-blue-apron-ipo-and-teslas-rough-week"><span class="recent_art">QVC-HSN Merger, Nvidia AI Deal, Blue Apron IPO, and Tesla's Rough Week</span></a>     			   
+		<div class="clear"></div><div class="none"></div></div>   </div>	<div class="tab_lscape_rhs mb30px picks_box alink_parent">
+		<div class="txtCen alink_click  picks_theme">
+			<div class="mb10px fs150">One of our top stock picks has returned over 600% since 2011. See the entire list, it's free.
+			</div> 
+			<div class="mt10px">
+				<a class="alink" href="https://amigobulls.com/stocks-to-buy/top-tech-stocks/">
+				</a>
+				<input type="button" class="mt10px" value="See our top picks">
+			</div>
+		</div>
+	</div>
+	</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+var siteurl="https://amigobulls.com/";
+</script>
+    <script type="text/javascript">
+            var geturl="https://static.amigobulls.com/"+"1500782106_getAllStocks_gz.txt";
+          </script>
+
+	 <script type="text/javascript">
+        tickSymbol="TSLA";
+    	    		var visited_stock=5909;
+    	        companyName="Tesla Inc";
+        entityId="56763";
+        commentType=3;
+        stockPrice=0;
+    </script>
+<!-- #mainContent -->
+<script>var page_type=33;</script><div class="clear"></div>
+<!-- <div class='displayNone height'><span class='embed_popup tickergreen bold left heightauto' id='mail-verification' title='Email Verification'></span></div>        -->
+<div class="clear"></div>
+<div class="footer_ad mt10px txtCen"> 
+</div>
+<div id="overlay" class="mobi-hideit"><div id="overlaydiv"></div></div>
+    <footer class="footer_fixed mt10px">
+        <div class="back_color">
+        <div id="footerbg">
+             <div class="top_sec">
+                <h3 class="footertitle">Top Sections</h3>     
+                <ul>
+                    <li><a href="https://amigobulls.com" title="amigobulls - home page"> Home</a>  </li> 
+                    <li><a href="https://amigobulls.com/stocks-to-buy/top-tech-stocks/" title="internet stock picks">Stock Picks</a> </li>
+                    <li><a href="https://amigobulls.com/articles/" title="Stock Market Analysis">Articles</a> </li>
+                    <li><a href="https://amigobulls.com/news/" title="Stock Market News">News From Partners</a> </li>
+                    <li class="mobi-footermenuhide"><a href="https://amigobulls.com/sectors/computer-and-technology/internet-services" title="Technology and internet stocks">Screen Stocks</a>  </li>
+                    <li><a href="https://amigobulls.com/watchlist" title="Stock Market Watchlist">Watchlist</a> </li>
+                </ul>
+            </div>
+            <div class="company_sec">
+                <h3 class="footertitle">Company Info</h3>
+                <ul>
+                    <li><a href="https://amigobulls.com/about" title="About Amigobulls">About</a></li>
+                    <li><a href="https://amigobulls.com/jobs" title="Existing careers at Amigobulls">Jobs</a></li>
+                    <li><a href="https://amigobulls.com/contact" title="Contact us  Amigobulls">Contact</a></li>
+                    <li><a href="https://amigobulls.com/articles/author/" title="Amigobulls Authors">Our Authors</a></li>
+                    <li><a href="https://amigobulls.com/terms" title="Terms of use">Terms of Use</a></li>
+                    <li><a href="https://amigobulls.com/privacy" title="Privacy Policy">Privacy</a></li>
+                    <li><a href="#" title="Feedback" class="feedbackpopup">Feedback</a></li>
+                </ul>
+            </div>
+            <div class="widgets_sec mobi-hideit">
+                <h3 class="footertitle">Widgets &amp; Others </h3>
+                <ul>
+                    <li><a href="https://amigobulls.com/widgets/" title="">Stock Chart Widget</a></li>
+                    <li><a href="https://amigobulls.com/articles/feed" title="RSS Feeds">RSS Feeds</a></li>
+                    <li><a href="https://amigobulls.com/glossary/" title="glossary">Glossary</a></li>
+                     <li><a href="https://amigobulls.com/companies/" title="Stocks Listing">Stocks Listing</a></li>
+                    <li><a href="https://amigobulls.com/links" title="blogroll">Blogroll</a></li>
+                </ul>
+            </div>
+         <!--    <div class="stocks_sec mobi-hideit">
+                <h3 class="footertitle ml5px">Top Stocks We Track</h3>
+                    <ul>
+                                                                        </ul>
+            </div> -->
+			<div class="left socialdiv">
+        <div class="promo_div"><a href="https://enrichview.in">
+          <div class="promo_text_content left">
+            <div class="promo_heading">AMIGOBULLS FOR BUSINESS</div>
+            <div class="promo_text fs80 mobi-hideit">Engage your wealth management clients with video statements.</div>
+          </div>
+          <div class="promo_img right">
+            <i class="fa fa-video-camera"></i>
+          </div>
+        </a>
+        </div>
+				<div class="socialicon">
+						<h3 class="footertitle">Join Us On</h3>                   
+							<a target="_blank" class="mleft" title="Follow amigobulls.com on Facebook" href="https://www.facebook.com/amigobulls">
+									<i class="fa fa-facebook-square fa-2x"></i>
+								<span class="displayNone">Follow amigobulls.com on Facebook</span>
+							</a>
+							<a target="_blank" title="Follow amigobulls.com on Twitter" href="https://twitter.com/amigobulls">
+									<i class="fa fa-twitter-square fa-2x"></i>
+								<span class="displayNone">Follow amigobulls.com on Twitter</span>
+							</a>
+							<a target="_blank" title="Follow amigobulls.com on LinkedIn" href="https://www.linkedin.com/company/amigobulls">
+									<i class="fa fa-linkedin-square fa-2x"></i>
+								<span class="displayNone">Follow amigobulls.com on LinkedIn</span>
+							</a>
+							<a target="_blank" title="Follow amigobulls.com on Google+" rel="publisher" href="https://plus.google.com/+amigobulls">
+									<i class="fa fa-google-plus-square fa-2x"></i>
+								<span class="displayNone">Follow amigobulls.com on Google+</span>
+							</a>
+              <a class="" target="_blank" title="Follow amigobulls.com on stocktwits" href="https://stocktwits.com/amigobulls">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAAAAAA6fptVAAAACklEQVR4nGP6DwABBQECz6AuzQAAAABJRU5ErkJggg==" data-src="https://static.amigobulls.com/v2images/StockTwits.svg" class="stocktwits_share lazy" alt="stocktwits">
+              </a>								
+				</div>
+                			</div>						
+            <div class="clear"></div>
+            <span class="fs62 footerst">Copyright<i class="fa fa-copyright"></i>2014 amigobulls.com </span>
+        </div><span id='ezoic-pub-ad-placeholder-'null" class="ezoic-adpicker-ad"></span><!-- placeholder  blocked.  Reason : inactive --></div>
+        <div class="fs75 footer_txt"><span id='ezoic-pub-ad-placeholder-683' class="ezoic-adpicker-ad"></span><span style='display:block !important;float:none;margin-bottom:2px !important;margin-left:0px !important;margin-right:0px !important;margin-top:2px !important;min-height:300px;min-width:336px;text-align:center !important;' class='ezoic-ad medrectangle-1 adtester-container adtester-container-683' data-ez-name='amigobulls_com-medrectangle-1'><span id='div-gpt-ad-amigobulls_com-medrectangle-1-0' ezaw='336' ezah='280' style='position:relative;z-index:0;display:inline-block;' class='ezoic-ad'><script data-cfasync='false' type='text/javascript' style='display:none;'>eval(ez_write_tag([[336,280],'amigobulls_com-medrectangle-1','ezslot_8']));</script></span></span>
+            Historical, current end-of-day data, and company fundamental data provided by <a rel="nofollow" href="http://www.zacksdata.com/" class="linkblue" target="post">Zacks</a>.<br>
+        	All information provided "as is" for informational purposes only, not intended for trading purposes or advice. 
+        	Neither Amigobulls nor any of the data providers is liable for any informational errors, incompleteness, or delays, or for any actions taken in reliance on information contained herein. By accessing the amigobulls.com, you agree not to redistribute the information found therein.
+        	Please read our <a class="linkblue" href="https://amigobulls.com/terms">terms of use</a> and <a class="linkblue" href="https://amigobulls.com/privacy">privacy policy</a>.
+        </div>
+    </footer>
+    <div class="clear"></div>
+</div>
+<script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        //for main server
+                    ga('create', 'UA-39375880-1', 'auto');
+                ga('send', 'pageview');
+        if (window.ga) {
+          //send event timeonpage if a user has stayed for more than 15 seconds
+          var myintervalid = setInterval(function() {ga('send', 'event', 'timeonpage', 'timeonpage', window.location.pathname,15);},15000);
+          // clear the event after 15 mins
+          setTimeout(function(){clearInterval(myintervalid);},900000);
+        }
+</script>
+
+<div id="feedbackdivs"></div><script type="text/javascript">
+    var siteurl="https://amigobulls.com/";
+    var siteimageurl="https://static.amigobulls.com/";
+    var cssurl="https://static.amigobulls.com/css/";
+    var jsurl="https://static.amigobulls.com/js/";
+    var server_type="1";
+    var unique_id='59747c264580b';
+	var loggedin=false;
+	var user_email='';
+	var user_name='';
+	var user_id='';
+
+	    var limit_exceeded = '' ? 1 : 0;
+  		var visitedurl='/articles/why-tesla-motors-inc-stock-didnt-tank-post-the-q2-earnings-miss';
+	var referrer='/https://www.google.com/';
+	var urlquery="u=why-tesla-motors-inc-stock-didnt-tank-post-the-q2-earnings-miss";
+    if (typeof limit_exceeded !== 'undefined' && limit_exceeded) {
+        urlquery += '&forced=1';
+    }
+	var request_url='/articles/why-tesla-motors-inc-stock-didnt-tank-post-the-q2-earnings-miss';
+	var siteurl='https://amigobulls.com/';
+	var node_type='articles';
+    var trade_it_enabled = 0;
+  if (trade_it_enabled) {
+    var publisher_name ='';
+    var tradit_js = '';
+  }
+</script>
+
+<script type="text/javascript">
+  			var isArticle="";
+                   isArticle=true;
+        </script>
+<script>
+  var session_open_popup= false;
+  var session_download_limit_exceeded=false;
+</script>
+<div class="displayNone " id="footer-login">
+<div id="forcedialog" class="txtCen" title="Login with amigobulls.com">
+<div class="pad10px">
+    <div id="title"></div>
+    <div class="pad10px displayInline"><input type="submit" class="submit_button loginfromjq" tabindex="4" value="Login"></div>
+    <div class="pad10px displayInline"><input type="submit" class="submit_button signupfromjq" tabindex="4" value="Sign Up"></div>
+</div>   
+</div>
+</div><div class="blackout"></div>
+      <script>
+  local_storage_access = true;
+
+  try{
+    localStorage.setItem("access","true");
+    test = localStorage.getItem("access");
+    localStorage.removeItem("access");
+  }
+  catch(err){
+    local_storage_access=false;
+  }
+  function async(u, c) {
+  var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+  o.src = u;
+  if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+  s.parentNode.insertBefore(o, s);
+}
+var jquery_lib="https://static.amigobulls.com/js/jquery_1.9.1.min.js";
+async( jquery_lib, function() {
+               common_js = document.createElement("script");
+            common_js.src = "https://static.amigobulls.com/js/combined/1500546975_jquer_amigo.min.js";
+            document.body.appendChild(common_js);
+  });   
+</script>
+<script type="text/javascript">
+/*query string to attach when show full article is clicked */
+	full_article_qs="?p=n";
+	is_single ="1";
+</script>
+
+
+
+<!-- Ezoic - Anchor Ad - bottom_floating -->
+<div class="ezmob-footer ezoic-floating-bottom ezo_ad"><center><span id='ezoic-pub-ad-placeholder-600'></span><!-- placeholder 600 blocked.  Reason : no sizes --></center></div>
+<!-- End Ezoic - Anchor Ad - bottom_floating -->
+
+
+<!-- Ezoic - Inline Ad - inline -->
+<!--  -->
+<!-- End Ezoic - Inline Ad - inline -->
+
+<script type="text/javascript" style='display:none;'>
+var __ez_dims = (function() {
+	var setCookie = function( name, content, expiry ) {
+		return document.cookie = name+'='+content+((expiry)?';expires='+(new Date(Math.floor(new Date().getTime()+expiry*1000)).toUTCString()):'');
+	};
+	var ffid = 1;
+	var oh = window.screen.height;
+	var ow = window.screen.width;
+	var h = ffid === 1 ? oh : (oh > ow) ? oh : ow;
+	var w = ffid === 1 ? ow : (oh > ow) ? ow : oh;
+	var uh = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight;
+	var uw = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth;
+	setCookie('ezds', encodeURIComponent('ffid='+ffid+',w='+w+',h='+h), (31536e3*7));
+	setCookie('ezohw', encodeURIComponent('w='+uw+',h='+uh), (31536e3*7));
+})();
+</script><script type='text/javascript' style='display:none;' async>
+__ez.queue.addFile('edmonton.php', '//amigobulls.com/detroitchicago/edmonton.webp?a=a&cb=169-0&shcb=23', true, [], true, false, false, false);
+__ez.queue.addFile('jellyfish.php', '//amigobulls.com/porpoiseant/jellyfish.webp?a=a&cb=169-0&shcb=23', false, [], true, false, false, false);
+</script>
+
+
+<div id='dmo1' style='display:none'>
+	<script type="text/javascript"><!--
+		google_ad_client = "ca-pub-6396844742497208";
+		/* dmo */
+		google_ad_slot = "dmo";
+		google_ad_width = 88;
+		google_ad_height = 31;
+		//-->
+	</script>
+	<script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+</div>
+
+<!--Begin comScore Tag--><script>var _comscore=_comscore||[];_comscore.push({c1:"2",c2:"20015427"});(function(){var s=document.createElement("script"),el=document.getElementsByTagName("script")[0];s.async=true;s.src=(document.location.protocol=="https:"?"https://sb":"http://b")+".scorecardresearch.com/beacon.js";el.parentNode.insertBefore(s,el)})();</script><noscript><img src="http://b.scorecardresearch.com/p?c1=2&c2=20015427&cv=2.0&cj=1"/></noscript><!--End comScore Tag-->
+<!--Quantcast Tag--><script type="text/javascript">var _qevents=_qevents||[];(function(){var elem=document.createElement('script');elem.src=(document.location.protocol=="https:"?"https://secure":"http://edge")+".quantserve.com/quant.js";elem.async=true;elem.type="text/javascript";var scpt=document.getElementsByTagName('script')[0];scpt.parentNode.insertBefore(elem,scpt)})();_qevents.push({qacct:"p-31iz6hfFutd16",labels:"Domain.amigobulls_com,DomainId.46056"});</script><noscript><div style="display:none;"><img src="//pixel.quantserve.com/pixel/p-31iz6hfFutd16.gif?labels=Domain.amigobulls_com,DomainId.46056"border="0"height="1"width="1"alt="Quantcast"/></div></noscript><!--End Quantcast tag--></body></html><!--[selectron:done]-->

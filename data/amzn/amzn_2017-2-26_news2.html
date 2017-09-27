@@ -1,0 +1,2224 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Snap IPO: The complete bearish case for avoiding investing in Snapchat</title>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UQ8EUVRACQAFVVdbAQk="};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(15),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,o){try{d?d-=1:i("err",[o||new UncaughtException(t,n,e)])}catch(s){try{i("ierr",[s,c.now(),!0])}catch(u){}}return"function"==typeof f&&f.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t){i("err",[t,c.now()])}var i=t("handle"),a=t(16),s=t("ee"),c=t("loader"),f=window.onerror,u=!1,d=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),u=!0)}s.on("fn-start",function(t,n,e){u&&(d+=1)}),s.on("fn-err",function(t,n,e){u&&(this.thrown=!0,o(e))}),s.on("fn-end",function(){u&&!this.thrown&&d>0&&(d-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(6);var b=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof b&&(this.bstStart=g.now())}),o.on(w,function(t,n){var e=t[0];e instanceof b&&i("bst",[e,n,this.bstStart,g.now()])}),a.on(m,function(t,n,e){this.bstStart=g.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(18)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){var r=t("ee").get("history"),o=t(18)(r);n.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,n,e){var r=t("ee").get("raf"),o=t(18)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(18)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){g.push(t),h&&(x?x.then(a):w?w(a):(E=-E,O.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t(18)(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];n.exports=u;var b=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(v,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,b),b.prototype=p.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var x=m&&m.resolve();if(!w&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],10:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!n.aborted){if(e.duration=a.now()-this.startTime,4===t.readyState){n.status=t.status;var i=o(t,this.lastSize);if(i&&(e.rxSize=i),this.sameOrigin){var c=t.getResponseHeader("X-NewRelic-App-Data");c&&(n.cat=c.split(", ").pop())}}else n.status=0;e.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[n,e,this.startTime])}}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return h(r)}function i(t,n){var e=c(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=h(r);i&&(e.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{f.emit("internal-error",[e])}catch(r){}}};for(var s=0;s<d;s++)n.addEventListener(u[s],this.listener,!1)}),f.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),f.on("xhr-load-added",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],n)}),f.on("removeEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],n)}),f.on("fn-start",function(t,n,e){n instanceof m&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,n){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,n],n)})}},{}],11:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],12:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(15),s=t(16),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}finally{c.emit("fn-end",[f.now()],e)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now()])}},{}],13:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],14:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],15:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],16:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],17:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],18:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=h(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[y[e]];return d&&d.push([g,e,r,a]),a}}function p(t,n){v[t]=h(t).concat(n)}function h(t){return v[t]||[]}function m(t){return d[t]=d[t]||o(e)}function w(t,n){f(t,function(t,e){n=n||"feature",y[e]=n,n in u||(u[n]=[])})}var v={},y={},g={on:p,emit:e,get:m,listeners:h,context:n,buffer:w,abort:a,aborted:!1};return g}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(15),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!x++){var t=b.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(y,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=l.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===l.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(15),u=t("ee"),d=window,l=d.document,p="addEventListener",h="attachEvent",m=d.XMLHttpRequest,w=m&&m.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:m,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},g=m&&w&&w[p]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:v,features:{},xhrWrappable:g};t(12),l[p]?(l[p]("DOMContentLoaded",i,!1),d[p]("load",r,!1)):(l[h]("onreadystatechange",o),d[h]("onload",r)),c("mark",["firstbyte",s],null,"api");var x=0,E=t(17)},{}]},{},["loader",2,10,4,3]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=6.0, user-scalable=1"/>
+    <meta name="apple-touch-fullscreen" content="YES" />
+
+        
+            
+    <meta name="apple-itunes-app" content=app-id=554260576>
+        <meta name="google-play-app" content=com.freerange360.mpp.businessinsider>
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="http://static4.businessinsider.com/assets/images/us/favicons/apple-touch-icon.png?v=BI-US-2017-06-22" />
+<link rel="icon" type="image/png" sizes="32x32" href="http://static1.businessinsider.com/assets/images/us/favicons/favicon-32x32.png?v=BI-US-2017-06-22" />
+<link rel="icon" type="image/png" sizes="16x16" href="http://static5.businessinsider.com/assets/images/us/favicons/favicon-16x16.png?v=BI-US-2017-06-22" />
+<link rel="manifest" href="http://static5.businessinsider.com/assets/images/us/favicons/manifest.json?v=BI-US-2017-06-22" />
+<link rel="mask-icon" href="http://static6.businessinsider.com/assets/images/us/favicons/safari-pinned-tab.svg?v=BI-US-2017-06-22" color="#1D607C" />
+<link rel="shortcut icon" href="http://static3.businessinsider.com/assets/images/us/favicons/favicon.ico?v=BI-US-2017-06-22" />
+<meta name="msapplication-config" content="http://static2.businessinsider.com/assets/images/us/favicons/browserconfig.xml?v=BI-US-2017-06-22" />
+<meta name="theme-color" content="#1D607C" />
+<meta name="linkedin:owner" content="mid:1d5f7b" />
+
+    <meta name="date" content="2017-02-26" />
+<meta name="sailthru.date" content="2017-02-26" />
+<meta name="news_keywords" content="SNAP, Snap IPO, Snapchat, Modern Trader, Evan Spiegel, Henry Blodget, Garrett Baldwin, Modern Trader" />
+<meta name="sailthru.tags" content="SNAP, Snap IPO, Snapchat, Modern Trader, Evan Spiegel, Henry Blodget, Garrett Baldwin, Modern Trader" />
+<meta name="description" content="&quot;Snapchat is not an investment in a media platform or a 'camera company,' as its founders have described the firm in filing documents.&quot;" />
+<meta name="sailthru.description" content="&quot;Snapchat is not an investment in a media platform or a 'camera company,' as its founders have described the firm in filing documents.&quot;" />
+<meta name="title" content="The complete bearish case against investing in Snapchat's massive IPO" />
+<meta name="sailthru.verticals" content="clusterstock-contributor,sai,clusterstock,moneygame,advertising" />
+<meta name="sailthru.title" content="The complete bearish case against investing in Snapchat's massive IPO" />
+<meta name="tbi-image" content="http://static4.businessinsider.com/image/58b32b9001fe5817378b4eaf/the-complete-bearish-case-against-investing-in-snapchats-massive-ipo.jpg" />
+<meta name="sailthru.image.full" content="http://static4.businessinsider.com/image/58b32b9001fe5817378b4eaf/the-complete-bearish-case-against-investing-in-snapchats-massive-ipo.jpg" />
+<meta name="sailthru.image.thumb" content="http://static4.businessinsider.com/image/58b32b9001fe5817378b4eaf-50-50/the-complete-bearish-case-against-investing-in-snapchats-massive-ipo.jpg" />
+<meta property="og:title" content="The complete bearish case against investing in Snapchat's massive IPO" />
+<meta property="og:description" content="&quot;Snapchat is not an investment in a media platform or a 'camera company,' as its founders have described the firm in filing documents.&quot;" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.businessinsider.com/snap-ipo-the-complete-bearish-case-for-avoiding-investing-in-snapchat-2017-2" />
+<meta property="og:site_name" content="Business Insider" />
+<meta property="fb:app_id" content="155043519637" />
+<meta property="article:publisher" content="businessinsider" />
+<meta property="author" content="Garrett Baldwin, Modern Trader, Modern Trader" />
+<meta name="twitter:url" content="http://www.businessinsider.com/snap-ipo-the-complete-bearish-case-for-avoiding-investing-in-snapchat-2017-2" />
+<meta name="twitter:title" content="The complete bearish case against investing in Snapchat's massive IPO" />
+<meta name="twitter:description" content="&quot;Snapchat is not an investment in a media platform or a 'camera company,' as its founders have described the firm in filing documents.&quot;" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://static1.businessinsider.com/image/58b32b8101fe5816378b4e55-506-253/the-complete-bearish-case-against-investing-in-snapchats-massive-ipo.jpg" />
+<meta name="twitter:site" content="bi_contributors" />
+<meta property="og:image" content="http://static6.businessinsider.com/image/58b32b8101fe5816378b4e55-1190-625/the-complete-bearish-case-against-investing-in-snapchats-massive-ipo.jpg" />    <link href="http://static1.businessinsider.com/assets/css/min-mobile-us.css?1501616115" media="screen" rel="stylesheet" type="text/css" />
+<link rel="syndication-source" />
+    <!-- inline fix as yahoo minification can not properly handle calc -->
+    <style>
+        .article-wrap.post-wrap .image,
+        .article-wrap.slideshow-wrap .intro-content .image,
+        .article-wrap.one-page-view .image,
+        .article-wrap .slide-module .on-image,
+        .article-wrap .ad,
+        .one-page-view .ad {
+            width: calc(100% + 40px);
+        }
+    </style>
+
+    <!-- Index Exchange - start -->
+        <script type="text/javascript">
+    	var vertical = 'clusterstock-contributor';
+        var index_ad_hierarch = 'finance/clusterstock';
+
+        window.headertag = window.headertag || {};
+        var PageType = window.headertag.pagetype = "post";
+
+        var post_id = '';
+        var _sf_startpt=(new Date()).getTime();
+    </script>
+
+            <script type="text/javascript" src="http://js.indexww.com/ht/ls-business-insider.js" async></script>
+        <!-- Index Exchange - end -->
+
+    <script>
+    window.dataLayer = [];
+    </script>
+
+    <!-- IAS -->
+    <script type="text/javascript">
+        window.BI_adHierarchy = 'mobile-web/finance/clusterstock/post';
+    </script>
+    <!-- IAS end -->
+
+    <script type="text/javascript" src="http://static2.businessinsider.com/assets/js/min-mobile.js?1501616115"></script>
+<script type="application/ld+json">
+    //<![CDATA[
+    {"@context":"http:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"http:\/\/www.businessinsider.com\/snap-ipo-the-complete-bearish-case-for-avoiding-investing-in-snapchat-2017-2"},"headline":"The complete bearish case against investing in Snapchat\u0027s massive IPO","thumbnailUrl":"http:\/\/static4.businessinsider.com\/image\/58b32b9001fe5817378b4eaf\/the-complete-bearish-case-against-investing-in-snapchats-massive-ipo.jpg","image":{"@type":"ImageObject","url":"http:\/\/static4.businessinsider.com\/image\/58b32b9001fe5817378b4eaf\/the-complete-bearish-case-against-investing-in-snapchats-massive-ipo.jpg","height":683,"width":911},"datePublished":"2017-02-26T22:30:00Z","dateModified":"2017-02-26T19:26:20Z","dateCreated":"2017-02-26T22:30:00Z","keywords":["SNAP","Snap IPO","Snapchat","Modern Trader","Evan Spiegel","Henry Blodget"],"author":{"@type":"Person","name":"Garrett Baldwin, Modern Trader"},"name":"snap-ipo-the-complete-bearish-case-for-avoiding-investing-in-snapchat-2017-2","publisher":{"@type":"Organization","name":"Business Insider","logo":{"@type":"ImageObject","url":"http:\/\/static2.businessinsider.com\/assets\/images\/us\/logos\/ogimagelogo.png"}},"description":"This story first appeared in Modern Trader and..."}    //]]>
+</script>
+<script type="text/javascript">
+    //<![CDATA[
+    BI.post.isSlideshow=false;    //]]>
+</script>
+<script type="text/javascript">
+    //<![CDATA[
+    post = {"id":"58b0678c549057a74c8b4bb3","uri":"http:\/\/www.businessinsider.com\/snap-ipo-the-complete-bearish-case-for-avoiding-investing-in-snapchat-2017-2","thumb":"http:\/\/static3.businessinsider.com\/image\/58b32b9001fe5817378b4eaf-90-90\/the-complete-bearish-case-against-investing-in-snapchats-massive-ipo.jpg","author":"Garrett Baldwin, Modern Trader","author_ids":"","post_type":"post"};    //]]>
+</script>
+<script type="text/javascript">
+    //<![CDATA[
+    
+        Author = "Garrett Baldwin, Modern Trader";
+        Category = "SNAP|Snap IPO|Snapchat|Modern Trader|Evan Spiegel|Henry Blodget";
+        AuthorType = "Contributed";
+        OriginalID = "";
+        Editor = "Hayley Hudson";
+        BIISub = "none"
+            //]]>
+</script>
+<script type="text/javascript">
+    //<![CDATA[
+    
+        BI.nav_select = "Finance";
+        BI.highTrafficMode = 0;
+        BI.post.isDraft = 0;
+        BI.post.url = "http://www.businessinsider.com/snap-ipo-the-complete-bearish-case-for-avoiding-investing-in-snapchat-2017-2";
+        BI.post.name = "snap-ipo-the-complete-bearish-case-for-avoiding-investing-in-snapchat-2017-2";
+        BI.post.vertical =  "clusterstock-contributor";
+        BI.post.author =  ["Garrett Baldwin, Modern Trader"];
+        BI.post.categories =  ["SNAP","Snap IPO","Snapchat","Modern Trader","Evan Spiegel","Henry Blodget"];
+        BI.post.views =  14637;
+        BI.comments.currentPage = 0;
+        BI.comments.filterPundits = 1;
+        BI.comments.getAllComments = 1;
+            //]]>
+</script>
+<script type="text/javascript">
+    //<![CDATA[
+    
+        Author = "Garrett Baldwin, Modern Trader";
+
+        Category = "SNAP|Snap IPO|Snapchat|Modern Trader|Evan Spiegel|Henry Blodget";
+        AuthorType = "Contributed";
+        OriginalID = "";
+        Editor = "Hayley Hudson";
+            //]]>
+</script>
+<script type="text/javascript">
+    //<![CDATA[
+    
+            BI.post.isDraft = 0;
+            BI.post.url = "http://www.businessinsider.com/snap-ipo-the-complete-bearish-case-for-avoiding-investing-in-snapchat-2017-2";
+            BI.post.name = "snap-ipo-the-complete-bearish-case-for-avoiding-investing-in-snapchat-2017-2";
+            BI.post.vertical =  "clusterstock-contributor";
+            BI.post.author =  ["Garrett Baldwin, Modern Trader"];
+            BI.post.categories =  ["SNAP","Snap IPO","Snapchat","Modern Trader","Evan Spiegel","Henry Blodget"];
+            BI.post.views =  14637;
+            BI.comments.currentPage = 0;
+            BI.comments.filterPundits = 1;
+            BI.comments.getAllComments = 1;
+            BI.comments.noReplyFilter = 0;
+            BI.comments.mobile = 1;
+            post = {"id":"58b0678c549057a74c8b4bb3","uri":"http:\/\/www.businessinsider.com\/snap-ipo-the-complete-bearish-case-for-avoiding-investing-in-snapchat-2017-2","thumb":"http:\/\/static3.businessinsider.com\/image\/58b32b9001fe5817378b4eaf-90-90\/the-complete-bearish-case-against-investing-in-snapchats-massive-ipo.jpg","author":"Garrett Baldwin, Modern Trader","author_ids":"","post_type":"post"};
+                //]]>
+</script>
+    <!-- purrrf performance library reference point -->
+    <script type="text/javascript">
+        window._purrrf.setStart();
+    </script>
+
+    <!-- optimizely mobile -->
+        <!-- End optimizely mobile -->
+    
+
+    <script type="text/javascript">
+        var vertical = 'clusterstock-contributor';
+        var PageType = 'post';
+        BI.isMobile = true;
+    </script>
+
+    <script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+    <script type="text/javascript">BI.site = 'US';</script>
+    <script type="text/javascript">BI.siteURI = 'http://www.businessinsider.com';</script>
+    <script type="text/javascript">BI.secureURI = 'https://www.businessinsider.com';</script>
+    <script type="text/javascript">BI.staticURI = 'http://static1.businessinsider.com';</script>
+    <script type="text/javascript">BI.env.setDomain('http://www.businessinsider.com');</script>
+        <script type="text/javascript">BI.sailthruHorizonURI = 'horizon.businessinsider.com'</script>
+
+
+    <script type="text/javascript">
+        BI.flags = BI.flags || {};
+        BI.flags.bii_facebook_tracking = 1;
+        BI.flags.bii_facebook_tracking_verticals = ["Apps and Platforms","Digital Media","Payments","Internet of Things","E-Commerce","eCommerce","Fintech"];
+    </script>
+
+            <!-- *************** ANALYTICS *************** -->
+        <script>
+            BI.ANALYTICS_SERVICE_URL = '//analytics.businessinsider.com';
+        </script>
+    <!-- *************** END ANALYTICS *************** -->
+    
+    <!-- Video Scripts -->
+            <!-- JW Player Head -->
+        <script src="http://imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
+        <script src="//content.jwplatform.com/libraries/puACk8ZV.js"></script>
+        <!-- /JW Player Head -->
+    
+    <!-- taboola mobile -->
+            <script type="text/javascript">
+          window._taboola = window._taboola || [];
+          _taboola.push({article:'auto'});
+          !function (e, f, u) {
+            e.async = 1;
+            e.src = u;
+            f.parentNode.insertBefore(e, f);
+          }(document.createElement('script'),
+          document.getElementsByTagName('script')[0],
+          'http://cdn.taboola.com/libtrc/businessinsider/loader.js');
+        </script>
+        <!-- End taboola mobile -->
+
+ <!-- Piano -->
+
+
+
+<script>
+    // Piano: custom vars
+    tp = window.tp || [];
+    tp.push(["setUseTinypassAccounts", true ]);
+    tp.push(['setCustomVariable', 'PageType', PageType]);
+    tp.push(["setAid", 'B6sIXKLiin']);
+
+    tp.push(["setSandbox", false]);
+
+    (function(src){var a=document.createElement("script");a.type="text/javascript";a.async=true;a.src=src;var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)})("//cdn.tinypass.com/api/tinypass.min.js");
+
+    tp.push(['init', function () {
+        tp.experience.init();
+    }]);
+
+    // refresh on login
+    tp.push(["addHandler", "loginSuccess", function(){
+        tp.api.callApi('/access/list', {}, function(data){
+            if (typeof data.data != "undefined"){
+                for ( var i in data.data ){
+                    // If user has access to something
+                    if ( data.data[i].granted ){
+                        tp.offer.close();
+                        location.reload();
+                    }
+                }
+            }
+        });
+    }]);
+
+            // post vars
+        tp.push(['setTags', ["SNAP","Snap IPO","Snapchat","Modern Trader","Evan Spiegel","Henry Blodget"]]);
+        tp.push(['setCustomVariable', 'PrimaryVertical', 'clusterstock-contributor']);
+
+                tp.push(['setCustomVariable', 'SecondaryVertical_Sai', 1]);
+                tp.push(['setCustomVariable', 'SecondaryVertical_Clusterstock', 1]);
+                tp.push(['setCustomVariable', 'SecondaryVertical_Moneygame', 1]);
+                tp.push(['setCustomVariable', 'SecondaryVertical_Advertising', 1]);
+            
+    // Get current page location and store as cookie
+    var primeReferrer = window.location.href;
+    BI.cookies.set('__pref', primeReferrer, 2592e3);
+</script>
+
+<!-- / PIANO -->
+
+    <!-- Chartbeat -->
+            <script type="text/javascript">
+            // chartbeat wants the vars in global
+            window._sf_async_config = window._sf_async_config || {};
+            window._sf_async_config.uid = 14447;
+            window._sf_async_config.domain = 'businessinsider.com';
+            window._sf_async_config.flickerControl = false;
+            window._sf_async_config.useCanonical = false;
+            window._sf_startpt = (new Date()).getTime();
+        </script>
+        <script async src="https://static.chartbeat.com/js/chartbeat_mab.js"></script>
+    <!-- / Chartbeat -->
+    
+</head>
+
+<body class="clusterstock">
+<div id="fb-root" data-bi-facebook-root="155043519637"></div>
+ <div class="main-menu" data-main-menu="">
+            
+<nav class="main-menu__nav">
+                <div class="main-menu__vertical-container">
+            <h3 class="main-menu__vertical-heading">
+                <a class="main-menu__vertical-link" href="/">Home</a>            </h3>
+                            <h4 class="main-menu__sub-vertical-heading">
+                    <a class="main-menu__sub-vertical-link" href="/latest">Latest</a>
+                </h4>
+                    </div>
+            <div class="main-menu__vertical-container">
+            <h3 class="main-menu__vertical-heading">
+                <a class="main-menu__vertical-link" href="/sai">Tech Insider</a>            </h3>
+                            <h4 class="main-menu__sub-vertical-heading">
+                    <a class="main-menu__sub-vertical-link" href="/enterprise">Enterprise</a>
+                </h4>
+                            <h4 class="main-menu__sub-vertical-heading">
+                    <a class="main-menu__sub-vertical-link" href="/science">Science</a>
+                </h4>
+                            <h4 class="main-menu__sub-vertical-heading">
+                    <a class="main-menu__sub-vertical-link" href="/advertising">Advertising</a>
+                </h4>
+                            <h4 class="main-menu__sub-vertical-heading">
+                    <a class="main-menu__sub-vertical-link" href="/media">Media</a>
+                </h4>
+                            <h4 class="main-menu__sub-vertical-heading">
+                    <a class="main-menu__sub-vertical-link" href="/thewire">Entertainment</a>
+                </h4>
+                            <h4 class="main-menu__sub-vertical-heading">
+                    <a class="main-menu__sub-vertical-link" href="/transportation">Transportation</a>
+                </h4>
+                    </div>
+            <div class="main-menu__vertical-container">
+            <h3 class="main-menu__vertical-heading">
+                <a class="main-menu__vertical-link" href="/clusterstock">Finance</a>            </h3>
+                            <h4 class="main-menu__sub-vertical-heading">
+                    <a class="main-menu__sub-vertical-link" href="/moneygame">Markets</a>
+                </h4>
+                            <h4 class="main-menu__sub-vertical-heading">
+                    <a class="main-menu__sub-vertical-link" href="/retail">Retail</a>
+                </h4>
+                            <h4 class="main-menu__sub-vertical-heading">
+                    <a class="main-menu__sub-vertical-link" href="/wealthadvisor">Wealth Advisor</a>
+                </h4>
+                            <h4 class="main-menu__sub-vertical-heading">
+                    <a class="main-menu__sub-vertical-link" href="/yourmoney">Your Money</a>
+                </h4>
+                            <h4 class="main-menu__sub-vertical-heading">
+                    <a class="main-menu__sub-vertical-link" href="http://markets.businessinsider.com">Markets Insider</a>
+                </h4>
+                    </div>
+            <div class="main-menu__vertical-container">
+            <h3 class="main-menu__vertical-heading">
+                <a class="main-menu__vertical-link" href="/politics">Politics</a>            </h3>
+                            <h4 class="main-menu__sub-vertical-heading">
+                    <a class="main-menu__sub-vertical-link" href="/defense">Military & Defense</a>
+                </h4>
+                            <h4 class="main-menu__sub-vertical-heading">
+                    <a class="main-menu__sub-vertical-link" href="/news">News</a>
+                </h4>
+                    </div>
+            <div class="main-menu__vertical-container">
+            <h3 class="main-menu__vertical-heading">
+                <a class="main-menu__vertical-link" href="/warroom">Strategy</a>            </h3>
+                            <h4 class="main-menu__sub-vertical-heading">
+                    <a class="main-menu__sub-vertical-link" href="/careers">Careers</a>
+                </h4>
+                            <h4 class="main-menu__sub-vertical-heading">
+                    <a class="main-menu__sub-vertical-link" href="/education">Education</a>
+                </h4>
+                            <h4 class="main-menu__sub-vertical-heading">
+                    <a class="main-menu__sub-vertical-link" href="/smallbusiness">Small Business</a>
+                </h4>
+                            <h4 class="main-menu__sub-vertical-heading">
+                    <a class="main-menu__sub-vertical-link" href="/lists">Lists</a>
+                </h4>
+                    </div>
+            <div class="main-menu__vertical-container">
+            <h3 class="main-menu__vertical-heading">
+                <a class="main-menu__vertical-link" href="/thelife">Life</a>            </h3>
+                            <h4 class="main-menu__sub-vertical-heading">
+                    <a class="main-menu__sub-vertical-link" href="/travel">Travel</a>
+                </h4>
+                    </div>
+            <div class="main-menu__vertical-container">
+            <h3 class="main-menu__vertical-heading">
+                <a class="main-menu__vertical-link" href="/sportspage">Sports</a>            </h3>
+                    </div>
+            <div class="main-menu__vertical-container">
+            <h3 class="main-menu__vertical-heading">
+                <a class="main-menu__vertical-link" href="/video">Video</a>            </h3>
+                    </div>
+    
+        <!-- sponsored link section -->
+    <div class="main-menu__vertical-container">
+                    <h3 class="main-menu__vertical-heading main-menu__vertical-heading--static">Featured</h3>
+        	
+                             <h4 class="main-menu__sub-vertical-heading">
+                    <a class="main-menu__sub-vertical-link" href="http://www.businessinsider.com/boardroom-2030">Boardroom 2030</a>
+                </h4>
+        	                 <h4 class="main-menu__sub-vertical-heading">
+                    <a class="main-menu__sub-vertical-link" href="http://www.businessinsider.com/the-bottom-line">The Bottom Line</a>
+                </h4>
+        	                 <h4 class="main-menu__sub-vertical-heading">
+                    <a class="main-menu__sub-vertical-link" href="http://www.businessinsider.com/embracing-disruption">Embracing Disruption</a>
+                </h4>
+        	                 <h4 class="main-menu__sub-vertical-heading">
+                    <a class="main-menu__sub-vertical-link" href="http://www.businessinsider.com/life-plan">Life Plan</a>
+                </h4>
+        	                 <h4 class="main-menu__sub-vertical-heading">
+                    <a class="main-menu__sub-vertical-link" href="http://www.businessinsider.com/retail-innovation">Retail Innovation</a>
+                </h4>
+        	                 <h4 class="main-menu__sub-vertical-heading">
+                    <a class="main-menu__sub-vertical-link" href="http://www.businessinsider.com/rewired">Rewired</a>
+                </h4>
+        	                 <h4 class="main-menu__sub-vertical-heading">
+                    <a class="main-menu__sub-vertical-link" href="http://www.businessinsider.com/category/success-series">The Success Series</a>
+                </h4>
+        	                 <h4 class="main-menu__sub-vertical-heading">
+                    <a class="main-menu__sub-vertical-link" href="http://www.businessinsider.com/category/year-by-year">Year by Year</a>
+                </h4>
+        	            </div>
+    
+            <div class="main-menu__vertical-container">
+            <h3 class="main-menu__vertical-heading main-menu__vertical-heading--static">
+                More            </h3>
+
+                            <h4 class="main-menu__sub-vertical-heading">
+                    <a class="main-menu__sub-vertical-link" href="/newsletter?unmobileonce=1">Newsletters</a>
+                </h4>
+                            <h4 class="main-menu__sub-vertical-heading">
+                    <a class="main-menu__sub-vertical-link" href="/companies">Companies</a>
+                </h4>
+                            <h4 class="main-menu__sub-vertical-heading">
+                    <a class="main-menu__sub-vertical-link" href="/authors">Authors</a>
+                </h4>
+                            <h4 class="main-menu__sub-vertical-heading">
+                    <a class="main-menu__sub-vertical-link" href="/categories">Categories</a>
+                </h4>
+                    </div>
+            <div class="main-menu__vertical-container">
+            <h3 class="main-menu__vertical-heading main-menu__vertical-heading--static">
+                About BI            </h3>
+
+                            <h4 class="main-menu__sub-vertical-heading">
+                    <a class="main-menu__sub-vertical-link" href="http://www.businessinsider.com/page/careers">Careers</a>
+                </h4>
+                            <h4 class="main-menu__sub-vertical-heading">
+                    <a class="main-menu__sub-vertical-link" href="/masthead">Masthead</a>
+                </h4>
+                            <h4 class="main-menu__sub-vertical-heading">
+                    <a class="main-menu__sub-vertical-link" href="/contact">Contact</a>
+                </h4>
+                            <h4 class="main-menu__sub-vertical-heading">
+                    <a class="main-menu__sub-vertical-link" href="/advertise">Advertise</a>
+                </h4>
+                            <h4 class="main-menu__sub-vertical-heading">
+                    <a class="main-menu__sub-vertical-link" href="/contributors-faq">Contributors FAQ</a>
+                </h4>
+                            <h4 class="main-menu__sub-vertical-heading">
+                    <a class="main-menu__sub-vertical-link" href="/legal-fine-print">Legal Fine Print</a>
+                </h4>
+                            <h4 class="main-menu__sub-vertical-heading">
+                    <a class="main-menu__sub-vertical-link" href="mailto:mobile@businessinsider.com?subject=Feedback">Send Feedback</a>
+                </h4>
+                    </div>
+    </nav>
+
+<nav class="main-menu__sub-nav hide-ti">
+            <a href="http://www.businessinsider.com/events" class="main-menu__sub-nav-link">Events</a>
+        <a href="http://intelligence.businessinsider.com" class="main-menu__sub-nav-link">BI Intelligence</a>
+    
+            
+        <a id="piano-login" class="main-menu__sub-nav-link" href="#">Sign In <span class="arrow">⟩</span></a>
+        <script>
+            _PIANO.loginMobile();
+        </script>
+    </nav>
+
+<div class="main-menu__social-container">
+
+
+        <a href="//www.facebook.com/businessinsider" title="Like us on Facebook" target="_blank" class="main-menu__social-link main-menu__social-link--facebook sprites"></a>
+    
+        <a href="//twitter.com/businessinsider" title="Follow us on Twitter" target="_blank" class="main-menu__social-link  main-menu__social-link--twitter sprites"></a>
+    
+        <a href="//plus.google.com/+BusinessInsider/posts" rel="publisher" title="Follow us on Google+" target="_blank" class="main-menu__social-link main-menu__social-link--google sprites"></a>
+        
+            <a href="//www.linkedin.com/company/businessinsider" title="Connect with us on LinkedIn" target="_blank" target="_blank" class="main-menu__social-link main-menu__social-link--linkedin sprites"></a>
+    
+    
+    </div>
+
+<footer class="main-menu__footer">
+    <p class="main-menu__copyright">
+         &copy; 2017 Copyright  Business Insider,  All rights reserved.
+        Use of this site constitutes acceptance of our
+        Terms of Service and Privacy Policy.
+                	Stock quotes by <a href="http://www.finanzen.net/" target="_blank">finanzen.net</a>
+             </p>
+            <div class="main-menu__regions">
+            <select class="main-menu__regions-selectbox sprites" data-regions-selectbox>
+                <option value="http://www.businessinsider.com">US edition</option><option value="http://uk.businessinsider.com?IR=C">UK edition</option><option value="http://www.businessinsider.de?IR=C">DE edition</option><option value="http://www.businessinsider.com.au/">AUS edition</option><option value="http://www.businessinsider.in/">IN edition</option><option value="http://www.businessinsider.my/">MY edition</option><option value="http://www.businessinsider.sg/">SG edition</option><option value="http://www.businessinsider.com.pl/?IR=C">PL edition</option><option value="http://nordic.businessinsider.com/?IR=C">SE edition</option><option value="http://www.businessinsider.nl?IR=C">NL edition</option><option value="http://www.businessinsider.fr/?IR=C">FR edition</option><option value="https://it.businessinsider.com">IT edition</option><option value="http://www.businessinsider.jp">JP edition</option>            </select>
+        </div>
+    </footer>
+    </div>
+<div class="page-wrap" data-page-wrap="">
+
+    <div class="main-header" data-main-header="">
+
+        
+            <!-- Intercept Message for Android - begin -->
+            	        <!-- Intercept Message for Android - end -->
+
+	        <!-- Intercept Message for iOS 5 and below -->
+	        <div id="mobile-intercept" class="iphone-intercept hidden" data-iphone-intercept="">
+	            <a class="iphone-close-button">
+	                <img src="http://static2.businessinsider.com/assets/images/mobile/ios-close-button.png">
+	            </a>
+	            <div>
+	                <a class="" href="http://itunes.apple.com/us/app/business-insider-iphone-edition/id554260576?ls=1&mt=8" onclick="">
+
+	                    <span class="iphone-text-button">VIEW</span>
+
+	                    <img class="app-logo" src="http://static2.businessinsider.com/assets/images/mobile/bi-iphone-logo.png" alt="Business Insider">
+
+	                    <p><strong class="title">Business Insider</strong><br>
+	                    What you need to know.<br>
+	                    On your iPhone.<br>
+	                    <strong>FREE</strong> - On the App Store.</p>
+
+	                </a>
+	            </div>
+	        </div>
+        
+        <div data-masthead="" class="masthead toolbar">
+            <a href="" class="open-menu menulines menu-button" data-menu-button>
+                <div data-hamburger="" class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </a>
+
+            <h1 class="logo-main ksm-river-logo-main">
+                <a class="sprites" href="/"></a>
+            </h1>
+
+                <div class="search-container menu-button" data-search-container="">
+                    <div class="svg icon-search" data-icon-search></div>
+                    <div class="close-search-icon" data-icon-close-search="">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+
+        </div>
+
+        <div class="search-open" data-search-open="">
+            <form method="get" action="/s" class="form-search">
+                <input name="q" type="text" class="search-query" placeholder="Search" data-search-query="">
+            </form>
+        </div>
+
+        <!-- flash messages -->
+            </div>
+    <div data-cookie-notice-container></div>
+    <!-- vertical name -->
+                
+                                    
+	<div data-bi-ad data-ad-container class="ad dfp" data-adunit="mobile-web/finance/clusterstock/post" data-authors="garrett-baldwin,-modern-trader" data-pagetype="post" data-pos="atf" data-region="Mobile Article Top" data-responsive="null" data-sizes="320x50,320x150,300x150" data-tag="snap,snap-ipo,snapchat,modern-trader,evan-spiegel,henry-blodget" data-url="/snap-ipo-the-complete-bearish-case-for-avoiding-investing-in-snapchat-2017-2" data-views="10001-500000">
+	</div>
+
+	<script type="text/javascript">
+		(function() {
+			'use strict';
+			// Notify the DFP code that a new ad has just been rendered
+			amplify.publish('adRender');
+		}());
+	</script>
+                    
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+        <div class="vertical-name-wrapper underlined">
+            <!-- Kissmetrics section category name class name -->
+            
+                                                <a href="/clusterstock/contributor" class="vertical-name underlined" style="color: #cf4e00; border-color: #cf4e00;">Finance </a>
+                            
+            <ul class="vertical-social-buttons">
+                                            <li class="twitter">
+                            <!-- Kissmetrics twitter class name -->
+                                                        <a href="https://twitter.com/bi_contributors" class="sprites ksm-post-twitter"></a>
+                                                    </li>
+                                                                <li class="facebook">
+                            <!-- Kissmetrics facebook class name -->
+                                                        <a href="https://www.facebook.com/businessinsider" class="sprites ksm-post-facebook"></a>
+                                                    </li>
+                                    </ul>
+        </div>
+
+        <!-- Sponsored Section Sub Nav -->
+                
+<div class="article-headers">
+    <h1 class="article-headline instapaper_title">The complete bearish case against investing in Snapchat's massive IPO</h1>
+    
+<div class="flex byline">
+                <div class="auto byline-icon">
+                            <a target="_blank" href="http://www.moderntrader.com/home">
+                            <img src="http://static3.businessinsider.com/image/58b068e801fe58bd3c8b612d-50/modern-trader.jpg" alt="Modern Trader" />
+                            </a>
+                    </div>
+    
+    <div class="flex-item">
+        <div class="list-pipes no-pipe">
+            <ul>
+                            
+                                            <!-- Kissmetrics author byline class name -->
+                                                    <li class="publication-author ksm-post-author-byline"><a target="_blank" href="http://www.moderntrader.com/">Garrett Baldwin, Modern Trader</a></li>
+                                            
+                
+                                    </ul>
+                </div>
+                <div class="list-pipes no-pipe">
+                    <ul>
+                
+                                    <!-- Date -->
+                    <li class="river-post__date">
+	<span class="svg sprites date-icon"></span>
+	<span data-bi-format="date" rel="1488148200">Feb. 26, 2017,  5:30 PM</span>
+</li>                            
+                            <li class="pageviews">
+                    <span class="svg sprites very-hot views"></span>
+                    <span class="very-hot" title="views">14,637</span>
+                </li>            
+            
+                        </ul>
+
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="article-wrap post-wrap">
+    <div class="KonaBody instapaper_body ">
+                    <div>
+<p>
+  <span data-post-image="" class="image on-image"><img src="http://static6.businessinsider.com/image/58b06c91549057814f8b4bff-538/spectacles.jpg" alt="spectacles" width="538"><span class="caption-source"><span class="caption">Delilah Hamlin walks the
+  runway wearing Spectacles by Snap Inc. during rehearsal at New
+  York Fashion Week on February 13, 2017 in New York
+  City.</span><span class="source">Astrid Stawiarz/Getty
+  Images</span></span></span>
+</p>
+<p>
+  <em>This story first appeared in <a href="http://www.moderntrader.com/">Modern Trader</a> and is
+  republished here with permission.</em>
+</p>
+<p>
+  For what is likely be the largest IPO in years, the Snapchat
+  filing has been swamped in secrecy.
+</p>
+<p>
+  Snapchat founders Evan Spiegel and Bobby Murphy aimed to raise at
+  least $3 billion in March after recently releasing their S-1
+  document.
+</p>
+<blockquote class="pullquote float_right">
+  The result of our investigation? Steer clear.
+</blockquote>
+<p>
+  Like any company issuing risk factors, Snapchat has many
+  questions to answer.
+</p>
+<p>
+  Dig under the hood and the issues pile up quickly. Snapchat has
+  had significant operating losses in its six-year history, and the
+  future doesn't look profitable anytime soon.
+</p>
+
+	<div data-bi-ad data-ad-container class="ad dfp" data-adunit="mobile-web/finance/clusterstock/post" data-authors="garrett-baldwin,-modern-trader" data-pagetype="post" data-region="Mobile In Post Ad" data-responsive="null" data-sizes="320x150,300x250,fluid" data-tag="snap,snap-ipo,snapchat,modern-trader,evan-spiegel,henry-blodget" data-url="/snap-ipo-the-complete-bearish-case-for-avoiding-investing-in-snapchat-2017-2" data-views="10001-500000">
+	</div>
+
+	<script type="text/javascript">
+		(function() {
+			'use strict';
+			// Notify the DFP code that a new ad has just been rendered
+			amplify.publish('adRender');
+		}());
+	</script>
+<p></p>
+<p>
+  Its competition is accelerating, and Facebook's (FB) monetization
+  of Instagram (Snapchat's closest rival) is just getting started.
+</p>
+<p>
+  Organizationally, Snapchat has multiple single points of failure,
+  and a simple departure by one key executive could hurt the firm.
+  Perhaps that's why the firm has one of the strictest vesting
+  schedules in the tech sector. Cyber security breaches are always
+  a looming threat. And one pending lawsuit argues that people
+  shouldn't trust the user metrics and growth figures in the
+  filing.
+</p>
+<p>
+  Snap's founders are seeking an IPO worth up to $22 billion. That
+  figure fell well short of early Wall Street expectations. But
+  more important than the $14 to $16 per share range is the
+  question of investors' willingness to relinquish control.
+</p>
+<p>
+  <span data-post-image="" class="image on-image"><img src="http://static1.businessinsider.com/image/58b06a2a01fe5847368b621c-538/moderntradercoverapril2017.jpg" alt="Modern_Trader_Cover_April_2017" width="538"><span class="caption-source"><span class="caption">This is the cover of the
+  issue of Modern Trader in which this story was first
+  published.</span><span class="source">Matt
+  Roussel</span></span></span>
+</p>
+<p>
+  Snapchat is not an investment in a media platform or a "camera
+  company," as its founders Evan Spiegel and Bobby Murphy have
+  described the firm in filing documents.  
+</p>
+<p>
+  It is an investment in its co-founders and a long-term strategy
+  that remains unclear. The company's multi-class stock structure
+  could set a precedent for one of the worst business practices in
+  the 21st century, a continued descent into digital feudalism.
+  Snapchat is already heavily controlled by its co-founders, who
+  maintain a high amount of the voting shares. Owners of Class B
+  common stock will be entitled to one vote per share. Class C
+  common stock, the bulk of which is owned by its founders,
+  provides 10 votes per share.<span><br></span>
+</p>
+<blockquote class="pullquote">
+  Snapchat is not an investment in a media platform or a 'camera
+  company.'
+</blockquote>
+<p>
+  The Class A stock available during the IPO will provide investors
+  with zero voting rights.
+</p>
+
+	<div data-bi-ad data-ad-container class="ad dfp" data-adunit="mobile-web/finance/clusterstock/post" data-authors="garrett-baldwin,-modern-trader" data-pagetype="post" data-region="Mobile In Post Ad" data-responsive="null" data-sizes="320x150,300x250,fluid" data-tag="snap,snap-ipo,snapchat,modern-trader,evan-spiegel,henry-blodget" data-url="/snap-ipo-the-complete-bearish-case-for-avoiding-investing-in-snapchat-2017-2" data-views="10001-500000">
+	</div>
+
+	<script type="text/javascript">
+		(function() {
+			'use strict';
+			// Notify the DFP code that a new ad has just been rendered
+			amplify.publish('adRender');
+		}());
+	</script>
+<p></p>
+<p>
+  While Facebook and Google (GOOG) have shifted control to its
+  founders in recent years, investors at least had a part in that
+  decision after the companies had been public. With Snapchat's
+  IPO, there are no voting rights: Love it or leave it; invest in
+  it or don't.
+</p>
+<p>
+  Just don't expect investors ever to have a say in the company's
+  business strategy. And don't expect any activist investor to ride
+  in on a white horse when (not if) the company's stock falls in
+  the years ahead and its strategy requires revaluation.
+</p>
+<p>
+  There has been a rash of underperforming technology companies
+  whose stocks tanked months after their IPOs. Snapchat would just
+  be another troubled tech leader giving its early investors an
+  exit strategy. But the structure of this IPO has ignited and
+  invited sharp criticism and forced us to look closer to determine
+  whether Snapchat is a decent long-term investment.
+</p>
+<p>
+  The result of our investigation? Steer clear.
+</p>
+<p>
+  While the dumb money seems poised to push this tech giant into
+  the stratosphere during its first few days of trading, it's a
+  risky long-term proposition.
+</p>
+<h1>
+  Here's why investors should avoid this IPO:
+</h1>
+<h2>
+  -The structure
+</h2>
+<p>
+  Forget that we've just read the first S-1, which uses the words
+  "sexting, party goat and selfie" to attract investors. The real
+  news is Snapchat's decision to use a multi-class voting structure
+  that ties the hands of its investors.
+</p>
+
+	<div data-bi-ad data-ad-container class="ad dfp" data-adunit="mobile-web/finance/clusterstock/post" data-authors="garrett-baldwin,-modern-trader" data-pagetype="post" data-region="Mobile In Post Ad" data-responsive="null" data-sizes="320x150,300x250,fluid" data-tag="snap,snap-ipo,snapchat,modern-trader,evan-spiegel,henry-blodget" data-url="/snap-ipo-the-complete-bearish-case-for-avoiding-investing-in-snapchat-2017-2" data-views="10001-500000">
+	</div>
+
+	<script type="text/javascript">
+		(function() {
+			'use strict';
+			// Notify the DFP code that a new ad has just been rendered
+			amplify.publish('adRender');
+		}());
+	</script>
+<p></p>
+<p>
+  Now, this structure isn't new in the tech community.
+</p>
+<p>
+  And proponents and sympathetic defenders of this structure argue
+  that it's important for founders to maintain control of their
+  firms so they can focus on a long-term strategy. But opponents of
+  this structure aren't shy about their views. Nor should they be.
+</p>
+<p>
+  <span data-post-image="" class="image on-image"><img src="http://static1.businessinsider.com/image/58b0bae05490579f038b58bd-538/grizzly.jpg" alt="grizzly" width="538"><span class="source-only source">Joe
+  Raedle/Getty Images</span></span>
+</p>
+<p>
+  An avalanche of criticism has come from institutional investors
+  who will likely be forced to own Snapchat in some form in the
+  future. Due to the company's size and expected presence on major
+  indices, it's not simple for major investment houses to avoid the
+  stock. Even if they are passive shareholders, the criticism
+  centers first on the company's decision and second on the
+  precedent.
+</p>
+<p>
+  The Council of Institutional Investors (CII) has been the most
+  vocal, and large investors are lining up behind them to criticize
+  the structure.
+</p>
+<p>
+  Kerrie Waring, executive director of the International Corporate
+  Governance Network (ICGN), argues that the IPO is a horrible
+  standard moving forward.
+</p>
+<p>
+  "This is ga-ga governance more fit for a nursery than one of the
+  world's leading stock exchanges," Waring says. "It is a damning
+  indictment of U.S. governance standards and is counterproductive
+  to the very good initiatives taking place in the USA led by the
+  Council for Institutional Investors and others."
+</p>
+
+	<div data-bi-ad data-ad-container class="ad dfp" data-adunit="mobile-web/finance/clusterstock/post" data-authors="garrett-baldwin,-modern-trader" data-pagetype="post" data-region="Mobile In Post Ad" data-responsive="null" data-sizes="320x150,300x250,fluid" data-tag="snap,snap-ipo,snapchat,modern-trader,evan-spiegel,henry-blodget" data-url="/snap-ipo-the-complete-bearish-case-for-avoiding-investing-in-snapchat-2017-2" data-views="10001-500000">
+	</div>
+
+	<script type="text/javascript">
+		(function() {
+			'use strict';
+			// Notify the DFP code that a new ad has just been rendered
+			amplify.publish('adRender');
+		}());
+	</script>
+<p></p>
+<p>
+  Waring argues that the decision to issue non- voting shares
+  entrenches management and reduces their accountability levels to
+  minority shareholders.  It turns out that these minority
+  shareholders will likely include some of the most influential
+  global investors.
+</p>
+<p>
+  "We are co-signatories to the letter with fellow asset owners at
+  the Council of Institutional Investors," wrote Anne Simpson, the
+  investment director of the California Public Employees'
+  Retirement System (CalPERS) in an e-mail to Modern Trader. "We
+  view the idea of management for life, with no votes for the
+  'electorate' as governance fit for a banana republic."
+</p>
+<p>
+  Additional signatories to this letter include Aberdeen Asset
+  Management, the Fire &amp; Police Pension Association of
+  Colorado, the International Brotherhood of Teamsters, Lawndale
+  Capital Management and the City of Milwaukee Employees'
+  Retirement System.
+</p>
+<blockquote class="pullquote float_right">
+  Value exists when a company's visionary founders can maintain
+  enough voting control to make decisions.
+</blockquote>
+<p>
+  Waring argues that the firm's decision will undermine its
+  attractiveness to potential investors. She also warns that such
+  shifts to entrench power can undermine the strength of and
+  confidence in the U.S. markets.
+</p>
+<p>
+   "The ICGN has long advocated that a 'one-share-one-vote'
+  ownership structure is the optimum model to align voting rights
+  with economic interests and therefore investment risk.
+</p>
+<p>
+  With the rising importance of investor stewardship around the
+  world, many of our members actively assess potential investee
+  company governance practices and their ownership models into
+  their investment analysis. Any risks associated with entrenched
+  control structures will be priced into stock valuations - or they
+  won't bother to invest at all."
+</p>
+<p>
+  <span data-post-image="" class="image on-image"><img src="http://static4.businessinsider.com/image/58b06d065490579f038b56cb-538/henry-blodget.jpg" alt="henry blodget" width="538"><span class="caption-source"><span class="caption">Henry Blodget is CEO of
+  Business Insider.</span><span class="source">Paul Zimmerman/Getty
+  Images</span></span></span>
+</p>
+<p>
+  Henry Blodget, former head of global Internet research at Merrill
+  Lynch and co-founder and chief editor at Business Insider,
+  doesn't believe the company is hurting investors and expects the
+  market to price the stock accordingly.
+</p>
+
+	<div data-bi-ad data-ad-container class="ad dfp" data-adunit="mobile-web/finance/clusterstock/post" data-authors="garrett-baldwin,-modern-trader" data-pagetype="post" data-region="Mobile In Post Ad" data-responsive="null" data-sizes="320x150,300x250,fluid" data-tag="snap,snap-ipo,snapchat,modern-trader,evan-spiegel,henry-blodget" data-url="/snap-ipo-the-complete-bearish-case-for-avoiding-investing-in-snapchat-2017-2" data-views="10001-500000">
+	</div>
+
+	<script type="text/javascript">
+		(function() {
+			'use strict';
+			// Notify the DFP code that a new ad has just been rendered
+			amplify.publish('adRender');
+		}());
+	</script>
+<p></p>
+<blockquote class="pullquote">
+  'If you don't like the governance, don't buy the stock,' says
+  Henry Blodget.
+</blockquote>
+<p>
+  Blodget, who spent his time at Merrill Lynch during the IPO
+  frenzy of the 1990s,  says that most investors can make a choice
+  and value the stock based on shareholder rights.
+</p>
+<p>
+  "First, if you don't like the governance, don't buy the stock,"
+  Blodget says. "You have 7,000 stocks that you can buy. If you
+  have a problem with this particular one, don't buy it. And
+  second, there should be a way for the market to discount the fact
+  that there's no outside voting control. If it is valuable to
+  investors to have voting power, then the lack of that voting
+  power should be reflected in the valuation with a discount of
+  some sort. This is a problem that the market should be able to
+  solve."
+</p>
+<p>
+  Blodget also notes that firms like Amazon (AMZN), Google and
+  Facebook in this generation of public companies have demonstrated
+  that value exists when a company's visionary founders can
+  maintain enough voting control to make decisions.
+</p>
+<p>
+  Santosh Rao, head of research at Manhattan Venture Research,
+  echoes that sentiment.
+</p>
+<p>
+  "In terms of corporate governance, I don't like it. It's too much
+  power in one hand," Rao says. He also acknowledges that companies
+  like Facebook and Google are shifting in this direction and
+  argues that allows the firms to remain focused on their long-term
+  strategy. "These company founders are trying to keep control. To
+  some extent, I don't have a problem with that. In the case of
+  Facebook, [Mark] Zuckerberg kept all the control and made a lot
+  of the decisions on his own;  it helps them make acquisitions
+  faster, to move faster without giving up too much control. It
+  helps growth companies pivot to new things and acquire new
+  companies. So in that sense, it's good. They are still in the
+  innovative phase in their companies, in the evolution.  I have no
+  problem with that as long as they deliver."
+</p>
+
+	<div data-bi-ad data-ad-container class="ad dfp" data-adunit="mobile-web/finance/clusterstock/post" data-authors="garrett-baldwin,-modern-trader" data-pagetype="post" data-region="Mobile In Post Ad" data-responsive="null" data-sizes="320x150,300x250,fluid" data-tag="snap,snap-ipo,snapchat,modern-trader,evan-spiegel,henry-blodget" data-url="/snap-ipo-the-complete-bearish-case-for-avoiding-investing-in-snapchat-2017-2" data-views="10001-500000">
+	</div>
+
+	<script type="text/javascript">
+		(function() {
+			'use strict';
+			// Notify the DFP code that a new ad has just been rendered
+			amplify.publish('adRender');
+		}());
+	</script>
+<p></p>
+<blockquote class="pullquote float_right">
+  Will Snapchat's decision to entrench its co-founders at its IPO
+  and limit outside voting rights set a precedent for other firms?
+</blockquote>
+<p>
+  But will Snapchat's decision to entrench its co-founders at its
+  IPO and limit outside voting rights set a precedent for other
+  firms? Snapchat's multi-class structure could pave the way for
+  other mega-unicorns to ensure the long-term power of their
+  founders.
+</p>
+<p>
+  With Airbnb and Uber expected to explore IPOs in the years ahead,
+  it wouldn't be surprising if both companies - and many other
+  private Silicon Valley titans planning their public debuts -
+  adopt this strategy should investors line up willingly behind
+  Snapchat.
+</p>
+<p>
+  As noted, Facebook and Google have shifted in this direction
+  during the last few years. However, do Spiegel and Murphy deserve
+  this level of control directly out of the gate?
+</p>
+<p>
+  <span data-post-image="" class="image on-image"><img src="http://static5.businessinsider.com/image/58b06d8d01fe5817378b4baa-538/mark-zuckerberg.jpg" alt="mark zuckerberg" width="538"><span class="caption-source"><span class="caption">"Are Spiegel and Murphy
+  true visionaries whose names will be placed on the mantle beside
+  Mark Zuckerberg and Sergey Brin?"</span><span class="source">David Ramos/Getty Images</span></span></span>
+</p>
+<p>
+  "We should acknowledge that a controlling interest is not always
+  seen as a governance risk but it largely depends on who the
+  controlling owner is and his reputation in the market," Waring
+  says.
+</p>
+<blockquote class="pullquote">
+  If this is the new standard, don't expect institutional investors
+  who will be forced to own the stock in some form to simply stand
+  down.
+</blockquote>
+<p>
+  Are Spiegel and Murphy true visionaries whose names will be
+  placed on the mantle beside Mark Zuckerberg and Sergey Brin? Or
+  are they exploiting a public market that is so desperate for a
+  fresh IPO that they can command downright authoritarian control
+  of their organization and prevent other large-scale investors
+  from demanding things as simple as board seats, access to
+  executives and the opportunity to enhance shareholder value?
+</p>
+<p>
+  If this is the new standard, don't expect institutional investors
+  who will be forced to own the stock in some form to simply stand
+  down as this trend takes shape.
+</p>
+
+	<div data-bi-ad data-ad-container class="ad dfp" data-adunit="mobile-web/finance/clusterstock/post" data-authors="garrett-baldwin,-modern-trader" data-pagetype="post" data-region="Mobile In Post Ad" data-responsive="null" data-sizes="320x150,300x250,fluid" data-tag="snap,snap-ipo,snapchat,modern-trader,evan-spiegel,henry-blodget" data-url="/snap-ipo-the-complete-bearish-case-for-avoiding-investing-in-snapchat-2017-2" data-views="10001-500000">
+	</div>
+
+	<script type="text/javascript">
+		(function() {
+			'use strict';
+			// Notify the DFP code that a new ad has just been rendered
+			amplify.publish('adRender');
+		}());
+	</script>
+<p></p>
+<p>
+  If anything, Waring argues that the co-founders must make some
+  concessions if they aim to empower the few at the expense of the
+  broader investor base. First, Waring would like a clearer
+  understanding of why the founders have chosen this route.
+</p>
+<p>
+  "If Spiegel and Murphy want to benefit from the rewards of public
+  markets they should be ready to stand up to public scrutiny," she
+  says. "They might consider presenting a clear rationale for this
+  decision and why they think it is beneficial for the company and
+  its shareholders. At the very least we would expect to see sunset
+  provisions, say five years from the IPO date, and an independent
+  board with a separate Chairman/CEO roles established. Other
+  mitigating measures to offset shareholder concerns could be the
+  introduction of a conflicts committee and /or exemptions from
+  major transactions."
+</p>
+<p>
+  Investors seeking a moral reason to sit this IPO out should keep
+  an eye on this issue and the actions of the ICGN. In March, the
+  ICGN will meet in Washington D.C. Its membership - which counts
+  assets under management at more than $26 trillion - will make a
+  public statement on its views regarding control structures and
+  differential ownership.
+</p>
+<h2>
+  -The valuation
+</h2>
+<p>
+  If the multi-class voting structure doesn't offer a reason to sit
+  this one out, there are several other reasons to consider. Start
+  with the finances.
+</p>
+<blockquote class="pullquote float_right">
+  [The] valuation is staggering and disconnected from reality.
+</blockquote>
+<p>
+  The company has set a valuation target of up to $22 billion.
+  That's short of the initial estimates of $25 billion to $30
+  billion from various underwriters and financial publi- cations
+  place. It's nearly half the $40 billion valuation cited by a
+  source of Alex Barinka and Sarah Frier at Bloomberg.
+</p>
+<p>
+  Even if it closes its first day at $40 billion due to frantic
+  buying, such a valuation is staggering and disconnected from
+  reality.
+</p>
+<p>
+  <span data-post-image="" class="image on-image"><img src="http://static3.businessinsider.com/image/58b06e0b01fe58bd3c8b6153-538/spiegel.jpg" alt="spiegel" width="538"><span class="caption-source"><span class="caption">Evan
+  Spiegel.</span><span class="source">Michael Kovac/Getty
+  Images</span></span></span>
+</p>
+<p>
+  Shira Ovide, also at Bloomberg, offers the bluntest analysis for
+  a company of this size that still has "serious unanswerable
+  questions about its business."<span><br></span>
+</p>
+
+	<div data-bi-ad data-ad-container class="ad dfp" data-adunit="mobile-web/finance/clusterstock/post" data-authors="garrett-baldwin,-modern-trader" data-pagetype="post" data-region="Mobile In Post Ad" data-responsive="null" data-sizes="320x150,300x250,fluid" data-tag="snap,snap-ipo,snapchat,modern-trader,evan-spiegel,henry-blodget" data-url="/snap-ipo-the-complete-bearish-case-for-avoiding-investing-in-snapchat-2017-2" data-views="10001-500000">
+	</div>
+
+	<script type="text/javascript">
+		(function() {
+			'use strict';
+			// Notify the DFP code that a new ad has just been rendered
+			amplify.publish('adRender');
+		}());
+	</script>
+<p></p>
+<blockquote class="pullquote">
+  In 2016, roughly 98% of the company's revenue came from
+  advertising.
+</blockquote>
+<p>
+  Ovide argues that its financial model is flawed and that the firm
+  has an unproven strategy to "concentrate on a smaller audience" -
+  a stark contrast from the strategies of its Internet rivals.
+  These challenges force the company to place an immense amount of
+  pressure on its digital advertising sales to drive revenue and to
+  "compensate for its weaknesses."
+</p>
+<p>
+  In 2016, roughly 98% of the company's revenue came from
+  advertising. "Snapchat has the valuation of a company that has
+  figured all this out, and then some," writes Ovide.
+</p>
+<p>
+  Snapchat and its underwriters may attempt to temper expectations,
+  even as there are reports the company is seeking $4 billion in
+  new capital. With Snapchat, it's stunning that investors are
+  clamoring to hand this amount of money to a company with its
+  current financials.
+</p>
+<p>
+  "For 2016, we incurred a net loss of $514.6 million, as compared
+  to a net loss of $372.9 million for 2015," the company's IPO
+  filing reads.
+</p>
+<p>
+  Even though its revenues jumped to $404.5 million in 2016, the
+  company will face a monumental challenge of boosting its per-user
+  revenue (ARPU). Currently, its ARPU sits at $1.05 worldwide (it's
+  around $2.15 in North America).
+</p>
+
+	<div data-bi-ad data-ad-container class="ad dfp" data-adunit="mobile-web/finance/clusterstock/post" data-authors="garrett-baldwin,-modern-trader" data-pagetype="post" data-region="Mobile In Post Ad" data-responsive="null" data-sizes="320x150,300x250,fluid" data-tag="snap,snap-ipo,snapchat,modern-trader,evan-spiegel,henry-blodget" data-url="/snap-ipo-the-complete-bearish-case-for-avoiding-investing-in-snapchat-2017-2" data-views="10001-500000">
+	</div>
+
+	<script type="text/javascript">
+		(function() {
+			'use strict';
+			// Notify the DFP code that a new ad has just been rendered
+			amplify.publish('adRender');
+		}());
+	</script>
+<p></p>
+<p>
+  However, the firm admits that its growth is cooling and that its
+  user base could decline in the future. Tack on the fact that the
+  company has pretty much acknowledged that it might never make a
+  profit.
+</p>
+<p>
+  Snapchat may have required some additional time to get its
+  finances in order to be able to approach profitability. However,
+  the company doesn't have the luxury of raising more capital in
+  the private market.
+</p>
+<blockquote class="pullquote float_right">
+  The company doesn't have the luxury of raising more capital in
+  the private market.
+</blockquote>
+<p>
+  The company raised $1.81 billion in a Series F round in May 2016.
+</p>
+<p>
+  After eight rounds of financing and 24 investors, the firm has
+  totaled $2.63 billion in the private market. But how much is the
+  company worth today?
+</p>
+<p>
+  According to MarketWatch, the private market evaluation currently
+  sits at roughly $17.8 billion.
+</p>
+<p>
+  <span data-post-image="" class="image on-image"><img src="http://static5.businessinsider.com/image/56310821dd0895b8058b45b8-538/snapchat.jpg" alt="snapchat" width="538"><span class="caption-source"><span class="caption">The interface of the
+  Snapchat app.</span><span class="source">Business
+  Insider</span></span></span>
+</p>
+<p>
+  But to get a real picture of where the company sits today, we
+  reached out to Manhattan Venture Research's Rao, who engages in a
+  difficult job on Wall Street: placing a valuation on private
+  companies before they go public.
+</p>
+
+	<div data-bi-ad data-ad-container class="ad dfp" data-adunit="mobile-web/finance/clusterstock/post" data-authors="garrett-baldwin,-modern-trader" data-pagetype="post" data-region="Mobile In Post Ad" data-responsive="null" data-sizes="320x150,300x250,fluid" data-tag="snap,snap-ipo,snapchat,modern-trader,evan-spiegel,henry-blodget" data-url="/snap-ipo-the-complete-bearish-case-for-avoiding-investing-in-snapchat-2017-2" data-views="10001-500000">
+	</div>
+
+	<script type="text/javascript">
+		(function() {
+			'use strict';
+			// Notify the DFP code that a new ad has just been rendered
+			amplify.publish('adRender');
+		}());
+	</script>
+<p></p>
+<p>
+  "Based on our valuation methodology we believe Snapchat should be
+  valued at $18.3 billion - the weighted average value of a range
+  between $13 billion and $20 billion. This translates to 16.9x our
+  2017 revenue estimate and 9.8x our 2018 revenue estimate," Rao
+  writes.
+</p>
+<p>
+  Rao's valuation is based on three metrics: First, the implied
+  2017 valuation from the public peer group's current trading
+  multiples. This list of peers includes Instagram (Facebook),
+  Twitter, Line, WeChat (Tencent) and Weibo. Second, he measured
+  the "implied valuation from the mean IPO multiple of the peer
+  group."
+</p>
+<p>
+  Rao says that investors will likely give the company the benefit
+  of the doubt as it aims to bolster revenue growth in the years
+  ahead just like other companies have in this space.
+</p>
+<blockquote class="pullquote">
+  Investors will likely give the company the benefit of the doubt.
+</blockquote>
+<p>
+  Finally, he analyzed the implied valuation from the EV/DAU
+  multiples of peer companies. "Given that Snapchat's high
+  engagement level is coming at the expense of Facebook and
+  Twitter's levels, and advertisers value engagement, we believe
+  this metric deserves to be valued in its own right," he writes. 
+</p>
+<p>
+  Naturally, the markets have rewarded companies that take a
+  long-term view and continually pump capital back into the
+  business. Amazon is a notable example of a company that barely
+  turns a profit; however, it continues to grow at a breakneck
+  pace, and its CEO is willing to invest in new business lines and
+  dominate the e-commerce space.
+</p>
+<p>
+  The assumption on Amazon is that the company can flick a switch
+  and start running profitably. Can the same be even remotely said
+  about Snapchat?
+</p>
+
+	<div data-bi-ad data-ad-container class="ad dfp" data-adunit="mobile-web/finance/clusterstock/post" data-authors="garrett-baldwin,-modern-trader" data-pagetype="post" data-region="Mobile In Post Ad" data-responsive="null" data-sizes="320x150,300x250,fluid" data-tag="snap,snap-ipo,snapchat,modern-trader,evan-spiegel,henry-blodget" data-url="/snap-ipo-the-complete-bearish-case-for-avoiding-investing-in-snapchat-2017-2" data-views="10001-500000">
+	</div>
+
+	<script type="text/javascript">
+		(function() {
+			'use strict';
+			// Notify the DFP code that a new ad has just been rendered
+			amplify.publish('adRender');
+		}());
+	</script>
+<p></p>
+<h2>
+  -The user growth issue
+</h2>
+<p>
+  The comparisons between Twitter (TWTR) and Snapchat have swelled
+  in recent months.
+</p>
+<p>
+  Twitter's stock has slumped over concerns about trolling and user
+  growth, and the company hasn't been able to find a buyer to
+  salvage its technology platform. Snapchat is facing a similar
+  challenge with user growth.
+</p>
+<p>
+  Rival Instagram recently overtook the company on a critical
+  metric: "Time spent per user." Also, it appears that its user
+  growth is on the verge of plateauing  without a significant
+  expansion.
+</p>
+<p>
+  <span data-post-image="" class="image on-image"><img src="http://static1.businessinsider.com/image/58b06f4801fe581d008b6766-538/anthony-snap.png" alt="anthony snap" width="538"><span class="caption-source"><span class="caption">Former employee Anthony
+  Pompliano, pictured, accused the company of luring him away from
+  Facebook to acquire information about its
+  competitor.</span><span class="source"><a href="https://www.youtube.com/watch?v=yhsURX-h4ZU">YouTube</a></span></span></span>
+</p>
+<p>
+  "The growth in daily active users was relatively flat in the
+  latter part of the quarter ended Sept. 30, 2016," the filing
+  said. The company had 158 million daily users on the platform.
+</p>
+<p>
+  And like Twitter, the company has seen its rate of growth slow
+  down. In 2016, the platform saw its user growth increase by 60%
+  and 66% in the first two quarters. In the final two quarters, the
+  growth rates fell to 55% and 46%.
+</p>
+<p>
+  But there's another red flag that investors should pay attention
+  to in the weeks ahead. Snapchat is still facing a lawsuit that
+  makes a damning accusation.
+</p>
+
+	<div data-bi-ad data-ad-container class="ad dfp" data-adunit="mobile-web/finance/clusterstock/post" data-authors="garrett-baldwin,-modern-trader" data-pagetype="post" data-region="Mobile In Post Ad" data-responsive="null" data-sizes="320x150,300x250,fluid" data-tag="snap,snap-ipo,snapchat,modern-trader,evan-spiegel,henry-blodget" data-url="/snap-ipo-the-complete-bearish-case-for-avoiding-investing-in-snapchat-2017-2" data-views="10001-500000">
+	</div>
+
+	<script type="text/javascript">
+		(function() {
+			'use strict';
+			// Notify the DFP code that a new ad has just been rendered
+			amplify.publish('adRender');
+		}());
+	</script>
+<p></p>
+<p>
+  Former employee Anthony Pompliano accused the company of luring
+  him away from Facebook to acquire information about its
+  competitor. But it's not just the deceitful accusation regarding
+  competitive intelligence that draws the most attention.
+</p>
+<p>
+  Pompliano also claims that company executives have been
+  misleading its investors and marketers by inflating their user
+  numbers. Pompliano alleges that he alerted company executives.
+</p>
+<p>
+  As of Dec. 31, the company had 158 million daily users. User
+  growth has been progressing higher (see "Building a community,"
+  left). But one of the biggest problems remains the ability to
+  keep daily users engaged and active in the social media space.
+</p>
+<blockquote class="pullquote float_right">
+  Investors need to worry about the basic quarterly grind that will
+  draw increased scrutiny to the stock's bottom line.
+</blockquote>
+<p>
+  That issue fits into a broader concern about social media stocks
+  in general. Global Equities Research's Trip Chowdhry has called
+  Social Media an "Anti-Trend" in 2017 and doesn't think the
+  broader sector is sustainable.
+</p>
+<p>
+  "[Snapchat executives] are trying to exit with an IPO before
+  their business collapses," Chowdhry wrote in a research report
+  Dec. 9, 2016. "We are at the tail end of the social media boom."
+</p>
+<p>
+  Also, investors need to worry about the basic quarterly grind
+  that will draw increased scrutiny to the stock's bottom line.
+</p>
+
+	<div data-bi-ad data-ad-container class="ad dfp" data-adunit="mobile-web/finance/clusterstock/post" data-authors="garrett-baldwin,-modern-trader" data-pagetype="post" data-region="Mobile In Post Ad" data-responsive="null" data-sizes="320x150,300x250,fluid" data-tag="snap,snap-ipo,snapchat,modern-trader,evan-spiegel,henry-blodget" data-url="/snap-ipo-the-complete-bearish-case-for-avoiding-investing-in-snapchat-2017-2" data-views="10001-500000">
+	</div>
+
+	<script type="text/javascript">
+		(function() {
+			'use strict';
+			// Notify the DFP code that a new ad has just been rendered
+			amplify.publish('adRender');
+		}());
+	</script>
+<p></p>
+<p>
+  In the last few years, stocks like Groupon (GRPN), Zynga (ZNGA)
+  and Twitter have cratered after a single negative report and
+  investors have been unwilling to pile back in.
+</p>
+<p>
+  While the founders certainly have a long-term vision for the
+  firm, Wall Street is not traditionally patient in the Internet
+  and mobile operator space.
+</p>
+<p>
+  <span data-post-image="" class="image on-image"><img src="http://static5.businessinsider.com/image/57d058445124c9872884e208-538/an-image-of-the-snapchat-logo-created-with-post-it-notes-is-seen-in-the-windows-of-havas-worldwide-at-200-hudson-street-in-lower-manhattan-new-york-us-may-18-2016-where-advertising-agencies-and-other-companies-have-started-what-is-being-called-a.jpg" alt="An image of the Snapchat logo created with Post-it notes is seen in the windows of Havas Worldwide at 200 Hudson Street in lower Manhattan, New York, U.S., May 18, 2016, where advertising agencies and other companies have started what is being called a " width="538"><span class="caption-source"><span class="caption">The Snapchat logo created with Post-It notes in a
+  window.</span><span class="source">Thomson
+  Reuters</span></span></span>
+</p>
+<p>
+  What compounds the problem is that Snapchat's financials are
+  deeply in the red when compared to other companies that recently
+  went public in the social media space.
+</p>
+<blockquote class="pullquote">
+  Snapchat's free cash flow as a percentage of revenue is a
+  staggering -113.5%.
+</blockquote>
+<p>
+  According to company filings, Snapchat's free cash flow as a
+  percentage of revenue is a staggering -113.5%.
+</p>
+<p>
+  By comparison, Twitter's free cash flow as a share of revenue was
+  -10% while Facebook's was -4.7%. Zynga, whose stock is trading
+  under $3 per share, had a free cash flow score as a share of
+  revenue at 4.7%.
+</p>
+<p>
+  An even more curious figure is the firm's plans to pay Alphabet
+  (GOOGL) $400 million for five years to manage its network
+  systems. This agreement means that Alphabet is poised to make
+  more money off Snapchat than the company is through its
+  advertising operations.
+</p>
+
+	<div data-bi-ad data-ad-container class="ad dfp" data-adunit="mobile-web/finance/clusterstock/post" data-authors="garrett-baldwin,-modern-trader" data-pagetype="post" data-region="Mobile In Post Ad" data-responsive="null" data-sizes="320x150,300x250,fluid" data-tag="snap,snap-ipo,snapchat,modern-trader,evan-spiegel,henry-blodget" data-url="/snap-ipo-the-complete-bearish-case-for-avoiding-investing-in-snapchat-2017-2" data-views="10001-500000">
+	</div>
+
+	<script type="text/javascript">
+		(function() {
+			'use strict';
+			// Notify the DFP code that a new ad has just been rendered
+			amplify.publish('adRender');
+		}());
+	</script>
+<p></p>
+<p>
+  Snapchat may easily raise another $3 billion to  $4 billion, and
+  the company will use it to spur growth on the domestic and
+  international front. But once they cross this IPO threshold, who
+  seems prepared to stand with Snapchat's team for the long haul?
+</p>
+<h2>
+  -The exit strategy
+</h2>
+<p>
+  One of the most important things that many investors forget is
+  that an IPO is not an entrance; it is an exit for many of the
+  firm's early investors. And this one is poised to capitalize on
+  investors' fear of missing out on Facebook stock. Even though
+  Facebook stock is trading at record levels, it was still punished
+  by Wall Street months after its IPO. A far better buying
+  opportunity emerged after the IPO.
+</p>
+<blockquote class="pullquote float_right">
+  It's clear that a massive shift has occurred in the IPO markets
+  during the last 20 years.
+</blockquote>
+<p>
+  On the technology front, it's very hard to ignore the results of
+  recent IPOs. For many companies coming to the market, the premium
+  that retail investors are paying has been steep. Box Inc. (BOX)
+  saw its stock rally more than 66% on the first day.
+</p>
+<p>
+  But weeks after the lockup period expired, shares were below
+  their IPO price of $14.
+</p>
+<p>
+  <span data-post-image="" class="image on-image"><img src="http://static5.businessinsider.com/image/58b06e9d5490570b548b51e4-538/gopro.jpg" alt="gopro" width="538"><span class="caption-source"><span class="caption">A dog wears a GoPro
+  camera.</span><span class="source">Gareth Cattermole/Getty
+  Images</span></span></span>
+</p>
+<p>
+  GoPro (GPRO) initiated its IPO at $24 per share.  As of Feb. 15,
+  the stock was just above $9 per share. Fitbit (FIT) opened at $20
+  per share in June 2015. By mid-February of 2017, the stock was
+  lingering at $5.73. In these cases, and others including Twilio
+  (TWLO), the premium paid on day one by investors didn't match up
+  with the hype. Chowdhry pulls no punches about Snapchat and makes
+  the case that early investors are looking for dumb money to bail
+  them out in the months ahead.
+</p>
+<blockquote class="pullquote">
+  Early investors are looking for dumb money to bail them out in
+  the months ahead.
+</blockquote>
+<p>
+  "Investors should be very cautious of Snapchat's IPO," Chowdhry
+  wrote Dec. 9, 2016. "They have run out of stupid investors in the
+  private market, and [are] probably looking to fools in the public
+  market."
+</p>
+
+	<div data-bi-ad data-ad-container class="ad dfp" data-adunit="mobile-web/finance/clusterstock/post" data-authors="garrett-baldwin,-modern-trader" data-pagetype="post" data-region="Mobile In Post Ad" data-responsive="null" data-sizes="320x150,300x250,fluid" data-tag="snap,snap-ipo,snapchat,modern-trader,evan-spiegel,henry-blodget" data-url="/snap-ipo-the-complete-bearish-case-for-avoiding-investing-in-snapchat-2017-2" data-views="10001-500000">
+	</div>
+
+	<script type="text/javascript">
+		(function() {
+			'use strict';
+			// Notify the DFP code that a new ad has just been rendered
+			amplify.publish('adRender');
+		}());
+	</script>
+<p></p>
+<p>
+  Chowdhry argues that Snapchat is not a durable company. He makes
+  the comparison to the recent rage of PokemonGo, which helped
+  propel Nintendo's stock higher for a short period. However, that
+  strength has faded. The same can be said of Yik Yak, which drew
+  comparisons to Facebook but quickly faded.
+</p>
+<p>
+  "It is extremely prudent for investors to go 10 levels deep to
+  make sure you are not breathing the company's exhaust." Chowdhry
+  wrote. "Missing an opportunity is okay versus getting burnt."
+</p>
+<p>
+  Chowdhry has encouraged investors to not only avoid the Snapchat
+  IPO but also to get out of every recent IPO from the last few
+  years. This list includes Apptio Inc. (APTI) Twilio, GoPro,
+  FitBit and Box Inc.
+</p>
+<p>
+  It's clear that a massive shift has occurred in the IPO markets
+  during the last 20 years that are leaving public investors at a
+  disadvantage.
+</p>
+<p>
+  Blodget explains there are fundamental differences between the
+  1990s and today.
+</p>
+<p>
+  "The main difference between the 1990s and now is that companies
+  are going public much later," he says. "There are benefits and
+  drawbacks to that."
+</p>
+
+	<div data-bi-ad data-ad-container class="ad dfp" data-adunit="mobile-web/finance/clusterstock/post" data-authors="garrett-baldwin,-modern-trader" data-pagetype="post" data-region="Mobile In Post Ad" data-responsive="null" data-sizes="320x150,300x250,fluid" data-tag="snap,snap-ipo,snapchat,modern-trader,evan-spiegel,henry-blodget" data-url="/snap-ipo-the-complete-bearish-case-for-avoiding-investing-in-snapchat-2017-2" data-views="10001-500000">
+	</div>
+
+	<script type="text/javascript">
+		(function() {
+			'use strict';
+			// Notify the DFP code that a new ad has just been rendered
+			amplify.publish('adRender');
+		}());
+	</script>
+<p></p>
+<blockquote class="pullquote float_right">
+  The people who captured the value in Facebook...were private
+  investors.
+</blockquote>
+<p>
+  On the positive side, he argues that firms are typically more
+  mature and bring less risk to the markets.
+</p>
+<p>
+  "You're always going to have high risk," he says. "There's just
+  no way of getting around it. So, the companies are more mature;
+  there's more governance in place in most cases, so a lot of folks
+  will look at that and say that's a positive."
+</p>
+<p>
+  <span data-post-image="" class="image on-image"><img src="http://static3.businessinsider.com/image/58b2f8c854905720098b6c07-538/facebook-sheryl-sandberg.jpg" alt="Facebook Sheryl Sandberg" width="538"><span class="source-only source"><a href="http://pictures.reuters.com/archive/TECH-SUMMIT--GM1E96K0GNY01.html">Stephen
+  Lam/Reuters</a></span></span>
+</p>
+<p>
+  But on the downside, aggressive speculative investors are less
+  able to invest in startup companies in their early stages like
+  what we saw in the 1990s. Blodget reminds us that Amazon had a
+  valuation of just $400 million when it went public.
+</p>
+<blockquote class="pullquote">
+  Amazon had a valuation of just $400 million when it went public.
+</blockquote>
+<p>
+  "When Facebook went public, the valuation was something like $30
+  billion. The people who captured the value in Facebook from $400
+  million to $30 billion were private investors."
+</p>
+<p>
+  Whether the IPO market is better today than it was 1990s, Blodget
+  says that it depends on individual perspective.
+</p>
+<p>
+  "If you believe that the job of public companies is to protect
+  against capital loses, and therefore we should only encourage
+  companies to go public later when they're safer and less
+  volatile, then this is an improvement. But, if you think that the
+  best situation is one in which investors can judge their own risk
+  tolerance and that there are going to be a small community of
+  investors who actually want to invest in speculative or
+  early-stage companies, then it's too bad that companies are
+  waiting so long to go public."
+</p>
+
+	<div data-bi-ad data-ad-container class="ad dfp" data-adunit="mobile-web/finance/clusterstock/post" data-authors="garrett-baldwin,-modern-trader" data-pagetype="post" data-region="Mobile In Post Ad" data-responsive="null" data-sizes="320x150,300x250,fluid" data-tag="snap,snap-ipo,snapchat,modern-trader,evan-spiegel,henry-blodget" data-url="/snap-ipo-the-complete-bearish-case-for-avoiding-investing-in-snapchat-2017-2" data-views="10001-500000">
+	</div>
+
+	<script type="text/javascript">
+		(function() {
+			'use strict';
+			// Notify the DFP code that a new ad has just been rendered
+			amplify.publish('adRender');
+		}());
+	</script>
+<p></p>
+<h2>
+  Finally...
+</h2>
+<p>
+  With all of these questionable figures, one hasn't even analyzed
+  the product itself. The company is engaged in a series of
+  distracting content shows and gimmicky glasses that make rainbows
+  vomit on a screen, and generate little revenue.
+</p>
+<p>
+  There's the nearly $900,000 that Snapchat paid in 2016 for a
+  security detail for Spiegel. There's the $650,000 that it paid to
+  Spiegel's father's law firm. There's the $157.5 million
+  settlement with its third co-founder.
+</p>
+<p>
+  And at a time that investors are upset about controlling shares
+  and voting rights, Spiegel will receive a 3% increase in his
+  shares as a "CEO bonus," according to the prospectus.
+</p>
+<p>
+  Investors would be wise to sit out the Snapchat IPO and wait for
+  the market to price the company accordingly in six to nine
+  months.
+</p>
+</div>            </div>
+	<p class="tagline">Get the latest Snap stock price<a href="http://markets.businessinsider.com/stock/SNAP-Quote"> here.</a></p>
+                <!-- See Also Text Links -->
+        <div id="see-also-links" class="see-also mobile">
+                            <h3><span class="all-caps">SEE ALSO:</span> <a href="http://www.businessinsider.com/snapchat-ipo-pros-and-cons-2017-2" >WALL STREET SPEAKS: The case for and against investing in Snap's massive IPO</a>
+                </h3>
+                    </div>
+    <!--  / See Also Text Links -->
+                            
+            </div>
+
+
+<div id="share" class="post-container">
+    <h2>Share This Post</h2>
+    <div id ="show-comments" class="share mobile">
+                    <a class="item share-facebook" href="http://www.facebook.com/sharer.php?u=http://www.businessinsider.com/snap-ipo-the-complete-bearish-case-for-avoiding-investing-in-snapchat-2017-2" title="Share on Facebook" target="_blank">
+                <i class="sprites facebook"></i>
+            </a>
+
+           <div class="item"></div>
+        
+                    <a class="item share-linkedin" href="http://www.linkedin.com/shareArticle?mini=true&url=http://www.businessinsider.com/snap-ipo-the-complete-bearish-case-for-avoiding-investing-in-snapchat-2017-2&title=The complete bearish case against investing in Snapchat's massive IPO&summary=" title="Share on LinkedIn" target="_blank">
+                <i class="sprites linkedin"></i>
+            </a>
+
+            <div class="item"></div>
+        
+                    <a class="item share-twitter" href="http://twitter.com/share?url=http://read.bi/2lUNp3F&amp;via=bi_contributors&amp;text=The complete bearish case against investing in Snapchat's massive IPO" title="Share on Twitter" target="_blank">
+                <i class="sprites twitter"></i>
+            </a>
+
+            <div class="item"></div>
+        
+                    <a class="item share-whatsapp" href="whatsapp://send?text=The complete bearish case against investing in Snapchat's massive IPO http%3A%2F%2Fwww.businessinsider.com%2Fsnap-ipo-the-complete-bearish-case-for-avoiding-investing-in-snapchat-2017-2%2F%3Futm_medium%3Dsocial%26utm_campaign%3Dsocial-share-click-thru%26utm_source%3Dwhatsapp%26utm_content%3Dlower%26utm_term%3Dmobileweb" data-action="share/whatsapp/share">
+                <i class="sprites whatsapp"></i>
+            </a>
+
+            <div class="item"></div>
+        
+        
+                    <a class="item share-email" href="mailto:?to=&subject=The complete bearish case against investing in Snapchat's massive IPO&body=http://www.businessinsider.com/snap-ipo-the-complete-bearish-case-for-avoiding-investing-in-snapchat-2017-2" title="Share with email" target="_blank">
+                <i class="sprites email"></i>
+            </a>
+
+            <div class="item"></div>
+        
+            </div>
+</div>
+
+<div class="recirculation-wrap">
+    </div>
+
+
+	<div data-bi-ad data-ad-container class="ad dfp position-load" data-adunit="mobile-web/finance/clusterstock/post" data-authors="garrett-baldwin,-modern-trader" data-pagetype="post" data-pos="btf" data-region="Mobile Article" data-responsive="null" data-sizes="300x250" data-tag="snap,snap-ipo,snapchat,modern-trader,evan-spiegel,henry-blodget" data-url="/snap-ipo-the-complete-bearish-case-for-avoiding-investing-in-snapchat-2017-2" data-views="10001-500000">
+	</div>
+
+	<script type="text/javascript">
+		(function() {
+			'use strict';
+			// Notify the DFP code that a new ad has just been rendered
+			amplify.publish('');
+		}());
+	</script>
+
+
+                        <div id="taboola-below-main-column" class='ksm-taboola'></div>
+            <script type="text/javascript">
+              window._taboola = window._taboola || [];
+              _taboola.push({mode: 'thumbs-2r-mobile', container: 'taboola-below-main-column', placement: 'below-main-column'});
+            </script>
+            
+            <div class="container box-post concierge-post-wrapper ksm-post-recommended">
+    <h2>
+        <span>Recommended For You</span>
+    </h2>
+    <div class="content">
+        <!-- Concierge posts -->
+        <div class="container ">
+            <div class="concierge-post">
+                <a class="concierge-post-link" href=""><div class="seealso-image"><img src="http://static4.businessinsider.com/assets/images/transparent.gif" alt="" /></div></a>
+                <h4 class="related"><a class="concierge-post-link" href=""></a></h4>
+            </div>
+            <div class="concierge-post">
+                <a class="concierge-post-link" href=""><div class="seealso-image"><img src="http://static4.businessinsider.com/assets/images/transparent.gif" alt="" /></div></a>
+                <h4 class="related"><a class="concierge-post-link" href=""></a></h4>
+            </div>
+                        <div class="concierge-post last-story">
+                <a class="concierge-post-link" href=""><div class="seealso-image"><img src="http://static4.businessinsider.com/assets/images/transparent.gif" alt="" /></div></a>
+                <h4 class="related"><a class="concierge-post-link" href=""></a></h4>
+            </div>
+            
+            <div class="powered-by-sailthru-container powered-by-sailthru-container">
+                <a href="http://www.sailthru.com/publishers/bi.html" target="_blank" class="powered-by-sailthru">Powered by Sailthru</a>
+            </div>
+        </div>
+        
+    </div>
+</div>    
+        <div id="post-river" class="post-container mobile-homepage no-infinite-scroll">
+        <h2><span>More from Business Insider</span></h2>
+        <ul selected="true" class="home-main">
+                        <li  class="river-post ksm-first-river">
+                                
+            <div class="river-post__image-wrapper">
+                <a href="http://www.businessinsider.com/r-no-plan-yet-on-kushners-flagship-manhattan-tower-vornado-ceo-2017-8" class="river-post__image-anchor" target="_self">
+                                        <img src="http://static2.businessinsider.com/image/5980d22cb50ab127008b645f-160/the-fate-of-jared-kushners-flagship-manhattan-tower-is-still-up-in-the-air.jpg" alt="The fate of Jared Kushner's flagship Manhattan tower is still up in the air" border="0" />                                    </a>
+            </div>
+
+            <div class="river-post__byline">
+                <h2 class="river-post__heading">
+                    <a class="river-post__heading-anchor" href="http://www.businessinsider.com/r-no-plan-yet-on-kushners-flagship-manhattan-tower-vornado-ceo-2017-8" target="_self" class="river-post__byline-heading-anchor">
+                        The fate of Jared Kushner's flagship Manhattan tower is still up in the air                    </a>
+                </h2>
+                                    
+<div class="flex byline">
+        
+    <div class="flex-item">
+        <div class="list-pipes no-pipe">
+            <ul>
+                            
+                      
+                        <!-- Kissmetrics author byline class name -->
+                                                    <li class="publication-author ksm-post-author-byline"><a target="_blank" href="http://www.reuters.com">Reuters</a></li>
+                                            
+                
+                
+                                    <!-- Date -->
+                    <li class="river-post__date">
+	<span class="svg sprites date-icon"></span>
+	<span data-bi-format="date" rel="1501614720">Aug.  1, 2017,  3:12 PM</span>
+</li>                            
+                            <li class="pageviews">
+                    <span class="svg sprites warm views"></span>
+                    <span class="warm" title="views">912</span>
+                </li>            
+            
+                        </ul>
+
+        </div>
+    </div>
+</div>
+                                            </div>
+            </li>
+            <li  class="river-post">
+                        
+            <div class="river-post__image-wrapper">
+                <a href="http://www.businessinsider.com/six-deadly-roads-2017-8" class="river-post__image-anchor" target="_self">
+                                        <img src="http://static6.businessinsider.com/image/59808f50b50ab183238b4ef4-160/these-are-the-most-terrifying-roads-in-the-world.jpg" alt="These are the most terrifying roads in the world" border="0" />                                    </a>
+            </div>
+
+            <div class="river-post__byline">
+                <h2 class="river-post__heading">
+                    <a class="river-post__heading-anchor" href="http://www.businessinsider.com/six-deadly-roads-2017-8" target="_self" class="river-post__byline-heading-anchor">
+                        These are the most terrifying roads in the world                    </a>
+                </h2>
+                                    
+<div class="flex byline">
+        
+    <div class="flex-item">
+        <div class="list-pipes no-pipe">
+            <ul>
+                            
+                      
+                        <!-- Kissmetrics author byline class name -->
+                                                    <li class="publication-author ksm-post-author-byline">Carl Pettit, <a target="_blank" href="http://fodors.com/">Fodor's</a></li>
+                                            
+                
+                
+                                    <!-- Date -->
+                    <li class="river-post__date">
+	<span class="svg sprites date-icon"></span>
+	<span data-bi-format="date" rel="1501599563">Aug.  1, 2017, 10:59 AM</span>
+</li>                            
+                            <li class="pageviews">
+                    <span class="svg sprites hot views"></span>
+                    <span class="hot" title="views">4,699</span>
+                </li>            
+            
+                        </ul>
+
+        </div>
+    </div>
+</div>
+                                            </div>
+            </li>
+            <li  class="river-post">
+                        
+            <div class="river-post__image-wrapper">
+                <a href="http://www.businessinsider.com/not-holding-3-stocks-cost-warren-buffett-12-billion-2017-7" class="river-post__image-anchor" target="_self">
+                                        <img src="http://static3.businessinsider.com/image/597f55b04528e628198b5860-160/not-holding-these-3-stocks-has-cost-warren-buffett-more-than-12-billion.jpg" alt="Not holding these 3 stocks has cost Warren Buffett more than $12 billion" border="0" />                                    </a>
+            </div>
+
+            <div class="river-post__byline">
+                <h2 class="river-post__heading">
+                    <a class="river-post__heading-anchor" href="http://www.businessinsider.com/not-holding-3-stocks-cost-warren-buffett-12-billion-2017-7" target="_self" class="river-post__byline-heading-anchor">
+                        Not holding these 3 stocks has cost Warren Buffett more than $12 billion                    </a>
+                </h2>
+                                    
+<div class="flex byline">
+        
+    <div class="flex-item">
+        <div class="list-pipes no-pipe">
+            <ul>
+                            
+                      
+                        <!-- Kissmetrics author byline class name -->
+                                                    <li class="publication-author ksm-post-author-byline"><a href="http://www.businessinsider.com/author/sean-williams">Sean Williams</a>, <a target="_blank" href="http://www.fool.com">The Motley Fool</a></li>
+                                            
+                
+                
+                                    <!-- Date -->
+                    <li class="river-post__date">
+	<span class="svg sprites date-icon"></span>
+	<span data-bi-format="date" rel="1501538520">Jul. 31, 2017,  6:02 PM</span>
+</li>                            
+                            <li class="pageviews">
+                    <span class="svg sprites hot views"></span>
+                    <span class="hot" title="views">6,368</span>
+                </li>            
+            
+                        </ul>
+
+        </div>
+    </div>
+</div>
+                                            </div>
+            </li>
+            <li  class="river-post">
+                        
+            <div class="river-post__image-wrapper">
+                <a href="http://www.businessinsider.com/a-180-sandwich-from-japan-is-coming-to-san-francisco-2017-7" class="river-post__image-anchor" target="_self">
+                                        <img src="http://static3.businessinsider.com/image/597f95b1b50ab100028b4f00-160/a-180-sandwich-from-japan-is-coming-to-san-francisco.jpg" alt="A $180 sandwich from Japan is coming to San Francisco" border="0" />                                    </a>
+            </div>
+
+            <div class="river-post__byline">
+                <h2 class="river-post__heading">
+                    <a class="river-post__heading-anchor" href="http://www.businessinsider.com/a-180-sandwich-from-japan-is-coming-to-san-francisco-2017-7" target="_self" class="river-post__byline-heading-anchor">
+                        A $180 sandwich from Japan is coming to San Francisco                    </a>
+                </h2>
+                                    
+<div class="flex byline">
+        
+    <div class="flex-item">
+        <div class="list-pipes no-pipe">
+            <ul>
+                            
+                      
+                        <!-- Kissmetrics author byline class name -->
+                                                    <li class="publication-author ksm-post-author-byline">Shayna Olsan & Shigeru Sato, <a target="_blank" href="https://www.businessinsider.jp">Business Insider Japan</a></li>
+                                            
+                
+                
+                                    <!-- Date -->
+                    <li class="river-post__date">
+	<span class="svg sprites date-icon"></span>
+	<span data-bi-format="date" rel="1501534200">Jul. 31, 2017,  4:50 PM</span>
+</li>                            
+                            <li class="pageviews">
+                    <span class="svg sprites very-hot views"></span>
+                    <span class="very-hot" title="views">62,802</span>
+                </li>            
+            
+                        </ul>
+
+        </div>
+    </div>
+</div>
+                                            </div>
+            </li>
+            <li  class="river-post">
+                        
+            <div class="river-post__image-wrapper">
+                <a href="http://www.businessinsider.com/best-international-starbucks-drinks-2017-7" class="river-post__image-anchor" target="_self">
+                                        <img src="http://static2.businessinsider.com/image/597f8ad8aa223418fc4eef85-160/14-amazing-starbucks-drinks-from-around-the-world-that-you-cant-get-in-the-us.jpg" alt="14 amazing Starbucks drinks from around the world that you can't get in the US" border="0" />                                    </a>
+            </div>
+
+            <div class="river-post__byline">
+                <h2 class="river-post__heading">
+                    <a class="river-post__heading-anchor" href="http://www.businessinsider.com/best-international-starbucks-drinks-2017-7" target="_self" class="river-post__byline-heading-anchor">
+                        14 amazing Starbucks drinks from around the world that you can't get in the US                    </a>
+                </h2>
+                                    
+<div class="flex byline">
+        
+    <div class="flex-item">
+        <div class="list-pipes no-pipe">
+            <ul>
+                            
+                      
+                        <!-- Kissmetrics author byline class name -->
+                                                    <li class="publication-author ksm-post-author-byline"><a href="http://www.businessinsider.com/author/joanna-fantozzi">Joanna Fantozzi</a>, <a target="_blank" href="http://www.thisisinsider.com/">INSIDER</a></li>
+                                            
+                
+                
+                                    <!-- Date -->
+                    <li class="river-post__date">
+	<span class="svg sprites date-icon"></span>
+	<span data-bi-format="date" rel="1501531140">Jul. 31, 2017,  3:59 PM</span>
+</li>                            
+                            <li class="pageviews">
+                    <span class="svg sprites very-hot views"></span>
+                    <span class="very-hot" title="views">64,491</span>
+                </li>            
+            
+                        </ul>
+
+        </div>
+    </div>
+</div>
+                                            </div>
+            </li>
+            <li  class="river-post">
+                        
+            <div class="river-post__image-wrapper">
+                <a href="http://www.businessinsider.com/tourist-traps-europe-2017-7" class="river-post__image-anchor" target="_self">
+                                        <img src="http://static3.businessinsider.com/image/597f6afbd7f5a414fb73ac3c-160/20-tourist-traps-to-avoid-in-europe--and-where-to-go-instead.jpg" alt="20 tourist traps to avoid in Europe — and where to go instead" border="0" />                                    </a>
+            </div>
+
+            <div class="river-post__byline">
+                <h2 class="river-post__heading">
+                    <a class="river-post__heading-anchor" href="http://www.businessinsider.com/tourist-traps-europe-2017-7" target="_self" class="river-post__byline-heading-anchor">
+                        20 tourist traps to avoid in Europe — and where to go instead                    </a>
+                </h2>
+                                    
+<div class="flex byline">
+        
+    <div class="flex-item">
+        <div class="list-pipes no-pipe">
+            <ul>
+                            
+                      
+                        <!-- Kissmetrics author byline class name -->
+                                                    <li class="publication-author ksm-post-author-byline"><a href="http://www.businessinsider.com/author/sophie-claire-hoeller">Sophie-Claire Hoeller</a>, <a target="_blank" href="http://www.thisisinsider.com/">INSIDER</a></li>
+                                            
+                
+                
+                                    <!-- Date -->
+                    <li class="river-post__date">
+	<span class="svg sprites date-icon"></span>
+	<span data-bi-format="date" rel="1501522740">Jul. 31, 2017,  1:39 PM</span>
+</li>                            
+                            <li class="pageviews">
+                    <span class="svg sprites very-hot views"></span>
+                    <span class="very-hot" title="views">43,850</span>
+                </li>            
+            
+                        </ul>
+
+        </div>
+    </div>
+</div>
+                                            </div>
+            </li>
+            <li  class="river-post">
+                        
+            <div class="river-post__image-wrapper">
+                <a href="http://www.businessinsider.com/ap-bank-of-england-workers-to-go-on-strike-2017-7" class="river-post__image-anchor" target="_self">
+                                        <img src="http://static5.businessinsider.com/image/597f5708b50ab127008b5d65-160/bank-of-england-maintenance-security-and-hospitality-workers-to-go-on-strike.jpg" alt="Bank of England maintenance, security, and hospitality workers to go on strike" border="0" />                                    </a>
+            </div>
+
+            <div class="river-post__byline">
+                <h2 class="river-post__heading">
+                    <a class="river-post__heading-anchor" href="http://www.businessinsider.com/ap-bank-of-england-workers-to-go-on-strike-2017-7" target="_self" class="river-post__byline-heading-anchor">
+                        Bank of England maintenance, security, and hospitality workers to go on strike                    </a>
+                </h2>
+                                    
+<div class="flex byline">
+        
+    <div class="flex-item">
+        <div class="list-pipes no-pipe">
+            <ul>
+                            
+                      
+                        <!-- Kissmetrics author byline class name -->
+                                                    <li class="publication-author ksm-post-author-byline"><a href="http://www.businessinsider.com/author/associated-press">Associated Press</a> <span class="text-and">and</span> <a href="http://www.businessinsider.com/author/russell-sheldrake">Russell Sheldrake</a></li>
+                                            
+                
+                
+                                    <!-- Date -->
+                    <li class="river-post__date">
+	<span class="svg sprites date-icon"></span>
+	<span data-bi-format="date" rel="1501517640">Jul. 31, 2017, 12:14 PM</span>
+</li>                            
+                            <li class="pageviews">
+                    <span class="svg sprites warm views"></span>
+                    <span class="warm" title="views">422</span>
+                </li>            
+            
+                        </ul>
+
+        </div>
+    </div>
+</div>
+                                            </div>
+            </li>
+            <li  class="river-post">
+                        
+            <div class="river-post__image-wrapper">
+                <a href="http://www.businessinsider.com/disney-world-sci-fi-dine-in-theater-restaurant-review-2017-7" class="river-post__image-anchor" target="_self">
+                                        <img src="http://static3.businessinsider.com/image/597cb539d7f5a40dda07fe2e-160/what-its-like-to-dine-at-disney-worlds-unique-indoor-drive-in-movie-restaurant.jpg" alt=" What it's like to dine at Disney World's unique indoor drive-in movie restaurant " border="0" />                                    </a>
+            </div>
+
+            <div class="river-post__byline">
+                <h2 class="river-post__heading">
+                    <a class="river-post__heading-anchor" href="http://www.businessinsider.com/disney-world-sci-fi-dine-in-theater-restaurant-review-2017-7" target="_self" class="river-post__byline-heading-anchor">
+                         What it's like to dine at Disney World's unique indoor drive-in movie restaurant                     </a>
+                </h2>
+                                    
+<div class="flex byline">
+        
+    <div class="flex-item">
+        <div class="list-pipes no-pipe">
+            <ul>
+                            
+                      
+                        <!-- Kissmetrics author byline class name -->
+                                                    <li class="publication-author ksm-post-author-byline"><a href="http://www.businessinsider.com/author/kim-renfro">Kim Renfro</a>, <a target="_blank" href="http://www.thisisinsider.com/">INSIDER</a></li>
+                                            
+                
+                
+                                    <!-- Date -->
+                    <li class="river-post__date">
+	<span class="svg sprites date-icon"></span>
+	<span data-bi-format="date" rel="1501507560">Jul. 31, 2017,  9:26 AM</span>
+</li>                            
+                            <li class="pageviews">
+                    <span class="svg sprites very-hot views"></span>
+                    <span class="very-hot" title="views">20,377</span>
+                </li>            
+            
+                        </ul>
+
+        </div>
+    </div>
+</div>
+                                            </div>
+            </li>
+            <li  class="river-post">
+                        
+            <div class="river-post__image-wrapper">
+                <a href="http://www.businessinsider.com/best-international-fast-food-chains-2017-7" class="river-post__image-anchor" target="_self">
+                                        <img src="http://static6.businessinsider.com/image/597ba8f6d7f5a40b97277087-160/23-fast-food-chains-from-around-the-world-that-we-wish-would-come-to-the-united-states.jpg" alt="23 fast food chains from around the world that we wish would come to the United States" border="0" />                                    </a>
+            </div>
+
+            <div class="river-post__byline">
+                <h2 class="river-post__heading">
+                    <a class="river-post__heading-anchor" href="http://www.businessinsider.com/best-international-fast-food-chains-2017-7" target="_self" class="river-post__byline-heading-anchor">
+                        23 fast food chains from around the world that we wish would come to the United States                    </a>
+                </h2>
+                                    
+<div class="flex byline">
+        
+    <div class="flex-item">
+        <div class="list-pipes no-pipe">
+            <ul>
+                            
+                      
+                        <!-- Kissmetrics author byline class name -->
+                                                    <li class="publication-author ksm-post-author-byline"><a href="http://www.businessinsider.com/author/joanna-fantozzi">Joanna Fantozzi</a>, <a target="_blank" href="http://www.thisisinsider.com/">INSIDER</a></li>
+                                            
+                
+                
+                                    <!-- Date -->
+                    <li class="river-post__date">
+	<span class="svg sprites date-icon"></span>
+	<span data-bi-format="date" rel="1501507080">Jul. 31, 2017,  9:18 AM</span>
+</li>                            
+                            <li class="pageviews">
+                    <span class="svg sprites very-hot views"></span>
+                    <span class="very-hot" title="views">92,950</span>
+                </li>            
+            
+                        </ul>
+
+        </div>
+    </div>
+</div>
+                                            </div>
+            </li>
+            <li  class="river-post">
+                        
+            <div class="river-post__image-wrapper">
+                <a href="http://www.businessinsider.com/tennis-star-andy-murray-is-going-to-invest-in-digital-challenger-bank-2017-7" class="river-post__image-anchor" target="_self">
+                                        <img src="http://static2.businessinsider.com/image/597f1323d7f5a411157deb86-160/tennis-star-andy-murray-is-going-to-invest-in-digital-challenger-bank-revolut.jpg" alt="Tennis star Andy Murray is going to invest in digital challenger bank Revolut" border="0" />                                    </a>
+            </div>
+
+            <div class="river-post__byline">
+                <h2 class="river-post__heading">
+                    <a class="river-post__heading-anchor" href="http://www.businessinsider.com/tennis-star-andy-murray-is-going-to-invest-in-digital-challenger-bank-2017-7" target="_self" class="river-post__byline-heading-anchor">
+                        Tennis star Andy Murray is going to invest in digital challenger bank Revolut                    </a>
+                </h2>
+                                    
+<div class="flex byline">
+        
+    <div class="flex-item">
+        <div class="list-pipes no-pipe">
+            <ul>
+                            
+                      
+                        <!-- Kissmetrics author byline class name -->
+                                                    <li class="publication-author ksm-post-author-byline">Lynsey Barber, <a target="_blank" href="http://www.cityam.com/">City AM</a></li>
+                                            
+                
+                
+                                    <!-- Date -->
+                    <li class="river-post__date">
+	<span class="svg sprites date-icon"></span>
+	<span data-bi-format="date" rel="1501500120">Jul. 31, 2017,  7:22 AM</span>
+</li>                            
+                            <li class="pageviews">
+                    <span class="svg sprites warm views"></span>
+                    <span class="warm" title="views">616</span>
+                </li>            
+            
+                        </ul>
+
+        </div>
+    </div>
+</div>
+                                            </div>
+            </li>
+        </ul>
+    </div>
+
+
+<!-- Simple Reach (all post types) -->
+<script type="text/javascript" src="http://static1.businessinsider.com/assets/js/min-mobile-foot.js?1501616115"></script>
+
+<!-- Chartbeat -->
+<script type="text/javascript">
+    // chartbeat wants the vars in global
+    window._sf_async_config.sections = 'clusterstock-contributor';
+    window._sf_async_config.authors = 'Garrett Baldwin, Modern Trader';
+
+    //only set the following if on a video post
+    
+    //only set the following if on a sponsored post
+    
+    (function(){
+      function loadChartbeat() {
+        window._sf_endpt=(new Date()).getTime();
+        var e = document.createElement('script');
+        e.setAttribute('language', 'javascript');
+        e.setAttribute('type', 'text/javascript');
+        e.setAttribute('src',
+           (('https:' === document.location.protocol) ? 'https://s3.amazonaws.com/' : 'http://') +
+           'static.chartbeat.com/js/chartbeat_video.js');
+        document.body.appendChild(e);
+      }
+      var oldonload = window.onload;
+      window.onload = (typeof window.onload != 'function') ?
+         loadChartbeat : function() { oldonload(); loadChartbeat(); };
+    })();
+</script>
+<!-- / Chartbeat -->
+
+<!-- Google Tag Manager -->
+<noscript><iframe src=""//www.googletagmanager.com/ns.html?id=GTM-NS64GV"" height=""0"" width=""0"" style=""display:none;visibility:hidden""></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NS64GV');</script>
+<!-- End Google Tag Manager -->
+
+
+<!-- Piano -->
+<!-- End Piano -->
+
+<!-- Kissmetrics -->
+<script type="text/javascript">
+    var _kmq = _kmq || [];
+    var _kmk = _kmk || 'baef5a3d7c1cae9c49c4ae5e64c97324b19df559';
+    function _kms(u){
+        setTimeout(function(){
+            var s = document.createElement('script');
+            var f = document.getElementsByTagName('script')[0];
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = u;
+            f.parentNode.insertBefore(s, f);
+        }, 1);
+    }
+    </script>
+<!-- /Kissmetrics -->
+
+<!-- Begin comScore Tag -->
+<script type="text/javascript">
+    var _comscore = _comscore || [];
+    _comscore.push({ c1: "2", c2: "9900186"
+        , options:{ url_append:"comscorekw = clusterstock-contributor"}    });
+    (function() {
+        var s = document.createElement("script"), el = document.getElementsByTagName("script")[0];
+        s.async = true;
+        s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+        el.parentNode.insertBefore(s, el);
+    })();
+</script>
+<noscript>
+    <img src="http://b.scorecardresearch.com/p?c1=2&c2=9900186&cv=2.0&cj=1" />
+</noscript>
+<!-- End comScore Tag -->
+
+<!-- BEGIN Krux ControlTag for "businessinsider.com" -->
+<script class="kxct" data-id="I2I9M2yx" data-timing="async" data-version="3.0" type="text/javascript">
+  window.Krux||((Krux=function(){Krux.q.push(arguments)}).q=[]);
+  (function(){
+    var k=document.createElement('script');k.type='text/javascript';k.async=true;
+    k.src=(location.protocol==='https:'?'https:':'http:')+'//cdn.krxd.net/controltag/I2I9M2yx.js';
+    var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(k,s);
+  }());
+</script>
+<!-- END Krux ControlTag -->
+
+<!--We load the Sailthru recommended stuff at the very end. -->
+<script type="text/javascript" src="//ak.sail-horizon.com/scout/v1.js"></script>
+
+    <script type="text/javascript">
+      window._taboola = window._taboola || [];
+      _taboola.push({flush: true});
+    </script>
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"4b4136998e","applicationID":"13516968","transactionName":"ZVZVZRBVXEJVVkJRDVwcdEQRQF1cG0VZSxY=","queueTime":0,"applicationTime":282,"atts":"SRFCE1hPTx0WVBQCGU9O","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

@@ -1,0 +1,878 @@
+
+<!DOCTYPE html>
+<html
+  xmlns="http://www.w3.org/1999/xhtml"
+  xml:lang="en-gb"
+  lang="en-gb"
+  dir="ltr"
+  ng-app="equities"
+  prefix="og: http://ogp.me/ns#"
+  >
+  <head>
+    <base href="/news/ican-socially-responsible-returns" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="financial,community,social,network,small-cap,public companies, news" />
+	<meta name="rights" content="Equities.com - Global Financial Community" />
+	<meta name="inLanguage" content="en-GB" />
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@equitiescom" />
+	<meta name="twitter:title" content="​ICAN: Socially-Responsible Returns" />
+	<meta name="twitter:description" content="Here's why more companies seem to be considering environmental, social, and governance (“ESG”) factors in their own operations." />
+	<meta name="twitter:image" content="https://res.cloudinary.com/equities-com/image/upload/v1/u/55a7cf9c71f1c9c495413f934dd1a158/mfmizqutirogcqjokhyd" />
+	<meta name="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="Author" content="equities.com" />
+	<meta name="web_author" content="Site built with the assistance of Thaumaturgix, Inc. http://www.tgix.com" />
+	<meta name="copyright" content="Equities.com" />
+	<meta name="description" content="Equities.com is an advanced financial information center and next-generation communication platform that connects self-directed investors with startup and small cap companies, market experts, and professional service providers and vendors." />
+	<title>​ICAN: Socially-Responsible Returns | Equities.com</title>
+	<link href="/templates/equities/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css" />
+	<link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="/assets/css/style.css" rel="stylesheet" type="text/css" />
+	<link href="//cdnjs.cloudflare.com/ajax/libs/chosen/1.4.2/chosen.css" rel="stylesheet" type="text/css" />
+	<link href="/assets/css/plain_css.css" rel="stylesheet" type="text/css" />
+	<link href="/media/system/css/modal.css?87b701f3ed38ed2ff808d073c6030c85" rel="stylesheet" type="text/css" />
+	<script type="application/json" class="joomla-script-options new">{
+    "system.paths": {
+        "root": "",
+        "base": ""
+    }
+}</script>
+	<script src="/media/jui/js/jquery.js?87b701f3ed38ed2ff808d073c6030c85" type="text/javascript"></script>
+	<script src="/media/jui/js/jquery-noconflict.js?87b701f3ed38ed2ff808d073c6030c85" type="text/javascript"></script>
+	<script src="/media/jui/js/jquery-migrate.js?87b701f3ed38ed2ff808d073c6030c85" type="text/javascript"></script>
+	<script src="/media/jui/js/bootstrap.js?87b701f3ed38ed2ff808d073c6030c85" type="text/javascript"></script>
+	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js" type="text/javascript"></script>
+	<script src="https://www.googletagservices.com/tag/js/gpt.js" type="text/javascript"></script>
+	<script src="https://www.equities.com//modules/mod_eq_banners/tmpl/assets/google_dpf.js" type="text/javascript"></script>
+	<script src="/media/system/js/html5fallback-uncompressed.js" type="text/javascript"></script>
+	<script src="/media/system/js/mootools-core-uncompressed.js?87b701f3ed38ed2ff808d073c6030c85" type="text/javascript"></script>
+	<script src="/media/system/js/core-uncompressed.js?87b701f3ed38ed2ff808d073c6030c85" type="text/javascript"></script>
+	<script src="/media/system/js/mootools-more-uncompressed.js?87b701f3ed38ed2ff808d073c6030c85" type="text/javascript"></script>
+	<script src="/media/system/js/modal-uncompressed.js?87b701f3ed38ed2ff808d073c6030c85" type="text/javascript"></script>
+	<script src="/modules/mod_improved_ajax_login/script/improved_ajax_login.js" type="text/javascript"></script>
+	<script src="/modules/mod_improved_ajax_login/themes/flat/theme.js" type="text/javascript"></script>
+	<script src="data:text/javascript;base64,Oyh3aW5kb3cuanExODN8fGpRdWVyeSkoZnVuY3Rpb24oJCl7bmV3IEltcHJvdmVkQUpBWExvZ2luKHsKaWQ6IDEwOSwKaXNHdWVzdDogMSwKb2F1dGg6IHsiZmFjZWJvb2siOiJodHRwczpcL1wvd3d3LmZhY2Vib29rLmNvbVwvZGlhbG9nXC9vYXV0aD9zY29wZT1lbWFpbCZyZXNwb25zZV90eXBlPWNvZGUmZGlzcGxheT1wb3B1cCZjbGllbnRfaWQ9MTY2OTIwOTY0NjY0MTA2NSZyZWRpcmVjdF91cmk9aHR0cCUzQSUyRiUyRnd3dy5lcXVpdGllcy5jb20lMkZpbmRleC5waHAlM0ZvcHRpb24lM0Rjb21faW1wcm92ZWRfYWpheF9sb2dpbiUyNnRhc2slM0RmYWNlYm9vayIsImdvb2dsZSI6Imh0dHBzOlwvXC9hY2NvdW50cy5nb29nbGUuY29tXC9vXC9vYXV0aDJcL2F1dGg/c2NvcGU9aHR0cHMlM0ElMkYlMkZ3d3cuZ29vZ2xlYXBpcy5jb20lMkZhdXRoJTJGdXNlcmluZm8uZW1haWwraHR0cHMlM0ElMkYlMkZ3d3cuZ29vZ2xlYXBpcy5jb20lMkZhdXRoJTJGdXNlcmluZm8ucHJvZmlsZSZyZXNwb25zZV90eXBlPWNvZGUmZGlzcGxheT1wb3B1cCZjbGllbnRfaWQ9OTEyODg0MjcxNTE0LTd2c3Znc3JjY2piMmNwYmVscW5jMmI4MGRidmw1cWlpLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tJnJlZGlyZWN0X3VyaT1odHRwJTNBJTJGJTJGd3d3LmVxdWl0aWVzLmNvbSUyRmluZGV4LnBocCUzRm9wdGlvbiUzRGNvbV9pbXByb3ZlZF9hamF4X2xvZ2luJTI2dGFzayUzRGdvb2dsZSIsInR3aXR0ZXIiOiJcL2luZGV4LnBocD9vcHRpb249Y29tX2ltcHJvdmVkX2FqYXhfbG9naW4mcmVkaXJlY3Q9MSZ0YXNrPXR3aXR0ZXIifSwKYmdPcGFjaXR5OiAwLjQsCnJldHVyblVybDogJy9uZXdzL2ljYW4tc29jaWFsbHktcmVzcG9uc2libGUtcmV0dXJucycsCmJvcmRlcjogcGFyc2VJbnQoJ2ZmZmZmZnwqfDN8KnwwNDJiNGJ8Knw3fCp8MXwqfCcuc3BsaXQoJ3wqfCcpWzFdKSwKcGFkZGluZzogNiwKdXNlQUpBWDogMCwKb3BlbkV2ZW50OiAnb25jbGljaycsCnduZENlbnRlcjogMSwKcmVnUG9wdXA6IDEsCmR1cjogMzAwLAp0aW1lb3V0OiAwLApiYXNlOiAnLycsCnRoZW1lOiAnZmxhdCcsCnNvY2lhbFByb2ZpbGU6ICcnLApzb2NpYWxUeXBlOiAnc29jaWFsSWNvJywKY3NzUGF0aDogJy9tb2R1bGVzL21vZF9pbXByb3ZlZF9hamF4X2xvZ2luL2NhY2hlLzEwOS8wYTMwNmU3MmIyMDRkMDBhY2VlMzZiMzc3ZjM2MGY4NC5jc3MnLApyZWdQYWdlOiAnam9vbWxhJywKY2FwdGNoYTogJzZMYzhtOVVTQUFBQUFQbWJZOEVpSzllVlhLQ2xUd05xU3NxSzZUR1onLApzaG93SGludDogMCwKZ2VvbG9jYXRpb246IHRydWUsCndpbmRvd0FuaW06ICcxJwp9KX0pOw==" type="text/javascript"></script>
+	<script type="text/javascript">
+
+		(function($) {
+			$(document).ready(function() {
+				$(".hasTooltip").tooltip();
+			});
+		})(jQuery);
+		
+if (typeof jQuery != "undefined") {
+  (function($) {
+    $(document).ready(function(){
+      $(".carousel").each(function(index, element) {
+        $(this)[index].slide = null;
+      });
+    });
+  })(jQuery);
+} 
+	        var googletag = googletag || {}; 
+	        googletag.cmd = googletag.cmd || [];
+	        
+	        googletag.pubads().setTargeting('env', ['https://www.equities.com/']);
+	        
+	         
+            //263x263
+            googletag.defineSlot('/40326709/home_square_263_263', [263, 263], 'div-gpt-ad-1478637639702-3').addService(googletag.pubads());
+	         
+            //263x400
+            googletag.defineSlot('/40326709/home_rectangle_v_263_400', [263, 400], 'div-gpt-ad-1478637639702-2').addService(googletag.pubads());
+	        
+		jQuery(function($) {
+			SqueezeBox.initialize({});
+			SqueezeBox.assign($('a.modal').get(), {
+				parse: 'rel'
+			});
+		});
+
+		window.jModalClose = function () {
+			SqueezeBox.close();
+		};
+		
+		// Add extra modal close functionality for tinyMCE-based editors
+		document.onreadystatechange = function () {
+			if (document.readyState == 'interactive' && typeof tinyMCE != 'undefined' && tinyMCE)
+			{
+				if (typeof window.jModalClose_no_tinyMCE === 'undefined')
+				{	
+					window.jModalClose_no_tinyMCE = typeof(jModalClose) == 'function'  ?  jModalClose  :  false;
+					
+					jModalClose = function () {
+						if (window.jModalClose_no_tinyMCE) window.jModalClose_no_tinyMCE.apply(this, arguments);
+						tinyMCE.activeEditor.windowManager.close();
+					};
+				}
+		
+				if (typeof window.SqueezeBoxClose_no_tinyMCE === 'undefined')
+				{
+					if (typeof(SqueezeBox) == 'undefined')  SqueezeBox = {};
+					window.SqueezeBoxClose_no_tinyMCE = typeof(SqueezeBox.close) == 'function'  ?  SqueezeBox.close  :  false;
+		
+					SqueezeBox.close = function () {
+						if (window.SqueezeBoxClose_no_tinyMCE)  window.SqueezeBoxClose_no_tinyMCE.apply(this, arguments);
+						tinyMCE.activeEditor.windowManager.close();
+					};
+				}
+			}
+		};
+		
+	</script>
+	<link href="http://feeds.feedburner.com/" rel="alternate" type="application/rss+xml" title="Equities.com Editors Desk" />
+	<link href="http://feeds.feedburner.com/" rel="alternate" type="application/rss+xml" title="Equities.com Public News RSS" />
+	<link href="http://feeds.feedburner.com/" rel="alternate" type="application/rss+xml" title="Equities.com Private All News RSS" />
+	<link href="http://feeds.feedburner.com/" rel="alternate" type="application/rss+xml" title="Equities.com Public News Spotlight" />
+	<link href="http://feeds.feedburner.com/" rel="alternate" type="application/rss+xml" title="Equities.com Private News Spotlight" />
+	<link href="http://feeds.feedburner.com/" rel="alternate" type="application/rss+xml" title="Equities.com Public Machine News RSS" />
+	<link href="http://feeds.feedburner.com/" rel="alternate" type="application/rss+xml" title="Equities.com Private Machine News RSS" />
+	<meta property="og:image" content="https://res.cloudinary.com/equities-com/image/upload/v1/u/55a7cf9c71f1c9c495413f934dd1a158/mfmizqutirogcqjokhyd" />
+	<meta property="og:title" content="​ICAN: Socially-Responsible Returns" />
+	<meta property="og:description" content="Here's why more companies seem to be considering environmental, social, and governance (“ESG”) factors in their own operations." />
+	<meta property="og:url" content="httpss://www.equities.com/news/ican-socially-responsible-returns" />
+	<meta property="og:site_name" content="Equities.com" />
+	<meta property="og:type" content="article" />
+	<meta property="og:locale" content="en_US" />
+	<link rel="canonical" href="https://www.equities.com/news/ican-socially-responsible-returns" />
+	<link rel="stylesheet" href="/modules/mod_improved_ajax_login/cache/109/0a306e72b204d00acee36b377f360f84.css" type="text/css" />
+
+      <!--<script src="/media/jui/js/ScrollWatch-1.0.0.min.js"></script>-->
+  <script src="/assets/js/script.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//origin.jsdelivr.net/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//origin.jsdelivr.net/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <!--[if lt IE 7]>
+    <p class="browsehappy">
+      You are using an <strong>outdated</strong> browser.
+      Please <a href="http://browsehappy.com/">upgrade your browser</a>
+      to improve your experience.
+    </p>
+  <![endif]-->
+
+  <!-- Must Remove For Production -->
+  <link rel="stylesheet" href="/media/cms/css/debug.css" type="text/css" />
+  <!-- /Must Remove For Production -->
+
+<script type="text/javascript">
+var _paq = _paq || [];
+jQuery(window).load( function(){
+  // jQuery('select').chosen({
+  //   "disable_search_threshold":10,
+  //   "allow_single_deselect":true,
+  //   "placeholder_text_multiple":"Select some options",
+  //   "placeholder_text_single":"Select an option",
+  //   "no_results_text":"No results match"
+  // });
+});
+</script>
+
+<script type="text/javascript" src="https://secure.leadforensics.com/js/84581.js" ></script>
+<noscript><img src="https://secure.leadforensics.com/84581.png" style="display:none;" /></noscript>
+
+  </head>
+
+  <body class="site com_eq_articles view-article no-layout no-task itemid-247">
+      <div id="topHeader" class="hidden-xs">
+    <div class="container">
+
+    
+    
+      <div class="row top-news">
+        <div id="carouselLatestNews" class="carousel slide col-md-10"
+          data-ride="carousel">
+          <!-- Controls -->
+          <strong role="title">BREAKING NEWS</strong>
+            <a class="left carousel-control" href="#carouselLatestNews"
+              role="button" data-slide="prev">
+            <span class="glyphicon eqicon-menu-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a><a class="right carousel-control" href="#carouselLatestNews"
+              role="button" data-slide="next">
+            <span class="glyphicon eqicon-menu-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+
+          <!-- Wrapper for slides -->
+          <ul class="carousel-inner" role="listbox">
+
+                        <li class="item active">
+              <p class="carousel-caption">
+                <a href="/news/when-social-media-bites-back">
+                  When Social Media Bites Back                </a>
+              </p>
+            </li>
+                        <li class="item ">
+              <p class="carousel-caption">
+                <a href="/news/trusted-income-from-t-rowe-price">
+                  ​Trusted Income from T. Rowe Price                </a>
+              </p>
+            </li>
+                        <li class="item ">
+              <p class="carousel-caption">
+                <a href="/news/banking-the-unbanked-is-a-380-billion-opportunity">
+                  Banking the Unbanked is a $380 Billion Opportunity                </a>
+              </p>
+            </li>
+                        <li class="item ">
+              <p class="carousel-caption">
+                <a href="/news/why-starting-an-investment-club-sucks-but-is-totally-worth-it">
+                  Why Starting an Investment Club Sucks... But Is Totally Worth It                </a>
+              </p>
+            </li>
+                        <li class="item ">
+              <p class="carousel-caption">
+                <a href="/news/energy-transfer-pipelines-and-profits">
+                  ​Energy Transfer: Pipelines and Profits                </a>
+              </p>
+            </li>
+            
+          </ul>
+        </div>
+
+
+              <div class="col-md-2">
+                            <div class="">
+                <script type="text/javascript">
+jQuery(window).load( function(){
+	jQuery("#localizationField").on('change', function() {
+	  jQuery("#localizationForm").trigger('submit');
+	});
+	var localization = jQuery('#localizationField option:selected').attr("data-alias");
+	//jQuery('.loc-flag').addClass(localization + '-flag' );
+	jQuery('#u-locale').val(localization);
+});
+</script>
+<form id="localizationForm" method="post" class="form-inline padding-top-15">
+	<div class="pull-right ">
+		<div class="form-group form-group-sm">
+		    <select id="localizationField" name="localizationField" class="form-control">
+		        <option value="">US/Global</option>
+		        		        <option  value="12333" data-alias="loc-ca">Canada</option>
+		    			    </select>
+		    <input type="hidden" id="u-locale" value="">
+	    </div>
+    </div>
+</form>
+              </div>
+                        </div>
+        </div>
+    </div>
+  </div>
+    
+<header>
+  <div class="main-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+        	  <a class="logo" href="/"><img src="//res.cloudinary.com/equities-com/image/upload/v1454095498/system/eq-logo.png" /></a>
+
+        	          	          	    <h2 class="news hidden-xs">News</h2>
+                        <div class="usermenu">
+
+        		          		          		<div class="login">
+          		  <div id="mod_improved_ajax_login-109">
+
+            <a class="logBtn selectBtn" onclick="return false" href="/login">
+        <span class="loginBtn">Log in</span>
+      </a>
+    	<div class="ial-window">
+        <div class="loginWndInside">
+    			<span class="ial-close"></span>
+          
+
+
+<form action="https://www.equities.com/news" method="post" name="ialLogin" class="ial-login ">
+    <div class="gi-elem gi-wide">
+    <h3 class="loginH3">Login to your account</h3>
+  </div>
+  
+    
+    <div class="gi-elem">
+        <div class="gi-field-out"><div class="gi-field-icon gi-user"><div class="gi-field-icon-hover gi-user"></div></div></div>
+    <input id="userTxt" class="loginTxt" name="username" type="text" placeholder="Username / Email" autocomplete="off" />
+  </div>
+  <div class="gi-elem">
+    <div class="gi-field-out"><div class="gi-field-icon gi-passw"><div class="gi-field-icon-hover gi-passw"></div></div></div>
+    <input id="passTxt" class="loginTxt" name="password" type="password" placeholder="Password" autocomplete="off" />
+  </div>
+    <div class="gi-elem">
+    <button class="loginBtn ial-submit" id="submitBtn"><span><i class="ial-load"></i>Log in</span></button>
+  </div>
+  <div class="gi-elem">
+          <label class="ial-check-lbl smallTxt" for="keepSigned">
+  		  <input id="keepSigned" name="remember" type="checkbox" class="ial-checkbox" checked="checked" />
+  			Remember Me  		</label>
+  	  	<div class="forgetDiv">
+        		<a class="forgetLnk" href="/register?view=reset">Forgot your password?</a>
+            <br />
+            <a class="forgetLnk" href="/register?view=remind">Forgot your username?</a>
+        	</div>
+  </div>
+  <br style="clear:both" />
+	<input type="hidden" name="option" value="com_users" />
+	<input type="hidden" name="task" value="user.login" />
+	<input type="hidden" name="return" value="L25ld3MvaWNhbi1zb2NpYWxseS1yZXNwb25zaWJsZS1yZXR1cm5z" />
+	<input type="hidden" name="6349ada9734fafd8c51f6888fd82a68e" value="1" /></form>
+<form name="saved" style="display:none">
+  <input type="text" name="username" />
+  <input type="password" name="password" />
+</form>
+
+
+
+  <div style="text-align:center; *display:inline; margin: 10px 0;">
+        <div class="socialIco" data-oauth="facebook" title="Use Facebook account">
+      <div class="socialImg facebookImg"><div class="socialImgHover facebookImg"></div></div>
+    </div>
+        <div class="socialIco" data-oauth="google" title="Use Google account">
+      <div class="socialImg googleImg"><div class="socialImgHover googleImg"></div></div>
+    </div>
+        <div class="socialIco" data-oauth="twitter" title="Use Twitter account">
+      <div class="socialImg twitterImg"><div class="socialImgHover twitterImg"></div></div>
+    </div>
+      </div>
+
+        </div>
+    	</div>
+      
+	      	  <a class="regBtn selectBtn  " href="/register">
+        <span class="loginBtn">Register</span>
+  		</a>
+      
+
+	<div class="ial-window">
+    <div class="loginWndInside">
+			<span class="ial-close loginBtn"></span>
+      
+
+
+
+<form action="https://www.equities.com/news" method="post" name="ialRegister" class="ial-form">
+  <input type="hidden" value="{&quot;page&quot;:[{&quot;elem&quot;:{&quot;LM5416e3590b599&quot;:{&quot;jform[elem_type]&quot;:{&quot;value&quot;:&quot;header&quot;,&quot;predefined&quot;:&quot;title&quot;,&quot;readonly&quot;:true,&quot;button&quot;:&quot;Title&quot;,&quot;icon&quot;:&quot;icon-quote icon-font&quot;},&quot;jform[elem_wide]&quot;:{&quot;checked&quot;:true,&quot;value&quot;:true},&quot;jform[elem_class]&quot;:{&quot;value&quot;:&quot;&quot;},&quot;jform[elem_label]&quot;:{&quot;value&quot;:&quot;Create an account&quot;},&quot;jform[elem_subtitle]&quot;:{&quot;value&quot;:&quot;&lt;strong class=\&quot;red\&quot;&gt;*&lt;\/strong&gt; Required field&quot;}},&quot;LM5416e3590b59c&quot;:{&quot;jform[elem_type]&quot;:{&quot;value&quot;:&quot;textfield&quot;,&quot;defaultValue&quot;:&quot;text&quot;,&quot;predefined&quot;:&quot;name&quot;,&quot;readonly&quot;:true,&quot;button&quot;:&quot;Name&quot;,&quot;icon&quot;:&quot;icon-user&quot;},&quot;jform[elem_required]&quot;:{&quot;checked&quot;:true,&quot;disabled&quot;:false,&quot;value&quot;:true},&quot;jform[elem_wide]&quot;:{&quot;checked&quot;:false},&quot;jform[elem_class]&quot;:{&quot;value&quot;:&quot;ial-name&quot;},&quot;jform[elem_name]&quot;:{&quot;value&quot;:&quot;name&quot;,&quot;readonly&quot;:true,&quot;prefix&quot;:&quot;jform[&quot;},&quot;jform[elem_prefix]&quot;:{&quot;value&quot;:&quot;jform&quot;},&quot;jform[elem_label]&quot;:{&quot;value&quot;:&quot;Name&quot;},&quot;jform[elem_placeholder]&quot;:{&quot;value&quot;:&quot;&quot;},&quot;jform[elem_title]&quot;:{&quot;value&quot;:&quot;Enter your full name.&quot;},&quot;jform[elem_pattern]&quot;:{&quot;value&quot;:&quot;.+&quot;,&quot;placeholder&quot;:&quot;.+&quot;},&quot;jform[elem_error]&quot;:{&quot;value&quot;:&quot;Invalid field: &quot;},&quot;jform[elem_id]&quot;:{&quot;value&quot;:&quot;ial-name&quot;}},&quot;LM5416e3590b59e&quot;:{&quot;jform[elem_type]&quot;:{&quot;value&quot;:&quot;textfield&quot;,&quot;defaultValue&quot;:&quot;text&quot;,&quot;predefined&quot;:&quot;username&quot;,&quot;readonly&quot;:true,&quot;button&quot;:&quot;Username&quot;,&quot;icon&quot;:&quot;icon-user&quot;},&quot;jform[elem_required]&quot;:{&quot;checked&quot;:true,&quot;disabled&quot;:true},&quot;jform[elem_wide]&quot;:{&quot;checked&quot;:false},&quot;jform[elem_class]&quot;:{&quot;value&quot;:&quot;ial-username&quot;},&quot;jform[elem_name]&quot;:{&quot;value&quot;:&quot;username&quot;,&quot;readonly&quot;:true,&quot;prefix&quot;:&quot;jform[&quot;},&quot;jform[elem_prefix]&quot;:{&quot;value&quot;:&quot;jform&quot;},&quot;jform[elem_label]&quot;:{&quot;value&quot;:&quot;Username&quot;},&quot;jform[elem_placeholder]&quot;:{&quot;value&quot;:&quot;&quot;},&quot;jform[elem_title]&quot;:{&quot;value&quot;:&quot;Enter your desired username.&quot;},&quot;jform[elem_error]&quot;:{&quot;value&quot;:&quot;Please enter a valid username. No space at beginning or end, at least 0 characters and must &lt;strong&gt;not&lt;\/strong&gt; contain the following characters: &lt; &gt; \\ &amp;quot; ' &amp;#37; ; ( ) &amp;.&quot;},&quot;jform[elem_pattern]&quot;:{&quot;value&quot;:&quot;^[^\\\\&amp;%'\&quot; ;\\(\\)]{2,}$&quot;,&quot;placeholder&quot;:&quot;^[^\\\\&amp;%'\&quot;;\\(\\)]{2,}$&quot;},&quot;jform[elem_ajax]&quot;:&quot;username&quot;,&quot;jform[elem_id]&quot;:{&quot;value&quot;:&quot;ial-username&quot;}},&quot;LM56143ae636b17&quot;:{&quot;jform[elem_type]&quot;:{&quot;value&quot;:&quot;password1&quot;,&quot;defaultValue&quot;:&quot;password&quot;,&quot;predefined&quot;:&quot;password1&quot;,&quot;readonly&quot;:true,&quot;button&quot;:&quot;Password&quot;,&quot;icon&quot;:&quot;icon-lock&quot;},&quot;jform[elem_required]&quot;:{&quot;checked&quot;:true,&quot;disabled&quot;:true,&quot;value&quot;:true},&quot;jform[elem_wide]&quot;:{&quot;checked&quot;:false},&quot;jform[elem_class]&quot;:{&quot;value&quot;:&quot;ial-password1&quot;},&quot;jform[elem_name]&quot;:{&quot;value&quot;:&quot;password1&quot;,&quot;readonly&quot;:true},&quot;jform[elem_prefix]&quot;:{&quot;value&quot;:&quot;jform&quot;},&quot;jform[elem_label]&quot;:{&quot;value&quot;:&quot;Password&quot;},&quot;jform[elem_placeholder]&quot;:{&quot;value&quot;:&quot;&quot;},&quot;jform[elem_title]&quot;:{&quot;value&quot;:&quot;Enter your desired password.&quot;},&quot;jform[elem_error]&quot;:{&quot;value&quot;:&quot;Invalid field: &quot;}},&quot;LM5416e3590b59f&quot;:{&quot;jform[elem_type]&quot;:{&quot;value&quot;:&quot;password2&quot;,&quot;defaultValue&quot;:&quot;password&quot;,&quot;predefined&quot;:&quot;password2&quot;,&quot;readonly&quot;:true,&quot;button&quot;:&quot;Password again&quot;,&quot;icon&quot;:&quot;icon-lock&quot;},&quot;jform[elem_required]&quot;:{&quot;checked&quot;:true,&quot;disabled&quot;:true,&quot;value&quot;:true},&quot;jform[elem_wide]&quot;:{&quot;checked&quot;:false},&quot;jform[elem_class]&quot;:{&quot;value&quot;:&quot;ial-password2&quot;},&quot;jform[elem_name]&quot;:{&quot;value&quot;:&quot;password2&quot;,&quot;readonly&quot;:true,&quot;prefix&quot;:&quot;jform[&quot;},&quot;jform[elem_prefix]&quot;:{&quot;value&quot;:&quot;jform&quot;},&quot;jform[elem_label]&quot;:{&quot;value&quot;:&quot;Confirm Password&quot;},&quot;jform[elem_placeholder]&quot;:{&quot;value&quot;:&quot;&quot;},&quot;jform[elem_title]&quot;:{&quot;value&quot;:&quot;Confirm your password.&quot;},&quot;jform[elem_error]&quot;:{&quot;value&quot;:&quot;The passwords you entered do not match. Please enter your desired password in the password field and confirm your entry by entering it in the confirm password field.&quot;},&quot;jform[elem_id]&quot;:{&quot;value&quot;:&quot;ial-password2&quot;}},&quot;LM5416e3590b5a1&quot;:{&quot;jform[elem_type]&quot;:{&quot;value&quot;:&quot;textfield&quot;,&quot;defaultValue&quot;:&quot;text&quot;,&quot;predefined&quot;:&quot;email&quot;,&quot;readonly&quot;:true,&quot;button&quot;:&quot;Email&quot;,&quot;icon&quot;:&quot;icon-mail-2 icon-envelope&quot;},&quot;jform[elem_required]&quot;:{&quot;checked&quot;:true,&quot;disabled&quot;:true,&quot;value&quot;:true},&quot;jform[elem_wide]&quot;:{&quot;checked&quot;:true,&quot;value&quot;:true},&quot;jform[elem_class]&quot;:{&quot;value&quot;:&quot;ial-email1&quot;},&quot;jform[elem_name]&quot;:{&quot;value&quot;:&quot;email1&quot;,&quot;readonly&quot;:true,&quot;prefix&quot;:&quot;jform[&quot;},&quot;jform[elem_prefix]&quot;:{&quot;value&quot;:&quot;jform&quot;},&quot;jform[elem_label]&quot;:{&quot;value&quot;:&quot;Email Address&quot;},&quot;jform[elem_placeholder]&quot;:{&quot;value&quot;:&quot;&quot;},&quot;jform[elem_title]&quot;:{&quot;value&quot;:&quot;Enter your email address.&quot;},&quot;jform[elem_error]&quot;:{&quot;value&quot;:&quot;Invalid email address&quot;},&quot;jform[elem_pattern]&quot;:{&quot;value&quot;:&quot;^([\\w0-9\\.\\-])+\\@(([a-zA-Z0-9\\-])+\\.)+[a-zA-Z]{2,4}$&quot;,&quot;placeholder&quot;:&quot;^([\\w0-9\\.\\-])+\\@(([a-zA-Z0-9\\-])+\\.)+[a-zA-Z]{2,4}$&quot;},&quot;jform[elem_ajax]&quot;:&quot;email&quot;,&quot;jform[elem_id]&quot;:{&quot;value&quot;:&quot;ial-email1&quot;}},&quot;LM5719191d459ee&quot;:{&quot;jform[elem_type]&quot;:{&quot;profile&quot;:1,&quot;value&quot;:&quot;checkbox&quot;,&quot;readonly&quot;:true,&quot;button&quot;:&quot;Checkbox&quot;,&quot;icon&quot;:&quot;icon-checkbox icon-ok-circle&quot;},&quot;jform[elem_required]&quot;:{&quot;checked&quot;:false,&quot;disabled&quot;:false},&quot;jform[elem_checked]&quot;:{&quot;checked&quot;:false,&quot;disabled&quot;:false},&quot;jform[elem_wide]&quot;:{&quot;checked&quot;:true,&quot;value&quot;:true},&quot;jform[elem_class]&quot;:{&quot;value&quot;:&quot;checkbox&quot;},&quot;jform[elem_value]&quot;:{&quot;defaultValue&quot;:&quot;JYes&quot;,&quot;placeholder&quot;:&quot;Yes&quot;,&quot;value&quot;:&quot;&quot;},&quot;jform[elem_name]&quot;:{&quot;value&quot;:&quot;subscribe_to_the_equitiescom_eye_on_the_market_daily_newsletter&quot;,&quot;placeholder&quot;:&quot;subscribe_to_the_equitiescom_eye_on_the_market_daily_newsletter&quot;,&quot;readonly&quot;:false},&quot;jform[elem_prefix]&quot;:{&quot;value&quot;:&quot;jform[improved]&quot;},&quot;jform[elem_label]&quot;:{&quot;value&quot;:&quot;Subscribe to the Equities.com Eye on the Market daily newsletter&quot;},&quot;jform[elem_title]&quot;:{&quot;value&quot;:&quot;&quot;}},&quot;LM5719191d459ef&quot;:{&quot;jform[elem_type]&quot;:{&quot;value&quot;:&quot;captcha&quot;,&quot;predefined&quot;:&quot;captcha&quot;,&quot;readonly&quot;:true,&quot;button&quot;:&quot;Captcha image&quot;,&quot;icon&quot;:&quot;icon-picture&quot;},&quot;jform[elem_class]&quot;:{&quot;value&quot;:&quot;&quot;},&quot;jform[elem_wide]&quot;:{&quot;checked&quot;:false}},&quot;LM5719191d459f0&quot;:{&quot;jform[elem_type]&quot;:{&quot;value&quot;:&quot;textfield&quot;,&quot;defaultValue&quot;:&quot;text&quot;,&quot;predefined&quot;:&quot;captcha2&quot;,&quot;readonly&quot;:true,&quot;button&quot;:&quot;Captcha textfield&quot;,&quot;icon&quot;:&quot;icon-pencil&quot;},&quot;jform[elem_required]&quot;:{&quot;checked&quot;:true,&quot;disabled&quot;:true,&quot;value&quot;:true},&quot;jform[elem_clear]&quot;:{&quot;checked&quot;:false},&quot;jform[elem_wide]&quot;:{&quot;checked&quot;:false},&quot;jform[elem_class]&quot;:{&quot;value&quot;:&quot;ial-captcha&quot;},&quot;jform[elem_name]&quot;:{&quot;value&quot;:&quot;recaptcha_response_field&quot;,&quot;readonly&quot;:true,&quot;placeholder&quot;:&quot;text_on_left_image&quot;},&quot;jform[elem_prefix]&quot;:{&quot;value&quot;:&quot;&quot;},&quot;jform[elem_label]&quot;:{&quot;value&quot;:&quot;Text on left image:&quot;},&quot;jform[elem_placeholder]&quot;:{&quot;value&quot;:&quot;&quot;},&quot;jform[elem_title]&quot;:{&quot;value&quot;:&quot;Please complete the security check.&quot;},&quot;jform[elem_error]&quot;:{&quot;value&quot;:&quot;Invalid field: &quot;},&quot;jform[elem_pattern]&quot;:{&quot;value&quot;:&quot;&quot;,&quot;placeholder&quot;:&quot;&quot;},&quot;jform[elem_autoCompOff]&quot;:true},&quot;LM5416e3590b5a4&quot;:{&quot;jform[elem_type]&quot;:{&quot;value&quot;:&quot;button&quot;,&quot;predefined&quot;:&quot;submit&quot;,&quot;readonly&quot;:true,&quot;button&quot;:&quot;Submit&quot;,&quot;icon&quot;:&quot;icon-arrow-right&quot;},&quot;jform[elem_wide]&quot;:{&quot;checked&quot;:true,&quot;value&quot;:true},&quot;jform[elem_class]&quot;:{&quot;value&quot;:&quot;&quot;},&quot;jform[elem_label]&quot;:{&quot;value&quot;:&quot;Register&quot;},&quot;jform[elem_subtitle]&quot;:{&quot;value&quot;:&quot;&quot;}}}}]}" name="fields" />
+  <input type="hidden" value="{&quot;layout&quot;:{&quot;jform[layout_columns]&quot;:&quot;2&quot;,&quot;jform[layout_margin]&quot;:&quot;10px&quot;,&quot;jform[layout_width]&quot;:&quot;190px&quot;}}" name="props" />
+  <input type="hidden" value="com_users" name="option" />
+  <input type="hidden" value="registration.register" name="task" />
+  <input type="hidden" name="6349ada9734fafd8c51f6888fd82a68e" value="1" /></form>
+
+<br style="clear:both" />
+
+
+  <div style="text-align:center; *display:inline; margin: 10px 0;">
+        <div class="socialIco" data-oauth="facebook" title="Use Facebook account">
+      <div class="socialImg facebookImg"><div class="socialImgHover facebookImg"></div></div>
+    </div>
+        <div class="socialIco" data-oauth="google" title="Use Google account">
+      <div class="socialImg googleImg"><div class="socialImgHover googleImg"></div></div>
+    </div>
+        <div class="socialIco" data-oauth="twitter" title="Use Twitter account">
+      <div class="socialImg twitterImg"><div class="socialImgHover twitterImg"></div></div>
+    </div>
+      </div>
+
+    </div>
+	</div>
+
+</div><form name="ialText" style="display:none">
+  <input type="hidden" name="COM_USERS_REGISTER_REQUIRED" value="&lt;strong class=&quot;red&quot;&gt;*&lt;/strong&gt; Required field" />
+  <input type="hidden" name="COM_USERS_REGISTRATION" value="User Registration" />
+  <input type="hidden" name="IAL_PLEASE_WAIT" value="Please wait" />
+  <input type="hidden" name="IAL_VERY_WEAK" value="Very weak" />
+  <input type="hidden" name="IAL_WEAK" value="Weak" />
+  <input type="hidden" name="IAL_REASONABLE" value="Reasonable" />
+  <input type="hidden" name="IAL_STRONG" value="Strong" />
+  <input type="hidden" name="IAL_VERY_STRONG" value="Very strong" />
+</form>
+          		</div>
+          		          	  	      </div>
+        </div><!-- /col-md-6 -->
+      </div><!-- /row -->
+    </div><!-- /container -->
+  </div><!-- /main-header -->
+
+  <div class="container">
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                    <ul class="nav menu  navbar-nav">
+<li class="item-246"><a class="chome-border" href="/" ><span>Home</span></a></li><li class="item-247 current active parent"><a class="cnews-border" href="/news" ><span>News</span></a></li><li class="item-248 parent"><a class="ccompanies-border" href="/companies" ><span>Companies</span></a></li><li class="item-249"><a class="cmarkets-border" href="/markets" ><span>Markets</span></a></li><li class="item-251"><a class="ccrowd-border" href="/private-markets" ><span>Private Markets</span></a></li><li class="item-252"><a class="cevents-border" href="/events" ><span>Events</span></a></li><li class="item-424"><a class="chome-border" href="/videos" ><span>Videos</span></a></li><li class="item-488"><a class="ctrading-border" href="/trading" ><span>Trading</span></a></li></ul>
+
+                              <div class="navbar-form navbar-right">
+            <div class="search form-group">
+	<form action="/news" method="post" class="form-inline">
+		<input name="searchword" id="mod-search-searchword" maxlength="200"  class="form-control inputbox search-query" type="search" size="20" placeholder="Search / Symbol" /> <button class="btn btn-default sch-btn" onclick="this.form.searchword.focus();"><i class="fa fa-search"></i></button>		<input type="hidden" name="task" value="search" />
+		<input type="hidden" name="option" value="com_search" />
+		<input type="hidden" name="searchphrase" value="any" />
+		<input type="hidden" name="ordering" value="newest" />
+		<input type="hidden" name="Itemid" value="247" />
+		<input type="hidden" name="areas[0]" value="eq_everything" />
+	</form>
+</div>
+
+          </div>
+          
+        </div>
+        </div>
+    </nav>
+
+
+
+  </div><!-- /container -->
+</header>
+
+
+
+
+
+
+
+      
+  <div id="pageBody" class="container">
+    
+    <div class="row">
+                
+
+      <main class="colCenter col-md-9">
+                        <script type='text/javascript'>
+    jQuery.post(
+            'index.php?option=com_eq_articles&task=article.addhit',
+            {id:'1592793'}
+    );
+</script>
+<div class="item-page" itemscope itemtype="http://schema.org/Article">
+
+	<div class="page-header">
+		<h1 class="section-title cnews">
+			News		</h1>
+	</div>
+
+	    
+	<h2 itemprop="name">
+		​ICAN: Socially-Responsible Returns	</h2>
+	<cite>
+									<a href="/user/MoneyShow" alt="MoneyShow">MoneyShow</a>
+
+									<a class="btn btn-xs btn-default follow" style="font-family: 'Open Sans',sans-serif; font-style: normal; font-size: 11px;" href="#">
+						<span class="glyphicon eqicon-user-plus"></span>
+						Follow					</a>
+											&#124;
+				<time datetime="2017-07-10 17:15:00">Monday, 10 July 2017 13:15&nbsp;<small>(EST)</small></time>
+	</cite>
+	<aside class="social-article btn-group pull-right" role="group">
+		<a href="#" class="btn btn-default btn-xs" onclick="event.preventDefault(); window.open('http://www.facebook.com/sharer.php?u=https://www.equities.com/news/ican-socially-responsible-returns', 'name', 'width=600, height=400');"><i class="fa fa-facebook text-primary"></i></a>
+		<a href="#" class="btn btn-default btn-xs" onclick="event.preventDefault(); window.open('https://twitter.com/share?url=https://www.equities.com/news/ican-socially-responsible-returns&text=%E2%80%8BICAN%3A+Socially-Responsible+Returns+by+%40equitiesinc', 'name', 'width=600, height=400');"><i class="fa fa-twitter text-primary"></i></a>
+		<a href="#" class="btn btn-default btn-xs" onclick="event.preventDefault(); window.open('http://www.linkedin.com/shareArticle?mini=true&url=https://www.equities.com/news/ican-socially-responsible-returns&source=Equities.com', 'name', 'width=600, height=400');"><i class="fa fa-linkedin text-primary"></i></a>
+		<a href="mailto:?subject=Checkout this on Equities.com: ​ICAN: Socially-Responsible Returns&body=​ICAN: Socially-Responsible Returns%0D%0A&quot;Here's why more companies seem to be considering environmental, social, and governance (“ESG”) factors in their own operations.&quot;%0D%0A%0D%0Ahttps://www.equities.com/news/ican-socially-responsible-returns" class="btn btn-default btn-xs"><i class="fa fa-envelope text-primary"></i></a>
+	</aside>
+
+	<div id="articleBody" itemprop="articleBody" class="margin-bottom-30">
+				<p><em><img src="https://res.cloudinary.com/equities-com/image/upload/v1/u/55a7cf9c71f1c9c495413f934dd1a158/mfmizqutirogcqjokhyd"></em></p><p><em>Environmental concerns have historically been the domain of politics. But as time goes on, and with publicly traded companies facing increasing regulation, more companies appear to be considering environmental, social, and governance (“ESG”) factors in their own operations, according to</em> <a href="http://investwithanedge.com/" target="_blank"><strong><i>Ron Rowland</i></strong></a><a href="http://investwithanedge.com/"><i>'s</i> <strong><i>Invest with an Edge</i></strong></a>.
+</p><p>The reason for this is fairly simple: the more we know about ESG risks, the more it becomes evident that taking them into account produces higher returns and lower risks for companies.
+</p><p>In fact, hundreds of business leaders have pledged this month to voluntarily adhere to the Paris climate agreement.
+</p><p>Why would they do this? Many studies, including one published by the Harvard Business Review, shows that socially responsible companies show higher profitability and stock performance than their counterparts.
+</p><p>Taking a long-term, sustainable view ensures that a company can operate in perpetuity. Going beyond this, however, companies can provide products that provide solutions to ESG challenges.
+</p><p>One example is <strong>Tesla (<a href="https://www.equities.com/companies/TSLA" target="_blank">TSLA</a></strong>), which offers electric vehicles. This is more direct than simply improving operational efficiency.
+</p><p>Going forward, it would appear that the appetite for these types of products will only increase. The <strong>SerenityShares Impact ETF (<a href="https://www.equities.com/companies/ican" target="_blank">ICAN</a></strong>), launched April 13th, 2007, focuses its investments on these products, providing access to companies that are actively making improvements to the environment and society while outperforming the market.
+</p><p>While ESG investing has become more popular over the last 20 years, in the millennial generation, it’s almost a requirement.
+</p><p>According to Bloomberg, about 84% of millennials are interested in socially responsible investing, and that figure is not expected to change as the generation ages, suggesting that demand for sustainable products will only increase.
+</p><p>In more traditional finance, <strong>Deutsche-Bank (<a href="https://www.equities.com/companies/db" target="_blank">DB</a></strong>) performed an analysis of more than 2,000 empirical studies dating back to the 1970s and found that about 90% of the studies suggested that ESG investing provides superior returns to passive investing.
+</p><p>This suggests that not only is ESG going to be more in-vogue in the future, but, over the long term, it should provide returns greater than funds that are not focused on ESG investing.
+<hr><p> 	<div id='div-gpt-article_rectangle_h_848_200'>
+				<script>
+					googletag.cmd.push(function() { googletag.display('div-gpt-article_rectangle_h_848_200'); });
+				</script>
+			</div> </p><hr><p></p><p>For this reason, current investors and the largest financial advisors are also moving in this direction, creating another tailwind for ESG companies and investments.
+</p><p>Unlike many other ESG indexes, which are subjective in nature, the SSI Impact Index is passive in nature.
+</p><p>First, the index uses six pillars (for example, resource scarcity, societal, environmental, healthy living) and 20 sub-themes (for example, energy efficiency, forestry, and green transportation) to select companies.
+</p><p>The index begins with all funds listed on the New York and NASDAQ stock exchanges. It then performs a screening process to determine if the considered companies produce a product that solves or provides improvement to one of the identified challenges.
+</p><p>Companies must be relevant to the considered challenges and also provide benefits or solutions to those challenges. This is a far more direct approach than many other ESG indexes and funds take.
+</p><p>Not only does the company have to be improving its operations with regard to ESG areas, but it also must be providing a product that is beneficial.
+</p><p>The top 10 holdings of ICAN include a large number of tech firms, such as <strong>Google (<a href="https://www.equities.com/companies/googl" target="_blank">GOOGL</a>)</strong> (the largest holding at 4.01%), <strong>Apple (<a href="https://www.equities.com/companies/aapl" target="_blank">AAPL</a>)</strong>, and <strong>Netflix (<a href="https://www.equities.com/companies/dis" target="_blank">NFLX</a>)</strong>.
+</p><p>However, other types of companies are also present, such as <strong>Honeywell (<a href="https://www.equities.com/companies/hon" target="_blank">HON</a>)</strong>, <strong>CVS Health (<a href="https://www.equities.com/companies/cvs" target="_blank">CVS</a>)</strong>, and <strong>Disney (<a href="https://www.equities.com/companies/dis" target="_blank">DIS</a>)</strong>, which are leaders in their respective sectors. The reasons these companies, and certain sectors, are included are varied (for example, Disney is included for its promotion of cultural diversity).
+</p><p>Sector exposures are heaviest in Industrials, Technology, and Healthcare, while Energy is somewhat underweight versus its market-capitalization weight. ICAN has an expense ratio of 0.50%, and dividends will be paid annually.
+</p><p><em><a href="https://www.moneyshow.com/expert/588spk/ron-rowland/">Ron Rowland</a>, the editor of<span class="apple-converted-space"><i> </i></span><i>All Star Fund Trader</i>, is widely regarded as an authority and leading practitioner of mutual fund investing.
+	</em>
+</p><p><em><a href="http://investwithanedge.com/" target="_blank"><strong>Subscribe to Ron Rowland's Invest with an Edge here…</strong></a>
+	</em>
+</p><p><em>About <a href="https://www.moneyshow.com/">MoneyShow.com</a><strong>: </strong>Founded in 1981, MoneyShow is a privately held financial media company headquartered in Sarasota, Florida. As a global network of investing and trading education, MoneyShow presents an extensive agenda of live and online events that attract over 75,000 investors, traders and financial advisors around the world.</em>
+</p>		<p>
+			<b>DISCLOSURE</b>:
+					<em>The views and opinions expressed in this article are those of the authors, and do not represent the views of <a href="http://www.equities.com">equities.com</a>. Readers should not consider statements made by the author as formal recommendations and should consult their financial advisor before making any investment decisions. To read our full disclosure, please go to: <a href="http://www.equities.com/disclaimer" target="_new">http://www.equities.com/disclaimer</a></em>
+				</p>
+	</div>
+	
+<section class="comments-tabs-wrapper">
+    <h3 class="section-sub-title cnews">Comments</h3>
+
+    <div role="tabpanel" class="tab-pane" id="comments-tab-public">
+        <div class="timeline-footer">
+            <div class="timeline-comments">
+                <ul class="list-group" style="">
+                                    </ul>
+                <div class="new-comment-wrapper list-group-item">
+                                        <p>You have to be logged in to leave a comment.</p>
+
+                    <a href="#" class="btn btn-primary log-popup">Take me to log in</a>
+                    <a href="#" class="btn btn-default text-danger reg-popup">Don't have an account?</a>
+                                    </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="login-modal-label">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="login-modal-label">You must log in first</h4>
+            </div>
+            <div class="modal-body">
+                <p>I'm sorry, but in order to complete what you're trying to do, you must be logged in.</p>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="btn btn-primary modal-login">Take me to log in</a>
+                <a href="#" class="btn btn-default text-danger modal-register">Don't have an account?</a>
+                <button type="button" class="btn btn-default" data-dismiss="modal">I'm good for now</button>
+            </div>
+        </div>
+    </div>
+</div>
+	<input type="hidden" name="context" value="com_eq_articles.article" />
+	<input type="hidden" name="cid" value="1592793" />
+	<script type="text/javascript">
+		_paq.push(["setCustomVariable", 4, "catId", "69", "page"]);
+	</script>
+</div>                		<div class="moduletable">
+							<h3 class="section-sub-title margin-top-30 cnews">More on Equities.com</h3>
+						
+
+		<div class="more-articles">
+						<div class="row">
+						<div class="col-xs-12 col-sm-4 col-md-4">
+																					<h4 class="more-title"><a href="/news/purpose-software-expands-support-capability-with-new-sap-business-one-implementation-consultant">PURPOSE SOFTWARE EXPANDS SUPPORT CAPABILITY WITH NEW SAP BUSINESS ONE IMPLEMENTATION CONSULTANT</a></h4>
+																						</div>
+						<div class="col-xs-12 col-sm-4 col-md-4">
+																					<h4 class="more-title"><a href="/news/caterpillar-tops-street-2q-forecasts-1">Caterpillar tops Street 2Q forecasts</a></h4>
+																						</div>
+						<div class="col-xs-12 col-sm-4 col-md-4">
+																					<h4 class="more-title"><a href="/news/stronger-demand-boosts-caterpillar-2017-outlook-raised">Stronger demand boosts Caterpillar, 2017 outlook raised</a></h4>
+																						</div>
+					</div>
+			</div>
+		</div>
+	
+                      </main>      
+
+            <div id="colRight" class="col-md-3">
+        		<div class="moduletable">
+						
+
+	<!-- /40326709/home_square_263_263 -->
+<div id='div-gpt-ad-1478637639702-3' style='height:263px; width:263px;     margin-bottom: 10px;'>
+	<script>
+		googletag.cmd.push(function() { googletag.display('div-gpt-ad-1478637639702-3'); });
+	</script>
+</div>
+
+
+
+	
+
+
+
+
+
+
+
+<!-- /40326709/home_rectangle_h2_555_200
+<div id='div-gpt-ad-1478637639702-1' style='height:200px; width:555px;'>
+	<script>
+		googletag.cmd.push(function() { googletag.display('div-gpt-ad-1478637639702-1'); });
+	</script>
+</div>
+-->
+
+
+
+
+
+		</div>
+			<div class="moduletable list-thumb">
+							<h3 class="section-title cnews">Trending Articles</h3>
+						
+
+<ul class="list-border">
+					<li class="clearfix">
+																		<a href="/news/aftermaster-aftm-announces-three-consecutive-quarters-of-strong-sales"><img src="//res.cloudinary.com/equities-com/image/upload/c_fill,h_75,w_100/v1/u/55a7cf9c71f1c9c495413f934dd1a158/cswuzypdqftme22g1n7f"></a>
+										<h4 class="more-title"><a href="/news/aftermaster-aftm-announces-three-consecutive-quarters-of-strong-sales">​Aftermaster (AFTM) Announces Three Consecutive Quarters of Strong Sales</a>
+											</h4>
+																		</li>
+				<li class="clearfix">
+																		<a href="/news/is-madison-the-next-great-copper-gold-project-in-famous-montana-district"><img src="//res.cloudinary.com/equities-com/image/upload/c_fill,h_75,w_100/v1/u/55a7cf9c71f1c9c495413f934dd1a158/jat9qwenkyr0sxptdvj2"></a>
+										<h4 class="more-title"><a href="/news/is-madison-the-next-great-copper-gold-project-in-famous-montana-district">​Is Madison the Next Great Copper-Gold Project in Famous Montana District?</a>
+											</h4>
+																		</li>
+				<li class="clearfix">
+																		<a href="/news/nxtd-fit-pay-adding-secure-shine-to-new-token-smart-rings"><img src="//res.cloudinary.com/equities-com/image/upload/c_fill,h_75,w_100/v1/u/55a7cf9c71f1c9c495413f934dd1a158/vmwfm444etxokfewgfui"></a>
+										<h4 class="more-title"><a href="/news/nxtd-fit-pay-adding-secure-shine-to-new-token-smart-rings">​NXT-ID’s Fit Pay Adding Secure Shine to New Token Smart Rings</a>
+											</h4>
+																		</li>
+				<li class="clearfix">
+																		<a href="/news/california-green-tree-gives-investors-early-shot-at-promising-cannabis-grower"><img src="//res.cloudinary.com/equities-com/image/upload/c_fill,h_75,w_100/v1/u/55a7cf9c71f1c9c495413f934dd1a158/y3ohvtkksxhhthmucohh"></a>
+										<h4 class="more-title"><a href="/news/california-green-tree-gives-investors-early-shot-at-promising-cannabis-grower">​California Green Tree Gives Investors Early Shot at Promising Cannabis Grower</a>
+											</h4>
+																		</li>
+				<li class="clearfix">
+																		<a href="/news/retail-tremors-shake-the-payment-ecosystem"><img src="//res.cloudinary.com/equities-com/image/upload/c_fill,h_75,w_100/v1/u/55a7cf9c71f1c9c495413f934dd1a158/nfwgehlhkc6krtdhprzj"></a>
+										<h4 class="more-title"><a href="/news/retail-tremors-shake-the-payment-ecosystem">​Retail Tremors Shake the Payment Ecosystem </a>
+											</h4>
+																		</li>
+				<li class="clearfix">
+																		<a href="/news/quantum-leap"><img src="//res.cloudinary.com/equities-com/image/upload/c_fill,h_75,w_100/v1/u/da6ykhZ0.EbKc/ofgswbfrl4a20c50cu38"></a>
+										<h4 class="more-title"><a href="/news/quantum-leap">Quantum Leap</a>
+											</h4>
+																		</li>
+			</ul>
+		</div>
+			<div class="moduletable">
+						  
+
+<h3 class="section-title ccompanies"><a href="/companies">Emerging Growth</a></h3>
+  
+
+        <div class="margin-bottom-20 clearfix list-thumb-top ">
+                    <a href="/companies/bdic"><img src="//res.cloudinary.com/equities-com/image/upload/c_pad,h_300,w_555/v1/u/398d0beebc2a1c91e7696c92ba188715/bqsiltcjyqrgacnh74pz" class="margin-bottom-10"></a>
+                            <h4 class="more-title"><a href="/companies/bdic" >Blow & Drive Interlock Corp</a>
+                            </h4>
+                                    <p class="margin-bottom-10">
+                Blow & Drive Interlock Corp manufactures, markets, leases, installs and monitors a Breath Alcohol Ignition Interlock Device mechanism on the steering column of an automobile and into which a driver&#8230;            </p>
+                    </div>
+		</div>
+			<div class="moduletable">
+						
+	<!-- /40326709/home_rectangle_v_263_400 -->
+	<div id='div-gpt-ad-1478637639702-2' style='height:400px; width:263px;     margin-bottom: 10px;'>
+		<script>
+			googletag.cmd.push(function() { googletag.display('div-gpt-ad-1478637639702-2'); });
+		</script>
+	</div>
+
+
+
+	
+
+
+
+
+
+
+
+<!-- /40326709/home_rectangle_h2_555_200
+<div id='div-gpt-ad-1478637639702-1' style='height:200px; width:555px;'>
+	<script>
+		googletag.cmd.push(function() { googletag.display('div-gpt-ad-1478637639702-1'); });
+	</script>
+</div>
+-->
+
+
+
+
+
+		</div>
+			<div class="moduletable margin-top-20">
+						  
+
+<h3 class="section-title ccrowd"><a href="/private-markets">Private Markets </a></h3>
+  
+
+        <div class="margin-bottom-20 clearfix list-thumb-top ">
+                    <a href="/private-markets/almond-smart-home-router-by-securifi"><img src="//res.cloudinary.com/equities-com/image/upload/c_fill,w_200/v1/u/398d0beebc2a1c91e7696c92ba188715/goto1k0wm4l0gfwfsf7r" class="margin-bottom-10"></a>
+                            <h4 class="more-title"><a href="/private-markets/almond-smart-home-router-by-securifi" >Almond Smart Home Router by Securifi</a>
+                            </h4>
+                                    <p class="margin-bottom-10">
+                Securifi sells user friendly touch screen routers that also have support for IoT/home automation.Securifi’s
+ Almond revolutionized wireless router setup with its easy to use 
+Touchscreen Interface in 2012. Now our&#8230;            </p>
+                    </div>
+  
+
+        <div class="margin-bottom-20 clearfix list-thumb-top ">
+                    <a href="/private-markets/waybetter"><img src="//res.cloudinary.com/equities-com/image/upload/c_fill,w_200/v1/u/398d0beebc2a1c91e7696c92ba188715/nqeneewnrcdyf1kikh9n" class="margin-bottom-10"></a>
+                            <h4 class="more-title"><a href="/private-markets/waybetter" >WayBetter</a>
+                            </h4>
+                                    <p class="margin-bottom-10">
+                The spark hit Jamie when he saw co-workers competing to lose weight. 
+Instead of pizzas and subs, they were eating salads and jogging along 
+the river. Some were sneakily leaving&#8230;            </p>
+                    </div>
+		</div>
+	
+      </div>
+                  </div>
+  </div>    
+<div class="main-footer">
+  <div class="container">
+     <div class="row">
+        <div class="col-md-3">
+          <ul class="nav menu ">
+<li class="item-477"><a href="http://www.findinvestors.online" ><span>Corporate Site</span></a></li><li class="item-485"><a href="http://www.equitiespremium.com/" target="_blank" ><span>Premium Products</span></a></li><li class="item-435"><a href="/advertising" ><span>Advertising</span></a></li><li class="item-478"><a href="/rss-feeds" ><span>RSS Feeds</span></a></li></ul>
+
+        	<div class="clearfix"></div>
+        </div>
+        <div class="col-md-3">
+          <ul class="nav menu ">
+<li class="item-257"><a href="/about" ><span>About</span></a></li><li class="item-260"><a href="/contact" ><span>Contact</span></a></li><li class="item-439"><a href="/site-map" ><span>Site Map</span></a></li><li class="item-438"><a href="/testimonials" ><span>Testimonials</span></a></li></ul>
+
+        	<div class="clearfix"></div>
+        </div>
+        <div class="col-md-3">
+          <ul class="nav menu ">
+<li class="item-258"><a href="/privacy-policy" ><span>Privacy Policy</span></a></li><li class="item-259"><a href="/terms-and-conditions" ><span>Terms and Conditions</span></a></li><li class="item-434"><a href="/disclaimer" ><span>Disclaimer</span></a></li><li class="item-436"><a href="/conference" ><span>Conference</span></a></li></ul>
+
+        	<div class="clearfix"></div>
+        </div>
+        <div class="col-md-3"><a class="logo pull-right" href="/"><img src="//res.cloudinary.com/equities-com/image/upload/v1454095498/system/eq-logo.png"></a></div><!-- /col-md-6 -->
+      </div><!-- /row -->
+   </div><!-- /container -->
+ </div>
+
+<div class="bot-footer">
+  <div class="container">
+    <div class="row">
+      <div class="divide20"></div><!-- //divide20 -->
+      <div class="col-md-6">
+        <p>© 2017 Equities</p>
+        <p><small>* All dates and time are being displayed in Eastern Standard Time (EST).</small></p>
+      </div><!-- /col-md-4 -->
+      <div class="col-md-6">
+        <div class="social-bottom">
+          <a target="_blank" href="http://www.linkedin.com/company/equities-com" target="_blank"><img src="//res.cloudinary.com/equities-com/image/upload/v1454095584/system/li.png"></a>
+          <a target="_blank" href="https://twitter.com/equitiesinc" target="_blank"><img src="//res.cloudinary.com/equities-com/image/upload/v1454095598/system/tw.png"></a>
+          <a target="_blank" href="https://www.facebook.com/equities" target="_blank"><img src="//res.cloudinary.com/equities-com/image/upload/v1454095614/system/fb.png"></a>
+          <a target="_blank" href="http://www.youtube.com/user/EquitiesTV" target="_blank"><img src="//res.cloudinary.com/equities-com/image/upload/v1454095635/system/yt.png"></a> </div>
+          <!-- /social -->
+      </div><!-- /col-md-4 -->
+    </div><!-- /row -->
+  </div><!-- /container -->
+</div>
+    
+      <script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-18682304-12', 'equities.com');
+    ga('send', 'pageview');
+  </script>
+  <script type="text/javascript">(function(o){var b="https://api.autopilothq.com/anywhere/",t="6164e529eb2c41ae99c05f25493ebf6f92edb7a7368e41b2bc32635b5a2b3263",a=window.AutopilotAnywhere={_runQueue:[],run:function(){this._runQueue.push(arguments);}},c=encodeURIComponent,s="SCRIPT",d=document,l=d.getElementsByTagName(s)0,p="t="c(d.title||"")"&u="c(d.location.href||"")"&r="+c(d.referrer||""),j="text/javascript",z,y;if(!window.Autopilot) window.Autopilot=a;if(o.app) p="devmode=true&"+p;z=function(src,asy)
+    {var e=d.createElement(s);e.src=src;e.type=j;e.async=asy;l.parentNode.insertBefore(e,l);}
+    ;if(!o.noaa)
+    {z(b+"aa/"+t+'?'+p,false)}
+    ;y=function()
+    {z(b+t+'?'+p,true);}
+    ;if(window.attachEvent)
+    {window.attachEvent("onload",y);}
+    else{window.addEventListener("load",y,false);}})({});
+  </script>
+    <!-- Piwik -->
+  <script type="text/javascript">
+    _paq.push(["setDocumentTitle", document.domain + "/​ICAN: Socially-Responsible Returns | Equities.com"]);
+    _paq.push(["setDomains", ["*.equities.com"]]);
+    // you can set up to 5 custom variables for each visitor
+    _paq.push(["setCustomVariable", 1, "userId", "0", "page"]);
+    _paq.push(["setCustomVariable", 2, "menuId", "247", "page"]);
+        _paq.push(["setCustomVariable", 3, "itemId", "1592793", "page"]);
+    _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+    _paq.push(['enableHeartBeatTimer']);
+    (function() {
+      var u="//www.equities.com/analytics/";
+      _paq.push(['setTrackerUrl', u+'piwik.php']);
+      _paq.push(['setSiteId', 1]);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+  <noscript><p><img src="//www.equities.com/analytics/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
+  <!-- End Piwik Code -->
+
+  <!-- Facebook Tracking Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)}};
+    if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)0;s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init','228748107521112');fbq('track',"PageView");
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display: none;" src="https://www.facebook.com/tr?id=228748107521112&ev=PageView&noscript=1">
+  </noscript>
+  <!-- - - - - - - - - - - - - -->
+
+  <!-- bio Tracking Pixel -->
+  <script async src='//c1.ox-bio.com/t0?oxtrk=98&oxhrt=c1c1dc1b-8944-4ed4-af15-63a93d884ee5&oxuid=EQU0001'></script>
+  <noscript>
+      <img src='//c1.ox-bio.com/k0?oxtrk=98&oxhrt=c1c1dc1b-8944-4ed4-af15-63a93d884ee5&oxuid=EQU0001' height='0' width='0' style='display: none;'  />
+  </noscript>
+
+  <!-- stackadapt.com tracker -->
+  <script>!function(s,a,e,v,n,t,z){if(s.saq)return;n=s.saq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!s._saq)s._saq=n;n.push=n;n.loaded=!0;n.version='1.0';n.queue=[];t=a.createElement(e);t.async=0;t.src=v;z=a.getElementsByTagName(e)[0];z.parentNode.insertBefore(t,z)}(window,document,'script','https://tags.srv.stackadapt.com/events.js');saq('rt', '5a2BACDpgbkExMQXSEFPYQ');</script>
+  <noscript><img src="https://srv.stackadapt.com/rt?sid=5a2BACDpgbkExMQXSEFPYQ" width="1" height="1"/></noscript>
+  
+  <script type="text/javascript" src="/assets/js/jquery.cloudinary.js"></script>
+  <script type="text/javascript" src="//widget.cloudinary.com/global/all.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.4.1/moment-timezone.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/chosen/1.4.2/chosen.jquery.min.js"></script>
+  <script type="text/javascript">
+    window._tfa = window._tfa || [];
+    _tfa.push({
+        notify: "action",
+        name  : 'page_view'
+    });
+  </script>
+  <noscript>
+    <div class="statcounter">
+      <a title="web stats" href="http://statcounter.com/" target="_blank">
+        <img class="statcounter" src="//c.statcounter.com/7027499/0/e524b3f5/1/" alt="web stats">
+      </a>
+    </div>
+  </noscript>
+
+      
+  
+    <!-- mailchip popup -->
+  <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
+  <script type="text/javascript">require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us6.list-manage.com","uuid":"c1060a47c7","lid":"1bd534d627"}) })</script>
+  
+ <!--test-->
+  <script type="text/javascript">
+      var mantis = mantis || [];
+      mantis.push(['analytics', 'load', {
+          advertiser: '596e3ea266b0f2150fb4f807',
+          transaction: '', // set this to a unique value (if applicable), such as a purchase id, to trace our conversions to your system (make sure to change the transaction= in the pixel below as well
+          revenue: '' // set to a decimal amount (ie: "99.99") on your thank you page that represents the total purchase amount (make sure to add revenue= in the pixel below as well, ie: transaction=123&revenue=99.99)
+      }]);
+  </script>
+  <script type="text/javascript" data-cfasync="false" src="https://assets.mantisadnetwork.com/analytics.min.js" async></script>
+  <noscript><img src="//mantodea.mantisadnetwork.com/analytics/pixel?advertiser=596e3ea266b0f2150fb4f807&transaction=" /></noscript>
+  </body>
+</html>
