@@ -169,6 +169,10 @@ def get_news_from_past_n_days(date,n):
     return news
 
 
+def get_news_for_date(date):
+    return date_to_articles_map[date]
+
+
 def init(root_dir,stock_symbol):
     load_user_agent()
     start_date = date(2016,1,1)
